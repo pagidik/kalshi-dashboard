@@ -1,3 +1,5 @@
+import fs from 'fs'
+import path from 'path'
 import { predictions as staticPredictions, config as staticConfig } from '../lib/predictions'
 import StatCard from '../components/StatCard'
 import CircularProgress from '../components/CircularProgress'
@@ -5,18 +7,14 @@ import ProfitChart from '../components/ProfitChart'
 import PredictionTable from '../components/PredictionTable'
 import CategoryCard from '../components/CategoryCard'
 
+export const dynamic = 'force-dynamic'
+
 async function getLiveData() {
   try {
-    const baseUrl = process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : 'http://localhost:3000'
-    const [predRes, cfgRes] = await Promise.all([
-      fetch(`${baseUrl}/data/predictions.json`, { next: { revalidate: 60 } }),
-      fetch(`${baseUrl}/data/config.json`, { next: { revalidate: 60 } }),
-    ])
-    if (!predRes.ok || !cfgRes.ok) throw new Error('fetch failed')
-    const predictions = (await predRes.json()) as typeof staticPredictions
-    const config = (await cfgRes.json()) as typeof staticConfig
+    const predictionsPath = path.join(process.cwd(), 'public/data/predictions.json')
+    const configPath = path.join(process.cwd(), 'public/data/config.json')
+    const predictions = JSON.parse(fs.readFileSync(predictionsPath, 'utf-8')) as typeof staticPredictions
+    const config = JSON.parse(fs.readFileSync(configPath, 'utf-8')) as typeof staticConfig
     return { predictions, config }
   } catch {
     return { predictions: staticPredictions, config: staticConfig }
