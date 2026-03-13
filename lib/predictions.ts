@@ -6,14 +6,19 @@ export interface Prediction {
   id: string
   firedAt: string
   market: string
+  ticker?: string
   side: Side
   price: number
   impliedPct: number
+  contractsObserved?: number
   dollarObserved: number
+  hypotheticalBet?: number
   pnl: number | null
   status: Status
+  result?: string | null
+  settledAt?: string | null
   category: Category
-  note: string
+  note?: string
 }
 
 export const predictions: Prediction[] = [

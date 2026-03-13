@@ -51,14 +51,25 @@ function ConfidenceBar({ pct }: { pct: number }) {
   )
 }
 
+function kalshiUrl(ticker?: string): string | null {
+  if (!ticker) return null
+  // Derive series ticker by removing the last hyphen-delimited segment
+  // e.g. KXNCAAMBGAME-26MAR12LOUMIA-MIA → KXNCAAMBGAME-26MAR12LOUMIA
+  const parts = ticker.split('-')
+  if (parts.length < 2) return `https://kalshi.com/markets/${ticker}`
+  const series = parts.slice(0, -1).join('-')
+  return `https://kalshi.com/markets/${series}`
+}
+
 function PendingCard({ p }: { p: Prediction }) {
   const sideColor = p.side === 'YES' ? 'text-green' : 'text-red'
   const bet = 100
   const potentialWin = +(bet * (1 - p.price)).toFixed(2)
   const risk = +(bet * p.price).toFixed(2)
+  const url = kalshiUrl(p.ticker)
 
   return (
-    <div className="relative rounded-xl border border-amber/20 bg-amber/[0.04] p-5 hover:border-amber/40 transition-all">
+    <div className="relative rounded-xl border border-amber/20 bg-amber/[0.04] p-5 hover:border-amber/40 transition-all group/card">
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
@@ -66,11 +77,11 @@ function PendingCard({ p }: { p: Prediction }) {
             <span className="text-xs text-text-muted">@{p.impliedPct}% implied</span>
             <span className="ml-auto text-xs text-amber font-medium animate-pulse">● OPEN</span>
           </div>
-          <p className="font-semibold text-text truncate">{p.market}</p>
+          <p className="font-semibold text-text">{p.market}</p>
           <p className="text-xs text-text-muted mt-1">{formatTime(p.firedAt)} · ${p.dollarObserved.toLocaleString()} spotted</p>
         </div>
       </div>
-      <div className="mt-3 flex gap-4 text-xs">
+      <div className="mt-3 flex flex-wrap items-center gap-4 text-xs">
         <div>
           <span className="text-text-muted">Risk: </span>
           <span className="text-red font-medium">−${risk}</span>
@@ -83,6 +94,19 @@ function PendingCard({ p }: { p: Prediction }) {
           <span className="text-text-muted">Category: </span>
           <span className="text-text capitalize">{p.category}</span>
         </div>
+        {url && (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-auto flex items-center gap-1 rounded-md border border-accent/20 bg-accent/5 px-2.5 py-1 text-xs font-medium text-accent transition-all hover:bg-accent/15 hover:border-accent/40"
+          >
+            View on Kalshi
+            <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        )}
       </div>
     </div>
   )
@@ -173,7 +197,18 @@ export default function PredictionTable({ predictions }: { predictions: Predicti
                   <div className="absolute left-0 top-0 h-full w-0.5 rounded bg-accent opacity-0 transition-opacity group-hover:opacity-100" />
                   {formatTime(p.firedAt)}
                 </td>
-                <td className="py-4 pr-4 font-medium text-text">{p.market}</td>
+                <td className="py-4 pr-4 font-medium text-text">
+                  {kalshiUrl(p.ticker) ? (
+                    <a
+                      href={kalshiUrl(p.ticker)!}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-accent transition-colors hover:underline decoration-accent/50"
+                    >
+                      {p.market}
+                    </a>
+                  ) : p.market}
+                </td>
                 <td className="py-4 pr-4"><SideBadge side={p.side} pct={p.impliedPct} /></td>
                 <td className="py-4 pr-4"><ConfidenceBar pct={p.impliedPct} /></td>
                 <td className="py-4 pr-4 text-text-muted">${p.dollarObserved.toLocaleString()}</td>
