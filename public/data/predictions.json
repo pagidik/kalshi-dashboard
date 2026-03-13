@@ -1003,5 +1003,22 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "e0f5be18-2385-475c-9aba-f8ae15606b7f",
+    "firedAt": "2026-03-13T15:29:48.424Z",
+    "market": "George Washington at Saint Louis Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR13GWSLU-SLU",
+    "side": "YES",
+    "price": 0.75,
+    "impliedPct": 75,
+    "contractsObserved": 634,
+    "dollarObserved": 476,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
