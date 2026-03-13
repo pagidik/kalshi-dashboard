@@ -51,8 +51,46 @@ function ConfidenceBar({ pct }: { pct: number }) {
   )
 }
 
+function PendingCard({ p }: { p: Prediction }) {
+  const sideColor = p.side === 'YES' ? 'text-green' : 'text-red'
+  const bet = 100
+  const potentialWin = +(bet * (1 - p.price)).toFixed(2)
+  const risk = +(bet * p.price).toFixed(2)
+
+  return (
+    <div className="relative rounded-xl border border-amber/20 bg-amber/[0.04] p-5 hover:border-amber/40 transition-all">
+      <div className="flex items-start justify-between gap-4">
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 mb-1">
+            <span className={`text-xs font-bold px-2 py-0.5 rounded bg-surface2 ${sideColor}`}>{p.side}</span>
+            <span className="text-xs text-text-muted">@{p.impliedPct}% implied</span>
+            <span className="ml-auto text-xs text-amber font-medium animate-pulse">● OPEN</span>
+          </div>
+          <p className="font-semibold text-text truncate">{p.market}</p>
+          <p className="text-xs text-text-muted mt-1">{formatTime(p.firedAt)} · ${p.dollarObserved.toLocaleString()} spotted</p>
+        </div>
+      </div>
+      <div className="mt-3 flex gap-4 text-xs">
+        <div>
+          <span className="text-text-muted">Risk: </span>
+          <span className="text-red font-medium">−${risk}</span>
+        </div>
+        <div>
+          <span className="text-text-muted">To win: </span>
+          <span className="text-green font-medium">+${potentialWin}</span>
+        </div>
+        <div>
+          <span className="text-text-muted">Category: </span>
+          <span className="text-text capitalize">{p.category}</span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function PredictionTable({ predictions }: { predictions: Prediction[] }) {
   const [tab, setTab] = useState<Tab>('all')
+  const pending = predictions.filter(p => p.status === 'pending')
 
   const filtered = predictions.filter(p => {
     if (tab === 'completed') return p.status === 'won' || p.status === 'lost' || p.status === 'expired'
@@ -60,14 +98,35 @@ export default function PredictionTable({ predictions }: { predictions: Predicti
     return true
   })
 
+  const completedCount = predictions.filter(p => p.status === 'won' || p.status === 'lost').length
+
   const tabs: { key: Tab; label: string }[] = [
-    { key: 'all', label: 'All' },
-    { key: 'completed', label: 'Completed' },
-    { key: 'pending', label: 'Pending' },
+    { key: 'all', label: `All (${predictions.length})` },
+    { key: 'completed', label: `Settled (${completedCount})` },
+    { key: 'pending', label: `Pending (${pending.length})` },
   ]
 
   return (
-    <div className="rounded-xl border border-border bg-surface p-6 md:p-8">
+    <div className="space-y-8">
+
+      {/* ── Open Positions ── */}
+      {pending.length > 0 && (
+        <div className="rounded-xl border border-border bg-surface p-6 md:p-8">
+          <div className="flex items-center gap-3 mb-5">
+            <h2 className="text-xl font-semibold text-text">Open Positions</h2>
+            <span className="rounded-full bg-amber/15 px-2.5 py-0.5 text-xs font-semibold text-amber">{pending.length} pending</span>
+            <Tooltip text="These bets haven't settled yet — the game or event hasn't finished. We're tracking whether they'll win or lose.">
+              <span className="text-xs text-text-muted cursor-help border-b border-dashed border-text-muted">What's this?</span>
+            </Tooltip>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {pending.map(p => <PendingCard key={p.id} p={p} />)}
+          </div>
+        </div>
+      )}
+
+      {/* ── All Signals Table ── */}
+      <div className="rounded-xl border border-border bg-surface p-6 md:p-8">
       <h2 className="text-xl font-semibold text-text">All Signals</h2>
       <p className="mb-4 text-sm text-text-muted">Signals detected from large trades on Kalshi</p>
 
@@ -119,12 +178,14 @@ export default function PredictionTable({ predictions }: { predictions: Predicti
                 <td className="py-4 pr-4"><ConfidenceBar pct={p.impliedPct} /></td>
                 <td className="py-4 pr-4 text-text-muted">${p.dollarObserved.toLocaleString()}</td>
                 <td className="py-4 pr-4 font-medium">
-                  {p.pnl !== null ? (
+                  {p.pnl !== null && p.status !== 'expired' ? (
                     <span style={{ color: p.pnl >= 0 ? 'var(--green)' : 'var(--red)' }}>
-                      {p.pnl >= 0 ? '+' : ''}{p.pnl}¢
+                      {p.pnl >= 0 ? '+' : ''}${Math.abs(p.pnl).toFixed(2)}
                     </span>
+                  ) : p.status === 'expired' ? (
+                    <span className="text-text-muted">—</span>
                   ) : (
-                    <span className="text-text-muted italic">Waiting...</span>
+                    <span className="text-amber italic text-xs">Waiting...</span>
                   )}
                 </td>
                 <td className="py-4"><StatusBadge status={p.status} /></td>
@@ -133,6 +194,7 @@ export default function PredictionTable({ predictions }: { predictions: Predicti
           </tbody>
         </table>
       </div>
+    </div>
     </div>
   )
 }
