@@ -29,6 +29,28 @@ export default async function Home() {
   const crypto = predictions.filter(p => p.category === 'crypto')
   const other = predictions.filter(p => p.category === 'other')
 
+  // Compute stats dynamically
+  const settled = predictions.filter(p => p.status === 'won' || p.status === 'lost')
+  const wins = settled.filter(p => p.status === 'won').length
+  const losses = settled.filter(p => p.status === 'lost').length
+  const pending = predictions.filter(p => p.status === 'pending').length
+  const winRate = settled.length > 0 ? (wins / settled.length) * 100 : 0
+  const totalPnl = settled.reduce((sum, p) => sum + (p.pnl ?? 0), 0)
+  const pnlDisplay = totalPnl >= 0 ? `+$${totalPnl.toFixed(0)}` : `-$${Math.abs(totalPnl).toFixed(0)}`
+  const pnlColor = totalPnl >= 0 ? 'var(--green)' : 'var(--red)'
+
+  // Brier score: mean((predicted_prob - outcome)^2) over settled bets with known result
+  const brierBets = settled.filter(p => p.result !== null && p.price !== null)
+  const brierScore = brierBets.length > 0
+    ? brierBets.reduce((sum, p) => {
+        const outcome = p.result === 'yes' ? 1 : 0
+        return sum + Math.pow((p.price ?? 0) - outcome, 2)
+      }, 0) / brierBets.length
+    : 0
+  const brierDisplay = brierScore.toFixed(3)
+  const brierColor = brierScore < 0.15 ? 'var(--green)' : brierScore < 0.20 ? 'var(--amber)' : 'var(--red)'
+  const brierPct = Math.min((brierScore / 0.25) * 100, 100)
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-8 md:py-12">
       {/* Header */}
@@ -48,34 +70,34 @@ export default async function Home() {
       <section className="mb-10 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <StatCard
           label="Correct Predictions"
-          value="85.7%"
+          value={`${winRate.toFixed(1)}%`}
           title="Win Rate"
-          subtext="6 wins out of 7 settled bets"
+          subtext={`${wins}W / ${losses}L — ${pending} pending`}
           tooltip="How often the signals we tracked turned out to be right. Based on settled (completed) bets only."
         >
-          <CircularProgress value={85.7} />
+          <CircularProgress value={winRate} />
         </StatCard>
 
         <StatCard
           label="Total Profit (Hypothetical)"
-          value="+$123"
+          value={pnlDisplay}
           title="Total Profit"
           subtext={`If you bet $${config.minTradeUSD} on each signal`}
           tooltip={`This is how much you would have made if you placed a $${config.minTradeUSD} bet on every signal we detected. Not real money — just tracking the signals.`}
-          color="var(--green)"
+          color={pnlColor}
         />
 
         <StatCard
           label="Calibration Score"
-          value="0.107"
+          value={brierDisplay}
           title="Signal Quality"
           subtext="Lower is better (0 = perfect, 0.25 = random)"
-          tooltip="Measures how accurate the probability was, not just win/lose. A score of 0.107 means our signals were well-calibrated — when they said 90% likely, it actually happened ~90% of the time."
-          color="var(--green)"
+          tooltip="Measures how accurate the probability was, not just win/lose. A lower score means our signals were well-calibrated — when they said 90% likely, it actually happened ~90% of the time."
+          color={brierColor}
         >
           <div className="flex flex-col items-end gap-1">
             <div className="relative h-2 w-20 rounded-full bg-surface2">
-              <div className="absolute top-1/2 -translate-y-1/2 h-3 w-3 rounded-full bg-green border-2 border-bg" style={{ left: `${(0.107 / 0.25) * 100}%` }} />
+              <div className="absolute top-1/2 -translate-y-1/2 h-3 w-3 rounded-full bg-green border-2 border-bg" style={{ left: `${brierPct}%` }} />
             </div>
             <div className="flex justify-between w-20 text-[9px] text-text-muted">
               <span>0</span>
