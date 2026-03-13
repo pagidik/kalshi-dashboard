@@ -1,11 +1,30 @@
-import { predictions, config } from '../lib/predictions'
+import { predictions as staticPredictions, config as staticConfig } from '../lib/predictions'
 import StatCard from '../components/StatCard'
 import CircularProgress from '../components/CircularProgress'
 import ProfitChart from '../components/ProfitChart'
 import PredictionTable from '../components/PredictionTable'
 import CategoryCard from '../components/CategoryCard'
 
-export default function Home() {
+async function getLiveData() {
+  try {
+    const baseUrl = process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'http://localhost:3000'
+    const [predRes, cfgRes] = await Promise.all([
+      fetch(`${baseUrl}/data/predictions.json`, { next: { revalidate: 60 } }),
+      fetch(`${baseUrl}/data/config.json`, { next: { revalidate: 60 } }),
+    ])
+    if (!predRes.ok || !cfgRes.ok) throw new Error('fetch failed')
+    const predictions = (await predRes.json()) as typeof staticPredictions
+    const config = (await cfgRes.json()) as typeof staticConfig
+    return { predictions, config }
+  } catch {
+    return { predictions: staticPredictions, config: staticConfig }
+  }
+}
+
+export default async function Home() {
+  const { predictions, config } = await getLiveData()
   const sports = predictions.filter(p => p.category === 'sports')
   const crypto = predictions.filter(p => p.category === 'crypto')
   const other = predictions.filter(p => p.category === 'other')
