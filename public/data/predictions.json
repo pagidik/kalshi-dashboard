@@ -1292,5 +1292,22 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "b5787dca-bc4c-4e6e-ad24-b1edfc36f0b6",
+    "firedAt": "2026-03-13T18:54:42.469Z",
+    "market": "Seton Hall at St. John's Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR13HALLSJU-SJU",
+    "side": "YES",
+    "price": 0.78,
+    "impliedPct": 78,
+    "contractsObserved": 684,
+    "dollarObserved": 534,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
