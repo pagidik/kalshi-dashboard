@@ -22,6 +22,9 @@ export default async function Home() {
   const sports = predictions.filter(p => p.category === 'sports')
   const crypto = predictions.filter(p => p.category === 'crypto')
   const other = predictions.filter(p => p.category === 'other')
+  const rawConfig = configJson as unknown as Record<string, unknown>
+  const kellyBet = rawConfig.kellyBet ?? (rawConfig.categoryStats as Record<string, unknown> | undefined)?.sports ?? config.minTradeUSD
+  const kellyDisplay = typeof kellyBet === 'number' ? kellyBet : (kellyBet as Record<string, unknown>)?.kellyBet ?? config.minTradeUSD
 
   // Compute stats dynamically
   const settled = predictions.filter(p => p.status === 'won' || p.status === 'lost')
@@ -102,7 +105,7 @@ export default async function Home() {
 
         <StatCard
           label="Smart Bet Size"
-          value={`$${config.kellyBet}`}
+          value={`$${kellyDisplay}`}
           title="Recommended Bet"
           subtext="Based on Kelly Criterion math"
           tooltip="The mathematically optimal amount to bet per signal, based on our observed win rate and the odds. Uses a conservative formula called Half-Kelly to avoid overbetting."
