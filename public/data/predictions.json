@@ -901,5 +901,39 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "d636ba77-5ca7-4ebb-bebc-f552a64b2ed0",
+    "firedAt": "2026-03-13T06:12:18.855Z",
+    "market": "Purdue at Nebraska Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR13PURNEB-PUR",
+    "side": "YES",
+    "price": 0.61,
+    "impliedPct": 61,
+    "contractsObserved": 1500,
+    "dollarObserved": 915,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
+  },
+  {
+    "id": "b1f0672b-bbc8-4448-9156-f7b354dc439d",
+    "firedAt": "2026-03-13T06:12:18.855Z",
+    "market": "Purdue at Nebraska Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR13PURNEB-PUR",
+    "side": "YES",
+    "price": 0.61,
+    "impliedPct": 61,
+    "contractsObserved": 1500,
+    "dollarObserved": 915,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
