@@ -1020,5 +1020,39 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "48975ae9-4faa-4c80-af36-57164d60ef6e",
+    "firedAt": "2026-03-13T15:49:43.216Z",
+    "market": "George Washington at Saint Louis Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR13GWSLU-SLU",
+    "side": "YES",
+    "price": 0.66,
+    "impliedPct": 66,
+    "contractsObserved": 987,
+    "dollarObserved": 651,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
+  },
+  {
+    "id": "ec8f6603-9466-40d3-97bc-ecbf2676f121",
+    "firedAt": "2026-03-13T15:59:41.848Z",
+    "market": "George Washington at Saint Louis Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR13GWSLU-GW",
+    "side": "YES",
+    "price": 0.59,
+    "impliedPct": 59,
+    "contractsObserved": 887,
+    "dollarObserved": 523,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
