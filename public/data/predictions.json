@@ -935,5 +935,22 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "2b9eaffc-2c8a-42fc-869b-a8c6bf7aa12a",
+    "firedAt": "2026-03-13T07:32:26.701Z",
+    "market": "Missouri St. at Louisiana Tech Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR13MOSULT-LT",
+    "side": "YES",
+    "price": 0.54,
+    "impliedPct": 54,
+    "contractsObserved": 1842,
+    "dollarObserved": 995,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
