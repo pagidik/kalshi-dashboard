@@ -68,8 +68,8 @@ function PendingCard({ p }: { p: Prediction }) {
   const risk = +(bet * p.price).toFixed(2)
   const url = kalshiUrl(p.ticker)
 
-  return (
-    <div className="relative rounded-xl border border-amber/20 bg-amber/[0.04] p-5 hover:border-amber/40 transition-all group/card">
+  const inner = (
+    <>
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
@@ -78,36 +78,41 @@ function PendingCard({ p }: { p: Prediction }) {
             <span className="ml-auto text-xs text-amber font-medium animate-pulse">● OPEN</span>
           </div>
           <p className="font-semibold text-text">{p.market}</p>
-          <p className="text-xs text-text-muted mt-1">{formatTime(p.firedAt)} · ${p.dollarObserved.toLocaleString()} spotted</p>
+          <p className="text-xs text-text-muted mt-1">
+            {formatTime(p.firedAt)} · <span title="Amount a large trader put in — what triggered this signal">${p.dollarObserved.toLocaleString()} spotted by big money</span>
+          </p>
         </div>
       </div>
       <div className="mt-3 flex flex-wrap items-center gap-4 text-xs">
         <div>
-          <span className="text-text-muted">Risk: </span>
+          <span className="text-text-muted">Your risk: </span>
           <span className="text-red font-medium">−${risk}</span>
         </div>
         <div>
           <span className="text-text-muted">To win: </span>
           <span className="text-green font-medium">+${potentialWin}</span>
         </div>
-        <div>
-          <span className="text-text-muted">Category: </span>
-          <span className="text-text capitalize">{p.category}</span>
-        </div>
         {url && (
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-auto flex items-center gap-1 rounded-md border border-accent/20 bg-accent/5 px-2.5 py-1 text-xs font-medium text-accent transition-all hover:bg-accent/15 hover:border-accent/40"
-          >
-            View on Kalshi
-            <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
+          <span className="ml-auto flex items-center gap-1 text-accent/60 text-xs">
+            kalshi.com ↗
+          </span>
         )}
       </div>
+    </>
+  )
+
+  return url ? (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block relative rounded-xl border border-amber/20 bg-amber/[0.04] p-5 hover:border-accent/40 hover:bg-accent/[0.04] transition-all cursor-pointer"
+    >
+      {inner}
+    </a>
+  ) : (
+    <div className="relative rounded-xl border border-amber/20 bg-amber/[0.04] p-5">
+      {inner}
     </div>
   )
 }
