@@ -952,5 +952,22 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "2c4c6c06-c384-4b79-9556-ad7e05107ae0",
+    "firedAt": "2026-03-13T12:11:57.512Z",
+    "market": "Tennessee at Vanderbilt Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR13TENNVAN-TENN",
+    "side": "YES",
+    "price": 0.48,
+    "impliedPct": 48,
+    "contractsObserved": 1000,
+    "dollarObserved": 480,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
