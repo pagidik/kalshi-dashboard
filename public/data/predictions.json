@@ -522,10 +522,10 @@
     "contractsObserved": 1020,
     "dollarObserved": 979,
     "hypotheticalBet": 100,
-    "status": "pending",
-    "result": null,
-    "pnl": null,
-    "settledAt": null,
+    "status": "won",
+    "result": "yes",
+    "pnl": 4,
+    "settledAt": "2026-03-13T07:00:05.401Z",
     "category": "sports"
   },
   {
@@ -556,10 +556,10 @@
     "contractsObserved": 1774,
     "dollarObserved": 1703,
     "hypotheticalBet": 100,
-    "status": "pending",
-    "result": null,
-    "pnl": null,
-    "settledAt": null,
+    "status": "won",
+    "result": "yes",
+    "pnl": 4,
+    "settledAt": "2026-03-13T07:00:05.637Z",
     "category": "sports"
   },
   {
@@ -573,10 +573,10 @@
     "contractsObserved": 250,
     "dollarObserved": 240,
     "hypotheticalBet": 100,
-    "status": "pending",
-    "result": null,
-    "pnl": null,
-    "settledAt": null,
+    "status": "won",
+    "result": "yes",
+    "pnl": 4,
+    "settledAt": "2026-03-13T07:00:05.871Z",
     "category": "sports"
   },
   {
@@ -845,10 +845,10 @@
     "contractsObserved": 587,
     "dollarObserved": 288,
     "hypotheticalBet": 100,
-    "status": "pending",
-    "result": null,
-    "pnl": null,
-    "settledAt": null,
+    "status": "lost",
+    "result": "no",
+    "pnl": -49,
+    "settledAt": "2026-03-13T07:00:06.070Z",
     "category": "sports"
   },
   {
@@ -879,10 +879,10 @@
     "contractsObserved": 1225,
     "dollarObserved": 760,
     "hypotheticalBet": 100,
-    "status": "pending",
-    "result": null,
-    "pnl": null,
-    "settledAt": null,
+    "status": "won",
+    "result": "yes",
+    "pnl": 38,
+    "settledAt": "2026-03-13T07:00:06.127Z",
     "category": "sports"
   },
   {
