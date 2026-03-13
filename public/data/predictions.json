@@ -862,10 +862,10 @@
     "contractsObserved": 217,
     "dollarObserved": 215,
     "hypotheticalBet": 100,
-    "status": "pending",
-    "result": null,
-    "pnl": null,
-    "settledAt": null,
+    "status": "won",
+    "result": "no",
+    "pnl": 1,
+    "settledAt": "2026-03-13T05:30:09.649Z",
     "category": "sports"
   },
   {
