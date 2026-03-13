@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: #020408;
+  --color-surface: #0a1628;
+  --color-surface2: #0f1f38;
+  --color-border: rgba(0, 255, 212, 0.12);
+  --color-accent: #00ffd4;
+  --color-accent-dim: rgba(0, 255, 212, 0.15);
+  --color-text: #e8f4f2;
+  --color-text-muted: #6a8fa8;
+  --color-green: #00ff88;
+  --color-red: #ff3344;
+  --color-amber: #ffaa00;
+  --font-sans: "Inter", system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --bg: #020408;
+  --surface: #0a1628;
+  --surface2: #0f1f38;
+  --border: rgba(0, 255, 212, 0.12);
+  --accent: #00ffd4;
+  --accent-dim: rgba(0, 255, 212, 0.15);
+  --text: #e8f4f2;
+  --text-muted: #6a8fa8;
+  --green: #00ff88;
+  --red: #ff3344;
+  --amber: #ffaa00;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes draw-line {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out both;
 }
