@@ -10,7 +10,7 @@ import CategoryCard from '../components/CategoryCard'
 function getLiveData() {
   try {
     const predictions = predictionsJson as typeof staticPredictions
-    const config = configJson as typeof staticConfig
+    const config = configJson as unknown as typeof staticConfig
     return { predictions, config }
   } catch {
     return { predictions: staticPredictions, config: staticConfig }
