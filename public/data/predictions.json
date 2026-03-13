@@ -1224,5 +1224,39 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "a10a96c2-f32f-4638-9281-0871f96bf3bc",
+    "firedAt": "2026-03-13T17:39:41.876Z",
+    "market": "Missouri St. at Louisiana Tech Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR13MOSULT-LT",
+    "side": "YES",
+    "price": 0.6,
+    "impliedPct": 60,
+    "contractsObserved": 6249,
+    "dollarObserved": 3749,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
+  },
+  {
+    "id": "c2b58c88-5d8b-4f6c-afb2-cef1bd6434a1",
+    "firedAt": "2026-03-13T17:39:41.876Z",
+    "market": "Missouri St. at Louisiana Tech Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR13MOSULT-LT",
+    "side": "YES",
+    "price": 0.6,
+    "impliedPct": 60,
+    "contractsObserved": 1807,
+    "dollarObserved": 1084,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
