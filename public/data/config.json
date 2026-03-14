@@ -1,7 +1,7 @@
 {
   "minTradeUSD": 500,
   "impliedRange": [
-    0.65,
+    0.7,
     1
   ],
   "skipCategories": [
@@ -75,5 +75,17 @@
       "avgPnL": 2.43
     }
   },
-  "notes": "284 settled trades | Win rate: 68.7% | Brier: 0.1467 (lower=better, 0.25=random) | Skipping: other (<35% win rate) | Implied range refined to 65%-100% based on EV | Min trade size: $500 (best win rate at this threshold) | Kelly bet size: $0 per signal (half-Kelly, 2-week EWMA) | Total P&L: $-332.50"
+  "notes": "284 settled trades | Win rate: 68.7% | Brier: 0.1467 (lower=better, 0.25=random) | Skipping: other (<35% win rate) | Implied range refined to 65%-100% based on EV | Min trade size: $500 (best win rate at this threshold) | Kelly bet size: $0 per signal (half-Kelly, 2-week EWMA) | Total P&L: $-332.50",
+  "ewmaDecay": 0.15,
+  "kellyFraction": 0.5,
+  "minContracts": 0,
+  "lookbackDays": 30,
+  "minDip": 0,
+  "maxDip": 1,
+  "requireCluster": false,
+  "bestPnL": 1077.1,
+  "autoresearchOptimizationTarget": "pnl",
+  "autoresearchAt": "2026-03-14T23:19:13.805Z",
+  "autoresearchExperiments": 51,
+  "autoresearchImprovements": 1
 }
