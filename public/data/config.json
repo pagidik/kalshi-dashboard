@@ -1,36 +1,86 @@
 {
-  "minTradeUSD": 400,
-  "impliedRange": [0.45, 0.80],
-  "skipCategories": ["crypto", "politics", "other"],
-  "allowedTickerPrefixes": ["KXNCAAMBGAME", "KXNCAAWBGAME"],
-  "recommendedBetSize": 50,
-  "kellyFraction": 0.5,
-  "ewmaDecay": 0.15,
-  "minContracts": 0,
-  "lookbackDays": 30,
-  "generatedAt": "2026-03-13T05:06:00.000Z",
-  "dataPoints": 15,
-  "overallWinRate": 0.6,
-  "overallBrierScore": 0.1242,
-  "notes": "REBOOT: NCAAB/NCAAW game winners only. Range 45-80% — enough edge, enough upside. No NBA, spreads, totals, parlays, crypto. Backtested: 3 trades, 3W/0L, +$128 with these filters.",
+  "minTradeUSD": 200,
+  "impliedRange": [
+    0.65,
+    1
+  ],
+  "skipCategories": [
+    "other"
+  ],
+  "recommendedBetSize": 0,
+  "generatedAt": "2026-03-14T04:00:23.560Z",
+  "dataPoints": 131,
+  "overallWinRate": 0.5573,
+  "overallBrierScore": 0.1608,
+  "modelConfidence": 0.56,
   "categoryStats": {
     "sports": {
-      "samples": 11,
-      "wins": 8,
-      "winRate": 0.7273,
-      "winRateEwma": 0.8174,
-      "brierScore": 0.1165,
-      "kellyBet": 50
+      "samples": 125,
+      "wins": 71,
+      "winRate": 0.568,
+      "winRateEwma": 0.78,
+      "brierScore": 0.2024,
+      "kellyBet": 0
     },
     "crypto": null,
     "politics": null,
     "other": {
-      "samples": 4,
-      "wins": 1,
-      "winRate": 0.25,
-      "winRateEwma": 0.25,
-      "brierScore": 0.2365,
+      "samples": 6,
+      "wins": 2,
+      "winRate": 0.3333,
+      "winRateEwma": 0.2625,
+      "brierScore": 0.2285,
       "kellyBet": 0
     }
-  }
+  },
+  "bucketStats": {
+    "0-40%": {
+      "samples": 1,
+      "wins": 0,
+      "winRate": 0,
+      "winRateEwma": 0,
+      "brierScore": 0.04,
+      "avgPnL": -20
+    },
+    "40-65%": {
+      "samples": 70,
+      "wins": 28,
+      "winRate": 0.4,
+      "winRateEwma": 0.4,
+      "brierScore": 0.2454,
+      "avgPnL": -13.36
+    },
+    "65-80%": {
+      "samples": 38,
+      "wins": 23,
+      "winRate": 0.6053,
+      "winRateEwma": 0.6052631578947368,
+      "brierScore": 0.2458,
+      "avgPnL": -12.05
+    },
+    "80-95%": {
+      "samples": 12,
+      "wins": 12,
+      "winRate": 1,
+      "winRateEwma": 1,
+      "brierScore": 0.0083,
+      "avgPnL": 9.08
+    },
+    "95-100%": {
+      "samples": 10,
+      "wins": 10,
+      "winRate": 1,
+      "winRateEwma": 1,
+      "brierScore": 0.0013,
+      "avgPnL": 3.2
+    }
+  },
+  "notes": "131 settled trades | Win rate: 55.7% | Brier: 0.2036 (lower=better, 0.25=random) | Skipping: other (<35% win rate) | Implied range refined to 65%-100% based on EV | Min trade size: $500 (best win rate at this threshold) | Kelly bet size: $0 per signal (half-Kelly, 2-week EWMA) | Total P&L: $-1271.90",
+  "ewmaDecay": 0.15,
+  "kellyFraction": 0.5,
+  "minContracts": 0,
+  "lookbackDays": 30,
+  "autoresearchAt": "2026-03-14T04:00:32.882Z",
+  "autoresearchExperiments": 28,
+  "autoresearchImprovements": 1
 }
