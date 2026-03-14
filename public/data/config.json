@@ -1,6 +1,6 @@
 {
   "minTradeUSD": 400,
-  "impliedRange": [0.45, 0.80],
+  "impliedRange": [0.75, 0.99],
   "skipCategories": ["crypto", "politics", "other"],
   "allowedTickerPrefixes": ["KXNCAAMBGAME", "KXNCAAWBGAME"],
   "recommendedBetSize": 50,
@@ -8,29 +8,36 @@
   "ewmaDecay": 0.15,
   "minContracts": 0,
   "lookbackDays": 30,
-  "generatedAt": "2026-03-13T05:06:00.000Z",
-  "dataPoints": 15,
-  "overallWinRate": 0.6,
-  "overallBrierScore": 0.1242,
-  "notes": "REBOOT: NCAAB/NCAAW game winners only. Range 45-80% — enough edge, enough upside. No NBA, spreads, totals, parlays, crypto. Backtested: 3 trades, 3W/0L, +$128 with these filters.",
+  "generatedAt": "2026-03-14T03:50:00.000Z",
+  "dataPoints": 131,
+  "overallWinRate": 0.557,
+  "overallBrierScore": 0.22,
+  "notes": "LEARNING UPDATE Mar 14: Raised lower bound from 0.45 → 0.75 based on 131 settled signals. Data shows <75% signals are random/anti-correlated (30-56% WR). 75-85% = 83% WR, 85%+ = 100% WR. Only high-confidence signals have edge. Filter was too wide — fixed.",
   "categoryStats": {
     "sports": {
-      "samples": 11,
-      "wins": 8,
-      "winRate": 0.7273,
-      "winRateEwma": 0.8174,
-      "brierScore": 0.1165,
-      "kellyBet": 50
+      "samples": 131,
+      "wins": 73,
+      "losses": 58,
+      "winRate": 0.557,
+      "winRateByBucket": {
+        "<55%": 0.30,
+        "55-65%": 0.56,
+        "65-75%": 0.50,
+        "75-85%": 0.83,
+        "85%+": 1.00
+      },
+      "kellyBet": 50,
+      "pnl": -1090
     },
     "crypto": null,
     "politics": null,
     "other": {
-      "samples": 4,
-      "wins": 1,
-      "winRate": 0.25,
-      "winRateEwma": 0.25,
-      "brierScore": 0.2365,
-      "kellyBet": 0
+      "samples": 6,
+      "wins": 2,
+      "losses": 4,
+      "winRate": 0.33,
+      "kellyBet": 0,
+      "pnl": -182
     }
   }
 }
