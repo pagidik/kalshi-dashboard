@@ -1870,5 +1870,39 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "abf1cb13-6be7-4c85-9e64-326162286b71",
+    "firedAt": "2026-03-13T23:32:13.971Z",
+    "market": "Iowa St. at Arizona Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR13ISUARIZ-ISU",
+    "side": "YES",
+    "price": 0.56,
+    "impliedPct": 56,
+    "contractsObserved": 4000,
+    "dollarObserved": 2240,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
+  },
+  {
+    "id": "1a012d72-5cb7-451a-9354-d8a6b37a7181",
+    "firedAt": "2026-03-13T23:47:13.396Z",
+    "market": "Kent St. at Akron Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR13KENTAKR-AKR",
+    "side": "YES",
+    "price": 0.73,
+    "impliedPct": 73,
+    "contractsObserved": 725,
+    "dollarObserved": 529,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
