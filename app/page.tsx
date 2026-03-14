@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { predictions as staticPredictions, config as staticConfig } from '../lib/predictions'
 import predictionsJson from '../public/data/predictions.json'
 import configJson from '../public/data/config.json'
@@ -60,7 +61,12 @@ export default async function Home() {
           </span>
         </div>
         <p className="text-base text-text-muted">Tracking big money signals from Kalshi prediction markets</p>
-        <p className="mt-1 text-xs text-text-muted">Last updated: {new Date().toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true })}</p>
+        <div className="flex items-center gap-4 mt-2">
+          <p className="text-xs text-text-muted">Last updated: {new Date().toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true })}</p>
+          <Link href="/experiments" className="text-xs px-3 py-1 rounded-full border transition-colors hover:opacity-80" style={{ borderColor: 'rgba(0,255,212,0.3)', color: 'var(--accent)', background: 'rgba(0,255,212,0.06)' }}>
+            🧪 Autoresearch Lab →
+          </Link>
+        </div>
       </header>
 
       {/* Stat Cards */}

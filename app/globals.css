@@ -56,3 +56,56 @@ body {
 .animate-fade-in-up {
   animation: fade-in-up 0.5s ease-out both;
 }
+
+/* Experiments page */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.kpi {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.kpi-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-green {
+  color: var(--green);
+}
+
+.param-tag {
+  background: rgba(0,255,212,0.08);
+  border: 1px solid rgba(0,255,212,0.2);
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-family: monospace;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+}
+
+.border-border {
+  border-color: var(--border);
+}
