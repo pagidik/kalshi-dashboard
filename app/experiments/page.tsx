@@ -81,7 +81,7 @@ export default function ExperimentsPage() {
       {improved.length > 0 && (
         <section className="mb-10">
           <h2 className="text-xl font-semibold mb-4">🏆 Improvements Found</h2>
-          <div className="space-y-3">
+          <div className="space-y-3 overflow-y-auto" style={{ maxHeight: '400px' }}>
             {improved.map((e, i) => (
               <div key={i} className="card border-l-4" style={{ borderLeftColor: '#06d6a0' }}>
                 <div className="flex flex-wrap items-start justify-between gap-4">
@@ -137,7 +137,7 @@ export default function ExperimentsPage() {
       {/* Top 10 experiments table */}
       <section className="mb-10">
         <h2 className="text-xl font-semibold mb-4">Top 10 Experiments by Brier Score</h2>
-        <div className="card overflow-x-auto">
+        <div className="card overflow-auto" style={{ maxHeight: '480px' }}>
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border">

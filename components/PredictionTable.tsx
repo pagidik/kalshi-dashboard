@@ -148,8 +148,10 @@ export default function PredictionTable({ predictions }: { predictions: Predicti
               <span className="text-xs text-text-muted cursor-help border-b border-dashed border-text-muted">What's this?</span>
             </Tooltip>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {pending.map(p => <PendingCard key={p.id} p={p} />)}
+          <div className="overflow-y-auto" style={{ maxHeight: '420px' }}>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {pending.map(p => <PendingCard key={p.id} p={p} />)}
+            </div>
           </div>
         </div>
       )}
@@ -175,7 +177,7 @@ export default function PredictionTable({ predictions }: { predictions: Predicti
         ))}
       </div>
 
-      <div className="overflow-x-auto">
+      <div className="overflow-auto" style={{ maxHeight: '520px' }}>
         <table className="w-full text-left text-sm">
           <thead>
             <tr className="border-b border-border text-xs uppercase tracking-wider text-text-muted">
