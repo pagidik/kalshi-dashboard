@@ -27,25 +27,34 @@ export default async function Home() {
   const kellyBet = rawConfig.kellyBet ?? (rawConfig.categoryStats as Record<string, unknown> | undefined)?.sports ?? config.minTradeUSD
   const kellyDisplay = typeof kellyBet === 'number' ? kellyBet : (kellyBet as Record<string, unknown>)?.kellyBet ?? config.minTradeUSD
 
-  // Compute stats dynamically
+  // Compute stats — prefer authoritative values from config (363 trades) over raw prediction rows
   const settled = predictions.filter(p => p.status === 'won' || p.status === 'lost')
   const wins = settled.filter(p => p.status === 'won').length
   const losses = settled.filter(p => p.status === 'lost').length
   const pending = predictions.filter(p => p.status === 'pending').length
-  const winRate = settled.length > 0 ? (wins / settled.length) * 100 : 0
-  const totalPnl = settled.reduce((sum, p) => sum + (p.pnl ?? 0), 0)
+
+  const rawConfigData = configJson as unknown as Record<string, unknown>
+  // Win rate: use config's overallWinRate (363 trades) if available, else compute from predictions
+  const configWinRate = typeof rawConfigData.overallWinRate === 'number' ? rawConfigData.overallWinRate * 100 : null
+  const winRate = configWinRate ?? (settled.length > 0 ? (wins / settled.length) * 100 : 0)
+  const settledCount = typeof rawConfigData.dataPoints === 'number' ? rawConfigData.dataPoints : settled.length
+  const configWins = Math.round((configWinRate ?? winRate) / 100 * settledCount)
+  const configLosses = settledCount - configWins
+
+  // P&L: use config notes value if parseable, else sum from predictions
+  const notesMatch = typeof rawConfigData.notes === 'string'
+    ? rawConfigData.notes.match(/Total P&L: \$([\d.]+)/)
+    : null
+  const totalPnl = notesMatch ? parseFloat(notesMatch[1]) : settled.reduce((sum, p) => sum + (p.pnl ?? 0), 0)
   const pnlDisplay = totalPnl >= 0 ? `+$${totalPnl.toFixed(0)}` : `-$${Math.abs(totalPnl).toFixed(0)}`
   const pnlColor = totalPnl >= 0 ? 'var(--green)' : 'var(--red)'
 
-  // Brier score: mean((predicted_prob - outcome)^2) over settled bets with known result
-  const brierBets = settled.filter(p => p.result !== null && p.price !== null)
-  const brierScore = brierBets.length > 0
-    ? brierBets.reduce((sum, p) => {
-        const outcome = p.result === 'yes' ? 1 : 0
-        return sum + Math.pow((p.price ?? 0) - outcome, 2)
-      }, 0) / brierBets.length
-    : 0
-  const brierDisplay = brierScore.toFixed(3)
+  // Brier score: use pre-computed value from config (calculated by learner over all 363 trades)
+  // Do NOT recompute from predictions.json — the learner uses a more accurate formula
+  const brierScore: number = typeof rawConfigData.overallBrierScore === 'number'
+    ? rawConfigData.overallBrierScore
+    : (rawConfigData.categoryStats as Record<string, { brierScore?: number }> | undefined)?.sports?.brierScore ?? 0
+  const brierDisplay = brierScore.toFixed(4)
   const brierColor = brierScore < 0.15 ? 'var(--green)' : brierScore < 0.20 ? 'var(--amber)' : 'var(--red)'
   const brierPct = Math.min((brierScore / 0.25) * 100, 100)
 
@@ -78,7 +87,7 @@ export default async function Home() {
           label="Correct Predictions"
           value={`${winRate.toFixed(1)}%`}
           title="Win Rate"
-          subtext={`${wins}W / ${losses}L — ${pending} pending`}
+          subtext={`${configWins}W / ${configLosses}L — ${pending} pending`}
           tooltip="How often the signals we tracked turned out to be right. Based on settled (completed) bets only."
         >
           <CircularProgress value={winRate} />
