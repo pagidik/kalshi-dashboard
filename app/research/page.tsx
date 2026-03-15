@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import Link from 'next/link'
 import {
   ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
@@ -253,6 +253,92 @@ function ResultCard({ r, rank }: { r: ExperimentResult; rank?: number }) {
   )
 }
 
+// ─── Intro modal ─────────────────────────────────────────────────────────────
+
+const INTRO_STEPS = [
+  {
+    emoji: '🔍',
+    title: 'What is this?',
+    body: 'We track large trades on Kalshi prediction markets — when someone bets big money, it\'s often a signal they know something. This tool lets you test different strategies against all our historical signals to see what would have worked.',
+  },
+  {
+    emoji: '🎛️',
+    title: 'How it works',
+    body: 'Pick a strategy — like "only follow bets where the market is 70%+ confident" — and hit Run. It instantly backtests that strategy on real past data and shows you the win rate, total profit, and individual bets.',
+  },
+  {
+    emoji: '⚡',
+    title: 'Start with a preset',
+    body: 'Not sure what to try? We\'ve built 6 ready-made strategies for you — from "follow everything" to "best known strategy." Click any preset on the left to instantly see results. No setup needed.',
+  },
+]
+
+function IntroModal({ onDismiss }: { onDismiss: () => void }) {
+  const [step, setStep] = useState(0)
+  const current = INTRO_STEPS[step]
+  const isLast = step === INTRO_STEPS.length - 1
+
+  return (
+    <div style={{
+      position: 'fixed', inset: 0, background: 'rgba(5,10,18,0.88)',
+      backdropFilter: 'blur(8px)', zIndex: 100,
+      display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24,
+    }}>
+      <div style={{
+        background: '#0d1829', border: '1px solid rgba(0,255,212,0.2)',
+        borderRadius: 20, padding: '36px 40px', maxWidth: 460, width: '100%',
+        boxShadow: '0 0 60px rgba(0,255,212,0.06)',
+        animation: 'fadeUp 0.25s ease',
+      }}>
+        {/* Step dots */}
+        <div style={{ display: 'flex', gap: 6, marginBottom: 28 }}>
+          {INTRO_STEPS.map((_, i) => (
+            <div key={i} style={{
+              height: 3, flex: 1, borderRadius: 3,
+              background: i <= step ? GREEN : '#1a2840',
+              transition: 'background 0.3s',
+            }} />
+          ))}
+        </div>
+
+        {/* Content */}
+        <div style={{ fontSize: 44, marginBottom: 16 }}>{current.emoji}</div>
+        <h2 style={{ fontSize: 22, fontWeight: 800, marginBottom: 12, letterSpacing: '-0.02em', color: '#e8edf5' }}>
+          {current.title}
+        </h2>
+        <p style={{ fontSize: 14, color: '#a0b4d0', lineHeight: 1.75, marginBottom: 32 }}>
+          {current.body}
+        </p>
+
+        {/* Actions */}
+        <div style={{ display: 'flex', gap: 10, justifyContent: 'space-between', alignItems: 'center' }}>
+          <button
+            onClick={onDismiss}
+            style={{ fontSize: 12, color: DIM, background: 'none', border: 'none', cursor: 'pointer', padding: '4px 0' }}>
+            Skip intro
+          </button>
+          <button
+            onClick={() => isLast ? onDismiss() : setStep(s => s + 1)}
+            style={{
+              background: GREEN, color: '#050d1a', border: 'none', borderRadius: 9,
+              padding: '11px 28px', fontWeight: 800, fontSize: 14, cursor: 'pointer',
+              transition: 'all 0.15s',
+            }}>
+            {isLast ? '🚀 Let\'s go' : 'Next →'}
+          </button>
+        </div>
+      </div>
+
+      <style>{`
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
+    </div>
+  )
+}
+
 // ─── Preset definitions ───────────────────────────────────────────────────────
 
 const PRESETS = [
@@ -303,6 +389,17 @@ export default function ResearchPage() {
   const [running, setRunning] = useState(false)
   const [history, setHistory] = useState<ExperimentResult[]>([])
   const [error, setError] = useState('')
+  const [showIntro, setShowIntro] = useState(false)
+
+  useEffect(() => {
+    const seen = localStorage.getItem('kalshi-research-intro-seen')
+    if (!seen) setShowIntro(true)
+  }, [])
+
+  function dismissIntro() {
+    localStorage.setItem('kalshi-research-intro-seen', '1')
+    setShowIntro(false)
+  }
 
   const run = useCallback(async (overrideParams?: Params, overrideLabel?: string) => {
     setRunning(true)
@@ -352,6 +449,8 @@ export default function ResearchPage() {
   return (
     <div style={{ minHeight: '100vh', background: '#050d1a', color: '#e8edf5', fontFamily: 'system-ui, sans-serif' }}>
 
+      {showIntro && <IntroModal onDismiss={dismissIntro} />}
+
       {/* Nav */}
       <div style={{ background: '#050d1a', borderBottom: '1px solid #1a2840', padding: '14px 24px', display: 'flex', alignItems: 'center', gap: 24 }}>
         <span style={{ fontWeight: 800, fontSize: 16, color: GREEN, letterSpacing: '-0.02em' }}>KALSHI</span>
@@ -371,10 +470,22 @@ export default function ResearchPage() {
 
         {/* Page intro */}
         <div style={{ marginBottom: 28 }}>
-          <h1 style={{ fontSize: 26, fontWeight: 800, marginBottom: 8, letterSpacing: '-0.02em' }}>
-            🧪 Strategy Tester
-          </h1>
-          <p style={{ fontSize: 14, color: '#a0b4d0', lineHeight: 1.7, maxWidth: 680 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
+            <h1 style={{ fontSize: 26, fontWeight: 800, letterSpacing: '-0.02em', margin: 0 }}>
+              🧪 Strategy Tester
+            </h1>
+            <button
+              onClick={() => setShowIntro(true)}
+              title="Show intro again"
+              style={{
+                background: 'rgba(0,255,212,0.07)', border: '1px solid rgba(0,255,212,0.2)',
+                borderRadius: 20, padding: '3px 12px', fontSize: 12, color: GREEN,
+                cursor: 'pointer', fontWeight: 600, flexShrink: 0,
+              }}>
+              ? How it works
+            </button>
+          </div>
+          <p style={{ fontSize: 14, color: '#a0b4d0', lineHeight: 1.7, maxWidth: 680, margin: 0 }}>
             Test different betting strategies against real historical signals. Adjust the filters below and hit <strong style={{ color: '#e8edf5' }}>Run</strong> — it instantly shows how that strategy would have performed on past data.
             Not sure where to start? <strong style={{ color: GREEN }}>Try the quick presets on the left.</strong>
           </p>
