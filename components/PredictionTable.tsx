@@ -53,12 +53,14 @@ function ConfidenceBar({ pct }: { pct: number }) {
 
 function kalshiUrl(ticker?: string): string | null {
   if (!ticker) return null
-  // Derive series ticker by removing the last hyphen-delimited segment
-  // e.g. KXNCAAMBGAME-26MAR12LOUMIA-MIA → KXNCAAMBGAME-26MAR12LOUMIA
+  // Kalshi URL format: /markets/{event_ticker}/{market_ticker}
+  // event_ticker = all hyphen-segments except the last one
+  // e.g. KXNCAAMBGAME-26MAR12LOUMIA-MIA
+  //   → kalshi.com/markets/KXNCAAMBGAME-26MAR12LOUMIA/KXNCAAMBGAME-26MAR12LOUMIA-MIA
   const parts = ticker.split('-')
   if (parts.length < 2) return `https://kalshi.com/markets/${ticker}`
-  const series = parts.slice(0, -1).join('-')
-  return `https://kalshi.com/markets/${series}`
+  const eventTicker = parts.slice(0, -1).join('-')
+  return `https://kalshi.com/markets/${eventTicker}/${ticker}`
 }
 
 function PendingCard({ p }: { p: Prediction }) {
