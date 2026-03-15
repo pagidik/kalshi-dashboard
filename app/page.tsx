@@ -66,6 +66,9 @@ export default async function Home() {
           <Link href="/experiments" className="text-xs px-3 py-1 rounded-full border transition-colors hover:opacity-80" style={{ borderColor: 'rgba(0,255,212,0.3)', color: 'var(--accent)', background: 'rgba(0,255,212,0.06)' }}>
             🧪 Autoresearch Lab →
           </Link>
+          <Link href="/research" className="text-xs px-3 py-1 rounded-full border transition-colors hover:opacity-80" style={{ borderColor: 'rgba(0,212,255,0.3)', color: '#00d4ff', background: 'rgba(0,212,255,0.06)' }}>
+            ⚗️ Research Lab →
+          </Link>
         </div>
       </header>
 
