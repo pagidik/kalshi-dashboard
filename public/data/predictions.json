@@ -7515,5 +7515,25 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "08b2ba4e-8aae-47c8-bdc8-0d787347b22f",
+    "firedAt": "2026-03-17T23:10:40.691Z",
+    "market": "Wyoming at Wichita St. Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR17WYOWICH-WICH",
+    "side": "YES",
+    "price": 0.79,
+    "impliedPct": 79,
+    "contractsObserved": 1946,
+    "dollarObserved": 1537,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 335.82,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
