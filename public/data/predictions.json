@@ -7495,5 +7495,25 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "5c805975-d206-4295-b36c-9869cda042b0",
+    "firedAt": "2026-03-17T14:15:28.111Z",
+    "market": "LIU at Arizona Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR20LIUARIZ-LIU",
+    "side": "NO",
+    "price": 0.99,
+    "impliedPct": 99,
+    "contractsObserved": 3028,
+    "dollarObserved": 2998,
+    "anchorPrice": 0.99,
+    "dipFromOpen": 0,
+    "hoursToClose": 410.74,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
