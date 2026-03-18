@@ -8835,5 +8835,25 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "c19eb0f3-9846-4ffc-9d50-6526dbfa1f16",
+    "firedAt": "2026-03-18T21:53:58.171Z",
+    "market": "Navy at Wake Forest Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR18NAVYWAKE-WAKE",
+    "side": "YES",
+    "price": 0.84,
+    "impliedPct": 84,
+    "contractsObserved": 835,
+    "dollarObserved": 701,
+    "anchorPrice": 0.85,
+    "dipFromOpen": 0.01,
+    "hoursToClose": 337.1,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
