@@ -8675,5 +8675,25 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "2a7d1c29-8626-4054-b231-b0693311f2e2",
+    "firedAt": "2026-03-18T10:13:27.278Z",
+    "market": "Northern Colorado at Air Force Winner?",
+    "ticker": "KXNCAAWBGAME-26MAR19UNCOAFA-UNCO",
+    "side": "YES",
+    "price": 0.7,
+    "impliedPct": 70,
+    "contractsObserved": 761,
+    "dollarObserved": 533,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 374.28,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
