@@ -34,6 +34,16 @@ interface SMCState {
     losses: number
     total_pnl: number
   }
+  watchlist?: string[]
+  note?: string
+  strategy?: {
+    name: string
+    rr_min: number
+    stop_pct: number
+    target_pct: number
+    max_positions: number
+    position_size_pct: number
+  }
 }
 
 async function getSMCState(): Promise<SMCState | null> {
@@ -180,8 +190,45 @@ export default async function StocksPage() {
             ))}
           </div>
         ) : (
-          <div className="card text-center py-8">
-            <p className="text-text-muted">No active signals. Scanner runs daily at 9:30 AM ET.</p>
+          <div className="card py-6">
+            <div className="text-center mb-4">
+              <p className="text-lg font-semibold text-text mb-2">Waiting for Setup</p>
+              <p className="text-sm text-text-muted">{smcState?.note || 'No liquidity sweeps detected with FVG/OB confluence.'}</p>
+            </div>
+            {smcState?.watchlist && (
+              <div className="mt-4 pt-4 border-t border-border">
+                <p className="text-xs text-text-muted mb-2 text-center">Watching:</p>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {smcState.watchlist.map((sym, i) => (
+                    <span key={i} className="px-2 py-1 rounded bg-surface2 text-xs font-mono">{sym}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+            {smcState?.strategy && (
+              <div className="mt-4 pt-4 border-t border-border grid grid-cols-2 sm:grid-cols-5 gap-3 text-center">
+                <div>
+                  <div className="text-xs text-text-muted">Min R:R</div>
+                  <div className="text-sm font-bold text-accent">{smcState.strategy.rr_min}:1</div>
+                </div>
+                <div>
+                  <div className="text-xs text-text-muted">Stop Loss</div>
+                  <div className="text-sm font-bold" style={{ color: 'var(--red)' }}>{(smcState.strategy.stop_pct * 100).toFixed(0)}%</div>
+                </div>
+                <div>
+                  <div className="text-xs text-text-muted">Take Profit</div>
+                  <div className="text-sm font-bold" style={{ color: 'var(--green)' }}>{(smcState.strategy.target_pct * 100).toFixed(0)}%</div>
+                </div>
+                <div>
+                  <div className="text-xs text-text-muted">Max Positions</div>
+                  <div className="text-sm font-bold text-text">{smcState.strategy.max_positions}</div>
+                </div>
+                <div>
+                  <div className="text-xs text-text-muted">Position Size</div>
+                  <div className="text-sm font-bold text-text">{(smcState.strategy.position_size_pct * 100).toFixed(0)}%</div>
+                </div>
+              </div>
+            )}
           </div>
         )}
       </section>
