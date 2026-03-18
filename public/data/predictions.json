@@ -8655,5 +8655,25 @@
     "pnl": 2,
     "settledAt": "2026-03-18T05:30:12.141Z",
     "category": "sports"
+  },
+  {
+    "id": "9a4d3844-a97e-461d-a003-51d5a8a1a8f9",
+    "firedAt": "2026-03-18T09:17:28.700Z",
+    "market": "Hawai'i at Arkansas Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR19HAWARK-ARK",
+    "side": "YES",
+    "price": 0.91,
+    "impliedPct": 91,
+    "contractsObserved": 1075,
+    "dollarObserved": 978,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 367.71,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
