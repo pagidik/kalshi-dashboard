@@ -27,7 +27,7 @@ export default async function Home() {
   const kellyBet = rawConfig.kellyBet ?? (rawConfig.categoryStats as Record<string, unknown> | undefined)?.sports ?? config.minTradeUSD
   const kellyDisplay = typeof kellyBet === 'number' ? kellyBet : (kellyBet as Record<string, unknown>)?.kellyBet ?? config.minTradeUSD
 
-  // Compute stats ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â prefer authoritative values from config (363 trades) over raw prediction rows
+  // Compute stats - prefer authoritative values from config (363 trades) over raw prediction rows
   const settled = predictions.filter(p => p.status === 'won' || p.status === 'lost')
   const wins = settled.filter(p => p.status === 'won').length
   const losses = settled.filter(p => p.status === 'lost').length
@@ -42,7 +42,7 @@ export default async function Home() {
   const configLosses = settledCount - configWins
 
   // P&L: use config notes value if parseable, else sum from predictions
-  // Parse P&L from notes -- supports both positive (+$39.50) and negative (-$457.50)
+  // Parse P&L from notes - supports both positive (+$39.50) and negative (-$457.50)
   const notesMatch = typeof rawConfigData.notes === 'string'
     ? rawConfigData.notes.match(/Total P&L: \$(-?[\d.]+)/)
     : null
@@ -51,7 +51,7 @@ export default async function Home() {
   const pnlColor = totalPnl >= 0 ? 'var(--green)' : 'var(--red)'
 
   // Brier score: use pre-computed value from config (calculated by learner over all 363 trades)
-  // Do NOT recompute from predictions.json ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â the learner uses a more accurate formula
+  // Do NOT recompute from predictions.json - the learner uses a more accurate formula
   const brierScore: number = typeof rawConfigData.overallBrierScore === 'number'
     ? rawConfigData.overallBrierScore
     : (rawConfigData.categoryStats as Record<string, { brierScore?: number }> | undefined)?.sports?.brierScore ?? 0
@@ -74,10 +74,10 @@ export default async function Home() {
         <div className="flex items-center gap-4 mt-2">
           <p className="text-xs text-text-muted">Last updated: {new Date().toLocaleString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true })} ET</p>
           <Link href="/experiments" className="text-xs px-3 py-1 rounded-full border transition-colors hover:opacity-80" style={{ borderColor: 'rgba(0,255,212,0.3)', color: 'var(--accent)', background: 'rgba(0,255,212,0.06)' }}>
-            ÃƒÂ°Ã…Â¸Ã‚Â§Ã‚Âª Autoresearch Lab ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢
+            Autoresearch Lab
           </Link>
           <Link href="/research" className="text-xs px-3 py-1 rounded-full border transition-colors hover:opacity-80" style={{ borderColor: 'rgba(0,212,255,0.3)', color: '#00d4ff', background: 'rgba(0,212,255,0.06)' }}>
-            ÃƒÂ¢Ã…Â¡Ã¢â‚¬â€ÃƒÂ¯Ã‚Â¸Ã‚Â Research Lab ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢
+            Research Lab
           </Link>
         </div>
       </header>
@@ -88,7 +88,7 @@ export default async function Home() {
           label="Correct Predictions"
           value={`${winRate.toFixed(1)}%`}
           title="Win Rate"
-          subtext={`${configWins}W / ${configLosses}L ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â ${pending} pending`}
+          subtext={`${configWins}W / ${configLosses}L - ${pending} pending`}
           tooltip="How often the signals we tracked turned out to be right. Based on settled (completed) bets only."
         >
           <CircularProgress value={winRate} />
@@ -99,7 +99,7 @@ export default async function Home() {
           value={pnlDisplay}
           title="Total Profit"
           subtext={`If you bet $${config.minTradeUSD} on each signal`}
-          tooltip={`This is how much you would have made if you placed a $${config.minTradeUSD} bet on every signal we detected. Not real money ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â just tracking the signals.`}
+          tooltip={`This is how much you would have made if you placed a $${config.minTradeUSD} bet on every signal we detected. Not real money - just tracking the signals.`}
           color={pnlColor}
         />
 
@@ -108,7 +108,7 @@ export default async function Home() {
           value={brierDisplay}
           title="Signal Quality"
           subtext="Lower is better (0 = perfect, 0.25 = random)"
-          tooltip="Measures how accurate the probability was, not just win/lose. A lower score means our signals were well-calibrated ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â when they said 90% likely, it actually happened ~90% of the time."
+          tooltip="Measures how accurate the probability was, not just win/lose. A lower score means our signals were well-calibrated - when they said 90% likely, it actually happened ~90% of the time."
           color={brierColor}
         >
           <div className="flex flex-col items-end gap-1">
@@ -180,10 +180,10 @@ export default async function Home() {
         <p className="mb-4 text-sm text-text-muted">Instead of one rule deciding whether to bet, 5 different strategies vote. We only bet when 3 or more agree. Like getting a second, third, fourth, and fifth opinion before deciding.</p>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-5 mb-3">
           {[
-            { name: 'Whale Chaser', rule: 'Only cares about massive $1000+ trades', icon: 'ÃƒÂ°Ã…Â¸Ã‚ÂÃ¢â‚¬Â¹' },
+            { name: 'Whale Chaser', rule: 'Only cares about massive $1000+ trades', num: '1' },
             { name: 'Momentum Rider', rule: 'Follows fast-moving markets', num: '2' },
             { name: 'Contrarian', rule: 'Looks for overlooked mid-range signals', num: '3' },
-            { name: 'Conservative', rule: 'Only 85%+ near-certain bets', icon: 'ÃƒÂ°Ã…Â¸Ã¢â‚¬ÂºÃ‚Â¡ÃƒÂ¯Ã‚Â¸Ã‚Â' },
+            { name: 'Conservative', rule: 'Only 85%+ near-certain bets', num: '4' },
             { name: 'Value Hunter', rule: 'Best overall config from nightly research', num: '5' },
           ].map((agent, i) => (
             <div key={i} className="rounded-xl border border-border bg-surface p-4 text-center">
@@ -254,7 +254,7 @@ export default async function Home() {
             { num: '3', title: 'Learn every night', desc: 'The research engine runs every night, looks at everything that happened, and adjusts the strategy to improve accuracy. Every morning the system is slightly smarter.' },
           ].map((step, i) => (
             <div key={i} className="rounded-xl border border-border bg-surface p-6 md:p-8">
-              <div className="w-8 h-8 rounded-full bg-accent/20 text-accent text-sm font-bold flex items-center justify-center mb-3">{String(i + 1)}</div>
+              <div className="w-8 h-8 rounded-full bg-accent/20 text-accent text-sm font-bold flex items-center justify-center mb-3">{step.num}</div>
               <h3 className="mb-2 text-lg font-semibold text-text">{step.title}</h3>
               <p className="text-sm leading-relaxed text-text-muted">{step.desc}</p>
             </div>
