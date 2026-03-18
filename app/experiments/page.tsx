@@ -1,5 +1,7 @@
 import experimentsData from '../../public/data/experiments.json'
+import hypothesisData from '../../public/data/hypothesis-history.json'
 import { BrierOverTime, ResultDistribution, WinRatevsBrier, ImpliedRangeMap, TradeUSDImpact } from '../../components/ExperimentsCharts'
+import HypothesisChart from '../../components/HypothesisChart'
 import Link from 'next/link'
 
 interface Experiment {
@@ -121,6 +123,13 @@ export default function ExperimentsPage() {
           </div>
         </section>
       )}
+
+      {/* Hypothesis Improvement Chart */}
+      <section className="mb-10">
+        <h2 className="text-xl font-semibold mb-4">Hypothesis Evolution</h2>
+        <p className="text-sm text-muted mb-4">Each wave tests a new hypothesis. The chart shows how PnL improved across experiments.</p>
+        <HypothesisChart data={hypothesisData as typeof hypothesisData} />
+      </section>
 
       {/* Charts grid */}
       <section className="mb-10 grid grid-cols-1 gap-6 lg:grid-cols-2">

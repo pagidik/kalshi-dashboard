@@ -1,0 +1,62 @@
+[
+  {
+    "wave": 1,
+    "date": "2026-03-10",
+    "hypothesis": "BASELINE",
+    "description": "Initial config from manual tuning",
+    "config": {"minTradeUSD": 100, "impliedRange": [0.5, 1], "ewmaDecay": 0.2},
+    "pnl": 46.50,
+    "winRate": 0.725,
+    "brier": 0.14,
+    "samples": 372,
+    "improved": true
+  },
+  {
+    "wave": 2,
+    "date": "2026-03-11",
+    "hypothesis": "WILDCARD-A",
+    "description": "Narrow range [0.60-1.0] + $500 min + ewmaDecay 0.20",
+    "config": {"minTradeUSD": 500, "impliedRange": [0.6, 1], "ewmaDecay": 0.2},
+    "pnl": 245,
+    "winRate": 0.728,
+    "brier": 0.135,
+    "samples": 372,
+    "improved": true
+  },
+  {
+    "wave": 3,
+    "date": "2026-03-12",
+    "hypothesis": "CAP-TOP-92",
+    "description": "Cap top at 92% instead of 100% to avoid low-value bets",
+    "config": {"minTradeUSD": 500, "impliedRange": [0.65, 0.92], "ewmaDecay": 0.15},
+    "pnl": 462,
+    "winRate": 0.73,
+    "brier": 0.157,
+    "samples": 91,
+    "improved": true
+  },
+  {
+    "wave": 4,
+    "date": "2026-03-13",
+    "hypothesis": "CAP-TOP-95",
+    "description": "Cap at 95% - balance between EV and sample size",
+    "config": {"minTradeUSD": 500, "impliedRange": [0.65, 0.95], "ewmaDecay": 0.15},
+    "pnl": 519,
+    "winRate": 0.732,
+    "brier": 0.142,
+    "samples": 101,
+    "improved": true
+  },
+  {
+    "wave": 5,
+    "date": "2026-03-17",
+    "hypothesis": "CAP-TOP-97",
+    "description": "Expand to 97% - more samples while still filtering ultra-low EV",
+    "config": {"minTradeUSD": 500, "impliedRange": [0.65, 0.97], "ewmaDecay": 0.15},
+    "pnl": 555,
+    "winRate": 0.74,
+    "brier": 0.129,
+    "samples": 111,
+    "improved": true
+  }
+]
