@@ -79,6 +79,9 @@ export default async function Home() {
           <Link href="/research" className="text-xs px-3 py-1 rounded-full border transition-colors hover:opacity-80" style={{ borderColor: 'rgba(0,212,255,0.3)', color: '#00d4ff', background: 'rgba(0,212,255,0.06)' }}>
             Research Lab
           </Link>
+          <Link href="/stocks" className="text-xs px-3 py-1 rounded-full border transition-colors hover:opacity-80" style={{ borderColor: 'rgba(255,193,7,0.3)', color: '#ffc107', background: 'rgba(255,193,7,0.06)' }}>
+            Stock Analyzer
+          </Link>
         </div>
       </header>
 
