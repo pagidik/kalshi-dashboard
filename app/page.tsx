@@ -27,7 +27,7 @@ export default async function Home() {
   const kellyBet = rawConfig.kellyBet ?? (rawConfig.categoryStats as Record<string, unknown> | undefined)?.sports ?? config.minTradeUSD
   const kellyDisplay = typeof kellyBet === 'number' ? kellyBet : (kellyBet as Record<string, unknown>)?.kellyBet ?? config.minTradeUSD
 
-  // Compute stats — prefer authoritative values from config (363 trades) over raw prediction rows
+  // Compute stats ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â prefer authoritative values from config (363 trades) over raw prediction rows
   const settled = predictions.filter(p => p.status === 'won' || p.status === 'lost')
   const wins = settled.filter(p => p.status === 'won').length
   const losses = settled.filter(p => p.status === 'lost').length
@@ -42,15 +42,16 @@ export default async function Home() {
   const configLosses = settledCount - configWins
 
   // P&L: use config notes value if parseable, else sum from predictions
+  // Parse P&L from notes -- supports both positive (+$39.50) and negative (-$457.50)
   const notesMatch = typeof rawConfigData.notes === 'string'
-    ? rawConfigData.notes.match(/Total P&L: \$([\d.]+)/)
+    ? rawConfigData.notes.match(/Total P&L: \$(-?[\d.]+)/)
     : null
   const totalPnl = notesMatch ? parseFloat(notesMatch[1]) : settled.reduce((sum, p) => sum + (p.pnl ?? 0), 0)
   const pnlDisplay = totalPnl >= 0 ? `+$${totalPnl.toFixed(0)}` : `-$${Math.abs(totalPnl).toFixed(0)}`
   const pnlColor = totalPnl >= 0 ? 'var(--green)' : 'var(--red)'
 
   // Brier score: use pre-computed value from config (calculated by learner over all 363 trades)
-  // Do NOT recompute from predictions.json — the learner uses a more accurate formula
+  // Do NOT recompute from predictions.json ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â the learner uses a more accurate formula
   const brierScore: number = typeof rawConfigData.overallBrierScore === 'number'
     ? rawConfigData.overallBrierScore
     : (rawConfigData.categoryStats as Record<string, { brierScore?: number }> | undefined)?.sports?.brierScore ?? 0
@@ -71,12 +72,12 @@ export default async function Home() {
         </div>
         <p className="text-base text-text-muted">Tracking big money signals from Kalshi prediction markets</p>
         <div className="flex items-center gap-4 mt-2">
-          <p className="text-xs text-text-muted">Last updated: {new Date().toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true })}</p>
+          <p className="text-xs text-text-muted">Last updated: {new Date().toLocaleString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true })} ET</p>
           <Link href="/experiments" className="text-xs px-3 py-1 rounded-full border transition-colors hover:opacity-80" style={{ borderColor: 'rgba(0,255,212,0.3)', color: 'var(--accent)', background: 'rgba(0,255,212,0.06)' }}>
-            🧪 Autoresearch Lab →
+            ÃƒÂ°Ã…Â¸Ã‚Â§Ã‚Âª Autoresearch Lab ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢
           </Link>
           <Link href="/research" className="text-xs px-3 py-1 rounded-full border transition-colors hover:opacity-80" style={{ borderColor: 'rgba(0,212,255,0.3)', color: '#00d4ff', background: 'rgba(0,212,255,0.06)' }}>
-            ⚗️ Research Lab →
+            ÃƒÂ¢Ã…Â¡Ã¢â‚¬â€ÃƒÂ¯Ã‚Â¸Ã‚Â Research Lab ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢
           </Link>
         </div>
       </header>
@@ -87,7 +88,7 @@ export default async function Home() {
           label="Correct Predictions"
           value={`${winRate.toFixed(1)}%`}
           title="Win Rate"
-          subtext={`${configWins}W / ${configLosses}L — ${pending} pending`}
+          subtext={`${configWins}W / ${configLosses}L ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â ${pending} pending`}
           tooltip="How often the signals we tracked turned out to be right. Based on settled (completed) bets only."
         >
           <CircularProgress value={winRate} />
@@ -98,7 +99,7 @@ export default async function Home() {
           value={pnlDisplay}
           title="Total Profit"
           subtext={`If you bet $${config.minTradeUSD} on each signal`}
-          tooltip={`This is how much you would have made if you placed a $${config.minTradeUSD} bet on every signal we detected. Not real money — just tracking the signals.`}
+          tooltip={`This is how much you would have made if you placed a $${config.minTradeUSD} bet on every signal we detected. Not real money ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â just tracking the signals.`}
           color={pnlColor}
         />
 
@@ -107,7 +108,7 @@ export default async function Home() {
           value={brierDisplay}
           title="Signal Quality"
           subtext="Lower is better (0 = perfect, 0.25 = random)"
-          tooltip="Measures how accurate the probability was, not just win/lose. A lower score means our signals were well-calibrated — when they said 90% likely, it actually happened ~90% of the time."
+          tooltip="Measures how accurate the probability was, not just win/lose. A lower score means our signals were well-calibrated ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â when they said 90% likely, it actually happened ~90% of the time."
           color={brierColor}
         >
           <div className="flex flex-col items-end gap-1">
@@ -150,17 +151,110 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* Pattern Memory */}
       <section className="mb-10">
-        <h2 className="mb-4 text-xl font-semibold">How It Works</h2>
+        <h2 className="mb-1 text-xl font-semibold">Pattern Memory</h2>
+        <p className="mb-4 text-sm text-text-muted">The system remembers which types of signals win almost every time. These are the golden patterns found across {settledCount} real bets.</p>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           {[
-            { icon: '🔍', title: 'Watch for big trades', desc: `We watch Kalshi markets for unusually large trades (over $${config.minTradeUSD})` },
-            { icon: '📊', title: 'Log the signal', desc: 'When big money moves, we log it as a signal' },
-            { icon: '📈', title: 'Track accuracy', desc: 'We track if the signal was right, and learn over time' },
+            { label: 'Sports + 90-100% certain + no dip', winRate: 100, bets: 92, pnl: 434, explain: 'When big money bets on a sports outcome that already looks 90%+ certain, it wins every time. Best pattern we have.' },
+            { label: 'Sports + 70-80% likely + big price drop', winRate: 100, bets: 17, pnl: 450, explain: 'When odds dip sharply but big money keeps buying, smart players saw something others missed. Perfect record.' },
+            { label: 'Sports + 70-80% likely + medium dip', winRate: 100, bets: 11, pnl: 294, explain: 'Same idea, slightly smaller dip. Still perfect. The dip is the tell.' },
+          ].map((p, i) => (
+            <div key={i} className="rounded-xl border border-border bg-surface p-5">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-bold text-accent bg-accent/10 px-2 py-0.5 rounded">{p.winRate}% win rate</span>
+                <span className="text-xs text-text-muted">{p.bets} bets</span>
+              </div>
+              <p className="text-sm font-medium text-text mb-2">{p.label}</p>
+              <p className="text-xs text-text-muted leading-relaxed mb-2">{p.explain}</p>
+              <p className="text-xs font-semibold" style={{ color: 'var(--green)' }}>+${p.pnl} total on this pattern</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Swarm Voting */}
+      <section className="mb-10">
+        <h2 className="mb-1 text-xl font-semibold">The 5-Agent Voting System</h2>
+        <p className="mb-4 text-sm text-text-muted">Instead of one rule deciding whether to bet, 5 different strategies vote. We only bet when 3 or more agree. Like getting a second, third, fourth, and fifth opinion before deciding.</p>
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-5 mb-3">
+          {[
+            { name: 'Whale Chaser', rule: 'Only cares about massive $1000+ trades', icon: 'ÃƒÂ°Ã…Â¸Ã‚ÂÃ¢â‚¬Â¹' },
+            { name: 'Momentum Rider', rule: 'Follows fast-moving markets', num: '2' },
+            { name: 'Contrarian', rule: 'Looks for overlooked mid-range signals', num: '3' },
+            { name: 'Conservative', rule: 'Only 85%+ near-certain bets', icon: 'ÃƒÂ°Ã…Â¸Ã¢â‚¬ÂºÃ‚Â¡ÃƒÂ¯Ã‚Â¸Ã‚Â' },
+            { name: 'Value Hunter', rule: 'Best overall config from nightly research', num: '5' },
+          ].map((agent, i) => (
+            <div key={i} className="rounded-xl border border-border bg-surface p-4 text-center">
+              <div className="w-8 h-8 rounded-full bg-accent/20 text-accent text-sm font-bold flex items-center justify-center mx-auto mb-2">{agent.num}</div>
+              <p className="text-sm font-semibold text-text mb-1">{agent.name}</p>
+              <p className="text-xs text-text-muted leading-relaxed">{agent.rule}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-text-muted bg-surface border border-border rounded-lg px-4 py-2">
+          A signal only gets logged if 3 out of 5 agents vote YES. This filters out a lot of noise compared to using a single rule.
+        </p>
+      </section>
+
+      {/* Futures Research */}
+      <section className="mb-10">
+        <h2 className="mb-1 text-xl font-semibold">Stock Market Research Lab</h2>
+        <p className="mb-4 text-sm text-text-muted">A separate system runs every night and tests hundreds of stock trading strategies. It keeps the best ones and ignores the rest. Gets smarter every night.</p>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 mb-4">
+          <div className="rounded-xl border border-border bg-surface p-5">
+            <p className="text-xs text-text-muted mb-1">Best strategy found so far</p>
+            <p className="text-xl font-bold text-text mb-1">Gold Momentum</p>
+            <p className="text-sm text-text-muted mb-4">Buy gold when it has been rising for 65 days in a row. Sell when it starts falling. Dead simple. Historically very effective.</p>
+            <div className="grid grid-cols-3 gap-3">
+              {[
+                { label: 'Risk score', value: '1.90', sub: 'Higher is better' },
+                { label: '2-year return', value: '+108%', sub: 'Backtested' },
+                { label: 'Win rate', value: '51%', sub: 'Of trades' },
+              ].map((stat, i) => (
+                <div key={i}>
+                  <p className="text-xs text-text-muted">{stat.label}</p>
+                  <p className="text-lg font-bold" style={{ color: i === 0 || i === 1 ? 'var(--green)' : 'var(--text)' }}>{stat.value}</p>
+                  <p className="text-xs text-text-muted">{stat.sub}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="rounded-xl border border-border bg-surface p-5">
+            <p className="text-xs text-text-muted mb-3">How the nightly research works</p>
+            <div className="space-y-3">
+              {[
+                '383 strategies tested across gold, S&P 500, Nasdaq, oil, bonds, Bitcoin',
+                'Runs 10 waves. Each wave learns from the previous one and focuses on what worked',
+                'Keeps the best strategy, tries to beat it again the next night',
+                'Currently testing Bitcoin paper trades (fake money) on Alpaca to check if it works in real markets',
+              ].map((item, i) => (
+                <div key={i} className="flex gap-3">
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/20 text-accent text-xs flex items-center justify-center font-bold">{i + 1}</span>
+                  <p className="text-xs text-text-muted leading-relaxed">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-4">
+          <p className="text-xs font-semibold text-amber-400 mb-1">Important: this is backtesting, not live results</p>
+          <p className="text-xs text-text-muted">These returns come from testing the strategy on old historical data. That is not the same as live trading. The Bitcoin paper trading on Alpaca is real-time but uses fake money to prove the strategy works before any real money is involved.</p>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="mb-10">
+        <h2 className="mb-4 text-xl font-semibold">How the whole system works</h2>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {[
+            { num: '1', title: 'Watch for big trades', desc: `We watch Kalshi prediction markets for large trades over $${config.minTradeUSD}. Big trades usually mean someone is confident about something.` },
+            { num: '2', title: '5 agents vote', desc: 'When a big trade is spotted, 5 different strategies each vote yes or no. If 3 or more say yes AND the pattern memory says it is a good signal, it gets logged.' },
+            { num: '3', title: 'Learn every night', desc: 'The research engine runs every night, looks at everything that happened, and adjusts the strategy to improve accuracy. Every morning the system is slightly smarter.' },
           ].map((step, i) => (
             <div key={i} className="rounded-xl border border-border bg-surface p-6 md:p-8">
-              <div className="mb-3 text-3xl">{step.icon}</div>
+              <div className="w-8 h-8 rounded-full bg-accent/20 text-accent text-sm font-bold flex items-center justify-center mb-3">{String(i + 1)}</div>
               <h3 className="mb-2 text-lg font-semibold text-text">{step.title}</h3>
               <p className="text-sm leading-relaxed text-text-muted">{step.desc}</p>
             </div>
