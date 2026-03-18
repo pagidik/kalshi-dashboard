@@ -8735,5 +8735,25 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "de49f418-088c-4e94-bb54-8898b67f1209",
+    "firedAt": "2026-03-18T16:59:26.323Z",
+    "market": "Miami (OH) at SMU Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR18MOHSMU-SMU",
+    "side": "YES",
+    "price": 0.73,
+    "impliedPct": 73,
+    "contractsObserved": 1635,
+    "dollarObserved": 1194,
+    "anchorPrice": 0.72,
+    "dipFromOpen": -0.01,
+    "hoursToClose": 336.01,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
