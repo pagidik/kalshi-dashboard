@@ -9,10 +9,13 @@ interface SMCSignal {
   stop: number
   target: number
   rr: number
-  setup: string
+  setup?: string
+  strategy?: string
   timestamp: string
   near_fvg?: boolean
   near_ob?: boolean
+  strength?: number
+  rsi?: number
 }
 
 interface SMCState {
@@ -190,12 +193,14 @@ export default async function StocksPage() {
                   </div>
                 </div>
                 <div className="flex items-center justify-between text-xs">
-                  <span className="text-text-muted">{signal.setup.replace(/_/g, ' ')}</span>
+                  <span className="text-text-muted">{(signal.setup || signal.strategy || 'unknown').replace(/_/g, ' ')}</span>
                   <span className="font-bold text-accent">{signal.rr.toFixed(1)}:1 R:R</span>
                 </div>
                 <div className="flex gap-2 mt-2">
                   {signal.near_fvg && <span className="text-xs px-2 py-0.5 rounded bg-accent/10 text-accent">FVG</span>}
                   {signal.near_ob && <span className="text-xs px-2 py-0.5 rounded bg-accent/10 text-accent">OB</span>}
+                  {signal.rsi && <span className="text-xs px-2 py-0.5 rounded bg-surface2 text-text-muted">RSI: {signal.rsi.toFixed(0)}</span>}
+                  {signal.strength && <span className="text-xs px-2 py-0.5 rounded bg-accent/10 text-accent">{(signal.strength * 100).toFixed(0)}% strength</span>}
                 </div>
               </div>
             ))}
