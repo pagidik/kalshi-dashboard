@@ -48,12 +48,23 @@ interface SMCState {
 
 async function getSMCState(): Promise<SMCState | null> {
   try {
+    // In production, read from public/data. Locally, try the scripts folder first.
+    if (process.env.NODE_ENV === 'production') {
+      const stateData = await import('../../public/data/smc-state.json')
+      return stateData.default as unknown as SMCState
+    }
     const fs = await import('fs/promises')
     const path = 'C:\\Users\\kisho\\clawd\\scripts\\alpaca-smc-state.json'
     const data = await fs.readFile(path, 'utf-8')
     return JSON.parse(data)
   } catch {
-    return null
+    // Fallback to bundled data
+    try {
+      const stateData = await import('../../public/data/smc-state.json')
+      return stateData.default as unknown as SMCState
+    } catch {
+      return null
+    }
   }
 }
 
