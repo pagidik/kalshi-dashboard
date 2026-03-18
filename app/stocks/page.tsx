@@ -112,7 +112,7 @@ export default async function StocksPage() {
             Paper Trading
           </span>
         </div>
-        <p className="text-base text-text-muted">SMC/ICT swing trading signals on Alpaca paper account</p>
+        <p className="text-base text-text-muted">Crypto swing trading on Alpaca paper account</p>
         <p className="text-xs text-text-muted mt-1">
           Last scan: {smcState?.last_scan ? new Date(smcState.last_scan).toLocaleString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) + ' ET' : 'Never'}
         </p>
