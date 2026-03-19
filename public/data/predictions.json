@@ -9430,10 +9430,10 @@
     "dipFromOpen": 0,
     "hoursToClose": 334.11,
     "hypotheticalBet": 100,
-    "status": "pending",
-    "result": null,
-    "pnl": null,
-    "settledAt": null,
+    "status": "won",
+    "result": "yes",
+    "pnl": 12,
+    "settledAt": "2026-03-19T06:00:06.862Z",
     "category": "sports"
   },
   {
@@ -9450,10 +9450,10 @@
     "dipFromOpen": -0.06,
     "hoursToClose": 333.84,
     "hypotheticalBet": 100,
-    "status": "pending",
-    "result": null,
-    "pnl": null,
-    "settledAt": null,
+    "status": "won",
+    "result": "yes",
+    "pnl": 6,
+    "settledAt": "2026-03-19T06:00:06.917Z",
     "category": "sports"
   },
   {
@@ -9470,10 +9470,10 @@
     "dipFromOpen": 0,
     "hoursToClose": 333.74,
     "hypotheticalBet": 100,
-    "status": "pending",
-    "result": null,
-    "pnl": null,
-    "settledAt": null,
+    "status": "won",
+    "result": "no",
+    "pnl": 25,
+    "settledAt": "2026-03-19T06:00:06.968Z",
     "category": "sports"
   },
   {
