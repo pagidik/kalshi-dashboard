@@ -9455,5 +9455,25 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "94319e9f-be7e-42e2-a270-f01871e863c7",
+    "firedAt": "2026-03-19T05:15:27.841Z",
+    "market": "Saint Joseph's at Colorado St. Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR18JOESCSU-CSU",
+    "side": "NO",
+    "price": 0.75,
+    "impliedPct": 75,
+    "contractsObserved": 701,
+    "dollarObserved": 526,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 333.74,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
