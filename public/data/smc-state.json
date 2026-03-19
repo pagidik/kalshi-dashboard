@@ -4,32 +4,47 @@
     {
       "symbol": "DOGE/USD",
       "direction": "LONG",
-      "entry": 0.09446415,
-      "stop": 0.08974094249999999,
-      "target": 0.10391056500000001,
+      "entry": 0.0951325,
+      "stop": 0.090375875,
+      "target": 0.10464575000000001,
       "rr": 2.0,
       "strategy": "macd_bullish",
       "strength": 0.6,
-      "rsi": 43.696037084115495,
-      "macd": -0.0003536859964145267,
+      "rsi": 52.56551554195576,
+      "macd": -0.0003612668739768343,
       "trend": "bearish",
-      "volatility_pct": 6.924208548957461,
-      "timestamp": "2026-03-18T20:21:42.428082+00:00"
+      "volatility_pct": 6.405751864880186,
+      "timestamp": "2026-03-19T00:02:06.382383+00:00"
     },
     {
       "symbol": "AVAX/USD",
       "direction": "LONG",
-      "entry": 9.59905,
-      "stop": 9.1190975,
-      "target": 10.558955000000001,
+      "entry": 9.692854158,
+      "stop": 9.208211450099999,
+      "target": 10.6621395738,
       "rr": 2.0,
       "strategy": "trend_follow",
       "strength": 0.5,
-      "rsi": 51.51188718158054,
-      "macd": 0.14674659411454982,
+      "rsi": 55.163017272765686,
+      "macd": 0.1404127995139799,
       "trend": "bullish",
-      "volatility_pct": 5.78174462167759,
-      "timestamp": "2026-03-18T20:21:42.943709+00:00"
+      "volatility_pct": 5.4935253774019035,
+      "timestamp": "2026-03-19T00:02:06.881443+00:00"
+    },
+    {
+      "symbol": "LINK/USD",
+      "direction": "LONG",
+      "entry": 9.21825,
+      "stop": 8.757337499999998,
+      "target": 10.140075,
+      "rr": 2.0,
+      "strategy": "trend_follow",
+      "strength": 0.5,
+      "rsi": 50.242927418288836,
+      "macd": 0.07806870403917898,
+      "trend": "bullish",
+      "volatility_pct": 5.717421652699807,
+      "timestamp": "2026-03-19T00:02:07.379662+00:00"
     }
   ],
   "trades": [
@@ -56,12 +71,24 @@
       "order_id": "69469e2a-1e21-458b-a377-28e06cf87317",
       "timestamp": "2026-03-18T20:21:44.457596+00:00",
       "status": "open"
+    },
+    {
+      "symbol": "LINK/USD",
+      "direction": "LONG",
+      "entry": 9.21825,
+      "stop": 8.757337499999998,
+      "target": 10.140075,
+      "qty": 1084.68,
+      "strategy": "trend_follow",
+      "order_id": "5c096dac-e2f0-4f53-be1d-23ff0e5e3b41",
+      "timestamp": "2026-03-19T00:02:07.888775+00:00",
+      "status": "open"
     }
   ],
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": 0
+    "total_pnl": 38.90298
   },
-  "last_scan": "2026-03-18T20:21:43.428160+00:00"
+  "last_scan": "2026-03-19T00:02:07.379696+00:00"
 }
