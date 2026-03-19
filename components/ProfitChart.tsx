@@ -1,136 +1,299 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler,
+  ChartOptions,
+  TooltipItem,
+} from 'chart.js'
+import { Line } from 'react-chartjs-2'
 import { Prediction } from '../lib/predictions'
 
-interface TooltipData {
+// Register base Chart.js components
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+)
+
+interface ChartDataPoint {
   x: number
   y: number
   market: string
   pnl: number
   status: string
+  impliedPct: number
+  side: string
+  settledAt: string
+  cumPnl: number
+  dollarObserved: number
 }
 
 export default function ProfitChart({ predictions }: { predictions: Prediction[] }) {
-  const [tooltipData, setTooltipData] = useState<TooltipData | null>(null)
-  const [pathLength, setPathLength] = useState(0)
-  const [mounted, setMounted] = useState(false)
-  const pathRef = useRef<SVGPathElement>(null)
+  const chartRef = useRef<ChartJS<'line'>>(null)
+  const [isZoomed, setIsZoomed] = useState(false)
+  const [zoomReady, setZoomReady] = useState(false)
+
+  // Register zoom plugin only on client
+  useEffect(() => {
+    import('chartjs-plugin-zoom').then((zoomPlugin) => {
+      ChartJS.register(zoomPlugin.default)
+      setZoomReady(true)
+    })
+  }, [])
 
   const settled = predictions
     .filter(p => p.status === 'won' || p.status === 'lost')
     .sort((a, b) => new Date(a.firedAt).getTime() - new Date(b.firedAt).getTime())
 
-  // Build cumulative P&L
-  const points: { x: number; y: number; market: string; pnl: number; status: string; cumPnl: number }[] = []
+  // Build cumulative P&L with full data
+  const points: ChartDataPoint[] = []
   let cumPnl = 0
   settled.forEach((p, i) => {
     cumPnl += p.pnl ?? 0
-    points.push({ x: i, y: cumPnl, market: p.market, pnl: p.pnl ?? 0, status: p.status, cumPnl })
+    points.push({
+      x: i,
+      y: cumPnl,
+      market: p.market,
+      pnl: p.pnl ?? 0,
+      status: p.status,
+      impliedPct: p.impliedPct,
+      side: p.side,
+      settledAt: p.settledAt || p.firedAt,
+      cumPnl,
+      dollarObserved: p.dollarObserved
+    })
   })
 
-  const W = 800
-  const H = 200
-  const padX = 40
-  const padY = 30
-  const chartW = W - padX * 2
-  const chartH = H - padY * 2
+  const labels = points.map((_, i) => `#${i + 1}`)
 
-  const minY = Math.min(0, ...points.map(p => p.y))
-  const maxY = Math.max(0, ...points.map(p => p.y))
-  const rangeY = maxY - minY || 1
+  const chartData = {
+    labels,
+    datasets: [
+      {
+        label: 'Cumulative P&L',
+        data: points.map(p => p.y),
+        borderColor: '#00ffd4',
+        backgroundColor: (context: { chart: ChartJS }) => {
+          const chart = context.chart
+          const { ctx, chartArea } = chart
+          if (!chartArea) return 'rgba(0, 255, 212, 0.1)'
+          const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top)
+          gradient.addColorStop(0, 'rgba(0, 255, 212, 0)')
+          gradient.addColorStop(1, 'rgba(0, 255, 212, 0.3)')
+          return gradient
+        },
+        borderWidth: 2.5,
+        pointRadius: 4,
+        pointHoverRadius: 8,
+        pointBackgroundColor: points.map(p => p.status === 'won' ? '#06d6a0' : '#ef476f'),
+        pointBorderColor: '#0a0f1a',
+        pointBorderWidth: 2,
+        fill: true,
+        tension: 0.2,
+      },
+    ],
+  }
 
-  const toSvgX = (i: number) => padX + (i / Math.max(points.length - 1, 1)) * chartW
-  const toSvgY = (v: number) => padY + chartH - ((v - minY) / rangeY) * chartH
+  const options: ChartOptions<'line'> = {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: {
+      mode: 'index',
+      intersect: false,
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        enabled: true,
+        backgroundColor: '#1a1f2e',
+        titleColor: '#ffffff',
+        bodyColor: '#a0a0a0',
+        borderColor: '#00ffd4',
+        borderWidth: 1,
+        padding: 16,
+        displayColors: false,
+        titleFont: { size: 13, weight: 'bold' },
+        bodyFont: { size: 12 },
+        callbacks: {
+          title: (items: TooltipItem<'line'>[]) => {
+            const idx = items[0].dataIndex
+            const point = points[idx]
+            return point.market
+          },
+          afterTitle: (items: TooltipItem<'line'>[]) => {
+            const idx = items[0].dataIndex
+            const point = points[idx]
+            return `Bet #${idx + 1}`
+          },
+          label: (item: TooltipItem<'line'>) => {
+            const point = points[item.dataIndex]
+            return [
+              ``,
+              `Side: ${point.side}`,
+              `Implied: ${point.impliedPct}%`,
+              `Trade Size: $${point.dollarObserved.toLocaleString()}`,
+              `P&L: ${point.pnl >= 0 ? '+' : ''}$${point.pnl.toFixed(2)}`,
+              `Cumulative: ${point.cumPnl >= 0 ? '+' : ''}$${point.cumPnl.toFixed(2)}`,
+              `Result: ${point.status.toUpperCase()}`,
+              `Settled: ${new Date(point.settledAt).toLocaleDateString()}`,
+            ]
+          },
+        },
+      },
+      zoom: {
+        pan: {
+          enabled: true,
+          mode: 'x',
+        },
+        zoom: {
+          wheel: {
+            enabled: true,
+          },
+          pinch: {
+            enabled: true,
+          },
+          drag: {
+            enabled: true,
+            backgroundColor: 'rgba(0, 255, 212, 0.1)',
+            borderColor: 'rgba(0, 255, 212, 0.5)',
+            borderWidth: 1,
+          },
+          mode: 'x',
+          onZoomComplete: () => setIsZoomed(true),
+        },
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          color: 'rgba(255, 255, 255, 0.05)',
+        },
+        ticks: {
+          color: 'rgba(255, 255, 255, 0.5)',
+          maxTicksLimit: 15,
+          font: { size: 10 },
+        },
+      },
+      y: {
+        grid: {
+          color: 'rgba(255, 255, 255, 0.05)',
+        },
+        ticks: {
+          color: 'rgba(255, 255, 255, 0.5)',
+          callback: (value) => `$${value}`,
+          font: { size: 11 },
+        },
+      },
+    },
+    onHover: (event, elements, chart) => {
+      if (elements.length > 0) {
+        chart.canvas.style.cursor = 'pointer'
+      } else {
+        chart.canvas.style.cursor = 'crosshair'
+      }
+    },
+  }
 
-  const zeroY = toSvgY(0)
-
-  const pathD = points.map((p, i) => {
-    const x = toSvgX(i)
-    const y = toSvgY(p.y)
-    return `${i === 0 ? 'M' : 'L'} ${x} ${y}`
-  }).join(' ')
-
-  const areaD = pathD +
-    ` L ${toSvgX(points.length - 1)} ${zeroY} L ${toSvgX(0)} ${zeroY} Z`
-
-  useEffect(() => {
-    if (pathRef.current) {
-      setPathLength(pathRef.current.getTotalLength())
+  const resetZoom = () => {
+    if (chartRef.current) {
+      chartRef.current.resetZoom()
+      setIsZoomed(false)
     }
-    const t = setTimeout(() => setMounted(true), 50)
-    return () => clearTimeout(t)
-  }, [])
+  }
+
+  // Stats
+  const totalPnl = points.length > 0 ? points[points.length - 1].cumPnl : 0
+  const wins = points.filter(p => p.status === 'won').length
+  const losses = points.filter(p => p.status === 'lost').length
+  const winRate = points.length > 0 ? ((wins / points.length) * 100).toFixed(1) : '0'
+  const maxDrawdown = Math.min(0, ...points.map(p => p.cumPnl))
+  const maxProfit = Math.max(0, ...points.map(p => p.cumPnl))
 
   return (
     <div className="rounded-xl border border-border bg-surface p-6 md:p-8">
-      <h2 className="text-xl font-semibold text-text">Profit Over Time</h2>
-      <p className="mb-4 text-sm text-text-muted">Each dot is a completed bet</p>
-      <div className="relative w-full overflow-x-auto">
-        <svg viewBox={`0 0 ${W} ${H}`} className="w-full" style={{ minWidth: 500 }}>
-          {/* Zero line */}
-          <line
-            x1={padX} y1={zeroY} x2={W - padX} y2={zeroY}
-            stroke="var(--text-muted)" strokeWidth={1} strokeDasharray="6 4" opacity={0.3}
-          />
-          {/* Y-axis labels */}
-          <text x={padX - 8} y={toSvgY(maxY) + 4} textAnchor="end" fill="var(--text-muted)" fontSize={11}>+${maxY}</text>
-          <text x={padX - 8} y={zeroY + 4} textAnchor="end" fill="var(--text-muted)" fontSize={11}>$0</text>
-          {minY < 0 && (
-            <text x={padX - 8} y={toSvgY(minY) + 4} textAnchor="end" fill="var(--text-muted)" fontSize={11}>-${Math.abs(minY)}</text>
+      <div className="flex items-center justify-between mb-4">
+        <div>
+          <h2 className="text-xl font-semibold text-text">Profit Over Time</h2>
+          <p className="text-sm text-text-muted">Scroll to zoom, drag to pan, hover for details</p>
+        </div>
+        <div className="flex items-center gap-4">
+          {isZoomed && (
+            <button
+              onClick={resetZoom}
+              className="px-3 py-1 text-xs rounded-full border transition-colors hover:opacity-80"
+              style={{ borderColor: 'rgba(0,255,212,0.3)', color: 'var(--accent)', background: 'rgba(0,255,212,0.06)' }}
+            >
+              Reset Zoom
+            </button>
           )}
+        </div>
+      </div>
 
-          {/* Area fill */}
-          <path d={areaD} fill="var(--accent)" opacity={0.08} />
+      {/* Stats bar */}
+      <div className="grid grid-cols-5 gap-4 mb-6 p-4 rounded-lg" style={{ background: 'rgba(0, 255, 212, 0.03)', border: '1px solid rgba(0, 255, 212, 0.1)' }}>
+        <div className="text-center">
+          <div className="text-xs text-muted mb-1">Total P&L</div>
+          <div className="text-lg font-bold" style={{ color: totalPnl >= 0 ? 'var(--green)' : 'var(--red)' }}>
+            {totalPnl >= 0 ? '+' : ''}${totalPnl.toFixed(0)}
+          </div>
+        </div>
+        <div className="text-center">
+          <div className="text-xs text-muted mb-1">Win Rate</div>
+          <div className="text-lg font-bold text-accent">{winRate}%</div>
+        </div>
+        <div className="text-center">
+          <div className="text-xs text-muted mb-1">Record</div>
+          <div className="text-lg font-bold">
+            <span style={{ color: 'var(--green)' }}>{wins}W</span>
+            <span className="text-muted mx-1">/</span>
+            <span style={{ color: 'var(--red)' }}>{losses}L</span>
+          </div>
+        </div>
+        <div className="text-center">
+          <div className="text-xs text-muted mb-1">Max Profit</div>
+          <div className="text-lg font-bold" style={{ color: 'var(--green)' }}>+${maxProfit.toFixed(0)}</div>
+        </div>
+        <div className="text-center">
+          <div className="text-xs text-muted mb-1">Max Drawdown</div>
+          <div className="text-lg font-bold" style={{ color: 'var(--red)' }}>${maxDrawdown.toFixed(0)}</div>
+        </div>
+      </div>
 
-          {/* Line */}
-          <path
-            ref={pathRef}
-            d={pathD}
-            fill="none"
-            stroke="var(--accent)"
-            strokeWidth={2.5}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeDasharray={pathLength || 2000}
-            strokeDashoffset={mounted ? 0 : (pathLength || 2000)}
-            style={{ transition: 'stroke-dashoffset 1.5s ease-out' }}
-          />
+      {/* Chart */}
+      <div style={{ height: '350px', position: 'relative' }}>
+        <Line ref={chartRef} data={chartData} options={options} />
+      </div>
 
-          {/* Data points */}
-          {points.map((p, i) => {
-            const cx = toSvgX(i)
-            const cy = toSvgY(p.y)
-            const color = p.status === 'won' ? 'var(--green)' : 'var(--red)'
-            return (
-              <g key={i}>
-                <circle cx={cx} cy={cy} r={12} fill="transparent"
-                  onMouseEnter={() => setTooltipData({ x: cx, y: cy, market: p.market, pnl: p.pnl, status: p.status })}
-                  onMouseLeave={() => setTooltipData(null)}
-                  style={{ cursor: 'pointer' }}
-                />
-                <circle cx={cx} cy={cy} r={5} fill={color} stroke="var(--bg)" strokeWidth={2} style={{ pointerEvents: 'none' }} />
-              </g>
-            )
-          })}
-
-          {/* Tooltip */}
-          {tooltipData && (
-            <g>
-              <rect
-                x={tooltipData.x - 80} y={tooltipData.y - 50}
-                width={160} height={36} rx={6}
-                fill="var(--surface2)" stroke="var(--border)" strokeWidth={1}
-              />
-              <text x={tooltipData.x} y={tooltipData.y - 36} textAnchor="middle" fill="var(--text)" fontSize={11} fontWeight={600}>
-                {tooltipData.market}
-              </text>
-              <text x={tooltipData.x} y={tooltipData.y - 22} textAnchor="middle" fill={tooltipData.pnl >= 0 ? 'var(--green)' : 'var(--red)'} fontSize={11}>
-                {tooltipData.pnl >= 0 ? '+' : ''}{tooltipData.pnl}¢
-              </text>
-            </g>
-          )}
-        </svg>
+      {/* Legend */}
+      <div className="flex items-center justify-center gap-6 mt-4 text-xs text-muted">
+        <div className="flex items-center gap-2">
+          <div className="w-3 h-3 rounded-full" style={{ background: '#06d6a0' }} />
+          <span>Win</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-3 h-3 rounded-full" style={{ background: '#ef476f' }} />
+          <span>Loss</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-4 h-0.5" style={{ background: '#00ffd4' }} />
+          <span>Cumulative P&L</span>
+        </div>
       </div>
     </div>
   )
