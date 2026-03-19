@@ -42,16 +42,24 @@ interface ChartDataPoint {
   dollarObserved: number
 }
 
-export default function ProfitChart({ predictions }: { predictions: Prediction[] }) {
+interface ProfitChartProps {
+  predictions: Prediction[]
+  configStats?: {
+    wins: number
+    losses: number
+    totalPnl: number
+    winRate: number
+  }
+}
+
+export default function ProfitChart({ predictions, configStats }: ProfitChartProps) {
   const chartRef = useRef<ChartJS<'line'>>(null)
   const [isZoomed, setIsZoomed] = useState(false)
-  const [zoomReady, setZoomReady] = useState(false)
 
   // Register zoom plugin only on client
   useEffect(() => {
     import('chartjs-plugin-zoom').then((zoomPlugin) => {
       ChartJS.register(zoomPlugin.default)
-      setZoomReady(true)
     })
   }, [])
 
@@ -97,8 +105,8 @@ export default function ProfitChart({ predictions }: { predictions: Prediction[]
           return gradient
         },
         borderWidth: 2.5,
-        pointRadius: 4,
-        pointHoverRadius: 8,
+        pointRadius: 5,
+        pointHoverRadius: 10,
         pointBackgroundColor: points.map(p => p.status === 'won' ? '#06d6a0' : '#ef476f'),
         pointBorderColor: '#0a0f1a',
         pointBorderWidth: 2,
@@ -112,8 +120,8 @@ export default function ProfitChart({ predictions }: { predictions: Prediction[]
     responsive: true,
     maintainAspectRatio: false,
     interaction: {
-      mode: 'index',
-      intersect: false,
+      mode: 'nearest',
+      intersect: true, // Only show tooltip when hovering directly on a point
     },
     plugins: {
       legend: {
@@ -138,7 +146,6 @@ export default function ProfitChart({ predictions }: { predictions: Prediction[]
           },
           afterTitle: (items: TooltipItem<'line'>[]) => {
             const idx = items[0].dataIndex
-            const point = points[idx]
             return `Bet #${idx + 1}`
           },
           label: (item: TooltipItem<'line'>) => {
@@ -159,22 +166,18 @@ export default function ProfitChart({ predictions }: { predictions: Prediction[]
       zoom: {
         pan: {
           enabled: true,
-          mode: 'x',
+          mode: 'xy',
+          threshold: 5,
         },
         zoom: {
           wheel: {
             enabled: true,
+            speed: 0.1,
           },
           pinch: {
             enabled: true,
           },
-          drag: {
-            enabled: true,
-            backgroundColor: 'rgba(0, 255, 212, 0.1)',
-            borderColor: 'rgba(0, 255, 212, 0.5)',
-            borderWidth: 1,
-          },
-          mode: 'x',
+          mode: 'xy',
           onZoomComplete: () => setIsZoomed(true),
         },
       },
@@ -205,7 +208,7 @@ export default function ProfitChart({ predictions }: { predictions: Prediction[]
       if (elements.length > 0) {
         chart.canvas.style.cursor = 'pointer'
       } else {
-        chart.canvas.style.cursor = 'crosshair'
+        chart.canvas.style.cursor = 'grab'
       }
     },
   }
@@ -217,11 +220,11 @@ export default function ProfitChart({ predictions }: { predictions: Prediction[]
     }
   }
 
-  // Stats
-  const totalPnl = points.length > 0 ? points[points.length - 1].cumPnl : 0
-  const wins = points.filter(p => p.status === 'won').length
-  const losses = points.filter(p => p.status === 'lost').length
-  const winRate = points.length > 0 ? ((wins / points.length) * 100).toFixed(1) : '0'
+  // Use config stats if provided, otherwise compute from chart data
+  const totalPnl = configStats?.totalPnl ?? (points.length > 0 ? points[points.length - 1].cumPnl : 0)
+  const wins = configStats?.wins ?? points.filter(p => p.status === 'won').length
+  const losses = configStats?.losses ?? points.filter(p => p.status === 'lost').length
+  const winRate = configStats?.winRate ?? (points.length > 0 ? (wins / (wins + losses)) * 100 : 0)
   const maxDrawdown = Math.min(0, ...points.map(p => p.cumPnl))
   const maxProfit = Math.max(0, ...points.map(p => p.cumPnl))
 
@@ -230,7 +233,7 @@ export default function ProfitChart({ predictions }: { predictions: Prediction[]
       <div className="flex items-center justify-between mb-4">
         <div>
           <h2 className="text-xl font-semibold text-text">Profit Over Time</h2>
-          <p className="text-sm text-text-muted">Scroll to zoom, drag to pan, hover for details</p>
+          <p className="text-sm text-text-muted">Scroll to zoom, drag to pan, hover dots for details</p>
         </div>
         <div className="flex items-center gap-4">
           {isZoomed && (
@@ -250,12 +253,12 @@ export default function ProfitChart({ predictions }: { predictions: Prediction[]
         <div className="text-center">
           <div className="text-xs text-muted mb-1">Total P&L</div>
           <div className="text-lg font-bold" style={{ color: totalPnl >= 0 ? 'var(--green)' : 'var(--red)' }}>
-            {totalPnl >= 0 ? '+' : ''}${totalPnl.toFixed(0)}
+            {totalPnl >= 0 ? '+' : ''}${Math.abs(totalPnl).toFixed(0)}
           </div>
         </div>
         <div className="text-center">
           <div className="text-xs text-muted mb-1">Win Rate</div>
-          <div className="text-lg font-bold text-accent">{winRate}%</div>
+          <div className="text-lg font-bold text-accent">{winRate.toFixed(1)}%</div>
         </div>
         <div className="text-center">
           <div className="text-xs text-muted mb-1">Record</div>

@@ -136,7 +136,15 @@ export default async function Home() {
 
       {/* Profit Chart */}
       <section className="mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-        <ProfitChart predictions={predictions} />
+        <ProfitChart 
+          predictions={predictions} 
+          configStats={{
+            wins: configWins,
+            losses: configLosses,
+            totalPnl: totalPnl,
+            winRate: winRate
+          }}
+        />
       </section>
 
       {/* Predictions Table */}
