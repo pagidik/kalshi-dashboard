@@ -22,8 +22,8 @@
     "winRate": 0.9649,
     "nSignals": 57,
     "sharpe": 0.453,
-    "hypothesis": "HIGH-CONF: impliedRange [0.75–1.0] — focus on whale-certainty signals",
-    "note": "PnL $144.1 → $486.1 (Δ$342)"
+    "hypothesis": "HIGH-CONF: impliedRange [0.751.0]  focus on whale-certainty signals",
+    "note": "PnL $144.1  $486.1 ($342)"
   },
   {
     "ts": "2026-03-14T19:55:55.682Z",
@@ -48,7 +48,7 @@
     "winRate": 0.9778,
     "nSignals": 45,
     "sharpe": 0.436,
-    "hypothesis": "HIGH-CONF: impliedRange [0.78–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.781.0]  focus on whale-certainty signals",
     "note": "No improvement: $295.1 vs best $486.1"
   },
   {
@@ -74,7 +74,7 @@
     "winRate": 0.9737,
     "nSignals": 38,
     "sharpe": 0.256,
-    "hypothesis": "HIGH-CONF: impliedRange [0.8–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.81.0]  focus on whale-certainty signals",
     "note": "No improvement: $144.1 vs best $486.1"
   },
   {
@@ -100,7 +100,7 @@
     "winRate": 0.9737,
     "nSignals": 38,
     "sharpe": 0.256,
-    "hypothesis": "HIGH-CONF: impliedRange [0.82–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.821.0]  focus on whale-certainty signals",
     "note": "No improvement: $144.1 vs best $486.1"
   },
   {
@@ -126,7 +126,7 @@
     "winRate": 1,
     "nSignals": 37,
     "sharpe": 1.353,
-    "hypothesis": "HIGH-CONF: impliedRange [0.84–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.841.0]  focus on whale-certainty signals",
     "note": "No improvement: $226.1 vs best $486.1"
   },
   {
@@ -152,7 +152,7 @@
     "winRate": 1,
     "nSignals": 36,
     "sharpe": 1.369,
-    "hypothesis": "HIGH-CONF: impliedRange [0.85–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.851.0]  focus on whale-certainty signals",
     "note": "No improvement: $210.1 vs best $486.1"
   },
   {
@@ -178,7 +178,7 @@
     "winRate": 1,
     "nSignals": 34,
     "sharpe": 1.397,
-    "hypothesis": "HIGH-CONF: impliedRange [0.87–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.871.0]  focus on whale-certainty signals",
     "note": "No improvement: $181.1 vs best $486.1"
   },
   {
@@ -204,7 +204,7 @@
     "winRate": 1,
     "nSignals": 32,
     "sharpe": 1.426,
-    "hypothesis": "HIGH-CONF: impliedRange [0.88–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.881.0]  focus on whale-certainty signals",
     "note": "No improvement: $155.1 vs best $486.1"
   },
   {
@@ -230,7 +230,7 @@
     "winRate": 1,
     "nSignals": 29,
     "sharpe": 1.484,
-    "hypothesis": "HIGH-CONF: impliedRange [0.9–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.91.0]  focus on whale-certainty signals",
     "note": "No improvement: $121.1 vs best $486.1"
   },
   {
@@ -256,7 +256,7 @@
     "winRate": 1,
     "nSignals": 26,
     "sharpe": 1.659,
-    "hypothesis": "HIGH-CONF: impliedRange [0.92–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.921.0]  focus on whale-certainty signals",
     "note": "No improvement: $91.1 vs best $486.1"
   },
   {
@@ -282,7 +282,7 @@
     "winRate": 1,
     "nSignals": 20,
     "sharpe": 1.887,
-    "hypothesis": "HIGH-CONF: impliedRange [0.95–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.951.0]  focus on whale-certainty signals",
     "note": "No improvement: $51.1 vs best $486.1"
   },
   {
@@ -308,8 +308,8 @@
     "winRate": 0.9783,
     "nSignals": 92,
     "sharpe": 0.386,
-    "hypothesis": "COMBO: range [0.8–1.0] + minTrade $200",
-    "note": "PnL $486.1 → $503.7 (Δ$18)"
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $200",
+    "note": "PnL $486.1  $503.7 ($18)"
   },
   {
     "ts": "2026-03-14T19:55:56.535Z",
@@ -334,7 +334,7 @@
     "winRate": 0.9701,
     "nSignals": 67,
     "sharpe": 0.275,
-    "hypothesis": "COMBO: range [0.8–1.0] + minTrade $300",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $300",
     "note": "No improvement: $296.7 vs best $503.7"
   },
   {
@@ -360,7 +360,7 @@
     "winRate": 0.9737,
     "nSignals": 38,
     "sharpe": 0.256,
-    "hypothesis": "COMBO: range [0.8–1.0] + minTrade $500",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $500",
     "note": "No improvement: $144.1 vs best $503.7"
   },
   {
@@ -386,7 +386,7 @@
     "winRate": 0.9688,
     "nSignals": 32,
     "sharpe": 0.22,
-    "hypothesis": "COMBO: range [0.8–1.0] + minTrade $750",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $750",
     "note": "No improvement: $113 vs best $503.7"
   },
   {
@@ -412,7 +412,7 @@
     "winRate": 1,
     "nSignals": 14,
     "sharpe": 1.517,
-    "hypothesis": "COMBO: range [0.8–1.0] + minTrade $1000",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $1000",
     "note": "No improvement: $98 vs best $503.7"
   },
   {
@@ -438,7 +438,7 @@
     "winRate": 1,
     "nSignals": 9,
     "sharpe": 1.693,
-    "hypothesis": "COMBO: range [0.8–1.0] + minTrade $1500",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $1500",
     "note": "No improvement: $56 vs best $503.7"
   },
   {
@@ -464,7 +464,7 @@
     "winRate": 1,
     "nSignals": 77,
     "sharpe": 1.341,
-    "hypothesis": "COMBO: range [0.85–1.0] + minTrade $200",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $200",
     "note": "No improvement: $436.1 vs best $503.7"
   },
   {
@@ -490,7 +490,7 @@
     "winRate": 1,
     "nSignals": 57,
     "sharpe": 1.26,
-    "hypothesis": "COMBO: range [0.85–1.0] + minTrade $300",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $300",
     "note": "No improvement: $318.1 vs best $503.7"
   },
   {
@@ -516,7 +516,7 @@
     "winRate": 1,
     "nSignals": 36,
     "sharpe": 1.369,
-    "hypothesis": "COMBO: range [0.85–1.0] + minTrade $500",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $500",
     "note": "No improvement: $210.1 vs best $503.7"
   },
   {
@@ -542,7 +542,7 @@
     "winRate": 1,
     "nSignals": 30,
     "sharpe": 1.382,
-    "hypothesis": "COMBO: range [0.85–1.0] + minTrade $750",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $750",
     "note": "No improvement: $179 vs best $503.7"
   },
   {
@@ -568,7 +568,7 @@
     "winRate": 1,
     "nSignals": 14,
     "sharpe": 1.517,
-    "hypothesis": "COMBO: range [0.85–1.0] + minTrade $1000",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $1000",
     "note": "No improvement: $98 vs best $503.7"
   },
   {
@@ -594,7 +594,7 @@
     "winRate": 1,
     "nSignals": 9,
     "sharpe": 1.693,
-    "hypothesis": "COMBO: range [0.85–1.0] + minTrade $1500",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $1500",
     "note": "No improvement: $56 vs best $503.7"
   },
   {
@@ -620,7 +620,7 @@
     "winRate": 1,
     "nSignals": 66,
     "sharpe": 1.401,
-    "hypothesis": "COMBO: range [0.9–1.0] + minTrade $200",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $200",
     "note": "No improvement: $293.1 vs best $503.7"
   },
   {
@@ -646,7 +646,7 @@
     "winRate": 1,
     "nSignals": 46,
     "sharpe": 1.383,
-    "hypothesis": "COMBO: range [0.9–1.0] + minTrade $300",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $300",
     "note": "No improvement: $175.1 vs best $503.7"
   },
   {
@@ -672,7 +672,7 @@
     "winRate": 1,
     "nSignals": 29,
     "sharpe": 1.484,
-    "hypothesis": "COMBO: range [0.9–1.0] + minTrade $500",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $500",
     "note": "No improvement: $121.1 vs best $503.7"
   },
   {
@@ -698,7 +698,7 @@
     "winRate": 1,
     "nSignals": 24,
     "sharpe": 1.454,
-    "hypothesis": "COMBO: range [0.9–1.0] + minTrade $750",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $750",
     "note": "No improvement: $103 vs best $503.7"
   },
   {
@@ -724,7 +724,7 @@
     "winRate": 1,
     "nSignals": 9,
     "sharpe": 1.371,
-    "hypothesis": "COMBO: range [0.9–1.0] + minTrade $1000",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $1000",
     "note": "No improvement: $37 vs best $503.7"
   },
   {
@@ -750,7 +750,7 @@
     "winRate": 1,
     "nSignals": 7,
     "sharpe": 1.621,
-    "hypothesis": "COMBO: range [0.9–1.0] + minTrade $1500",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $1500",
     "note": "No improvement: $34 vs best $503.7"
   },
   {
@@ -778,7 +778,7 @@
     "winRate": 0.9737,
     "nSignals": 38,
     "sharpe": 0.256,
-    "hypothesis": "SPORTS-ONLY high-conf: [0.8–1.0], skip all non-sports",
+    "hypothesis": "SPORTS-ONLY high-conf: [0.81.0], skip all non-sports",
     "note": "No improvement: $144.1 vs best $503.7"
   },
   {
@@ -806,7 +806,7 @@
     "winRate": 1,
     "nSignals": 36,
     "sharpe": 1.369,
-    "hypothesis": "SPORTS-ONLY high-conf: [0.85–1.0], skip all non-sports",
+    "hypothesis": "SPORTS-ONLY high-conf: [0.851.0], skip all non-sports",
     "note": "No improvement: $210.1 vs best $503.7"
   },
   {
@@ -834,7 +834,7 @@
     "winRate": 1,
     "nSignals": 29,
     "sharpe": 1.484,
-    "hypothesis": "SPORTS-ONLY high-conf: [0.9–1.0], skip all non-sports",
+    "hypothesis": "SPORTS-ONLY high-conf: [0.91.0], skip all non-sports",
     "note": "No improvement: $121.1 vs best $503.7"
   },
   {
@@ -860,7 +860,7 @@
     "winRate": 0.9737,
     "nSignals": 38,
     "sharpe": 0.256,
-    "hypothesis": "RECENCY: [0.8–1.0] + lookback 7d",
+    "hypothesis": "RECENCY: [0.81.0] + lookback 7d",
     "note": "No improvement: $144.1 vs best $503.7"
   },
   {
@@ -886,7 +886,7 @@
     "winRate": 0.9737,
     "nSignals": 38,
     "sharpe": 0.256,
-    "hypothesis": "RECENCY: [0.8–1.0] + lookback 14d",
+    "hypothesis": "RECENCY: [0.81.0] + lookback 14d",
     "note": "No improvement: $144.1 vs best $503.7"
   },
   {
@@ -912,7 +912,7 @@
     "winRate": 0.9737,
     "nSignals": 38,
     "sharpe": 0.256,
-    "hypothesis": "RECENCY: [0.8–1.0] + lookback 21d",
+    "hypothesis": "RECENCY: [0.81.0] + lookback 21d",
     "note": "No improvement: $144.1 vs best $503.7"
   },
   {
@@ -938,7 +938,7 @@
     "winRate": 1,
     "nSignals": 36,
     "sharpe": 1.369,
-    "hypothesis": "RECENCY: [0.85–1.0] + lookback 7d",
+    "hypothesis": "RECENCY: [0.851.0] + lookback 7d",
     "note": "No improvement: $210.1 vs best $503.7"
   },
   {
@@ -964,7 +964,7 @@
     "winRate": 1,
     "nSignals": 36,
     "sharpe": 1.369,
-    "hypothesis": "RECENCY: [0.85–1.0] + lookback 14d",
+    "hypothesis": "RECENCY: [0.851.0] + lookback 14d",
     "note": "No improvement: $210.1 vs best $503.7"
   },
   {
@@ -990,7 +990,7 @@
     "winRate": 1,
     "nSignals": 36,
     "sharpe": 1.369,
-    "hypothesis": "RECENCY: [0.85–1.0] + lookback 21d",
+    "hypothesis": "RECENCY: [0.851.0] + lookback 21d",
     "note": "No improvement: $210.1 vs best $503.7"
   },
   {
@@ -1016,7 +1016,7 @@
     "winRate": 0.9737,
     "nSignals": 38,
     "sharpe": 0.256,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 500",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 500",
     "note": "No improvement: $144.1 vs best $503.7"
   },
   {
@@ -1042,7 +1042,7 @@
     "winRate": 0.9706,
     "nSignals": 34,
     "sharpe": 0.25,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 750",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 750",
     "note": "No improvement: $133 vs best $503.7"
   },
   {
@@ -1068,7 +1068,7 @@
     "winRate": 0.9583,
     "nSignals": 24,
     "sharpe": 0.187,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 1000",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 1000",
     "note": "No improvement: $83 vs best $503.7"
   },
   {
@@ -1094,7 +1094,7 @@
     "winRate": 1,
     "nSignals": 10,
     "sharpe": 1.564,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 1500",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 1500",
     "note": "No improvement: $58 vs best $503.7"
   },
   {
@@ -1120,7 +1120,7 @@
     "winRate": 1,
     "nSignals": 36,
     "sharpe": 1.369,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 500",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 500",
     "note": "No improvement: $210.1 vs best $503.7"
   },
   {
@@ -1146,7 +1146,7 @@
     "winRate": 1,
     "nSignals": 32,
     "sharpe": 1.427,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 750",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 750",
     "note": "No improvement: $199 vs best $503.7"
   },
   {
@@ -1172,7 +1172,7 @@
     "winRate": 1,
     "nSignals": 22,
     "sharpe": 1.459,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 1000",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 1000",
     "note": "No improvement: $149 vs best $503.7"
   },
   {
@@ -1198,7 +1198,7 @@
     "winRate": 1,
     "nSignals": 10,
     "sharpe": 1.564,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 1500",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 1500",
     "note": "No improvement: $58 vs best $503.7"
   },
   {
@@ -1224,7 +1224,7 @@
     "winRate": 1,
     "nSignals": 29,
     "sharpe": 1.484,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 500",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 500",
     "note": "No improvement: $121.1 vs best $503.7"
   },
   {
@@ -1250,7 +1250,7 @@
     "winRate": 1,
     "nSignals": 25,
     "sharpe": 1.497,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 750",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 750",
     "note": "No improvement: $110 vs best $503.7"
   },
   {
@@ -1276,7 +1276,7 @@
     "winRate": 1,
     "nSignals": 16,
     "sharpe": 1.384,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 1000",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 1000",
     "note": "No improvement: $73 vs best $503.7"
   },
   {
@@ -1302,7 +1302,7 @@
     "winRate": 1,
     "nSignals": 8,
     "sharpe": 1.521,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 1500",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 1500",
     "note": "No improvement: $36 vs best $503.7"
   },
   {
@@ -1328,7 +1328,7 @@
     "winRate": 0.9028,
     "nSignals": 72,
     "sharpe": 0.196,
-    "hypothesis": "WIDER: does including [0.7–0.80] zone help or hurt PnL?",
+    "hypothesis": "WIDER: does including [0.70.80] zone help or hurt PnL",
     "note": "No improvement: $393.1 vs best $503.7"
   },
   {
@@ -1354,7 +1354,7 @@
     "winRate": 0.9143,
     "nSignals": 70,
     "sharpe": 0.233,
-    "hypothesis": "WIDER: does including [0.72–0.80] zone help or hurt PnL?",
+    "hypothesis": "WIDER: does including [0.720.80] zone help or hurt PnL",
     "note": "No improvement: $434.1 vs best $503.7"
   },
   {
@@ -1380,7 +1380,7 @@
     "winRate": 0.9649,
     "nSignals": 57,
     "sharpe": 0.453,
-    "hypothesis": "WIDER: does including [0.75–0.80] zone help or hurt PnL?",
+    "hypothesis": "WIDER: does including [0.750.80] zone help or hurt PnL",
     "note": "No improvement: $486.1 vs best $503.7"
   },
   {
@@ -1464,7 +1464,7 @@
     "winRate": 1,
     "nSignals": 66,
     "sharpe": 1.401,
-    "hypothesis": "FULL-COMBO-C: 90%+ sports-only $200+ — maximum conviction only",
+    "hypothesis": "FULL-COMBO-C: 90%+ sports-only $200+  maximum conviction only",
     "note": "No improvement: $293.1 vs best $503.7"
   },
   {
@@ -1490,7 +1490,7 @@
     "winRate": 1,
     "nSignals": 30,
     "sharpe": 1.382,
-    "hypothesis": "FULL-COMBO-D: 85%+ $750+ 500+ contracts — whale-only filter",
+    "hypothesis": "FULL-COMBO-D: 85%+ $750+ 500+ contracts  whale-only filter",
     "note": "No improvement: $179 vs best $503.7"
   },
   {
@@ -1516,8 +1516,8 @@
     "winRate": 0.9583,
     "nSignals": 120,
     "sharpe": 0.363,
-    "hypothesis": "HIGH-CONF: impliedRange [0.75–1.0] — focus on whale-certainty signals",
-    "note": "PnL $503.7 → $859.7 (Δ$356)"
+    "hypothesis": "HIGH-CONF: impliedRange [0.751.0]  focus on whale-certainty signals",
+    "note": "PnL $503.7  $859.7 ($356)"
   },
   {
     "ts": "2026-03-14T19:56:20.447Z",
@@ -1542,7 +1542,7 @@
     "winRate": 0.9703,
     "nSignals": 101,
     "sharpe": 0.357,
-    "hypothesis": "HIGH-CONF: impliedRange [0.78–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.781.0]  focus on whale-certainty signals",
     "note": "No improvement: $596.7 vs best $859.7"
   },
   {
@@ -1568,7 +1568,7 @@
     "winRate": 0.9885,
     "nSignals": 87,
     "sharpe": 0.538,
-    "hypothesis": "HIGH-CONF: impliedRange [0.82–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.821.0]  focus on whale-certainty signals",
     "note": "No improvement: $507.7 vs best $859.7"
   },
   {
@@ -1594,7 +1594,7 @@
     "winRate": 1,
     "nSignals": 80,
     "sharpe": 1.319,
-    "hypothesis": "HIGH-CONF: impliedRange [0.84–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.841.0]  focus on whale-certainty signals",
     "note": "No improvement: $484.1 vs best $859.7"
   },
   {
@@ -1620,7 +1620,7 @@
     "winRate": 1,
     "nSignals": 73,
     "sharpe": 1.37,
-    "hypothesis": "HIGH-CONF: impliedRange [0.87–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.871.0]  focus on whale-certainty signals",
     "note": "No improvement: $378.1 vs best $859.7"
   },
   {
@@ -1646,7 +1646,7 @@
     "winRate": 1,
     "nSignals": 70,
     "sharpe": 1.388,
-    "hypothesis": "HIGH-CONF: impliedRange [0.88–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.881.0]  focus on whale-certainty signals",
     "note": "No improvement: $339.1 vs best $859.7"
   },
   {
@@ -1672,7 +1672,7 @@
     "winRate": 1,
     "nSignals": 51,
     "sharpe": 1.494,
-    "hypothesis": "HIGH-CONF: impliedRange [0.92–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.921.0]  focus on whale-certainty signals",
     "note": "No improvement: $154.1 vs best $859.7"
   },
   {
@@ -1698,7 +1698,7 @@
     "winRate": 1,
     "nSignals": 43,
     "sharpe": 1.625,
-    "hypothesis": "HIGH-CONF: impliedRange [0.95–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.951.0]  focus on whale-certainty signals",
     "note": "No improvement: $102.1 vs best $859.7"
   },
   {
@@ -1726,7 +1726,7 @@
     "winRate": 0.9783,
     "nSignals": 92,
     "sharpe": 0.386,
-    "hypothesis": "SPORTS-ONLY high-conf: [0.8–1.0], skip all non-sports",
+    "hypothesis": "SPORTS-ONLY high-conf: [0.81.0], skip all non-sports",
     "note": "No improvement: $503.7 vs best $859.7"
   },
   {
@@ -1754,7 +1754,7 @@
     "winRate": 1,
     "nSignals": 77,
     "sharpe": 1.341,
-    "hypothesis": "SPORTS-ONLY high-conf: [0.85–1.0], skip all non-sports",
+    "hypothesis": "SPORTS-ONLY high-conf: [0.851.0], skip all non-sports",
     "note": "No improvement: $436.1 vs best $859.7"
   },
   {
@@ -1780,7 +1780,7 @@
     "winRate": 0.9783,
     "nSignals": 92,
     "sharpe": 0.386,
-    "hypothesis": "RECENCY: [0.8–1.0] + lookback 7d",
+    "hypothesis": "RECENCY: [0.81.0] + lookback 7d",
     "note": "No improvement: $503.7 vs best $859.7"
   },
   {
@@ -1806,7 +1806,7 @@
     "winRate": 0.9783,
     "nSignals": 92,
     "sharpe": 0.386,
-    "hypothesis": "RECENCY: [0.8–1.0] + lookback 14d",
+    "hypothesis": "RECENCY: [0.81.0] + lookback 14d",
     "note": "No improvement: $503.7 vs best $859.7"
   },
   {
@@ -1832,7 +1832,7 @@
     "winRate": 0.9783,
     "nSignals": 92,
     "sharpe": 0.386,
-    "hypothesis": "RECENCY: [0.8–1.0] + lookback 21d",
+    "hypothesis": "RECENCY: [0.81.0] + lookback 21d",
     "note": "No improvement: $503.7 vs best $859.7"
   },
   {
@@ -1858,7 +1858,7 @@
     "winRate": 1,
     "nSignals": 77,
     "sharpe": 1.341,
-    "hypothesis": "RECENCY: [0.85–1.0] + lookback 7d",
+    "hypothesis": "RECENCY: [0.851.0] + lookback 7d",
     "note": "No improvement: $436.1 vs best $859.7"
   },
   {
@@ -1884,7 +1884,7 @@
     "winRate": 1,
     "nSignals": 77,
     "sharpe": 1.341,
-    "hypothesis": "RECENCY: [0.85–1.0] + lookback 14d",
+    "hypothesis": "RECENCY: [0.851.0] + lookback 14d",
     "note": "No improvement: $436.1 vs best $859.7"
   },
   {
@@ -1910,7 +1910,7 @@
     "winRate": 1,
     "nSignals": 77,
     "sharpe": 1.341,
-    "hypothesis": "RECENCY: [0.85–1.0] + lookback 21d",
+    "hypothesis": "RECENCY: [0.851.0] + lookback 21d",
     "note": "No improvement: $436.1 vs best $859.7"
   },
   {
@@ -1936,7 +1936,7 @@
     "winRate": 0.9565,
     "nSignals": 46,
     "sharpe": 0.122,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 500",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 500",
     "note": "No improvement: $104.1 vs best $859.7"
   },
   {
@@ -1962,7 +1962,7 @@
     "winRate": 0.9706,
     "nSignals": 34,
     "sharpe": 0.25,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 750",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 750",
     "note": "No improvement: $133 vs best $859.7"
   },
   {
@@ -1988,7 +1988,7 @@
     "winRate": 0.9583,
     "nSignals": 24,
     "sharpe": 0.187,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 1000",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 1000",
     "note": "No improvement: $83 vs best $859.7"
   },
   {
@@ -2014,7 +2014,7 @@
     "winRate": 1,
     "nSignals": 10,
     "sharpe": 1.564,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 1500",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 1500",
     "note": "No improvement: $58 vs best $859.7"
   },
   {
@@ -2040,7 +2040,7 @@
     "winRate": 1,
     "nSignals": 42,
     "sharpe": 1.26,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 500",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 500",
     "note": "No improvement: $235.1 vs best $859.7"
   },
   {
@@ -2066,7 +2066,7 @@
     "winRate": 1,
     "nSignals": 32,
     "sharpe": 1.427,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 750",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 750",
     "note": "No improvement: $199 vs best $859.7"
   },
   {
@@ -2092,7 +2092,7 @@
     "winRate": 1,
     "nSignals": 22,
     "sharpe": 1.459,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 1000",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 1000",
     "note": "No improvement: $149 vs best $859.7"
   },
   {
@@ -2118,7 +2118,7 @@
     "winRate": 1,
     "nSignals": 10,
     "sharpe": 1.564,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 1500",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 1500",
     "note": "No improvement: $58 vs best $859.7"
   },
   {
@@ -2144,7 +2144,7 @@
     "winRate": 1,
     "nSignals": 34,
     "sharpe": 1.369,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 500",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 500",
     "note": "No improvement: $131.1 vs best $859.7"
   },
   {
@@ -2170,7 +2170,7 @@
     "winRate": 1,
     "nSignals": 25,
     "sharpe": 1.497,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 750",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 750",
     "note": "No improvement: $110 vs best $859.7"
   },
   {
@@ -2196,7 +2196,7 @@
     "winRate": 1,
     "nSignals": 16,
     "sharpe": 1.384,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 1000",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 1000",
     "note": "No improvement: $73 vs best $859.7"
   },
   {
@@ -2222,7 +2222,7 @@
     "winRate": 1,
     "nSignals": 8,
     "sharpe": 1.521,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 1500",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 1500",
     "note": "No improvement: $36 vs best $859.7"
   },
   {
@@ -2248,7 +2248,7 @@
     "winRate": 0.9041,
     "nSignals": 146,
     "sharpe": 0.169,
-    "hypothesis": "WIDER: does including [0.7–0.80] zone help or hurt PnL?",
+    "hypothesis": "WIDER: does including [0.70.80] zone help or hurt PnL",
     "note": "No improvement: $673.7 vs best $859.7"
   },
   {
@@ -2274,7 +2274,7 @@
     "winRate": 0.9143,
     "nSignals": 140,
     "sharpe": 0.19,
-    "hypothesis": "WIDER: does including [0.72–0.80] zone help or hurt PnL?",
+    "hypothesis": "WIDER: does including [0.720.80] zone help or hurt PnL",
     "note": "No improvement: $696.7 vs best $859.7"
   },
   {
@@ -2300,7 +2300,7 @@
     "winRate": 0.9583,
     "nSignals": 120,
     "sharpe": 0.363,
-    "hypothesis": "WIDER: does including [0.75–0.80] zone help or hurt PnL?",
+    "hypothesis": "WIDER: does including [0.750.80] zone help or hurt PnL",
     "note": "No improvement: $859.7 vs best $859.7"
   },
   {
@@ -2329,7 +2329,7 @@
     "winRate": 0.9667,
     "nSignals": 60,
     "sharpe": 0.576,
-    "hypothesis": "HIGH-CONF: impliedRange [0.75–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.751.0]  focus on whale-certainty signals",
     "note": "No improvement: $660.1 vs best $660.1"
   },
   {
@@ -2358,7 +2358,7 @@
     "winRate": 0.9565,
     "nSignals": 46,
     "sharpe": 0.349,
-    "hypothesis": "HIGH-CONF: impliedRange [0.78–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.781.0]  focus on whale-certainty signals",
     "note": "No improvement: $325.1 vs best $660.1"
   },
   {
@@ -2387,7 +2387,7 @@
     "winRate": 0.9737,
     "nSignals": 38,
     "sharpe": 0.405,
-    "hypothesis": "HIGH-CONF: impliedRange [0.8–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.81.0]  focus on whale-certainty signals",
     "note": "No improvement: $251.1 vs best $660.1"
   },
   {
@@ -2416,7 +2416,7 @@
     "winRate": 0.9697,
     "nSignals": 33,
     "sharpe": 0.278,
-    "hypothesis": "HIGH-CONF: impliedRange [0.82–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.821.0]  focus on whale-certainty signals",
     "note": "No improvement: $152.1 vs best $660.1"
   },
   {
@@ -2445,7 +2445,7 @@
     "winRate": 0.9697,
     "nSignals": 33,
     "sharpe": 0.278,
-    "hypothesis": "HIGH-CONF: impliedRange [0.84–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.841.0]  focus on whale-certainty signals",
     "note": "No improvement: $152.1 vs best $660.1"
   },
   {
@@ -2474,7 +2474,7 @@
     "winRate": 0.9697,
     "nSignals": 33,
     "sharpe": 0.278,
-    "hypothesis": "HIGH-CONF: impliedRange [0.85–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.851.0]  focus on whale-certainty signals",
     "note": "No improvement: $152.1 vs best $660.1"
   },
   {
@@ -2503,7 +2503,7 @@
     "winRate": 1,
     "nSignals": 24,
     "sharpe": 1.461,
-    "hypothesis": "HIGH-CONF: impliedRange [0.87–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.871.0]  focus on whale-certainty signals",
     "note": "No improvement: $122.1 vs best $660.1"
   },
   {
@@ -2532,7 +2532,7 @@
     "winRate": 1,
     "nSignals": 24,
     "sharpe": 1.461,
-    "hypothesis": "HIGH-CONF: impliedRange [0.88–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.881.0]  focus on whale-certainty signals",
     "note": "No improvement: $122.1 vs best $660.1"
   },
   {
@@ -2561,7 +2561,7 @@
     "winRate": 1,
     "nSignals": 22,
     "sharpe": 1.53,
-    "hypothesis": "HIGH-CONF: impliedRange [0.9–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.91.0]  focus on whale-certainty signals",
     "note": "No improvement: $98.1 vs best $660.1"
   },
   {
@@ -2590,7 +2590,7 @@
     "winRate": 1,
     "nSignals": 19,
     "sharpe": 1.745,
-    "hypothesis": "HIGH-CONF: impliedRange [0.92–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.921.0]  focus on whale-certainty signals",
     "note": "No improvement: $68.1 vs best $660.1"
   },
   {
@@ -2619,7 +2619,7 @@
     "winRate": 1,
     "nSignals": 15,
     "sharpe": 1.984,
-    "hypothesis": "HIGH-CONF: impliedRange [0.95–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.951.0]  focus on whale-certainty signals",
     "note": "No improvement: $41.1 vs best $660.1"
   },
   {
@@ -2648,7 +2648,7 @@
     "winRate": 0.9863,
     "nSignals": 73,
     "sharpe": 0.565,
-    "hypothesis": "COMBO: range [0.8–1.0] + minTrade $200",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $200",
     "note": "No improvement: $515.7 vs best $660.1"
   },
   {
@@ -2677,7 +2677,7 @@
     "winRate": 0.9811,
     "nSignals": 53,
     "sharpe": 0.484,
-    "hypothesis": "COMBO: range [0.8–1.0] + minTrade $300",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $300",
     "note": "No improvement: $367.7 vs best $660.1"
   },
   {
@@ -2706,7 +2706,7 @@
     "winRate": 0.9737,
     "nSignals": 38,
     "sharpe": 0.405,
-    "hypothesis": "COMBO: range [0.8–1.0] + minTrade $500",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $500",
     "note": "No improvement: $251.1 vs best $660.1"
   },
   {
@@ -2735,7 +2735,7 @@
     "winRate": 1,
     "nSignals": 31,
     "sharpe": 1.442,
-    "hypothesis": "COMBO: range [0.8–1.0] + minTrade $750",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $750",
     "note": "No improvement: $269 vs best $660.1"
   },
   {
@@ -2764,7 +2764,7 @@
     "winRate": 1,
     "nSignals": 14,
     "sharpe": 1.382,
-    "hypothesis": "COMBO: range [0.8–1.0] + minTrade $1000",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $1000",
     "note": "No improvement: $135 vs best $660.1"
   },
   {
@@ -2793,7 +2793,7 @@
     "winRate": 1,
     "nSignals": 10,
     "sharpe": 1.249,
-    "hypothesis": "COMBO: range [0.8–1.0] + minTrade $1500",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $1500",
     "note": "No improvement: $84 vs best $660.1"
   },
   {
@@ -2822,7 +2822,7 @@
     "winRate": 0.9839,
     "nSignals": 62,
     "sharpe": 0.399,
-    "hypothesis": "COMBO: range [0.85–1.0] + minTrade $200",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $200",
     "note": "No improvement: $307.1 vs best $660.1"
   },
   {
@@ -2851,7 +2851,7 @@
     "winRate": 0.9773,
     "nSignals": 44,
     "sharpe": 0.307,
-    "hypothesis": "COMBO: range [0.85–1.0] + minTrade $300",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $300",
     "note": "No improvement: $196.1 vs best $660.1"
   },
   {
@@ -2880,7 +2880,7 @@
     "winRate": 0.9697,
     "nSignals": 33,
     "sharpe": 0.278,
-    "hypothesis": "COMBO: range [0.85–1.0] + minTrade $500",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $500",
     "note": "No improvement: $152.1 vs best $660.1"
   },
   {
@@ -2909,7 +2909,7 @@
     "winRate": 1,
     "nSignals": 28,
     "sharpe": 1.478,
-    "hypothesis": "COMBO: range [0.85–1.0] + minTrade $750",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $750",
     "note": "No improvement: $210 vs best $660.1"
   },
   {
@@ -2938,7 +2938,7 @@
     "winRate": 1,
     "nSignals": 11,
     "sharpe": 1.33,
-    "hypothesis": "COMBO: range [0.85–1.0] + minTrade $1000",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $1000",
     "note": "No improvement: $76 vs best $660.1"
   },
   {
@@ -2967,7 +2967,7 @@
     "winRate": 1,
     "nSignals": 8,
     "sharpe": 1.326,
-    "hypothesis": "COMBO: range [0.85–1.0] + minTrade $1500",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $1500",
     "note": "No improvement: $45 vs best $660.1"
   },
   {
@@ -2996,7 +2996,7 @@
     "winRate": 1,
     "nSignals": 50,
     "sharpe": 1.407,
-    "hypothesis": "COMBO: range [0.9–1.0] + minTrade $200",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $200",
     "note": "No improvement: $239.1 vs best $660.1"
   },
   {
@@ -3025,7 +3025,7 @@
     "winRate": 1,
     "nSignals": 32,
     "sharpe": 1.336,
-    "hypothesis": "COMBO: range [0.9–1.0] + minTrade $300",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $300",
     "note": "No improvement: $128.1 vs best $660.1"
   },
   {
@@ -3054,7 +3054,7 @@
     "winRate": 1,
     "nSignals": 22,
     "sharpe": 1.53,
-    "hypothesis": "COMBO: range [0.9–1.0] + minTrade $500",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $500",
     "note": "No improvement: $98.1 vs best $660.1"
   },
   {
@@ -3083,7 +3083,7 @@
     "winRate": 1,
     "nSignals": 19,
     "sharpe": 1.501,
-    "hypothesis": "COMBO: range [0.9–1.0] + minTrade $750",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $750",
     "note": "No improvement: $85 vs best $660.1"
   },
   {
@@ -3112,7 +3112,7 @@
     "winRate": 1,
     "nSignals": 8,
     "sharpe": 1.406,
-    "hypothesis": "COMBO: range [0.9–1.0] + minTrade $1000",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $1000",
     "note": "No improvement: $33 vs best $660.1"
   },
   {
@@ -3141,7 +3141,7 @@
     "winRate": 1,
     "nSignals": 7,
     "sharpe": 1.468,
-    "hypothesis": "COMBO: range [0.9–1.0] + minTrade $1500",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $1500",
     "note": "No improvement: $31 vs best $660.1"
   },
   {
@@ -3172,7 +3172,7 @@
     "winRate": 0.9737,
     "nSignals": 38,
     "sharpe": 0.405,
-    "hypothesis": "SPORTS-ONLY high-conf: [0.8–1.0], skip all non-sports",
+    "hypothesis": "SPORTS-ONLY high-conf: [0.81.0], skip all non-sports",
     "note": "No improvement: $251.1 vs best $660.1"
   },
   {
@@ -3203,7 +3203,7 @@
     "winRate": 0.9697,
     "nSignals": 33,
     "sharpe": 0.278,
-    "hypothesis": "SPORTS-ONLY high-conf: [0.85–1.0], skip all non-sports",
+    "hypothesis": "SPORTS-ONLY high-conf: [0.851.0], skip all non-sports",
     "note": "No improvement: $152.1 vs best $660.1"
   },
   {
@@ -3234,7 +3234,7 @@
     "winRate": 1,
     "nSignals": 22,
     "sharpe": 1.53,
-    "hypothesis": "SPORTS-ONLY high-conf: [0.9–1.0], skip all non-sports",
+    "hypothesis": "SPORTS-ONLY high-conf: [0.91.0], skip all non-sports",
     "note": "No improvement: $98.1 vs best $660.1"
   },
   {
@@ -3263,7 +3263,7 @@
     "winRate": 0.9737,
     "nSignals": 38,
     "sharpe": 0.405,
-    "hypothesis": "RECENCY: [0.8–1.0] + lookback 7d",
+    "hypothesis": "RECENCY: [0.81.0] + lookback 7d",
     "note": "No improvement: $251.1 vs best $660.1"
   },
   {
@@ -3292,7 +3292,7 @@
     "winRate": 0.9737,
     "nSignals": 38,
     "sharpe": 0.405,
-    "hypothesis": "RECENCY: [0.8–1.0] + lookback 14d",
+    "hypothesis": "RECENCY: [0.81.0] + lookback 14d",
     "note": "No improvement: $251.1 vs best $660.1"
   },
   {
@@ -3321,7 +3321,7 @@
     "winRate": 0.9737,
     "nSignals": 38,
     "sharpe": 0.405,
-    "hypothesis": "RECENCY: [0.8–1.0] + lookback 21d",
+    "hypothesis": "RECENCY: [0.81.0] + lookback 21d",
     "note": "No improvement: $251.1 vs best $660.1"
   },
   {
@@ -3350,7 +3350,7 @@
     "winRate": 0.9697,
     "nSignals": 33,
     "sharpe": 0.278,
-    "hypothesis": "RECENCY: [0.85–1.0] + lookback 7d",
+    "hypothesis": "RECENCY: [0.851.0] + lookback 7d",
     "note": "No improvement: $152.1 vs best $660.1"
   },
   {
@@ -3379,7 +3379,7 @@
     "winRate": 0.9697,
     "nSignals": 33,
     "sharpe": 0.278,
-    "hypothesis": "RECENCY: [0.85–1.0] + lookback 14d",
+    "hypothesis": "RECENCY: [0.851.0] + lookback 14d",
     "note": "No improvement: $152.1 vs best $660.1"
   },
   {
@@ -3408,7 +3408,7 @@
     "winRate": 0.9697,
     "nSignals": 33,
     "sharpe": 0.278,
-    "hypothesis": "RECENCY: [0.85–1.0] + lookback 21d",
+    "hypothesis": "RECENCY: [0.851.0] + lookback 21d",
     "note": "No improvement: $152.1 vs best $660.1"
   },
   {
@@ -3437,7 +3437,7 @@
     "winRate": 0.9737,
     "nSignals": 38,
     "sharpe": 0.405,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 500",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 500",
     "note": "No improvement: $251.1 vs best $660.1"
   },
   {
@@ -3466,7 +3466,7 @@
     "winRate": 0.9706,
     "nSignals": 34,
     "sharpe": 0.384,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 750",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 750",
     "note": "No improvement: $224 vs best $660.1"
   },
   {
@@ -3495,7 +3495,7 @@
     "winRate": 1,
     "nSignals": 22,
     "sharpe": 1.546,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 1000",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 1000",
     "note": "No improvement: $212 vs best $660.1"
   },
   {
@@ -3524,7 +3524,7 @@
     "winRate": 1,
     "nSignals": 12,
     "sharpe": 1.223,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 1500",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 1500",
     "note": "No improvement: $106 vs best $660.1"
   },
   {
@@ -3553,7 +3553,7 @@
     "winRate": 0.9697,
     "nSignals": 33,
     "sharpe": 0.278,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 500",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 500",
     "note": "No improvement: $152.1 vs best $660.1"
   },
   {
@@ -3582,7 +3582,7 @@
     "winRate": 0.9655,
     "nSignals": 29,
     "sharpe": 0.245,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 750",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 750",
     "note": "No improvement: $125 vs best $660.1"
   },
   {
@@ -3611,7 +3611,7 @@
     "winRate": 1,
     "nSignals": 19,
     "sharpe": 1.562,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 1000",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 1000",
     "note": "No improvement: $153 vs best $660.1"
   },
   {
@@ -3640,7 +3640,7 @@
     "winRate": 1,
     "nSignals": 9,
     "sharpe": 1.256,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 1500",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 1500",
     "note": "No improvement: $47 vs best $660.1"
   },
   {
@@ -3669,7 +3669,7 @@
     "winRate": 1,
     "nSignals": 22,
     "sharpe": 1.53,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 500",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 500",
     "note": "No improvement: $98.1 vs best $660.1"
   },
   {
@@ -3698,7 +3698,7 @@
     "winRate": 1,
     "nSignals": 19,
     "sharpe": 1.501,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 750",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 750",
     "note": "No improvement: $85 vs best $660.1"
   },
   {
@@ -3727,7 +3727,7 @@
     "winRate": 1,
     "nSignals": 13,
     "sharpe": 1.553,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 1000",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 1000",
     "note": "No improvement: $66 vs best $660.1"
   },
   {
@@ -3756,7 +3756,7 @@
     "winRate": 1,
     "nSignals": 8,
     "sharpe": 1.406,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 1500",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 1500",
     "note": "No improvement: $33 vs best $660.1"
   },
   {
@@ -3785,8 +3785,8 @@
     "winRate": 0.9333,
     "nSignals": 90,
     "sharpe": 0.476,
-    "hypothesis": "WIDER: does including [0.7–0.80] zone help or hurt PnL?",
-    "note": "PnL $660.1 → $1077.1 (Δ$417)"
+    "hypothesis": "WIDER: does including [0.70.80] zone help or hurt PnL",
+    "note": "PnL $660.1  $1077.1 ($417)"
   },
   {
     "ts": "2026-03-14T23:19:13.943Z",
@@ -3814,7 +3814,7 @@
     "winRate": 0.9302,
     "nSignals": 86,
     "sharpe": 0.439,
-    "hypothesis": "WIDER: does including [0.72–0.80] zone help or hurt PnL?",
+    "hypothesis": "WIDER: does including [0.720.80] zone help or hurt PnL",
     "note": "No improvement: $961.1 vs best $1077.1"
   },
   {
@@ -3843,7 +3843,7 @@
     "winRate": 0.9667,
     "nSignals": 60,
     "sharpe": 0.576,
-    "hypothesis": "WIDER: does including [0.75–0.80] zone help or hurt PnL?",
+    "hypothesis": "WIDER: does including [0.750.80] zone help or hurt PnL",
     "note": "No improvement: $660.1 vs best $1077.1"
   },
   {
@@ -3872,7 +3872,7 @@
     "winRate": 1,
     "nSignals": 18,
     "sharpe": 12.165,
-    "hypothesis": "DIP: minDip=0.05 maxDip=0.18 — conviction during wobble, not collapse",
+    "hypothesis": "DIP: minDip=0.05 maxDip=0.18  conviction during wobble, not collapse",
     "note": "No improvement: $410 vs best $1077.1"
   },
   {
@@ -3901,7 +3901,7 @@
     "winRate": 1,
     "nSignals": 13,
     "sharpe": 22.657,
-    "hypothesis": "DIP: minDip=0.08 maxDip=0.18 — conviction during wobble, not collapse",
+    "hypothesis": "DIP: minDip=0.08 maxDip=0.18  conviction during wobble, not collapse",
     "note": "No improvement: $309 vs best $1077.1"
   },
   {
@@ -3930,7 +3930,7 @@
     "winRate": 1,
     "nSignals": 8,
     "sharpe": 49,
-    "hypothesis": "DIP: minDip=0.1 maxDip=0.18 — conviction during wobble, not collapse",
+    "hypothesis": "DIP: minDip=0.1 maxDip=0.18  conviction during wobble, not collapse",
     "note": "No improvement: $196 vs best $1077.1"
   },
   {
@@ -3959,7 +3959,7 @@
     "winRate": 1,
     "nSignals": 7,
     "sharpe": 49.652,
-    "hypothesis": "DIP: minDip=0.12 maxDip=0.18 — conviction during wobble, not collapse",
+    "hypothesis": "DIP: minDip=0.12 maxDip=0.18  conviction during wobble, not collapse",
     "note": "No improvement: $172 vs best $1077.1"
   },
   {
@@ -3988,7 +3988,7 @@
     "winRate": 1,
     "nSignals": 4,
     "sharpe": 0,
-    "hypothesis": "DIP: minDip=0.15 maxDip=0.18 — conviction during wobble, not collapse",
+    "hypothesis": "DIP: minDip=0.15 maxDip=0.18  conviction during wobble, not collapse",
     "note": "No improvement: $100 vs best $1077.1"
   },
   {
@@ -4017,7 +4017,7 @@
     "winRate": 1,
     "nSignals": 18,
     "sharpe": 12.165,
-    "hypothesis": "DIP-ONLY: minDip=0.05 — any conviction dip",
+    "hypothesis": "DIP-ONLY: minDip=0.05  any conviction dip",
     "note": "No improvement: $410 vs best $1077.1"
   },
   {
@@ -4046,7 +4046,7 @@
     "winRate": 1,
     "nSignals": 8,
     "sharpe": 49,
-    "hypothesis": "DIP-ONLY: minDip=0.1 — any conviction dip",
+    "hypothesis": "DIP-ONLY: minDip=0.1  any conviction dip",
     "note": "No improvement: $196 vs best $1077.1"
   },
   {
@@ -4075,7 +4075,7 @@
     "winRate": 1,
     "nSignals": 4,
     "sharpe": 0,
-    "hypothesis": "DIP-ONLY: minDip=0.15 — any conviction dip",
+    "hypothesis": "DIP-ONLY: minDip=0.15  any conviction dip",
     "note": "No improvement: $100 vs best $1077.1"
   },
   {
@@ -4191,7 +4191,7 @@
     "winRate": 1,
     "nSignals": 4,
     "sharpe": 57.158,
-    "hypothesis": "HOLY-GRAIL-A: dip 10-18¢ + cluster — Ole Miss pattern",
+    "hypothesis": "HOLY-GRAIL-A: dip 10-18 + cluster  Ole Miss pattern",
     "note": "No improvement: $99 vs best $1077.1"
   },
   {
@@ -4220,7 +4220,7 @@
     "winRate": 1,
     "nSignals": 7,
     "sharpe": 21.209,
-    "hypothesis": "HOLY-GRAIL-B: dip 8-18¢ + cluster — slightly wider",
+    "hypothesis": "HOLY-GRAIL-B: dip 8-18 + cluster  slightly wider",
     "note": "No improvement: $167 vs best $1077.1"
   },
   {
@@ -4249,7 +4249,7 @@
     "winRate": 1,
     "nSignals": 23,
     "sharpe": 18.285,
-    "hypothesis": "HOLY-GRAIL-C: dip 10-18¢ + cluster + wider implied range",
+    "hypothesis": "HOLY-GRAIL-C: dip 10-18 + cluster + wider implied range",
     "note": "No improvement: $619 vs best $1077.1"
   },
   {
@@ -4278,7 +4278,7 @@
     "winRate": 1,
     "nSignals": 4,
     "sharpe": 57.158,
-    "hypothesis": "HOLY-GRAIL-D: dip 10-18¢ + cluster + $300+ trade size",
+    "hypothesis": "HOLY-GRAIL-D: dip 10-18 + cluster + $300+ trade size",
     "note": "No improvement: $99 vs best $1077.1"
   },
   {
@@ -4307,7 +4307,7 @@
     "winRate": 1,
     "nSignals": 4,
     "sharpe": 57.158,
-    "hypothesis": "FULL-OPTIMAL: 75%+ + dip 10-18¢ + cluster + $200+",
+    "hypothesis": "FULL-OPTIMAL: 75%+ + dip 10-18 + cluster + $200+",
     "note": "No improvement: $99 vs best $1077.1"
   },
   {
@@ -4336,7 +4336,7 @@
     "winRate": 1,
     "nSignals": 26,
     "sharpe": 13.586,
-    "hypothesis": "FULL-WIDE: 70%+ + dip 8¢+ + cluster + $300+",
+    "hypothesis": "FULL-WIDE: 70%+ + dip 8+ + cluster + $300+",
     "note": "No improvement: $687 vs best $1077.1"
   },
   {
@@ -4365,7 +4365,7 @@
     "winRate": 1,
     "nSignals": 21,
     "sharpe": 1.38,
-    "hypothesis": "HIGH-CONF: impliedRange [0.75–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.751.0]  focus on whale-certainty signals",
     "note": "No improvement: $245 vs best $245"
   },
   {
@@ -4394,7 +4394,7 @@
     "winRate": 1,
     "nSignals": 18,
     "sharpe": 1.337,
-    "hypothesis": "HIGH-CONF: impliedRange [0.78–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.781.0]  focus on whale-certainty signals",
     "note": "No improvement: $171 vs best $245"
   },
   {
@@ -4423,7 +4423,7 @@
     "winRate": 1,
     "nSignals": 14,
     "sharpe": 1.367,
-    "hypothesis": "HIGH-CONF: impliedRange [0.82–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.821.0]  focus on whale-certainty signals",
     "note": "No improvement: $90 vs best $245"
   },
   {
@@ -4452,7 +4452,7 @@
     "winRate": 1,
     "nSignals": 14,
     "sharpe": 1.367,
-    "hypothesis": "HIGH-CONF: impliedRange [0.84–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.841.0]  focus on whale-certainty signals",
     "note": "No improvement: $90 vs best $245"
   },
   {
@@ -4481,7 +4481,7 @@
     "winRate": 1,
     "nSignals": 11,
     "sharpe": 1.692,
-    "hypothesis": "HIGH-CONF: impliedRange [0.87–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.871.0]  focus on whale-certainty signals",
     "note": "No improvement: $47 vs best $245"
   },
   {
@@ -4510,7 +4510,7 @@
     "winRate": 1,
     "nSignals": 11,
     "sharpe": 1.692,
-    "hypothesis": "HIGH-CONF: impliedRange [0.88–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.881.0]  focus on whale-certainty signals",
     "note": "No improvement: $47 vs best $245"
   },
   {
@@ -4539,7 +4539,7 @@
     "winRate": 1,
     "nSignals": 10,
     "sharpe": 2.004,
-    "hypothesis": "HIGH-CONF: impliedRange [0.92–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.921.0]  focus on whale-certainty signals",
     "note": "No improvement: $37 vs best $245"
   },
   {
@@ -4568,7 +4568,7 @@
     "winRate": 1,
     "nSignals": 9,
     "sharpe": 2.132,
-    "hypothesis": "HIGH-CONF: impliedRange [0.95–1.0] — focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.951.0]  focus on whale-certainty signals",
     "note": "No improvement: $30 vs best $245"
   },
   {
@@ -4599,7 +4599,7 @@
     "winRate": 1,
     "nSignals": 17,
     "sharpe": 1.326,
-    "hypothesis": "SPORTS-ONLY high-conf: [0.8–1.0], skip all non-sports",
+    "hypothesis": "SPORTS-ONLY high-conf: [0.81.0], skip all non-sports",
     "note": "No improvement: $149 vs best $245"
   },
   {
@@ -4630,7 +4630,7 @@
     "winRate": 1,
     "nSignals": 14,
     "sharpe": 1.367,
-    "hypothesis": "SPORTS-ONLY high-conf: [0.85–1.0], skip all non-sports",
+    "hypothesis": "SPORTS-ONLY high-conf: [0.851.0], skip all non-sports",
     "note": "No improvement: $90 vs best $245"
   },
   {
@@ -4661,7 +4661,7 @@
     "winRate": 1,
     "nSignals": 11,
     "sharpe": 1.692,
-    "hypothesis": "SPORTS-ONLY high-conf: [0.9–1.0], skip all non-sports",
+    "hypothesis": "SPORTS-ONLY high-conf: [0.91.0], skip all non-sports",
     "note": "No improvement: $47 vs best $245"
   },
   {
@@ -4690,7 +4690,7 @@
     "winRate": 1,
     "nSignals": 17,
     "sharpe": 1.326,
-    "hypothesis": "RECENCY: [0.8–1.0] + lookback 7d",
+    "hypothesis": "RECENCY: [0.81.0] + lookback 7d",
     "note": "No improvement: $149 vs best $245"
   },
   {
@@ -4719,7 +4719,7 @@
     "winRate": 1,
     "nSignals": 17,
     "sharpe": 1.326,
-    "hypothesis": "RECENCY: [0.8–1.0] + lookback 14d",
+    "hypothesis": "RECENCY: [0.81.0] + lookback 14d",
     "note": "No improvement: $149 vs best $245"
   },
   {
@@ -4748,7 +4748,7 @@
     "winRate": 1,
     "nSignals": 17,
     "sharpe": 1.326,
-    "hypothesis": "RECENCY: [0.8–1.0] + lookback 21d",
+    "hypothesis": "RECENCY: [0.81.0] + lookback 21d",
     "note": "No improvement: $149 vs best $245"
   },
   {
@@ -4777,7 +4777,7 @@
     "winRate": 1,
     "nSignals": 14,
     "sharpe": 1.367,
-    "hypothesis": "RECENCY: [0.85–1.0] + lookback 7d",
+    "hypothesis": "RECENCY: [0.851.0] + lookback 7d",
     "note": "No improvement: $90 vs best $245"
   },
   {
@@ -4806,7 +4806,7 @@
     "winRate": 1,
     "nSignals": 14,
     "sharpe": 1.367,
-    "hypothesis": "RECENCY: [0.85–1.0] + lookback 14d",
+    "hypothesis": "RECENCY: [0.851.0] + lookback 14d",
     "note": "No improvement: $90 vs best $245"
   },
   {
@@ -4835,7 +4835,7 @@
     "winRate": 1,
     "nSignals": 14,
     "sharpe": 1.367,
-    "hypothesis": "RECENCY: [0.85–1.0] + lookback 21d",
+    "hypothesis": "RECENCY: [0.851.0] + lookback 21d",
     "note": "No improvement: $90 vs best $245"
   },
   {
@@ -4864,7 +4864,7 @@
     "winRate": 1,
     "nSignals": 17,
     "sharpe": 1.326,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 500",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 500",
     "note": "No improvement: $149 vs best $245"
   },
   {
@@ -4893,7 +4893,7 @@
     "winRate": 1,
     "nSignals": 17,
     "sharpe": 1.326,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 750",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 750",
     "note": "No improvement: $149 vs best $245"
   },
   {
@@ -4922,7 +4922,7 @@
     "winRate": 1,
     "nSignals": 17,
     "sharpe": 1.326,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 1000",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 1000",
     "note": "No improvement: $149 vs best $245"
   },
   {
@@ -4951,7 +4951,7 @@
     "winRate": 1,
     "nSignals": 15,
     "sharpe": 1.199,
-    "hypothesis": "INSTITUTIONAL: [0.8–1.0] + minContracts 1500",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 1500",
     "note": "No improvement: $120 vs best $245"
   },
   {
@@ -4980,7 +4980,7 @@
     "winRate": 1,
     "nSignals": 14,
     "sharpe": 1.367,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 500",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 500",
     "note": "No improvement: $90 vs best $245"
   },
   {
@@ -5009,7 +5009,7 @@
     "winRate": 1,
     "nSignals": 14,
     "sharpe": 1.367,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 750",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 750",
     "note": "No improvement: $90 vs best $245"
   },
   {
@@ -5038,7 +5038,7 @@
     "winRate": 1,
     "nSignals": 14,
     "sharpe": 1.367,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 1000",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 1000",
     "note": "No improvement: $90 vs best $245"
   },
   {
@@ -5067,7 +5067,7 @@
     "winRate": 1,
     "nSignals": 12,
     "sharpe": 1.406,
-    "hypothesis": "INSTITUTIONAL: [0.85–1.0] + minContracts 1500",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 1500",
     "note": "No improvement: $61 vs best $245"
   },
   {
@@ -5096,7 +5096,7 @@
     "winRate": 1,
     "nSignals": 11,
     "sharpe": 1.692,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 500",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 500",
     "note": "No improvement: $47 vs best $245"
   },
   {
@@ -5125,7 +5125,7 @@
     "winRate": 1,
     "nSignals": 11,
     "sharpe": 1.692,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 750",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 750",
     "note": "No improvement: $47 vs best $245"
   },
   {
@@ -5154,7 +5154,7 @@
     "winRate": 1,
     "nSignals": 11,
     "sharpe": 1.692,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 1000",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 1000",
     "note": "No improvement: $47 vs best $245"
   },
   {
@@ -5183,7 +5183,7 @@
     "winRate": 1,
     "nSignals": 11,
     "sharpe": 1.692,
-    "hypothesis": "INSTITUTIONAL: [0.9–1.0] + minContracts 1500",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 1500",
     "note": "No improvement: $47 vs best $245"
   },
   {
@@ -5212,8 +5212,8 @@
     "winRate": 0.931,
     "nSignals": 29,
     "sharpe": 0.365,
-    "hypothesis": "WIDER: does including [0.7–0.80] zone help or hurt PnL?",
-    "note": "PnL $245 → $257 (Δ$12)"
+    "hypothesis": "WIDER: does including [0.70.80] zone help or hurt PnL",
+    "note": "PnL $245  $257 ($12)"
   },
   {
     "ts": "2026-03-15T04:00:32.378Z",
@@ -5241,7 +5241,7 @@
     "winRate": 0.931,
     "nSignals": 29,
     "sharpe": 0.365,
-    "hypothesis": "WIDER: does including [0.72–0.80] zone help or hurt PnL?",
+    "hypothesis": "WIDER: does including [0.720.80] zone help or hurt PnL",
     "note": "No improvement: $257 vs best $257"
   },
   {
@@ -5270,7 +5270,7 @@
     "winRate": 1,
     "nSignals": 21,
     "sharpe": 1.38,
-    "hypothesis": "WIDER: does including [0.75–0.80] zone help or hurt PnL?",
+    "hypothesis": "WIDER: does including [0.750.80] zone help or hurt PnL",
     "note": "No improvement: $245 vs best $257"
   },
   {
@@ -5299,7 +5299,7 @@
     "winRate": 1,
     "nSignals": 6,
     "sharpe": 8.713,
-    "hypothesis": "DIP: minDip=0.05 maxDip=0.18 — conviction during wobble, not collapse",
+    "hypothesis": "DIP: minDip=0.05 maxDip=0.18  conviction during wobble, not collapse",
     "note": "No improvement: $133 vs best $257"
   },
   {
@@ -5328,7 +5328,7 @@
     "winRate": 1,
     "nSignals": 3,
     "sharpe": 52.326,
-    "hypothesis": "DIP: minDip=0.08 maxDip=0.18 — conviction during wobble, not collapse",
+    "hypothesis": "DIP: minDip=0.08 maxDip=0.18  conviction during wobble, not collapse",
     "note": "No improvement: $74 vs best $257"
   },
   {
@@ -5357,7 +5357,7 @@
     "winRate": 1,
     "nSignals": 3,
     "sharpe": 52.326,
-    "hypothesis": "DIP: minDip=0.1 maxDip=0.18 — conviction during wobble, not collapse",
+    "hypothesis": "DIP: minDip=0.1 maxDip=0.18  conviction during wobble, not collapse",
     "note": "No improvement: $74 vs best $257"
   },
   {
@@ -5386,7 +5386,7 @@
     "winRate": 1,
     "nSignals": 3,
     "sharpe": 52.326,
-    "hypothesis": "DIP: minDip=0.12 maxDip=0.18 — conviction during wobble, not collapse",
+    "hypothesis": "DIP: minDip=0.12 maxDip=0.18  conviction during wobble, not collapse",
     "note": "No improvement: $74 vs best $257"
   },
   {
@@ -5409,7 +5409,7 @@
       "requireCluster": false
     },
     "result": "INSUFFICIENT",
-    "hypothesis": "DIP: minDip=0.15 maxDip=0.18 — conviction during wobble, not collapse",
+    "hypothesis": "DIP: minDip=0.15 maxDip=0.18  conviction during wobble, not collapse",
     "note": "Too few signals passed filter"
   },
   {
@@ -5438,7 +5438,7 @@
     "winRate": 1,
     "nSignals": 6,
     "sharpe": 8.713,
-    "hypothesis": "DIP-ONLY: minDip=0.05 — any conviction dip",
+    "hypothesis": "DIP-ONLY: minDip=0.05  any conviction dip",
     "note": "No improvement: $133 vs best $257"
   },
   {
@@ -5467,7 +5467,7 @@
     "winRate": 1,
     "nSignals": 3,
     "sharpe": 52.326,
-    "hypothesis": "DIP-ONLY: minDip=0.1 — any conviction dip",
+    "hypothesis": "DIP-ONLY: minDip=0.1  any conviction dip",
     "note": "No improvement: $74 vs best $257"
   },
   {
@@ -5490,7 +5490,7 @@
       "requireCluster": false
     },
     "result": "INSUFFICIENT",
-    "hypothesis": "DIP-ONLY: minDip=0.15 — any conviction dip",
+    "hypothesis": "DIP-ONLY: minDip=0.15  any conviction dip",
     "note": "Too few signals passed filter"
   },
   {
@@ -5588,7 +5588,7 @@
       "requireCluster": true
     },
     "result": "INSUFFICIENT",
-    "hypothesis": "HOLY-GRAIL-A: dip 10-18¢ + cluster — Ole Miss pattern",
+    "hypothesis": "HOLY-GRAIL-A: dip 10-18 + cluster  Ole Miss pattern",
     "note": "Too few signals passed filter"
   },
   {
@@ -5611,7 +5611,7 @@
       "requireCluster": true
     },
     "result": "INSUFFICIENT",
-    "hypothesis": "HOLY-GRAIL-B: dip 8-18¢ + cluster — slightly wider",
+    "hypothesis": "HOLY-GRAIL-B: dip 8-18 + cluster  slightly wider",
     "note": "Too few signals passed filter"
   },
   {
@@ -5640,7 +5640,7 @@
     "winRate": 1,
     "nSignals": 3,
     "sharpe": 53.74,
-    "hypothesis": "HOLY-GRAIL-C: dip 10-18¢ + cluster + wider implied range",
+    "hypothesis": "HOLY-GRAIL-C: dip 10-18 + cluster + wider implied range",
     "note": "No improvement: $76 vs best $257"
   },
   {
@@ -6786,7 +6786,7 @@
     "nSignals": 125,
     "sharpe": 0.343,
     "hypothesis": "WILDCARD-A: wide-range-med-trade-fast-ewma",
-    "note": "PnL $245 Ã¢â€ â€™ $1315.2 (ÃŽâ€$1070)"
+    "note": "PnL $245  $1315.2 ($1070)"
   },
   {
     "ts": "2026-03-16T04:30:27.570Z",
@@ -7299,7 +7299,7 @@
     "nSignals": 91,
     "sharpe": 0.129,
     "hypothesis": "CAP-TOP: range 0.65-0.92",
-    "note": "PnL $221.1 Ã¢â€ â€™ $462 (ÃŽâ€$241)"
+    "note": "PnL $221.1  $462 ($241)"
   },
   {
     "ts": "2026-03-18T01:47:19.102Z",
@@ -7328,7 +7328,7 @@
     "nSignals": 101,
     "sharpe": 0.138,
     "hypothesis": "CAP-TOP: range 0.65-0.95",
-    "note": "PnL $462 Ã¢â€ â€™ $519 (ÃŽâ€$57)"
+    "note": "PnL $462  $519 ($57)"
   },
   {
     "ts": "2026-03-18T01:48:07.861Z",
@@ -7357,7 +7357,7 @@
     "nSignals": 111,
     "sharpe": 0.141,
     "hypothesis": "CAP-TOP: range 0.65-0.97",
-    "note": "PnL $221.1 Ã¢â€ â€™ $555 (ÃŽâ€$334)"
+    "note": "PnL $221.1  $555 ($334)"
   },
   {
     "ts": "2026-03-18T01:48:07.941Z",
@@ -7936,7 +7936,7 @@
     "winRate": 0.8776,
     "nSignals": 98,
     "sharpe": 0.051,
-    "hypothesis": "HIGH-CONF: impliedRange [0.75Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.751.0]  focus on whale-certainty signals",
     "note": "No improvement: $157.1 vs best $157.1"
   },
   {
@@ -7965,7 +7965,7 @@
     "winRate": 0.9,
     "nSignals": 80,
     "sharpe": 0.055,
-    "hypothesis": "HIGH-CONF: impliedRange [0.78Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.781.0]  focus on whale-certainty signals",
     "note": "No improvement: $126.1 vs best $157.1"
   },
   {
@@ -7994,7 +7994,7 @@
     "winRate": 0.9,
     "nSignals": 70,
     "sharpe": 0.005,
-    "hypothesis": "HIGH-CONF: impliedRange [0.8Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.81.0]  focus on whale-certainty signals",
     "note": "No improvement: $10.1 vs best $157.1"
   },
   {
@@ -8023,7 +8023,7 @@
     "winRate": 0.8871,
     "nSignals": 62,
     "sharpe": -0.081,
-    "hypothesis": "HIGH-CONF: impliedRange [0.82Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.821.0]  focus on whale-certainty signals",
     "note": "No improvement: $-145.9 vs best $157.1"
   },
   {
@@ -8052,8 +8052,8 @@
     "winRate": 0.9821,
     "nSignals": 56,
     "sharpe": 0.472,
-    "hypothesis": "HIGH-CONF: impliedRange [0.84Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
-    "note": "PnL $157.1 Ã¢â€ â€™ $350.1 (ÃŽâ€$193)"
+    "hypothesis": "HIGH-CONF: impliedRange [0.841.0]  focus on whale-certainty signals",
+    "note": "PnL $157.1  $350.1 ($193)"
   },
   {
     "ts": "2026-03-19T05:13:47.313Z",
@@ -8081,7 +8081,7 @@
     "winRate": 0.9818,
     "nSignals": 55,
     "sharpe": 0.457,
-    "hypothesis": "HIGH-CONF: impliedRange [0.85Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.851.0]  focus on whale-certainty signals",
     "note": "No improvement: $334.1 vs best $350.1"
   },
   {
@@ -8110,7 +8110,7 @@
     "winRate": 1,
     "nSignals": 43,
     "sharpe": 1.552,
-    "hypothesis": "HIGH-CONF: impliedRange [0.87Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.871.0]  focus on whale-certainty signals",
     "note": "No improvement: $260.1 vs best $350.1"
   },
   {
@@ -8139,7 +8139,7 @@
     "winRate": 1,
     "nSignals": 41,
     "sharpe": 1.557,
-    "hypothesis": "HIGH-CONF: impliedRange [0.88Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.881.0]  focus on whale-certainty signals",
     "note": "No improvement: $234.1 vs best $350.1"
   },
   {
@@ -8168,7 +8168,7 @@
     "winRate": 1,
     "nSignals": 34,
     "sharpe": 1.702,
-    "hypothesis": "HIGH-CONF: impliedRange [0.9Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.91.0]  focus on whale-certainty signals",
     "note": "No improvement: $151.1 vs best $350.1"
   },
   {
@@ -8197,7 +8197,7 @@
     "winRate": 1,
     "nSignals": 30,
     "sharpe": 2.013,
-    "hypothesis": "HIGH-CONF: impliedRange [0.92Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.921.0]  focus on whale-certainty signals",
     "note": "No improvement: $112.1 vs best $350.1"
   },
   {
@@ -8226,7 +8226,7 @@
     "winRate": 1,
     "nSignals": 25,
     "sharpe": 2.174,
-    "hypothesis": "HIGH-CONF: impliedRange [0.95Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.951.0]  focus on whale-certainty signals",
     "note": "No improvement: $79.1 vs best $350.1"
   },
   {
@@ -8255,7 +8255,7 @@
     "winRate": 0.9346,
     "nSignals": 107,
     "sharpe": 0.116,
-    "hypothesis": "COMBO: range [0.8Ã¢â‚¬â€œ1.0] + minTrade $200",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $200",
     "note": "No improvement: $290.7 vs best $350.1"
   },
   {
@@ -8284,7 +8284,7 @@
     "winRate": 0.9176,
     "nSignals": 85,
     "sharpe": 0.057,
-    "hypothesis": "COMBO: range [0.8Ã¢â‚¬â€œ1.0] + minTrade $300",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $300",
     "note": "No improvement: $126.7 vs best $350.1"
   },
   {
@@ -8313,7 +8313,7 @@
     "winRate": 0.9,
     "nSignals": 70,
     "sharpe": 0.005,
-    "hypothesis": "COMBO: range [0.8Ã¢â‚¬â€œ1.0] + minTrade $500",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $500",
     "note": "No improvement: $10.1 vs best $350.1"
   },
   {
@@ -8342,7 +8342,7 @@
     "winRate": 0.8947,
     "nSignals": 57,
     "sharpe": -0.023,
-    "hypothesis": "COMBO: range [0.8Ã¢â‚¬â€œ1.0] + minTrade $750",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $750",
     "note": "No improvement: $-38 vs best $350.1"
   },
   {
@@ -8371,7 +8371,7 @@
     "winRate": 0.8182,
     "nSignals": 33,
     "sharpe": -0.19,
-    "hypothesis": "COMBO: range [0.8Ã¢â‚¬â€œ1.0] + minTrade $1000",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $1000",
     "note": "No improvement: $-227 vs best $350.1"
   },
   {
@@ -8400,7 +8400,7 @@
     "winRate": 0.7692,
     "nSignals": 26,
     "sharpe": -0.298,
-    "hypothesis": "COMBO: range [0.8Ã¢â‚¬â€œ1.0] + minTrade $1500",
+    "hypothesis": "COMBO: range [0.81.0] + minTrade $1500",
     "note": "No improvement: $-305 vs best $350.1"
   },
   {
@@ -8429,8 +8429,8 @@
     "winRate": 0.9884,
     "nSignals": 86,
     "sharpe": 0.537,
-    "hypothesis": "COMBO: range [0.85Ã¢â‚¬â€œ1.0] + minTrade $200",
-    "note": "PnL $350.1 Ã¢â€ â€™ $505.1 (ÃŽâ€$155)"
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $200",
+    "note": "PnL $350.1  $505.1 ($155)"
   },
   {
     "ts": "2026-03-19T05:13:48.420Z",
@@ -8458,7 +8458,7 @@
     "winRate": 0.9848,
     "nSignals": 66,
     "sharpe": 0.466,
-    "hypothesis": "COMBO: range [0.85Ã¢â‚¬â€œ1.0] + minTrade $300",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $300",
     "note": "No improvement: $378.1 vs best $505.1"
   },
   {
@@ -8487,7 +8487,7 @@
     "winRate": 0.9818,
     "nSignals": 55,
     "sharpe": 0.457,
-    "hypothesis": "COMBO: range [0.85Ã¢â‚¬â€œ1.0] + minTrade $500",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $500",
     "note": "No improvement: $334.1 vs best $505.1"
   },
   {
@@ -8516,7 +8516,7 @@
     "winRate": 1,
     "nSignals": 45,
     "sharpe": 1.549,
-    "hypothesis": "COMBO: range [0.85Ã¢â‚¬â€œ1.0] + minTrade $750",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $750",
     "note": "No improvement: $342 vs best $505.1"
   },
   {
@@ -8545,7 +8545,7 @@
     "winRate": 1,
     "nSignals": 21,
     "sharpe": 1.502,
-    "hypothesis": "COMBO: range [0.85Ã¢â‚¬â€œ1.0] + minTrade $1000",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $1000",
     "note": "No improvement: $153 vs best $505.1"
   },
   {
@@ -8574,7 +8574,7 @@
     "winRate": 1,
     "nSignals": 15,
     "sharpe": 1.413,
-    "hypothesis": "COMBO: range [0.85Ã¢â‚¬â€œ1.0] + minTrade $1500",
+    "hypothesis": "COMBO: range [0.851.0] + minTrade $1500",
     "note": "No improvement: $95 vs best $505.1"
   },
   {
@@ -8603,7 +8603,7 @@
     "winRate": 1,
     "nSignals": 63,
     "sharpe": 1.475,
-    "hypothesis": "COMBO: range [0.9Ã¢â‚¬â€œ1.0] + minTrade $200",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $200",
     "note": "No improvement: $294.1 vs best $505.1"
   },
   {
@@ -8632,7 +8632,7 @@
     "winRate": 1,
     "nSignals": 44,
     "sharpe": 1.494,
-    "hypothesis": "COMBO: range [0.9Ã¢â‚¬â€œ1.0] + minTrade $300",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $300",
     "note": "No improvement: $181.1 vs best $505.1"
   },
   {
@@ -8661,7 +8661,7 @@
     "winRate": 1,
     "nSignals": 34,
     "sharpe": 1.702,
-    "hypothesis": "COMBO: range [0.9Ã¢â‚¬â€œ1.0] + minTrade $500",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $500",
     "note": "No improvement: $151.1 vs best $505.1"
   },
   {
@@ -8690,7 +8690,7 @@
     "winRate": 1,
     "nSignals": 29,
     "sharpe": 1.624,
-    "hypothesis": "COMBO: range [0.9Ã¢â‚¬â€œ1.0] + minTrade $750",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $750",
     "note": "No improvement: $127 vs best $505.1"
   },
   {
@@ -8719,7 +8719,7 @@
     "winRate": 0.9,
     "nSignals": 140,
     "sharpe": 0.089,
-    "hypothesis": "HIGH-CONF: impliedRange [0.75Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.751.0]  focus on whale-certainty signals",
     "note": "No improvement: $355.7 vs best $355.7"
   },
   {
@@ -8748,7 +8748,7 @@
     "winRate": 0.9237,
     "nSignals": 118,
     "sharpe": 0.11,
-    "hypothesis": "HIGH-CONF: impliedRange [0.78Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.781.0]  focus on whale-certainty signals",
     "note": "No improvement: $327.7 vs best $355.7"
   },
   {
@@ -8777,7 +8777,7 @@
     "winRate": 0.9278,
     "nSignals": 97,
     "sharpe": 0.041,
-    "hypothesis": "HIGH-CONF: impliedRange [0.82Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.821.0]  focus on whale-certainty signals",
     "note": "No improvement: $95.7 vs best $355.7"
   },
   {
@@ -8806,8 +8806,8 @@
     "winRate": 0.9885,
     "nSignals": 87,
     "sharpe": 0.548,
-    "hypothesis": "HIGH-CONF: impliedRange [0.84Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
-    "note": "PnL $355.7 Ã¢â€ â€™ $521.1 (ÃŽâ€$165)"
+    "hypothesis": "HIGH-CONF: impliedRange [0.841.0]  focus on whale-certainty signals",
+    "note": "PnL $355.7  $521.1 ($165)"
   },
   {
     "ts": "2026-03-19T05:13:56.579Z",
@@ -8835,7 +8835,7 @@
     "winRate": 1,
     "nSignals": 72,
     "sharpe": 1.452,
-    "hypothesis": "HIGH-CONF: impliedRange [0.87Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.871.0]  focus on whale-certainty signals",
     "note": "No improvement: $403.1 vs best $521.1"
   },
   {
@@ -8864,7 +8864,7 @@
     "winRate": 1,
     "nSignals": 70,
     "sharpe": 1.456,
-    "hypothesis": "HIGH-CONF: impliedRange [0.88Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.881.0]  focus on whale-certainty signals",
     "note": "No improvement: $377.1 vs best $521.1"
   },
   {
@@ -8893,7 +8893,7 @@
     "winRate": 1,
     "nSignals": 47,
     "sharpe": 1.597,
-    "hypothesis": "HIGH-CONF: impliedRange [0.92Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.921.0]  focus on whale-certainty signals",
     "note": "No improvement: $146.1 vs best $521.1"
   },
   {
@@ -8922,7 +8922,7 @@
     "winRate": 1,
     "nSignals": 41,
     "sharpe": 1.694,
-    "hypothesis": "HIGH-CONF: impliedRange [0.95Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "hypothesis": "HIGH-CONF: impliedRange [0.951.0]  focus on whale-certainty signals",
     "note": "No improvement: $107.1 vs best $521.1"
   },
   {
@@ -8951,7 +8951,7 @@
     "winRate": 1,
     "nSignals": 14,
     "sharpe": 1.566,
-    "hypothesis": "COMBO: range [0.9Ã¢â‚¬â€œ1.0] + minTrade $1000",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $1000",
     "note": "No improvement: $60 vs best $521.1"
   },
   {
@@ -8980,7 +8980,7 @@
     "winRate": 1,
     "nSignals": 12,
     "sharpe": 1.567,
-    "hypothesis": "COMBO: range [0.9Ã¢â‚¬â€œ1.0] + minTrade $1500",
+    "hypothesis": "COMBO: range [0.91.0] + minTrade $1500",
     "note": "No improvement: $54 vs best $521.1"
   },
   {
@@ -9011,7 +9011,7 @@
     "winRate": 0.9346,
     "nSignals": 107,
     "sharpe": 0.116,
-    "hypothesis": "SPORTS-ONLY high-conf: [0.8Ã¢â‚¬â€œ1.0], skip all non-sports",
+    "hypothesis": "SPORTS-ONLY high-conf: [0.81.0], skip all non-sports",
     "note": "No improvement: $290.7 vs best $521.1"
   },
   {
@@ -9042,7 +9042,7 @@
     "winRate": 0.9884,
     "nSignals": 86,
     "sharpe": 0.537,
-    "hypothesis": "SPORTS-ONLY high-conf: [0.85Ã¢â‚¬â€œ1.0], skip all non-sports",
+    "hypothesis": "SPORTS-ONLY high-conf: [0.851.0], skip all non-sports",
     "note": "No improvement: $505.1 vs best $521.1"
   },
   {
@@ -9073,7 +9073,7 @@
     "winRate": 1,
     "nSignals": 63,
     "sharpe": 1.475,
-    "hypothesis": "SPORTS-ONLY high-conf: [0.9Ã¢â‚¬â€œ1.0], skip all non-sports",
+    "hypothesis": "SPORTS-ONLY high-conf: [0.91.0], skip all non-sports",
     "note": "No improvement: $294.1 vs best $521.1"
   },
   {
@@ -9102,7 +9102,7 @@
     "winRate": 0.9346,
     "nSignals": 107,
     "sharpe": 0.116,
-    "hypothesis": "RECENCY: [0.8Ã¢â‚¬â€œ1.0] + lookback 7d",
+    "hypothesis": "RECENCY: [0.81.0] + lookback 7d",
     "note": "No improvement: $290.7 vs best $521.1"
   },
   {
@@ -9131,7 +9131,7 @@
     "winRate": 0.9346,
     "nSignals": 107,
     "sharpe": 0.116,
-    "hypothesis": "RECENCY: [0.8Ã¢â‚¬â€œ1.0] + lookback 14d",
+    "hypothesis": "RECENCY: [0.81.0] + lookback 14d",
     "note": "No improvement: $290.7 vs best $521.1"
   },
   {
@@ -9160,7 +9160,7 @@
     "winRate": 0.9346,
     "nSignals": 107,
     "sharpe": 0.116,
-    "hypothesis": "RECENCY: [0.8Ã¢â‚¬â€œ1.0] + lookback 21d",
+    "hypothesis": "RECENCY: [0.81.0] + lookback 21d",
     "note": "No improvement: $290.7 vs best $521.1"
   },
   {
@@ -9189,7 +9189,7 @@
     "winRate": 0.9884,
     "nSignals": 86,
     "sharpe": 0.537,
-    "hypothesis": "RECENCY: [0.85Ã¢â‚¬â€œ1.0] + lookback 7d",
+    "hypothesis": "RECENCY: [0.851.0] + lookback 7d",
     "note": "No improvement: $505.1 vs best $521.1"
   },
   {
@@ -9218,7 +9218,7 @@
     "winRate": 0.9884,
     "nSignals": 86,
     "sharpe": 0.537,
-    "hypothesis": "RECENCY: [0.85Ã¢â‚¬â€œ1.0] + lookback 14d",
+    "hypothesis": "RECENCY: [0.851.0] + lookback 14d",
     "note": "No improvement: $505.1 vs best $521.1"
   },
   {
@@ -9247,7 +9247,7 @@
     "winRate": 0.9884,
     "nSignals": 86,
     "sharpe": 0.537,
-    "hypothesis": "RECENCY: [0.85Ã¢â‚¬â€œ1.0] + lookback 21d",
+    "hypothesis": "RECENCY: [0.851.0] + lookback 21d",
     "note": "No improvement: $505.1 vs best $521.1"
   },
   {
@@ -9276,7 +9276,7 @@
     "winRate": 0.9067,
     "nSignals": 75,
     "sharpe": 0.01,
-    "hypothesis": "INSTITUTIONAL: [0.8Ã¢â‚¬â€œ1.0] + minContracts 500",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 500",
     "note": "No improvement: $20.1 vs best $521.1"
   },
   {
@@ -9305,7 +9305,7 @@
     "winRate": 0.8871,
     "nSignals": 62,
     "sharpe": -0.028,
-    "hypothesis": "INSTITUTIONAL: [0.8Ã¢â‚¬â€œ1.0] + minContracts 750",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 750",
     "note": "No improvement: $-52 vs best $521.1"
   },
   {
@@ -9334,7 +9334,7 @@
     "winRate": 0.8636,
     "nSignals": 44,
     "sharpe": -0.091,
-    "hypothesis": "INSTITUTIONAL: [0.8Ã¢â‚¬â€œ1.0] + minContracts 1000",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 1000",
     "note": "No improvement: $-129 vs best $521.1"
   },
   {
@@ -9363,7 +9363,7 @@
     "winRate": 0.7931,
     "nSignals": 29,
     "sharpe": -0.254,
-    "hypothesis": "INSTITUTIONAL: [0.8Ã¢â‚¬â€œ1.0] + minContracts 1500",
+    "hypothesis": "INSTITUTIONAL: [0.81.0] + minContracts 1500",
     "note": "No improvement: $-279 vs best $521.1"
   },
   {
@@ -9392,7 +9392,7 @@
     "winRate": 0.9833,
     "nSignals": 60,
     "sharpe": 0.448,
-    "hypothesis": "INSTITUTIONAL: [0.85Ã¢â‚¬â€œ1.0] + minContracts 500",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 500",
     "note": "No improvement: $344.1 vs best $521.1"
   },
   {
@@ -9421,7 +9421,7 @@
     "winRate": 0.9787,
     "nSignals": 47,
     "sharpe": 0.406,
-    "hypothesis": "INSTITUTIONAL: [0.85Ã¢â‚¬â€œ1.0] + minContracts 750",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 750",
     "note": "No improvement: $272 vs best $521.1"
   },
   {
@@ -9450,7 +9450,7 @@
     "winRate": 1,
     "nSignals": 32,
     "sharpe": 1.614,
-    "hypothesis": "INSTITUTIONAL: [0.85Ã¢â‚¬â€œ1.0] + minContracts 1000",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 1000",
     "note": "No improvement: $251 vs best $521.1"
   },
   {
@@ -9479,7 +9479,7 @@
     "winRate": 1,
     "nSignals": 17,
     "sharpe": 1.363,
-    "hypothesis": "INSTITUTIONAL: [0.85Ã¢â‚¬â€œ1.0] + minContracts 1500",
+    "hypothesis": "INSTITUTIONAL: [0.851.0] + minContracts 1500",
     "note": "No improvement: $101 vs best $521.1"
   },
   {
@@ -9508,7 +9508,7 @@
     "winRate": 1,
     "nSignals": 39,
     "sharpe": 1.548,
-    "hypothesis": "INSTITUTIONAL: [0.9Ã¢â‚¬â€œ1.0] + minContracts 500",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 500",
     "note": "No improvement: $161.1 vs best $521.1"
   },
   {
@@ -9537,7 +9537,7 @@
     "winRate": 1,
     "nSignals": 29,
     "sharpe": 1.624,
-    "hypothesis": "INSTITUTIONAL: [0.9Ã¢â‚¬â€œ1.0] + minContracts 750",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 750",
     "note": "No improvement: $127 vs best $521.1"
   },
   {
@@ -9566,7 +9566,7 @@
     "winRate": 1,
     "nSignals": 21,
     "sharpe": 1.656,
-    "hypothesis": "INSTITUTIONAL: [0.9Ã¢â‚¬â€œ1.0] + minContracts 1000",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 1000",
     "note": "No improvement: $101 vs best $521.1"
   },
   {
@@ -9595,7 +9595,7 @@
     "winRate": 1,
     "nSignals": 14,
     "sharpe": 1.566,
-    "hypothesis": "INSTITUTIONAL: [0.9Ã¢â‚¬â€œ1.0] + minContracts 1500",
+    "hypothesis": "INSTITUTIONAL: [0.91.0] + minContracts 1500",
     "note": "No improvement: $60 vs best $521.1"
   },
   {
@@ -9624,8 +9624,8 @@
     "winRate": 0.8757,
     "nSignals": 185,
     "sharpe": 0.117,
-    "hypothesis": "WIDER: does including [0.7Ã¢â‚¬â€œ0.80] zone help or hurt PnL?",
-    "note": "PnL $521.1 Ã¢â€ â€™ $685.7 (ÃŽâ€$165)"
+    "hypothesis": "WIDER: does including [0.70.80] zone help or hurt PnL",
+    "note": "PnL $521.1  $685.7 ($165)"
   },
   {
     "ts": "2026-03-19T05:13:58.955Z",
@@ -9653,7 +9653,7 @@
     "winRate": 0.8764,
     "nSignals": 178,
     "sharpe": 0.103,
-    "hypothesis": "WIDER: does including [0.72Ã¢â‚¬â€œ0.80] zone help or hurt PnL?",
+    "hypothesis": "WIDER: does including [0.720.80] zone help or hurt PnL",
     "note": "No improvement: $580.7 vs best $685.7"
   },
   {
@@ -9682,7 +9682,7 @@
     "winRate": 0.9,
     "nSignals": 140,
     "sharpe": 0.089,
-    "hypothesis": "WIDER: does including [0.75Ã¢â‚¬â€œ0.80] zone help or hurt PnL?",
+    "hypothesis": "WIDER: does including [0.750.80] zone help or hurt PnL",
     "note": "No improvement: $355.7 vs best $685.7"
   },
   {
@@ -9711,7 +9711,7 @@
     "winRate": 1,
     "nSignals": 21,
     "sharpe": 10.2,
-    "hypothesis": "DIP: minDip=0.05 maxDip=0.18 Ã¢â‚¬â€ conviction during wobble, not collapse",
+    "hypothesis": "DIP: minDip=0.05 maxDip=0.18  conviction during wobble, not collapse",
     "note": "No improvement: $467 vs best $685.7"
   },
   {
@@ -9740,7 +9740,7 @@
     "winRate": 1,
     "nSignals": 13,
     "sharpe": 22.657,
-    "hypothesis": "DIP: minDip=0.08 maxDip=0.18 Ã¢â‚¬â€ conviction during wobble, not collapse",
+    "hypothesis": "DIP: minDip=0.08 maxDip=0.18  conviction during wobble, not collapse",
     "note": "No improvement: $309 vs best $685.7"
   },
   {
@@ -9769,7 +9769,7 @@
     "winRate": 1,
     "nSignals": 8,
     "sharpe": 49,
-    "hypothesis": "DIP: minDip=0.1 maxDip=0.18 Ã¢â‚¬â€ conviction during wobble, not collapse",
+    "hypothesis": "DIP: minDip=0.1 maxDip=0.18  conviction during wobble, not collapse",
     "note": "No improvement: $196 vs best $685.7"
   },
   {
@@ -9798,7 +9798,7 @@
     "winRate": 1,
     "nSignals": 7,
     "sharpe": 49.652,
-    "hypothesis": "DIP: minDip=0.12 maxDip=0.18 Ã¢â‚¬â€ conviction during wobble, not collapse",
+    "hypothesis": "DIP: minDip=0.12 maxDip=0.18  conviction during wobble, not collapse",
     "note": "No improvement: $172 vs best $685.7"
   },
   {
@@ -9827,7 +9827,7 @@
     "winRate": 1,
     "nSignals": 4,
     "sharpe": 0,
-    "hypothesis": "DIP: minDip=0.15 maxDip=0.18 Ã¢â‚¬â€ conviction during wobble, not collapse",
+    "hypothesis": "DIP: minDip=0.15 maxDip=0.18  conviction during wobble, not collapse",
     "note": "No improvement: $100 vs best $685.7"
   },
   {
@@ -9856,7 +9856,7 @@
     "winRate": 1,
     "nSignals": 21,
     "sharpe": 10.2,
-    "hypothesis": "DIP-ONLY: minDip=0.05 Ã¢â‚¬â€ any conviction dip",
+    "hypothesis": "DIP-ONLY: minDip=0.05  any conviction dip",
     "note": "No improvement: $467 vs best $685.7"
   },
   {
@@ -9885,7 +9885,7 @@
     "winRate": 1,
     "nSignals": 8,
     "sharpe": 49,
-    "hypothesis": "DIP-ONLY: minDip=0.1 Ã¢â‚¬â€ any conviction dip",
+    "hypothesis": "DIP-ONLY: minDip=0.1  any conviction dip",
     "note": "No improvement: $196 vs best $685.7"
   },
   {
@@ -9914,7 +9914,7 @@
     "winRate": 1,
     "nSignals": 4,
     "sharpe": 0,
-    "hypothesis": "DIP-ONLY: minDip=0.15 Ã¢â‚¬â€ any conviction dip",
+    "hypothesis": "DIP-ONLY: minDip=0.15  any conviction dip",
     "note": "No improvement: $100 vs best $685.7"
   },
   {
@@ -10030,7 +10030,7 @@
     "winRate": 1,
     "nSignals": 4,
     "sharpe": 57.158,
-    "hypothesis": "HOLY-GRAIL-A: dip 10-18Ã‚Â¢ + cluster Ã¢â‚¬â€ Ole Miss pattern",
+    "hypothesis": "HOLY-GRAIL-A: dip 10-18 + cluster  Ole Miss pattern",
     "note": "No improvement: $99 vs best $685.7"
   },
   {
@@ -10059,7 +10059,7 @@
     "winRate": 1,
     "nSignals": 7,
     "sharpe": 21.209,
-    "hypothesis": "HOLY-GRAIL-B: dip 8-18Ã‚Â¢ + cluster Ã¢â‚¬â€ slightly wider",
+    "hypothesis": "HOLY-GRAIL-B: dip 8-18 + cluster  slightly wider",
     "note": "No improvement: $167 vs best $685.7"
   },
   {
@@ -10088,7 +10088,7 @@
     "winRate": 1,
     "nSignals": 23,
     "sharpe": 18.285,
-    "hypothesis": "HOLY-GRAIL-C: dip 10-18Ã‚Â¢ + cluster + wider implied range",
+    "hypothesis": "HOLY-GRAIL-C: dip 10-18 + cluster + wider implied range",
     "note": "No improvement: $619 vs best $685.7"
   },
   {
@@ -10117,7 +10117,7 @@
     "winRate": 1,
     "nSignals": 4,
     "sharpe": 57.158,
-    "hypothesis": "HOLY-GRAIL-D: dip 10-18Ã‚Â¢ + cluster + $300+ trade size",
+    "hypothesis": "HOLY-GRAIL-D: dip 10-18 + cluster + $300+ trade size",
     "note": "No improvement: $99 vs best $685.7"
   },
   {
@@ -10146,7 +10146,7 @@
     "winRate": 1,
     "nSignals": 4,
     "sharpe": 57.158,
-    "hypothesis": "FULL-OPTIMAL: 75%+ + dip 10-18Ã‚Â¢ + cluster + $200+",
+    "hypothesis": "FULL-OPTIMAL: 75%+ + dip 10-18 + cluster + $200+",
     "note": "No improvement: $99 vs best $685.7"
   },
   {
@@ -10175,8 +10175,8 @@
     "winRate": 1,
     "nSignals": 26,
     "sharpe": 13.586,
-    "hypothesis": "FULL-WIDE: 70%+ + dip 8Ã‚Â¢+ + cluster + $300+",
-    "note": "PnL $685.7 Ã¢â€ â€™ $687 (ÃŽâ€$1)"
+    "hypothesis": "FULL-WIDE: 70%+ + dip 8+ + cluster + $300+",
+    "note": "PnL $685.7  $687 ($1)"
   },
   {
     "ts": "2026-03-19T05:14:00.606Z",
@@ -11321,7 +11321,7 @@
     "nSignals": 171,
     "sharpe": 0.154,
     "hypothesis": "WILDCARD-A: wide-range-med-trade-fast-ewma",
-    "note": "PnL $687 Ã¢â€ â€™ $944.2 (ÃŽâ€$257)"
+    "note": "PnL $687  $944.2 ($257)"
   },
   {
     "ts": "2026-03-19T05:14:03.968Z",

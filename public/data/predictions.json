@@ -9475,5 +9475,25 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "e8b9d950-09e4-4b71-b4ea-1dfc7382a45c",
+    "firedAt": "2026-03-19T05:25:25.897Z",
+    "market": "High Point at Wisconsin Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR19HPWIS-WIS",
+    "side": "YES",
+    "price": 0.81,
+    "impliedPct": 81,
+    "contractsObserved": 1218,
+    "dollarObserved": 987,
+    "anchorPrice": 0.82,
+    "dipFromOpen": 0.01,
+    "hoursToClose": 347.58,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
