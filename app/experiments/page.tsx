@@ -55,6 +55,41 @@ export default function ExperimentsPage() {
         </p>
       </header>
 
+      {/* Plain English explainer */}
+      <section className="mb-8 card" style={{ background: 'linear-gradient(135deg, rgba(0,212,255,0.05) 0%, rgba(0,255,212,0.02) 100%)', borderColor: 'rgba(0,212,255,0.2)' }}>
+        <h3 className="text-lg font-semibold mb-3" style={{ color: '#00d4ff' }}>📚 What is this page?</h3>
+        <div className="space-y-3 text-sm" style={{ color: '#a0b4d0', lineHeight: 1.7 }}>
+          <p>
+            <strong style={{ color: '#e8edf5' }}>Every night at 1 AM</strong>, this system runs hundreds of experiments to find better betting strategies.
+            It tests different combinations of settings and keeps the ones that make more money.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div className="p-3 rounded-lg" style={{ background: 'rgba(0,0,0,0.3)' }}>
+              <div className="font-semibold mb-1" style={{ color: '#00ffd4' }}>Key terms:</div>
+              <ul className="space-y-1 text-xs">
+                <li><strong>PnL</strong> = Profit and Loss (how much money made or lost)</li>
+                <li><strong>Win Rate</strong> = % of bets that won</li>
+                <li><strong>Brier Score</strong> = prediction accuracy (lower = better, 0.25 = random guess)</li>
+                <li><strong>Implied Range</strong> = what confidence level to bet on (e.g., 80-100% = only bet when very confident)</li>
+                <li><strong>Min Trade</strong> = only follow bets where someone bet at least this much</li>
+              </ul>
+            </div>
+            <div className="p-3 rounded-lg" style={{ background: 'rgba(0,0,0,0.3)' }}>
+              <div className="font-semibold mb-1" style={{ color: '#06d6a0' }}>What IMPROVED means:</div>
+              <p className="text-xs">
+                An experiment is marked <span style={{ color: '#06d6a0' }}>IMPROVED</span> when it makes more money than all previous experiments.
+                The system automatically saves the best settings and uses them for future predictions.
+              </p>
+              <div className="font-semibold mb-1 mt-3" style={{ color: '#ef476f' }}>What REJECTED means:</div>
+              <p className="text-xs">
+                An experiment is <span style={{ color: '#ef476f' }}>REJECTED</span> when it doesn&apos;t beat the current best.
+                Most experiments get rejected — that&apos;s normal. We&apos;re looking for rare improvements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* KPI row */}
       <section className="mb-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
         <div className="card text-center">
