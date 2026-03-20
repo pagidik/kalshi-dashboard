@@ -12295,5 +12295,25 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "ccb74f4d-ca68-4b4f-a32a-2c3708610202",
+    "firedAt": "2026-03-20T11:23:23.302Z",
+    "market": "Akron at Texas Tech Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR20AKRTTU-TTU",
+    "side": "YES",
+    "price": 0.74,
+    "impliedPct": 74,
+    "contractsObserved": 1242,
+    "dollarObserved": 919,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 341.61,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
