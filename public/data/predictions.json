@@ -12090,10 +12090,10 @@
     "dipFromOpen": 0,
     "hoursToClose": 325.11,
     "hypotheticalBet": 100,
-    "status": "pending",
-    "result": null,
-    "pnl": null,
-    "settledAt": null,
+    "status": "won",
+    "result": "no",
+    "pnl": 3,
+    "settledAt": "2026-03-20T05:30:10.628Z",
     "category": "sports"
   },
   {
@@ -12110,10 +12110,10 @@
     "dipFromOpen": 0,
     "hoursToClose": 325.11,
     "hypotheticalBet": 100,
-    "status": "pending",
-    "result": null,
-    "pnl": null,
-    "settledAt": null,
+    "status": "won",
+    "result": "yes",
+    "pnl": 4,
+    "settledAt": "2026-03-20T05:30:10.687Z",
     "category": "sports"
   },
   {
@@ -12130,10 +12130,10 @@
     "dipFromOpen": 0,
     "hoursToClose": 325.08,
     "hypotheticalBet": 100,
-    "status": "pending",
-    "result": null,
-    "pnl": null,
-    "settledAt": null,
+    "status": "won",
+    "result": "yes",
+    "pnl": 1,
+    "settledAt": "2026-03-20T05:30:10.837Z",
     "category": "sports"
   },
   {
@@ -12234,6 +12234,26 @@
     "result": "yes",
     "pnl": 4,
     "settledAt": "2026-03-20T05:00:08.975Z",
+    "category": "sports"
+  },
+  {
+    "id": "31425005-9dc9-4ccb-a1c7-934a2f3ff685",
+    "firedAt": "2026-03-20T05:28:22.300Z",
+    "market": "Hofstra at Alabama Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR20HOFALA-ALA",
+    "side": "YES",
+    "price": 0.86,
+    "impliedPct": 86,
+    "contractsObserved": 3409,
+    "dollarObserved": 2932,
+    "anchorPrice": 0.86,
+    "dipFromOpen": 0,
+    "hoursToClose": 347.53,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
     "category": "sports"
   }
 ]
