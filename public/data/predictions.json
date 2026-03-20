@@ -12255,5 +12255,25 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "22605e6e-46db-4ae5-9c55-574318dc85a4",
+    "firedAt": "2026-03-20T08:56:56.112Z",
+    "market": "Tennessee St. at Iowa St. Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR20TNSTISU-ISU",
+    "side": "YES",
+    "price": 0.97,
+    "impliedPct": 97,
+    "contractsObserved": 3086,
+    "dollarObserved": 2993,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 344.05,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
