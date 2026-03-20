@@ -12275,5 +12275,25 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "2ae3bae2-db4a-4f12-b339-17d4ddbd1575",
+    "firedAt": "2026-03-20T09:34:58.634Z",
+    "market": "Prairie View A&M at Florida Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR20PVFLA-FLA",
+    "side": "YES",
+    "price": 0.99,
+    "impliedPct": 99,
+    "contractsObserved": 1000,
+    "dollarObserved": 990,
+    "anchorPrice": 0.98,
+    "dipFromOpen": -0.01,
+    "hoursToClose": 351.83,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
