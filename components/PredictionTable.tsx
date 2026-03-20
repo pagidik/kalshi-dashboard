@@ -53,14 +53,19 @@ function ConfidenceBar({ pct }: { pct: number }) {
 
 function kalshiUrl(ticker?: string): string | null {
   if (!ticker) return null
-  // Kalshi URL format: /markets/{event_ticker}/{market_ticker}
-  // event_ticker = all hyphen-segments except the last one
-  // e.g. KXNCAAMBGAME-26MAR12LOUMIA-MIA
-  //   → kalshi.com/markets/KXNCAAMBGAME-26MAR12LOUMIA/KXNCAAMBGAME-26MAR12LOUMIA-MIA
+  // Kalshi URL format changed in 2026:
+  // Old: /markets/{event_ticker}/{market_ticker}
+  // New: /markets/{series_ticker}/{series_name}/{event_ticker_lowercase}
+  // Since we don't have series_name, we use a search URL that redirects
+  // e.g. KXNCAAMBGAME-26MAR20PVFLA-FLA → search for the event ticker
   const parts = ticker.split('-')
-  if (parts.length < 2) return `https://kalshi.com/markets/${ticker}`
-  const eventTicker = parts.slice(0, -1).join('-')
-  return `https://kalshi.com/markets/${eventTicker}/${ticker}`
+  if (parts.length < 2) return `https://kalshi.com/browse?q=${encodeURIComponent(ticker)}`
+  // Extract base series ticker (first segment, lowercase)
+  const seriesTicker = parts[0].toLowerCase()
+  // For sports games, build the event ticker (all but last segment, lowercase)
+  const eventTicker = parts.slice(0, -1).join('-').toLowerCase()
+  // Use search as fallback - most reliable
+  return `https://kalshi.com/browse?q=${encodeURIComponent(eventTicker)}`
 }
 
 function PendingCard({ p }: { p: Prediction }) {
