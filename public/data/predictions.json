@@ -12315,5 +12315,25 @@
     "pnl": null,
     "settledAt": null,
     "category": "sports"
+  },
+  {
+    "id": "2affa80d-b5a8-486c-9e2b-8f2fecfeaa43",
+    "firedAt": "2026-03-20T12:51:09.559Z",
+    "market": "Northern Iowa at St. John's Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR20UNISJU-SJU",
+    "side": "YES",
+    "price": 0.83,
+    "impliedPct": 83,
+    "contractsObserved": 823,
+    "dollarObserved": 683,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 340.15,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports"
   }
 ]
