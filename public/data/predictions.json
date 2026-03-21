@@ -16622,10 +16622,10 @@
     "dipFromOpen": 0,
     "hoursToClose": 330.78,
     "hypotheticalBet": 100,
-    "status": "pending",
-    "result": null,
-    "pnl": null,
-    "settledAt": null,
+    "status": "won",
+    "result": "no",
+    "pnl": 3,
+    "settledAt": "2026-03-21T23:00:08.951Z",
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaawbgame-26mar21fduiowa"
   },
@@ -16649,5 +16649,26 @@
     "settledAt": null,
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaambgame-26mar21tcuduke"
+  },
+  {
+    "id": "7616e6ce-f714-47dc-a52e-a5c9ffb4f982",
+    "firedAt": "2026-03-21T22:58:59.667Z",
+    "market": "Syracuse at Iowa St. Winner?",
+    "ticker": "KXNCAAWBGAME-26MAR21SYRISU-SYR",
+    "side": "YES",
+    "price": 0.95,
+    "impliedPct": 95,
+    "contractsObserved": 3000,
+    "dollarObserved": 2850,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 330.02,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaawbgame-26mar21syrisu"
   }
 ]
