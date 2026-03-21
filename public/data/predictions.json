@@ -16544,5 +16544,26 @@
     "settledAt": null,
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaambgame-26mar21loumsu"
+  },
+  {
+    "id": "a33e8a93-71cd-40c0-af90-f6c7c7bbb653",
+    "firedAt": "2026-03-21T20:39:57.111Z",
+    "market": "Louisville at Michigan St. Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR21LOUMSU-MSU",
+    "side": "YES",
+    "price": 0.99,
+    "impliedPct": 99,
+    "contractsObserved": 5223,
+    "dollarObserved": 5171,
+    "anchorPrice": 0.64,
+    "dipFromOpen": -0.35,
+    "hoursToClose": 332.33,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaambgame-26mar21loumsu"
   }
 ]
