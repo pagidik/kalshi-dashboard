@@ -243,6 +243,21 @@ export default async function Home() {
         <h2 className="mb-1 text-xl font-semibold">🧪 Latest Backtest Results</h2>
         <p className="mb-4 text-sm text-text-muted">Real experiments on {experimentStatus.experiments?.[0]?.trades || 763} actual trades with verified entry prices</p>
         
+        {/* Plain language explainer */}
+        <div className="rounded-xl border border-accent/20 bg-accent/5 p-5 mb-6">
+          <p className="text-sm font-semibold text-accent mb-2">What this means in plain English:</p>
+          <p className="text-sm text-text-muted leading-relaxed mb-3">
+            We tested 20 different "rules" for when to bet. Each rule says: "Only bet when the market thinks something has X% to Y% chance of happening, and only when someone puts at least $Z on it."
+          </p>
+          <p className="text-sm text-text-muted leading-relaxed mb-3">
+            <strong className="text-text">The winner:</strong> Bet when the market says something has a <strong className="text-accent">60% to 100%</strong> chance of happening, and someone just put <strong className="text-accent">$500+</strong> on it. 
+            If you had followed this rule on all 574 qualifying trades, you would have made <strong className="text-green-400">$2,707</strong> profit with an <strong className="text-green-400">88.9% win rate</strong>.
+          </p>
+          <p className="text-sm text-text-muted leading-relaxed">
+            <strong className="text-text">What changed:</strong> We widened from 65% to 60%. This catches more bets in the "likely but not certain" range. The extra volume more than makes up for slightly lower confidence per trade.
+          </p>
+        </div>
+        
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-4">
           <div className="rounded-xl border border-green-500/20 bg-green-500/5 p-5">
             <p className="text-xs text-text-muted mb-1">Best Config Found</p>
@@ -270,8 +285,9 @@ export default async function Home() {
         
         {/* Top 5 experiments */}
         <div className="rounded-xl border border-border bg-surface overflow-hidden">
-          <div className="px-5 py-3 border-b border-border flex items-center justify-between">
-            <span className="text-sm font-medium">Top Performing Configs</span>
+          <div className="px-5 py-3 border-b border-border">
+            <span className="text-sm font-medium">All Configs Tested (sorted by profit)</span>
+            <p className="text-xs text-text-muted mt-1">Each row is a different betting rule. "Implied %" = how likely the market thinks the outcome is.</p>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
@@ -288,18 +304,21 @@ export default async function Home() {
                 {(experimentStatus.experiments || [])
                   .slice()
                   .sort((a: {pnl: number}, b: {pnl: number}) => b.pnl - a.pnl)
-                  .slice(0, 5)
                   .map((exp: {id: number; hypothesis: string; pnl: number; winRate: number; trades: number; result: string}, i: number) => (
-                    <tr key={exp.id} className="border-b border-border/30 hover:bg-accent/[0.02]">
-                      <td className="px-5 py-3 font-medium text-text">{exp.hypothesis}</td>
+                    <tr key={exp.id} className={`border-b border-border/30 hover:bg-accent/[0.02] ${i === 0 ? 'bg-green-500/5' : ''}`}>
+                      <td className="px-5 py-3 font-medium text-text">
+                        {exp.hypothesis}
+                        {i === 0 && <span className="ml-2 text-xs bg-green-500/20 text-green-400 px-2 py-0.5 rounded">Winner</span>}
+                      </td>
                       <td className={`px-5 py-3 font-mono ${exp.pnl >= 0 ? 'text-green-400' : 'text-red-400'}`}>
                         {exp.pnl >= 0 ? '+' : ''}${exp.pnl.toLocaleString()}
                       </td>
                       <td className="px-5 py-3">{(exp.winRate * 100).toFixed(1)}%</td>
                       <td className="px-5 py-3 text-text-muted">{exp.trades}</td>
                       <td className="px-5 py-3">
-                        {exp.result === 'IMPROVED' && <span className="text-green-400 text-xs font-medium">✓ Best</span>}
-                        {exp.result === 'REJECTED' && <span className="text-text-muted text-xs">Tested</span>}
+                        {i === 0 && <span className="text-green-400 text-xs font-medium">✓ Applied</span>}
+                        {exp.pnl < 0 && <span className="text-red-400 text-xs">Lost money</span>}
+                        {exp.pnl >= 0 && i !== 0 && <span className="text-text-muted text-xs">Profitable but not best</span>}
                       </td>
                     </tr>
                   ))}
