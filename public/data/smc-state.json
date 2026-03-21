@@ -2,34 +2,49 @@
   "positions": {},
   "signals": [
     {
-      "symbol": "LTC/USD",
+      "symbol": "BTC/USD",
       "direction": "LONG",
-      "entry": 55.68825,
-      "stop": 52.903837499999995,
-      "target": 61.257075,
+      "entry": 70381.965,
+      "stop": 66862.86674999999,
+      "target": 77420.1615,
       "rr": 2.0,
       "strategy": "trend_follow",
       "strength": 0.5,
-      "rsi": 58.47575298010861,
-      "macd": 0.1485482936296023,
+      "rsi": 59.784212173519784,
+      "macd": 350.86256410277565,
       "trend": "bullish",
-      "volatility_pct": 5.051723133887568,
-      "timestamp": "2026-03-21T17:53:25.410662+00:00"
+      "volatility_pct": 3.950554040962822,
+      "timestamp": "2026-03-21T20:02:01.216850+00:00"
+    },
+    {
+      "symbol": "LTC/USD",
+      "direction": "LONG",
+      "entry": 55.84165,
+      "stop": 53.0495675,
+      "target": 61.42581500000001,
+      "rr": 2.0,
+      "strategy": "trend_follow",
+      "strength": 0.5,
+      "rsi": 59.20255713238187,
+      "macd": 0.16078016408535944,
+      "trend": "bullish",
+      "volatility_pct": 5.037845780178672,
+      "timestamp": "2026-03-21T20:02:02.736620+00:00"
     },
     {
       "symbol": "DOGE/USD",
       "direction": "LONG",
-      "entry": 0.09404,
-      "stop": 0.089338,
-      "target": 0.10344400000000001,
+      "entry": 0.094059,
+      "stop": 0.08935604999999999,
+      "target": 0.10346490000000001,
       "rr": 2.0,
       "strategy": "macd_bullish",
       "strength": 0.6,
-      "rsi": 57.34899394430323,
-      "macd": -0.0006702164183931547,
+      "rsi": 57.38773217482194,
+      "macd": -0.0006687013888060783,
       "trend": "bearish",
-      "volatility_pct": 5.874904182110955,
-      "timestamp": "2026-03-21T17:53:25.968822+00:00"
+      "volatility_pct": 5.873717446344466,
+      "timestamp": "2026-03-21T20:02:03.432283+00:00"
     }
   ],
   "trades": [
@@ -73,7 +88,7 @@
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": -441.767511
+    "total_pnl": -488.93051
   },
-  "last_scan": "2026-03-21T17:53:27.447966+00:00"
+  "last_scan": "2026-03-21T20:02:04.853187+00:00"
 }
