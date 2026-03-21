@@ -7,7 +7,7 @@ import CircularProgress from '../components/CircularProgress'
 import ProfitChart from '../components/ProfitChart'
 import PredictionTable from '../components/PredictionTable'
 import CategoryCard from '../components/CategoryCard'
-import Leaderboard from '../components/Leaderboard'
+
 
 function getLiveData() {
   try {
@@ -134,11 +134,6 @@ export default async function Home() {
       {/* Predictions Table */}
       <section className="mb-10 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
         <PredictionTable predictions={predictions} />
-      </section>
-
-      {/* Leaderboard */}
-      <section className="mb-10 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
-        <Leaderboard />
       </section>
 
       {/* Category Breakdown */}

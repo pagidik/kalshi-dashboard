@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import VisitorTracker from "../components/VisitorTracker";
 import Header from "../components/Header";
-import HypothesisWrapper from "../components/HypothesisWrapper";
 
 export const metadata: Metadata = {
   title: "Kalshi Predictions Dashboard",
@@ -20,7 +19,6 @@ export default function RootLayout({
         <Header />
         {children}
         <VisitorTracker />
-        <HypothesisWrapper />
       </body>
     </html>
   );
