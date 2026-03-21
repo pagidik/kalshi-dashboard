@@ -30,9 +30,10 @@ function extractEventKey(p: Prediction): string {
 function kalshiUrl(ticker?: string): string | null {
   if (!ticker) return null
   const parts = ticker.split('-')
-  if (parts.length < 2) return `https://kalshi.com/browse?q=${encodeURIComponent(ticker)}`
+  if (parts.length < 2) return `https://kalshi.com/markets/${ticker.toLowerCase()}`
+  // Event ticker is everything except the last part (which is the contract variant)
   const eventTicker = parts.slice(0, -1).join('-').toLowerCase()
-  return `https://kalshi.com/browse?q=${encodeURIComponent(eventTicker)}`
+  return `https://kalshi.com/markets/${eventTicker}`
 }
 
 // ─── Batch Logic ─────────────────────────────────────────────────────────────
