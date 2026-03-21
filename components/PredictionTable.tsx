@@ -514,7 +514,7 @@ export default function PredictionTable({ predictions }: { predictions: Predicti
               <span className="text-xs text-text-muted cursor-help border-b border-dashed border-text-muted">What's this?</span>
             </Tooltip>
           </div>
-          <div className="overflow-y-auto" style={{ maxHeight: '420px' }}>
+          <div className="overflow-y-auto pr-2" style={{ maxHeight: '400px', scrollbarWidth: 'thin', scrollbarColor: 'rgba(255,193,7,0.3) transparent' }}>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {pending.map(p => <PendingCard key={p.id} p={p} />)}
             </div>
@@ -575,7 +575,7 @@ export default function PredictionTable({ predictions }: { predictions: Predicti
 
         {/* ── Grouped View ── */}
         {viewMode === 'grouped' && (
-          <div className="space-y-3">
+          <div className="space-y-3 max-h-[600px] overflow-y-auto pr-2" style={{ scrollbarWidth: 'thin', scrollbarColor: 'rgba(0,255,212,0.3) transparent' }}>
             {batchGroups.length === 0 ? (
               <p className="text-text-muted text-sm py-8 text-center">No signals match this filter.</p>
             ) : (
@@ -588,7 +588,7 @@ export default function PredictionTable({ predictions }: { predictions: Predicti
 
         {/* ── Individual View ── */}
         {viewMode === 'individual' && (
-          <div className="overflow-auto" style={{ maxHeight: '520px' }}>
+          <div className="overflow-auto" style={{ maxHeight: '600px', scrollbarWidth: 'thin', scrollbarColor: 'rgba(0,255,212,0.3) transparent' }}>
             <table className="w-full text-left text-sm">
               <thead>
                 <tr className="border-b border-border text-xs uppercase tracking-wider text-text-muted">

@@ -1,0 +1,365 @@
+{
+  "status": "complete",
+  "currentExperiment": 20,
+  "totalExperiments": 20,
+  "bestPnl": 14677,
+  "bestConfig": "80-100% / $500",
+  "startedAt": "2026-03-21T02:44:06.215Z",
+  "experiments": [
+    {
+      "id": 1,
+      "hypothesis": "Tight range 75-100%",
+      "params": {
+        "impliedRange": [
+          0.75,
+          1
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "IMPROVED",
+      "pnl": 14388,
+      "winRate": 0.999433387633685,
+      "trades": 14119
+    },
+    {
+      "id": 2,
+      "hypothesis": "Very tight 80-100%",
+      "params": {
+        "impliedRange": [
+          0.8,
+          1
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "IMPROVED",
+      "pnl": 14677,
+      "winRate": 0.9997165934533088,
+      "trades": 14114
+    },
+    {
+      "id": 3,
+      "hypothesis": "Ultra tight 85-100%",
+      "params": {
+        "impliedRange": [
+          0.85,
+          1
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "REJECTED",
+      "pnl": 14605,
+      "winRate": 0.9997165131112686,
+      "trades": 14110
+    },
+    {
+      "id": 4,
+      "hypothesis": "Sweet spot 70-95%",
+      "params": {
+        "impliedRange": [
+          0.7,
+          0.95
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "REJECTED",
+      "pnl": -207,
+      "winRate": 0.8777777777777778,
+      "trades": 90
+    },
+    {
+      "id": 5,
+      "hypothesis": "Current config 65-100%",
+      "params": {
+        "impliedRange": [
+          0.65,
+          1
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "REJECTED",
+      "pnl": 13959,
+      "winRate": 0.9988677375981884,
+      "trades": 14131
+    },
+    {
+      "id": 6,
+      "hypothesis": "Higher min $750",
+      "params": {
+        "impliedRange": [
+          0.65,
+          1
+        ],
+        "minTradeUSD": 750
+      },
+      "result": "REJECTED",
+      "pnl": 13959,
+      "winRate": 0.9988677375981884,
+      "trades": 14131
+    },
+    {
+      "id": 7,
+      "hypothesis": "Higher min $1000",
+      "params": {
+        "impliedRange": [
+          0.65,
+          1
+        ],
+        "minTradeUSD": 1000
+      },
+      "result": "REJECTED",
+      "pnl": 13959,
+      "winRate": 0.9988677375981884,
+      "trades": 14131
+    },
+    {
+      "id": 8,
+      "hypothesis": "Lower min $250",
+      "params": {
+        "impliedRange": [
+          0.65,
+          1
+        ],
+        "minTradeUSD": 250
+      },
+      "result": "REJECTED",
+      "pnl": 13959,
+      "winRate": 0.9988677375981884,
+      "trades": 14131
+    },
+    {
+      "id": 9,
+      "hypothesis": "Tight + high min",
+      "params": {
+        "impliedRange": [
+          0.8,
+          1
+        ],
+        "minTradeUSD": 750
+      },
+      "result": "REJECTED",
+      "pnl": 14677,
+      "winRate": 0.9997165934533088,
+      "trades": 14114
+    },
+    {
+      "id": 10,
+      "hypothesis": "Very tight + high min",
+      "params": {
+        "impliedRange": [
+          0.85,
+          1
+        ],
+        "minTradeUSD": 1000
+      },
+      "result": "REJECTED",
+      "pnl": 14605,
+      "winRate": 0.9997165131112686,
+      "trades": 14110
+    },
+    {
+      "id": 11,
+      "hypothesis": "NCAA Men only 65-100%",
+      "params": {
+        "impliedRange": [
+          0.65,
+          1
+        ],
+        "minTradeUSD": 500,
+        "sport": "KXNCAAMBGAME"
+      },
+      "result": "REJECTED",
+      "pnl": 5253,
+      "winRate": 0.9998081350729087,
+      "trades": 5212
+    },
+    {
+      "id": 12,
+      "hypothesis": "NCAA Men only 75-100%",
+      "params": {
+        "impliedRange": [
+          0.75,
+          1
+        ],
+        "minTradeUSD": 500,
+        "sport": "KXNCAAMBGAME"
+      },
+      "result": "REJECTED",
+      "pnl": 5253,
+      "winRate": 0.9998081350729087,
+      "trades": 5212
+    },
+    {
+      "id": 13,
+      "hypothesis": "NBA only 65-100%",
+      "params": {
+        "impliedRange": [
+          0.65,
+          1
+        ],
+        "minTradeUSD": 500,
+        "sport": "KXNBAGAME"
+      },
+      "result": "REJECTED",
+      "pnl": 1199,
+      "winRate": 1,
+      "trades": 1174
+    },
+    {
+      "id": 14,
+      "hypothesis": "NBA only 75-100%",
+      "params": {
+        "impliedRange": [
+          0.75,
+          1
+        ],
+        "minTradeUSD": 500,
+        "sport": "KXNBAGAME"
+      },
+      "result": "REJECTED",
+      "pnl": 1173,
+      "winRate": 1,
+      "trades": 1173
+    },
+    {
+      "id": 15,
+      "hypothesis": "Only favorites 90-100%",
+      "params": {
+        "impliedRange": [
+          0.9,
+          1
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "REJECTED",
+      "pnl": 14575,
+      "winRate": 0.9997872340425532,
+      "trades": 14100
+    },
+    {
+      "id": 16,
+      "hypothesis": "Underdogs only 50-65%",
+      "params": {
+        "impliedRange": [
+          0.5,
+          0.65
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "REJECTED",
+      "pnl": -118,
+      "winRate": 0.5,
+      "trades": 16
+    },
+    {
+      "id": 17,
+      "hypothesis": "High volume $2000+",
+      "params": {
+        "impliedRange": [
+          0.65,
+          1
+        ],
+        "minTradeUSD": 2000
+      },
+      "result": "REJECTED",
+      "pnl": 13959,
+      "winRate": 0.9988677375981884,
+      "trades": 14131
+    },
+    {
+      "id": 18,
+      "hypothesis": "Mega volume $5000+",
+      "params": {
+        "impliedRange": [
+          0.65,
+          1
+        ],
+        "minTradeUSD": 5000
+      },
+      "result": "REJECTED",
+      "pnl": 13959,
+      "winRate": 0.9988677375981884,
+      "trades": 14131
+    },
+    {
+      "id": 19,
+      "hypothesis": "Slightly tighter 68-100%",
+      "params": {
+        "impliedRange": [
+          0.68,
+          1
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "REJECTED",
+      "pnl": 14085,
+      "winRate": 0.9990797111708906,
+      "trades": 14126
+    },
+    {
+      "id": 20,
+      "hypothesis": "Slightly tighter 70-100%",
+      "params": {
+        "impliedRange": [
+          0.7,
+          1
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "REJECTED",
+      "pnl": 14154,
+      "winRate": 0.9991504424778761,
+      "trades": 14125
+    }
+  ],
+  "log": [
+    "[10:44:06 PM] 🧪 Starting historical backtest experiments...",
+    "[10:44:06 PM] 📊 Testing against 28264 historical markets",
+    "[10:44:06 PM] ",
+    "[10:44:06 PM] Testing: Tight range 75-100%",
+    "[10:44:06 PM] ✅ IMPROVED! Tight range 75-100%: $14388 (99.9% over 14119 trades)",
+    "[10:44:06 PM] 🏆 New best: $14388",
+    "[10:44:06 PM] Testing: Very tight 80-100%",
+    "[10:44:06 PM] ✅ IMPROVED! Very tight 80-100%: $14677 (100.0% over 14114 trades)",
+    "[10:44:06 PM] 🏆 New best: $14677",
+    "[10:44:07 PM] Testing: Ultra tight 85-100%",
+    "[10:44:07 PM] ❌ REJECTED: Ultra tight 85-100%: $14605 vs best $14677",
+    "[10:44:07 PM] Testing: Sweet spot 70-95%",
+    "[10:44:07 PM] ❌ REJECTED: Sweet spot 70-95%: $-207 vs best $14677",
+    "[10:44:08 PM] Testing: Current config 65-100%",
+    "[10:44:08 PM] ❌ REJECTED: Current config 65-100%: $13959 vs best $14677",
+    "[10:44:08 PM] Testing: Higher min $750",
+    "[10:44:08 PM] ❌ REJECTED: Higher min $750: $13959 vs best $14677",
+    "[10:44:09 PM] Testing: Higher min $1000",
+    "[10:44:09 PM] ❌ REJECTED: Higher min $1000: $13959 vs best $14677",
+    "[10:44:09 PM] Testing: Lower min $250",
+    "[10:44:09 PM] ❌ REJECTED: Lower min $250: $13959 vs best $14677",
+    "[10:44:10 PM] Testing: Tight + high min",
+    "[10:44:10 PM] ❌ REJECTED: Tight + high min: $14677 vs best $14677",
+    "[10:44:10 PM] Testing: Very tight + high min",
+    "[10:44:10 PM] ❌ REJECTED: Very tight + high min: $14605 vs best $14677",
+    "[10:44:11 PM] Testing: NCAA Men only 65-100%",
+    "[10:44:11 PM] ❌ REJECTED: NCAA Men only 65-100%: $5253 vs best $14677",
+    "[10:44:11 PM] Testing: NCAA Men only 75-100%",
+    "[10:44:11 PM] ❌ REJECTED: NCAA Men only 75-100%: $5253 vs best $14677",
+    "[10:44:12 PM] Testing: NBA only 65-100%",
+    "[10:44:12 PM] ❌ REJECTED: NBA only 65-100%: $1199 vs best $14677",
+    "[10:44:12 PM] Testing: NBA only 75-100%",
+    "[10:44:12 PM] ❌ REJECTED: NBA only 75-100%: $1173 vs best $14677",
+    "[10:44:13 PM] Testing: Only favorites 90-100%",
+    "[10:44:13 PM] ❌ REJECTED: Only favorites 90-100%: $14575 vs best $14677",
+    "[10:44:13 PM] Testing: Underdogs only 50-65%",
+    "[10:44:13 PM] ❌ REJECTED: Underdogs only 50-65%: $-118 vs best $14677",
+    "[10:44:14 PM] Testing: High volume $2000+",
+    "[10:44:14 PM] ❌ REJECTED: High volume $2000+: $13959 vs best $14677",
+    "[10:44:14 PM] Testing: Mega volume $5000+",
+    "[10:44:14 PM] ❌ REJECTED: Mega volume $5000+: $13959 vs best $14677",
+    "[10:44:15 PM] Testing: Slightly tighter 68-100%",
+    "[10:44:15 PM] ❌ REJECTED: Slightly tighter 68-100%: $14085 vs best $14677",
+    "[10:44:15 PM] Testing: Slightly tighter 70-100%",
+    "[10:44:15 PM] ❌ REJECTED: Slightly tighter 70-100%: $14154 vs best $14677",
+    "[10:44:16 PM] ",
+    "[10:44:16 PM] 🎉 Experiments complete!",
+    "[10:44:16 PM] 🏆 Best P&L: $14677",
+    "[10:44:16 PM] 🔧 Best Config: 80-100% / $500"
+  ]
+}

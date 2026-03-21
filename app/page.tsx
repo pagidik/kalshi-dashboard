@@ -82,6 +82,9 @@ export default async function Home() {
           <Link href="/stocks" className="text-xs px-3 py-1 rounded-full border transition-colors hover:opacity-80" style={{ borderColor: 'rgba(255,193,7,0.3)', color: '#ffc107', background: 'rgba(255,193,7,0.06)' }}>
             Stock Analyzer
           </Link>
+          <Link href="/data-collection" className="text-xs px-3 py-1 rounded-full border transition-colors hover:opacity-80" style={{ borderColor: 'rgba(168,85,247,0.3)', color: '#a855f7', background: 'rgba(168,85,247,0.06)' }}>
+            Data Collection
+          </Link>
         </div>
       </header>
 
