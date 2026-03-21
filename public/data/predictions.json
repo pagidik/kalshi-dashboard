@@ -16586,5 +16586,26 @@
     "settledAt": null,
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaambgame-26mar21txamhou"
+  },
+  {
+    "id": "c6600a43-06d6-4a44-af2a-bdd8286a4e9b",
+    "firedAt": "2026-03-21T21:40:26.546Z",
+    "market": "TCU at Duke Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR21TCUDUKE-DUKE",
+    "side": "YES",
+    "price": 0.86,
+    "impliedPct": 86,
+    "contractsObserved": 3409,
+    "dollarObserved": 2932,
+    "anchorPrice": 0.87,
+    "dipFromOpen": 0.01,
+    "hoursToClose": 331.33,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaambgame-26mar21tcuduke"
   }
 ]
