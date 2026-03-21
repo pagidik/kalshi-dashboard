@@ -2,13 +2,45 @@
   "status": "complete",
   "currentExperiment": 20,
   "totalExperiments": 20,
-  "bestPnl": 14677,
-  "bestConfig": "80-100% / $500",
-  "startedAt": "2026-03-21T02:44:06.215Z",
+  "bestPnl": 2707.3,
+  "bestConfig": "60-100% / $500",
+  "startedAt": "2026-03-21T03:36:56.517Z",
   "experiments": [
     {
       "id": 1,
-      "hypothesis": "Tight range 75-100%",
+      "hypothesis": "Current config 65-100%",
+      "params": {
+        "impliedRange": [
+          0.65,
+          1
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "IMPROVED",
+      "pnl": 2073.1,
+      "winRate": 0.8903107861060329,
+      "trades": 547,
+      "improvement": "$0 vs baseline"
+    },
+    {
+      "id": 2,
+      "hypothesis": "Tighter 70-100%",
+      "params": {
+        "impliedRange": [
+          0.7,
+          1
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "IMPROVED",
+      "pnl": 2288.1,
+      "winRate": 0.9114173228346457,
+      "trades": 508,
+      "improvement": "+$215 vs baseline"
+    },
+    {
+      "id": 3,
+      "hypothesis": "Tighter 75-100%",
       "params": {
         "impliedRange": [
           0.75,
@@ -16,13 +48,14 @@
         ],
         "minTradeUSD": 500
       },
-      "result": "IMPROVED",
-      "pnl": 14388,
-      "winRate": 0.999433387633685,
-      "trades": 14119
+      "result": "REJECTED",
+      "pnl": 1657.1,
+      "winRate": 0.9251700680272109,
+      "trades": 441,
+      "improvement": "$-416 vs baseline"
     },
     {
-      "id": 2,
+      "id": 4,
       "hypothesis": "Very tight 80-100%",
       "params": {
         "impliedRange": [
@@ -31,13 +64,14 @@
         ],
         "minTradeUSD": 500
       },
-      "result": "IMPROVED",
-      "pnl": 14677,
-      "winRate": 0.9997165934533088,
-      "trades": 14114
+      "result": "REJECTED",
+      "pnl": 832.1,
+      "winRate": 0.9287598944591029,
+      "trades": 379,
+      "improvement": "$-1241 vs baseline"
     },
     {
-      "id": 3,
+      "id": 5,
       "hypothesis": "Ultra tight 85-100%",
       "params": {
         "impliedRange": [
@@ -47,182 +81,14 @@
         "minTradeUSD": 500
       },
       "result": "REJECTED",
-      "pnl": 14605,
-      "winRate": 0.9997165131112686,
-      "trades": 14110
-    },
-    {
-      "id": 4,
-      "hypothesis": "Sweet spot 70-95%",
-      "params": {
-        "impliedRange": [
-          0.7,
-          0.95
-        ],
-        "minTradeUSD": 500
-      },
-      "result": "REJECTED",
-      "pnl": -207,
-      "winRate": 0.8777777777777778,
-      "trades": 90
-    },
-    {
-      "id": 5,
-      "hypothesis": "Current config 65-100%",
-      "params": {
-        "impliedRange": [
-          0.65,
-          1
-        ],
-        "minTradeUSD": 500
-      },
-      "result": "REJECTED",
-      "pnl": 13959,
-      "winRate": 0.9988677375981884,
-      "trades": 14131
+      "pnl": 1633.1,
+      "winRate": 0.9833333333333333,
+      "trades": 300,
+      "improvement": "$-440 vs baseline"
     },
     {
       "id": 6,
-      "hypothesis": "Higher min $750",
-      "params": {
-        "impliedRange": [
-          0.65,
-          1
-        ],
-        "minTradeUSD": 750
-      },
-      "result": "REJECTED",
-      "pnl": 13959,
-      "winRate": 0.9988677375981884,
-      "trades": 14131
-    },
-    {
-      "id": 7,
-      "hypothesis": "Higher min $1000",
-      "params": {
-        "impliedRange": [
-          0.65,
-          1
-        ],
-        "minTradeUSD": 1000
-      },
-      "result": "REJECTED",
-      "pnl": 13959,
-      "winRate": 0.9988677375981884,
-      "trades": 14131
-    },
-    {
-      "id": 8,
-      "hypothesis": "Lower min $250",
-      "params": {
-        "impliedRange": [
-          0.65,
-          1
-        ],
-        "minTradeUSD": 250
-      },
-      "result": "REJECTED",
-      "pnl": 13959,
-      "winRate": 0.9988677375981884,
-      "trades": 14131
-    },
-    {
-      "id": 9,
-      "hypothesis": "Tight + high min",
-      "params": {
-        "impliedRange": [
-          0.8,
-          1
-        ],
-        "minTradeUSD": 750
-      },
-      "result": "REJECTED",
-      "pnl": 14677,
-      "winRate": 0.9997165934533088,
-      "trades": 14114
-    },
-    {
-      "id": 10,
-      "hypothesis": "Very tight + high min",
-      "params": {
-        "impliedRange": [
-          0.85,
-          1
-        ],
-        "minTradeUSD": 1000
-      },
-      "result": "REJECTED",
-      "pnl": 14605,
-      "winRate": 0.9997165131112686,
-      "trades": 14110
-    },
-    {
-      "id": 11,
-      "hypothesis": "NCAA Men only 65-100%",
-      "params": {
-        "impliedRange": [
-          0.65,
-          1
-        ],
-        "minTradeUSD": 500,
-        "sport": "KXNCAAMBGAME"
-      },
-      "result": "REJECTED",
-      "pnl": 5253,
-      "winRate": 0.9998081350729087,
-      "trades": 5212
-    },
-    {
-      "id": 12,
-      "hypothesis": "NCAA Men only 75-100%",
-      "params": {
-        "impliedRange": [
-          0.75,
-          1
-        ],
-        "minTradeUSD": 500,
-        "sport": "KXNCAAMBGAME"
-      },
-      "result": "REJECTED",
-      "pnl": 5253,
-      "winRate": 0.9998081350729087,
-      "trades": 5212
-    },
-    {
-      "id": 13,
-      "hypothesis": "NBA only 65-100%",
-      "params": {
-        "impliedRange": [
-          0.65,
-          1
-        ],
-        "minTradeUSD": 500,
-        "sport": "KXNBAGAME"
-      },
-      "result": "REJECTED",
-      "pnl": 1199,
-      "winRate": 1,
-      "trades": 1174
-    },
-    {
-      "id": 14,
-      "hypothesis": "NBA only 75-100%",
-      "params": {
-        "impliedRange": [
-          0.75,
-          1
-        ],
-        "minTradeUSD": 500,
-        "sport": "KXNBAGAME"
-      },
-      "result": "REJECTED",
-      "pnl": 1173,
-      "winRate": 1,
-      "trades": 1173
-    },
-    {
-      "id": 15,
-      "hypothesis": "Only favorites 90-100%",
+      "hypothesis": "Only near-locks 90-100%",
       "params": {
         "impliedRange": [
           0.9,
@@ -231,13 +97,158 @@
         "minTradeUSD": 500
       },
       "result": "REJECTED",
-      "pnl": 14575,
-      "winRate": 0.9997872340425532,
-      "trades": 14100
+      "pnl": 836.1,
+      "winRate": 0.9951923076923077,
+      "trades": 208,
+      "improvement": "$-1237 vs baseline"
+    },
+    {
+      "id": 7,
+      "hypothesis": "Wider 60-100%",
+      "params": {
+        "impliedRange": [
+          0.6,
+          1
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "IMPROVED",
+      "pnl": 2707.3,
+      "winRate": 0.8885017421602788,
+      "trades": 574,
+      "improvement": "+$634 vs baseline"
+    },
+    {
+      "id": 8,
+      "hypothesis": "Much wider 50-100%",
+      "params": {
+        "impliedRange": [
+          0.5,
+          1
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "REJECTED",
+      "pnl": 2381.3,
+      "winRate": 0.8683333333333333,
+      "trades": 600,
+      "improvement": "+$308 vs baseline"
+    },
+    {
+      "id": 9,
+      "hypothesis": "Sweet spot 70-90%",
+      "params": {
+        "impliedRange": [
+          0.7,
+          0.9
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "REJECTED",
+      "pnl": 1552,
+      "winRate": 0.8580645161290322,
+      "trades": 310,
+      "improvement": "$-521 vs baseline"
+    },
+    {
+      "id": 10,
+      "hypothesis": "Value range 65-85%",
+      "params": {
+        "impliedRange": [
+          0.65,
+          0.85
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "REJECTED",
+      "pnl": 550,
+      "winRate": 0.7854406130268199,
+      "trades": 261,
+      "improvement": "$-1523 vs baseline"
+    },
+    {
+      "id": 11,
+      "hypothesis": "65-100% + higher min $750",
+      "params": {
+        "impliedRange": [
+          0.65,
+          1
+        ],
+        "minTradeUSD": 750
+      },
+      "result": "REJECTED",
+      "pnl": 962,
+      "winRate": 0.8897243107769424,
+      "trades": 399,
+      "improvement": "$-1111 vs baseline"
+    },
+    {
+      "id": 12,
+      "hypothesis": "65-100% + higher min $1000",
+      "params": {
+        "impliedRange": [
+          0.65,
+          1
+        ],
+        "minTradeUSD": 1000
+      },
+      "result": "REJECTED",
+      "pnl": 347,
+      "winRate": 0.8768656716417911,
+      "trades": 268,
+      "improvement": "$-1726 vs baseline"
+    },
+    {
+      "id": 13,
+      "hypothesis": "65-100% + lower min $250",
+      "params": {
+        "impliedRange": [
+          0.65,
+          1
+        ],
+        "minTradeUSD": 250
+      },
+      "result": "REJECTED",
+      "pnl": 2014.7,
+      "winRate": 0.8851132686084142,
+      "trades": 618,
+      "improvement": "$-58 vs baseline"
+    },
+    {
+      "id": 14,
+      "hypothesis": "80-100% + min $750",
+      "params": {
+        "impliedRange": [
+          0.8,
+          1
+        ],
+        "minTradeUSD": 750
+      },
+      "result": "REJECTED",
+      "pnl": 749,
+      "winRate": 0.9311475409836065,
+      "trades": 305,
+      "improvement": "$-1324 vs baseline"
+    },
+    {
+      "id": 15,
+      "hypothesis": "85-100% + min $1000",
+      "params": {
+        "impliedRange": [
+          0.85,
+          1
+        ],
+        "minTradeUSD": 1000
+      },
+      "result": "REJECTED",
+      "pnl": 1032,
+      "winRate": 1,
+      "trades": 152,
+      "improvement": "$-1041 vs baseline"
     },
     {
       "id": 16,
-      "hypothesis": "Underdogs only 50-65%",
+      "hypothesis": "Underdogs 50-65%",
       "params": {
         "impliedRange": [
           0.5,
@@ -246,42 +257,29 @@
         "minTradeUSD": 500
       },
       "result": "REJECTED",
-      "pnl": -118,
-      "winRate": 0.5,
-      "trades": 16
+      "pnl": 553.2,
+      "winRate": 0.6833333333333333,
+      "trades": 60,
+      "improvement": "$-1520 vs baseline"
     },
     {
       "id": 17,
-      "hypothesis": "High volume $2000+",
+      "hypothesis": "Deep underdogs 40-60%",
       "params": {
         "impliedRange": [
-          0.65,
-          1
+          0.4,
+          0.6
         ],
-        "minTradeUSD": 2000
+        "minTradeUSD": 500
       },
       "result": "REJECTED",
-      "pnl": 13959,
-      "winRate": 0.9988677375981884,
-      "trades": 14131
+      "pnl": -383,
+      "winRate": 0.44680851063829785,
+      "trades": 47,
+      "improvement": "$-2456 vs baseline"
     },
     {
       "id": 18,
-      "hypothesis": "Mega volume $5000+",
-      "params": {
-        "impliedRange": [
-          0.65,
-          1
-        ],
-        "minTradeUSD": 5000
-      },
-      "result": "REJECTED",
-      "pnl": 13959,
-      "winRate": 0.9988677375981884,
-      "trades": 14131
-    },
-    {
-      "id": 19,
       "hypothesis": "Slightly tighter 68-100%",
       "params": {
         "impliedRange": [
@@ -291,75 +289,93 @@
         "minTradeUSD": 500
       },
       "result": "REJECTED",
-      "pnl": 14085,
-      "winRate": 0.9990797111708906,
-      "trades": 14126
+      "pnl": 2029.1,
+      "winRate": 0.9003831417624522,
+      "trades": 522,
+      "improvement": "$-44 vs baseline"
     },
     {
-      "id": 20,
-      "hypothesis": "Slightly tighter 70-100%",
+      "id": 19,
+      "hypothesis": "Exclude near-locks 65-95%",
       "params": {
         "impliedRange": [
-          0.7,
-          1
+          0.65,
+          0.95
         ],
         "minTradeUSD": 500
       },
       "result": "REJECTED",
-      "pnl": 14154,
-      "winRate": 0.9991504424778761,
-      "trades": 14125
+      "pnl": 1871,
+      "winRate": 0.8663697104677061,
+      "trades": 449,
+      "improvement": "$-202 vs baseline"
+    },
+    {
+      "id": 20,
+      "hypothesis": "Exclude near-locks 70-95%",
+      "params": {
+        "impliedRange": [
+          0.7,
+          0.95
+        ],
+        "minTradeUSD": 500
+      },
+      "result": "REJECTED",
+      "pnl": 2086,
+      "winRate": 0.8902439024390244,
+      "trades": 410,
+      "improvement": "+$13 vs baseline"
     }
   ],
   "log": [
-    "[10:44:06 PM] 🧪 Starting historical backtest experiments...",
-    "[10:44:06 PM] 📊 Testing against 28264 historical markets",
-    "[10:44:06 PM] ",
-    "[10:44:06 PM] Testing: Tight range 75-100%",
-    "[10:44:06 PM] ✅ IMPROVED! Tight range 75-100%: $14388 (99.9% over 14119 trades)",
-    "[10:44:06 PM] 🏆 New best: $14388",
-    "[10:44:06 PM] Testing: Very tight 80-100%",
-    "[10:44:06 PM] ✅ IMPROVED! Very tight 80-100%: $14677 (100.0% over 14114 trades)",
-    "[10:44:06 PM] 🏆 New best: $14677",
-    "[10:44:07 PM] Testing: Ultra tight 85-100%",
-    "[10:44:07 PM] ❌ REJECTED: Ultra tight 85-100%: $14605 vs best $14677",
-    "[10:44:07 PM] Testing: Sweet spot 70-95%",
-    "[10:44:07 PM] ❌ REJECTED: Sweet spot 70-95%: $-207 vs best $14677",
-    "[10:44:08 PM] Testing: Current config 65-100%",
-    "[10:44:08 PM] ❌ REJECTED: Current config 65-100%: $13959 vs best $14677",
-    "[10:44:08 PM] Testing: Higher min $750",
-    "[10:44:08 PM] ❌ REJECTED: Higher min $750: $13959 vs best $14677",
-    "[10:44:09 PM] Testing: Higher min $1000",
-    "[10:44:09 PM] ❌ REJECTED: Higher min $1000: $13959 vs best $14677",
-    "[10:44:09 PM] Testing: Lower min $250",
-    "[10:44:09 PM] ❌ REJECTED: Lower min $250: $13959 vs best $14677",
-    "[10:44:10 PM] Testing: Tight + high min",
-    "[10:44:10 PM] ❌ REJECTED: Tight + high min: $14677 vs best $14677",
-    "[10:44:10 PM] Testing: Very tight + high min",
-    "[10:44:10 PM] ❌ REJECTED: Very tight + high min: $14605 vs best $14677",
-    "[10:44:11 PM] Testing: NCAA Men only 65-100%",
-    "[10:44:11 PM] ❌ REJECTED: NCAA Men only 65-100%: $5253 vs best $14677",
-    "[10:44:11 PM] Testing: NCAA Men only 75-100%",
-    "[10:44:11 PM] ❌ REJECTED: NCAA Men only 75-100%: $5253 vs best $14677",
-    "[10:44:12 PM] Testing: NBA only 65-100%",
-    "[10:44:12 PM] ❌ REJECTED: NBA only 65-100%: $1199 vs best $14677",
-    "[10:44:12 PM] Testing: NBA only 75-100%",
-    "[10:44:12 PM] ❌ REJECTED: NBA only 75-100%: $1173 vs best $14677",
-    "[10:44:13 PM] Testing: Only favorites 90-100%",
-    "[10:44:13 PM] ❌ REJECTED: Only favorites 90-100%: $14575 vs best $14677",
-    "[10:44:13 PM] Testing: Underdogs only 50-65%",
-    "[10:44:13 PM] ❌ REJECTED: Underdogs only 50-65%: $-118 vs best $14677",
-    "[10:44:14 PM] Testing: High volume $2000+",
-    "[10:44:14 PM] ❌ REJECTED: High volume $2000+: $13959 vs best $14677",
-    "[10:44:14 PM] Testing: Mega volume $5000+",
-    "[10:44:14 PM] ❌ REJECTED: Mega volume $5000+: $13959 vs best $14677",
-    "[10:44:15 PM] Testing: Slightly tighter 68-100%",
-    "[10:44:15 PM] ❌ REJECTED: Slightly tighter 68-100%: $14085 vs best $14677",
-    "[10:44:15 PM] Testing: Slightly tighter 70-100%",
-    "[10:44:15 PM] ❌ REJECTED: Slightly tighter 70-100%: $14154 vs best $14677",
-    "[10:44:16 PM] ",
-    "[10:44:16 PM] 🎉 Experiments complete!",
-    "[10:44:16 PM] 🏆 Best P&L: $14677",
-    "[10:44:16 PM] 🔧 Best Config: 80-100% / $500"
+    "[11:36:56 PM] 🧪 Starting REAL backtest experiments...",
+    "[11:36:56 PM] 📊 Testing against 763 settled trades with ACTUAL entry prices",
+    "[11:36:56 PM] ",
+    "[11:36:56 PM] Testing: Current config 65-100%",
+    "[11:36:56 PM] 📍 BASELINE: Current config 65-100%: $2073.1 (89.0% over 547 trades)",
+    "[11:36:56 PM] ✅ NEW BEST! Current config 65-100%: $2073.1 (89.0% over 547 trades)",
+    "[11:36:56 PM] Testing: Tighter 70-100%",
+    "[11:36:56 PM] ✅ NEW BEST! Tighter 70-100%: $2288.1 (91.1% over 508 trades)",
+    "[11:36:57 PM] Testing: Tighter 75-100%",
+    "[11:36:57 PM] ❌ REJECTED: Tighter 75-100%: $1657.1 ($-416 vs baseline)",
+    "[11:36:57 PM] Testing: Very tight 80-100%",
+    "[11:36:57 PM] ❌ REJECTED: Very tight 80-100%: $832.1 ($-1241 vs baseline)",
+    "[11:36:57 PM] Testing: Ultra tight 85-100%",
+    "[11:36:57 PM] ❌ REJECTED: Ultra tight 85-100%: $1633.1 ($-440 vs baseline)",
+    "[11:36:58 PM] Testing: Only near-locks 90-100%",
+    "[11:36:58 PM] ❌ REJECTED: Only near-locks 90-100%: $836.1 ($-1237 vs baseline)",
+    "[11:36:58 PM] Testing: Wider 60-100%",
+    "[11:36:58 PM] ✅ NEW BEST! Wider 60-100%: $2707.3 (88.9% over 574 trades)",
+    "[11:36:58 PM] Testing: Much wider 50-100%",
+    "[11:36:58 PM] ❌ REJECTED: Much wider 50-100%: $2381.3 (+$308 vs baseline)",
+    "[11:36:59 PM] Testing: Sweet spot 70-90%",
+    "[11:36:59 PM] ❌ REJECTED: Sweet spot 70-90%: $1552 ($-521 vs baseline)",
+    "[11:36:59 PM] Testing: Value range 65-85%",
+    "[11:36:59 PM] ❌ REJECTED: Value range 65-85%: $550 ($-1523 vs baseline)",
+    "[11:36:59 PM] Testing: 65-100% + higher min $750",
+    "[11:36:59 PM] ❌ REJECTED: 65-100% + higher min $750: $962 ($-1111 vs baseline)",
+    "[11:36:59 PM] Testing: 65-100% + higher min $1000",
+    "[11:36:59 PM] ❌ REJECTED: 65-100% + higher min $1000: $347 ($-1726 vs baseline)",
+    "[11:37:00 PM] Testing: 65-100% + lower min $250",
+    "[11:37:00 PM] ❌ REJECTED: 65-100% + lower min $250: $2014.7 ($-58 vs baseline)",
+    "[11:37:00 PM] Testing: 80-100% + min $750",
+    "[11:37:00 PM] ❌ REJECTED: 80-100% + min $750: $749 ($-1324 vs baseline)",
+    "[11:37:00 PM] Testing: 85-100% + min $1000",
+    "[11:37:00 PM] ❌ REJECTED: 85-100% + min $1000: $1032 ($-1041 vs baseline)",
+    "[11:37:01 PM] Testing: Underdogs 50-65%",
+    "[11:37:01 PM] ❌ REJECTED: Underdogs 50-65%: $553.2 ($-1520 vs baseline)",
+    "[11:37:01 PM] Testing: Deep underdogs 40-60%",
+    "[11:37:01 PM] ❌ REJECTED: Deep underdogs 40-60%: $-383 ($-2456 vs baseline)",
+    "[11:37:01 PM] Testing: Slightly tighter 68-100%",
+    "[11:37:01 PM] ❌ REJECTED: Slightly tighter 68-100%: $2029.1 ($-44 vs baseline)",
+    "[11:37:02 PM] Testing: Exclude near-locks 65-95%",
+    "[11:37:02 PM] ❌ REJECTED: Exclude near-locks 65-95%: $1871 ($-202 vs baseline)",
+    "[11:37:02 PM] Testing: Exclude near-locks 70-95%",
+    "[11:37:02 PM] ❌ REJECTED: Exclude near-locks 70-95%: $2086 (+$13 vs baseline)",
+    "[11:37:02 PM] ",
+    "[11:37:02 PM] 🎉 Experiments complete!",
+    "[11:37:02 PM] 🏆 Best P&L: $2707.3",
+    "[11:37:02 PM] 🔧 Best Config: 60-100% / $500",
+    "[11:37:02 PM] 📊 Based on 763 REAL trades with actual entry prices"
   ]
 }
