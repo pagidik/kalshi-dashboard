@@ -15977,5 +15977,26 @@
     "settledAt": null,
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaambgame-26mar21slumich"
+  },
+  {
+    "id": "b714c211-cab5-47f8-a920-00f8b43cb40e",
+    "firedAt": "2026-03-21T05:26:30.101Z",
+    "market": "Miami (OH) at West Virginia Winner?",
+    "ticker": "KXNCAAWBGAME-26MAR21MOHWVU-WVU",
+    "side": "YES",
+    "price": 0.97,
+    "impliedPct": 97,
+    "contractsObserved": 1495,
+    "dollarObserved": 1450,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 347.56,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaawbgame-26mar21mohwvu"
   }
 ]
