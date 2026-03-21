@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import { predictions as staticPredictions, config as staticConfig } from '../lib/predictions'
 import predictionsJson from '../public/data/predictions.json'
 import configJson from '../public/data/config.json'
+import experimentStatus from '../public/data/experiment-status.json'
 import StatCard from '../components/StatCard'
 import CircularProgress from '../components/CircularProgress'
 import ProfitChart from '../components/ProfitChart'
@@ -61,32 +61,12 @@ export default async function Home() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-8 md:py-12">
-      {/* Header */}
-      <header className="mb-10">
-        <div className="flex items-center gap-3 mb-2">
-          <h1 className="text-3xl font-bold tracking-tight md:text-4xl">Kalshi Predictions</h1>
-          <span className="flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
-            <span className="inline-block h-2 w-2 rounded-full bg-accent animate-pulse-glow" />
-            Live
-          </span>
-        </div>
-        <p className="text-base text-text-muted">Tracking big money signals from Kalshi prediction markets</p>
-        <div className="flex items-center gap-4 mt-2">
-          <p className="text-xs text-text-muted">Last updated: {new Date().toLocaleString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true })} ET</p>
-          <Link href="/experiments" className="text-xs px-3 py-1 rounded-full border transition-colors hover:opacity-80" style={{ borderColor: 'rgba(0,255,212,0.3)', color: 'var(--accent)', background: 'rgba(0,255,212,0.06)' }}>
-            Autoresearch Lab
-          </Link>
-          <Link href="/research" className="text-xs px-3 py-1 rounded-full border transition-colors hover:opacity-80" style={{ borderColor: 'rgba(0,212,255,0.3)', color: '#00d4ff', background: 'rgba(0,212,255,0.06)' }}>
-            Research Lab
-          </Link>
-          <Link href="/stocks" className="text-xs px-3 py-1 rounded-full border transition-colors hover:opacity-80" style={{ borderColor: 'rgba(255,193,7,0.3)', color: '#ffc107', background: 'rgba(255,193,7,0.06)' }}>
-            Stock Analyzer
-          </Link>
-          <Link href="/data-collection" className="text-xs px-3 py-1 rounded-full border transition-colors hover:opacity-80" style={{ borderColor: 'rgba(168,85,247,0.3)', color: '#a855f7', background: 'rgba(168,85,247,0.06)' }}>
-            Data Collection
-          </Link>
-        </div>
-      </header>
+      {/* Page Title */}
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold tracking-tight md:text-4xl">Predictions Dashboard</h1>
+        <p className="text-base text-text-muted mt-1">Tracking big money signals from Kalshi prediction markets</p>
+        <p className="text-xs text-text-muted mt-2">Last updated: {new Date().toLocaleString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true })} ET</p>
+      </div>
 
       {/* Stat Cards */}
       <section className="mb-10 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -255,6 +235,77 @@ export default async function Home() {
         <div className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-4">
           <p className="text-xs font-semibold text-amber-400 mb-1">Important: this is backtesting, not live results</p>
           <p className="text-xs text-text-muted">These returns come from testing the strategy on old historical data. That is not the same as live trading. The Bitcoin paper trading on Alpaca is real-time but uses fake money to prove the strategy works before any real money is involved.</p>
+        </div>
+      </section>
+
+      {/* Latest Experiments */}
+      <section className="mb-10">
+        <h2 className="mb-1 text-xl font-semibold">🧪 Latest Backtest Results</h2>
+        <p className="mb-4 text-sm text-text-muted">Real experiments on {experimentStatus.experiments?.[0]?.trades || 763} actual trades with verified entry prices</p>
+        
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-4">
+          <div className="rounded-xl border border-green-500/20 bg-green-500/5 p-5">
+            <p className="text-xs text-text-muted mb-1">Best Config Found</p>
+            <p className="text-xl font-bold text-green-400">{experimentStatus.bestConfig || '60-100% / $500'}</p>
+            <p className="text-xs text-text-muted mt-1">Implied range / Min trade</p>
+          </div>
+          <div className="rounded-xl border border-border bg-surface p-5">
+            <p className="text-xs text-text-muted mb-1">Best P&L</p>
+            <p className="text-xl font-bold text-green-400">${experimentStatus.bestPnl?.toLocaleString() || '2,707'}</p>
+            <p className="text-xs text-text-muted mt-1">Backtested on real trades</p>
+          </div>
+          <div className="rounded-xl border border-border bg-surface p-5">
+            <p className="text-xs text-text-muted mb-1">Experiments Run</p>
+            <p className="text-xl font-bold text-text">{experimentStatus.experiments?.length || 20}</p>
+            <p className="text-xs text-text-muted mt-1">Different configs tested</p>
+          </div>
+          <div className="rounded-xl border border-border bg-surface p-5">
+            <p className="text-xs text-text-muted mb-1">Status</p>
+            <p className={`text-xl font-bold ${experimentStatus.status === 'complete' ? 'text-green-400' : 'text-amber-400'}`}>
+              {experimentStatus.status === 'complete' ? '✓ Complete' : '● Running'}
+            </p>
+            <p className="text-xs text-text-muted mt-1">{new Date(experimentStatus.startedAt || Date.now()).toLocaleDateString()}</p>
+          </div>
+        </div>
+        
+        {/* Top 5 experiments */}
+        <div className="rounded-xl border border-border bg-surface overflow-hidden">
+          <div className="px-5 py-3 border-b border-border flex items-center justify-between">
+            <span className="text-sm font-medium">Top Performing Configs</span>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-left text-text-muted text-xs uppercase tracking-wider border-b border-border/50">
+                  <th className="px-5 py-3 font-medium">Config</th>
+                  <th className="px-5 py-3 font-medium">P&L</th>
+                  <th className="px-5 py-3 font-medium">Win Rate</th>
+                  <th className="px-5 py-3 font-medium">Trades</th>
+                  <th className="px-5 py-3 font-medium">Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                {(experimentStatus.experiments || [])
+                  .slice()
+                  .sort((a: {pnl: number}, b: {pnl: number}) => b.pnl - a.pnl)
+                  .slice(0, 5)
+                  .map((exp: {id: number; hypothesis: string; pnl: number; winRate: number; trades: number; result: string}, i: number) => (
+                    <tr key={exp.id} className="border-b border-border/30 hover:bg-accent/[0.02]">
+                      <td className="px-5 py-3 font-medium text-text">{exp.hypothesis}</td>
+                      <td className={`px-5 py-3 font-mono ${exp.pnl >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                        {exp.pnl >= 0 ? '+' : ''}${exp.pnl.toLocaleString()}
+                      </td>
+                      <td className="px-5 py-3">{(exp.winRate * 100).toFixed(1)}%</td>
+                      <td className="px-5 py-3 text-text-muted">{exp.trades}</td>
+                      <td className="px-5 py-3">
+                        {exp.result === 'IMPROVED' && <span className="text-green-400 text-xs font-medium">✓ Best</span>}
+                        {exp.result === 'REJECTED' && <span className="text-text-muted text-xs">Tested</span>}
+                      </td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 

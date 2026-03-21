@@ -144,9 +144,6 @@ export default function DataCollectionPage() {
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div>
-            <div className="flex items-center gap-3 mb-2">
-              <Link href="/" className="text-text-muted hover:text-accent transition-colors">← Dashboard</Link>
-            </div>
             <h1 className="text-3xl font-bold">📊 Data Collection</h1>
             <p className="text-gray-400 mt-1">Building real entry price dataset for valid backtesting</p>
           </div>

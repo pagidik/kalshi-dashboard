@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import VisitorTracker from "../components/VisitorTracker";
+import Header from "../components/Header";
 
 export const metadata: Metadata = {
   title: "Kalshi Predictions Dashboard",
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <Header />
         {children}
         <VisitorTracker />
       </body>
