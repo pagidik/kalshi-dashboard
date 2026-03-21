@@ -31,10 +31,15 @@ export default function VisitorTracker() {
       setHasSubmittedName(true)
     }
     
-    // Track page visit
+    // Track page visit - only once per session per page
     const trackVisit = async () => {
       try {
         const sessionId = getSessionId()
+        
+        // Only track once per page per session
+        const trackKey = `kalshi_tracked_${pathname}`
+        if (sessionStorage.getItem(trackKey)) return
+        sessionStorage.setItem(trackKey, 'true')
         
         await fetch('/api/track', {
           method: 'POST',

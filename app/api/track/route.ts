@@ -39,6 +39,18 @@ export async function POST(req: Request) {
                'unknown'
     
     const userAgent = headers.get('user-agent') || ''
+    
+    // Skip bots and crawlers
+    const botPatterns = /bot|crawler|spider|curl|wget|python|go-http|node-fetch|vercel|prefetch|prerender/i
+    if (botPatterns.test(userAgent)) {
+      return NextResponse.json({ ok: true, skipped: 'bot' })
+    }
+    
+    // Skip if no session ID (likely not a real page view)
+    if (!body.sessionId) {
+      return NextResponse.json({ ok: true, skipped: 'no-session' })
+    }
+    
     const { device, browser, os } = parseUserAgent(userAgent)
     
     // Get geo data from Vercel's edge headers
