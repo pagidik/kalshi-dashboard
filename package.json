@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.99.3",
     "chart.js": "^4.5.1",
     "chartjs-plugin-crosshair": "^2.0.0",
     "chartjs-plugin-zoom": "^2.2.0",
