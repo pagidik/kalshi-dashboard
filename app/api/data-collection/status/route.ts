@@ -1,9 +1,7 @@
 import { NextResponse } from 'next/server'
-import { readFileSync, existsSync, statSync } from 'fs'
+import priceSnapshotsData from '../../../../public/data/price-snapshots.json'
 
 export const dynamic = 'force-dynamic'
-
-const DATA_FILE = 'C:\\Users\\kisho\\clawd\\scripts\\kalshi-price-snapshots.json'
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`
@@ -12,33 +10,21 @@ function formatBytes(bytes: number): string {
 }
 
 export async function GET() {
-  if (!existsSync(DATA_FILE)) {
-    return NextResponse.json({
-      status: 'error',
-      totalMarkets: 0,
-      totalSnapshots: 0,
-      oldestSnapshot: null,
-      newestSnapshot: null,
-      seriesBreakdown: {},
-      markets: [],
-      dataSize: '0 B',
-      nextCaptureIn: '~15 min'
-    })
-  }
-
   try {
-    const stats = statSync(DATA_FILE)
-    const data = JSON.parse(readFileSync(DATA_FILE, 'utf8'))
+    const data = priceSnapshotsData as {
+      snapshots?: Array<{ timestamp: string; marketCount: number }>
+      marketHistory?: Record<string, {
+        ticker: string
+        eventTicker: string
+        seriesTicker: string
+        title: string
+        closeTime: string
+        prices: Array<{ t: string; yb: number; ya: number; v: number; oi: number }>
+      }>
+    }
     
     const marketHistory = data.marketHistory || {}
-    const markets = Object.values(marketHistory) as Array<{
-      ticker: string
-      eventTicker: string
-      seriesTicker: string
-      title: string
-      closeTime: string
-      prices: Array<{ t: string; yb: number; ya: number; v: number; oi: number }>
-    }>
+    const markets = Object.values(marketHistory)
     
     // Calculate stats
     let totalSnapshots = 0
@@ -71,6 +57,9 @@ export async function GET() {
     // Sort markets by number of snapshots (most data first)
     const sortedMarkets = markets.sort((a, b) => b.prices.length - a.prices.length)
     
+    // Estimate data size from JSON
+    const dataSize = formatBytes(JSON.stringify(data).length)
+    
     return NextResponse.json({
       status: 'active',
       totalMarkets: markets.length,
@@ -79,10 +68,11 @@ export async function GET() {
       newestSnapshot,
       seriesBreakdown,
       markets: sortedMarkets,
-      dataSize: formatBytes(stats.size),
+      dataSize,
       nextCaptureIn
     })
   } catch (e) {
+    console.error('Data collection status error:', e)
     return NextResponse.json({
       status: 'error',
       totalMarkets: 0,
