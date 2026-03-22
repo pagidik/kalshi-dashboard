@@ -848,6 +848,7 @@ export default function ResearchPage() {
   const [history, setHistory] = useState<ExperimentResult[]>([])
   const [error, setError] = useState('')
   const [showIntro, setShowIntro] = useState(false)
+  const [activeTab, setActiveTab] = useState<'lab' | 'auto'>('lab')
 
   useEffect(() => {
     const seen = localStorage.getItem('kalshi-research-intro-seen')
@@ -949,6 +950,40 @@ export default function ResearchPage() {
           </p>
         </div>
 
+        {/* Tab bar */}
+        <div style={{
+          display: 'flex', gap: 4, marginBottom: 24,
+          borderBottom: '1px solid #1e3a5f',
+          paddingBottom: 0,
+        }}>
+          {[
+            { id: 'lab', label: '🔬 Research Lab' },
+            { id: 'auto', label: '🤖 Auto-Research' },
+          ].map(tab => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id as 'lab' | 'auto')}
+              style={{
+                background: 'none',
+                border: 'none',
+                borderBottom: activeTab === tab.id ? '2px solid #00ffd4' : '2px solid transparent',
+                color: activeTab === tab.id ? '#00ffd4' : '#5a7399',
+                fontSize: 14,
+                fontWeight: activeTab === tab.id ? 700 : 400,
+                padding: '10px 20px',
+                cursor: 'pointer',
+                letterSpacing: 1,
+                fontFamily: 'inherit',
+                marginBottom: -1,
+                transition: 'all 0.15s',
+              }}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {activeTab === 'lab' && (
         <div style={{ display: 'grid', gridTemplateColumns: '300px 1fr', gap: 28 }}>
 
           {/* LEFT — Controls */}
@@ -1145,9 +1180,11 @@ export default function ResearchPage() {
             )}
           </div>
         </div>
+        )} {/* end activeTab === 'lab' */}
 
-        {/* Auto-Research Engine section */}
-        <AutoResearchEngine />
+        {activeTab === 'auto' && (
+          <AutoResearchEngine />
+        )}
 
       </div>
     </div>
