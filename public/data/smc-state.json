@@ -3,48 +3,63 @@
   "signals": [
     {
       "symbol": "BTC/USD",
-      "direction": "LONG",
-      "entry": 70381.965,
-      "stop": 66862.86674999999,
-      "target": 77420.1615,
+      "direction": "SHORT",
+      "entry": 68976.477832512,
+      "stop": 72425.30172413761,
+      "target": 62078.8300492608,
       "rr": 2.0,
-      "strategy": "trend_follow",
-      "strength": 0.5,
-      "rsi": 59.784212173519784,
-      "macd": 350.86256410277565,
+      "strategy": "macd_bearish",
+      "strength": 0.6,
+      "rsi": 59.32387727133475,
+      "macd": 83.34351788414642,
       "trend": "bullish",
-      "volatility_pct": 3.950554040962822,
-      "timestamp": "2026-03-21T20:02:01.216850+00:00"
+      "volatility_pct": 3.9179950211422545,
+      "timestamp": "2026-03-22T00:03:22.920562+00:00"
     },
     {
       "symbol": "LTC/USD",
       "direction": "LONG",
-      "entry": 55.84165,
-      "stop": 53.0495675,
-      "target": 61.42581500000001,
-      "rr": 2.0,
-      "strategy": "trend_follow",
-      "strength": 0.5,
-      "rsi": 59.20255713238187,
-      "macd": 0.16078016408535944,
-      "trend": "bullish",
-      "volatility_pct": 5.037845780178672,
-      "timestamp": "2026-03-21T20:02:02.736620+00:00"
-    },
-    {
-      "symbol": "DOGE/USD",
-      "direction": "LONG",
-      "entry": 0.094059,
-      "stop": 0.08935604999999999,
-      "target": 0.10346490000000001,
+      "entry": 54.3378,
+      "stop": 51.62091,
+      "target": 59.77158000000001,
       "rr": 2.0,
       "strategy": "macd_bullish",
       "strength": 0.6,
-      "rsi": 57.38773217482194,
-      "macd": -0.0006687013888060783,
+      "rsi": 56.79247922771399,
+      "macd": -0.0361003647322633,
+      "trend": "bullish",
+      "volatility_pct": 4.448157379459078,
+      "timestamp": "2026-03-22T00:03:24.307423+00:00"
+    },
+    {
+      "symbol": "DOGE/USD",
+      "direction": "SHORT",
+      "entry": 0.0903638,
+      "stop": 0.09488199,
+      "target": 0.08132742,
+      "rr": 2.0,
+      "strategy": "trend_follow",
+      "strength": 0.5,
+      "rsi": 51.91621773739648,
+      "macd": -0.0011855854272722205,
       "trend": "bearish",
-      "volatility_pct": 5.873717446344466,
-      "timestamp": "2026-03-21T20:02:03.432283+00:00"
+      "volatility_pct": 5.788474200952151,
+      "timestamp": "2026-03-22T00:03:24.980849+00:00"
+    },
+    {
+      "symbol": "AVAX/USD",
+      "direction": "SHORT",
+      "entry": 9.0988,
+      "stop": 9.553740000000001,
+      "target": 8.188920000000001,
+      "rr": 2.0,
+      "strategy": "macd_bearish",
+      "strength": 0.6,
+      "rsi": 54.366791190846506,
+      "macd": 0.01555554713043783,
+      "trend": "bullish",
+      "volatility_pct": 6.013825741542055,
+      "timestamp": "2026-03-22T00:03:25.804088+00:00"
     }
   ],
   "trades": [
@@ -88,7 +103,7 @@
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": -488.93051
+    "total_pnl": -1361.20747
   },
-  "last_scan": "2026-03-21T20:02:04.853187+00:00"
+  "last_scan": "2026-03-22T00:03:26.552168+00:00"
 }
