@@ -1,0 +1,460 @@
+{
+  "generatedAt": "2026-03-21T05:03:39.622Z",
+  "settledTrades": 798,
+  "L0_categories": {
+    "sports": {
+      "wins": 651,
+      "losses": 141,
+      "pnl": 1952.4,
+      "totalBets": 792,
+      "winRate": 0.822,
+      "avgPnl": 2.47,
+      "summary": "sports: 651W/141L (82.2% WR, avg PnL $2.47)"
+    },
+    "other": {
+      "wins": 2,
+      "losses": 4,
+      "pnl": -181.9,
+      "totalBets": 6,
+      "winRate": 0.333,
+      "avgPnl": -30.32,
+      "summary": "other: 2W/4L (33.3% WR, avg PnL $-30.32)"
+    }
+  },
+  "L1_conditions": {
+    "sports|70-80|nodip": {
+      "wins": 76,
+      "losses": 25,
+      "pnl": 14,
+      "totalBets": 101,
+      "examples": [
+        "Louisville at Miami (FL) Winner?",
+        "Georgetown at Villanova Winner?",
+        "Boston at Oklahoma City Winner?"
+      ],
+      "winRate": 0.752,
+      "avgPnl": 0.14,
+      "edge": 0.252
+    },
+    "sports|below-60|nodip": {
+      "wins": 24,
+      "losses": 38,
+      "pnl": -605.4,
+      "totalBets": 62,
+      "examples": [
+        "Auburn at Tennessee Winner?",
+        "Auburn at Tennessee Winner?",
+        "Nevada at Grand Canyon Winner?"
+      ],
+      "winRate": 0.387,
+      "avgPnl": -9.76,
+      "edge": -0.113
+    },
+    "sports|90-100|nodip": {
+      "wins": 264,
+      "losses": 1,
+      "pnl": 1066.1,
+      "totalBets": 265,
+      "examples": [
+        "Louisville at Miami (FL) Winner?",
+        "BYU at Houston Winner?",
+        "Middle Tennessee at Louisiana Tech Winner?"
+      ],
+      "winRate": 0.996,
+      "avgPnl": 4.02,
+      "edge": 0.496
+    },
+    "sports|60-70|nodip": {
+      "wins": 46,
+      "losses": 20,
+      "pnl": 316.1,
+      "totalBets": 66,
+      "examples": [
+        "Milwaukee at Miami Winner?",
+        "TCU at Kansas Winner?",
+        "UC Davis at Cal State Fullerton Winner?"
+      ],
+      "winRate": 0.697,
+      "avgPnl": 4.79,
+      "edge": 0.197
+    },
+    "other|90-100|nodip": {
+      "wins": 1,
+      "losses": 0,
+      "pnl": 5,
+      "totalBets": 1,
+      "examples": [
+        "Duke wins by over 9.5 Points?"
+      ],
+      "winRate": 1,
+      "avgPnl": 5,
+      "edge": 0.5
+    },
+    "other|below-60|nodip": {
+      "wins": 0,
+      "losses": 3,
+      "pnl": -159,
+      "totalBets": 3,
+      "examples": [
+        "Southern University wins by over 4.5 Points?",
+        "Oklahoma at Texas A&M: Total Points",
+        "Rutgers at UCLA: Total Points"
+      ],
+      "winRate": 0,
+      "avgPnl": -53,
+      "edge": -0.5
+    },
+    "other|60-70|nodip": {
+      "wins": 1,
+      "losses": 1,
+      "pnl": -27.9,
+      "totalBets": 2,
+      "examples": [
+        "Colorado at Seattle Winner?",
+        "yes San Diego St.,yes UCLA,yes UT Arlington,yes UC San Diego"
+      ],
+      "winRate": 0.5,
+      "avgPnl": -13.95,
+      "edge": 0
+    },
+    "sports|below-60|dip-15+": {
+      "wins": 4,
+      "losses": 19,
+      "pnl": -474,
+      "totalBets": 23,
+      "examples": [
+        "Georgetown at Villanova Winner?",
+        "Georgetown at Villanova Winner?",
+        "George Washington at Saint Louis Winner?"
+      ],
+      "winRate": 0.174,
+      "avgPnl": -20.61,
+      "edge": -0.326
+    },
+    "sports|60-70|dip-5-10": {
+      "wins": 2,
+      "losses": 3,
+      "pnl": -126,
+      "totalBets": 5,
+      "examples": [
+        "George Washington at Saint Louis Winner?",
+        "Kennesaw St. at Sam Houston Winner?",
+        "North Texas at Tulsa Winner?"
+      ],
+      "winRate": 0.4,
+      "avgPnl": -25.2,
+      "edge": -0.1
+    },
+    "sports|60-70|dip-15+": {
+      "wins": 4,
+      "losses": 1,
+      "pnl": 76,
+      "totalBets": 5,
+      "examples": [
+        "Wisconsin at Illinois Winner?",
+        "Ole Miss at Arkansas Winner?",
+        "Ole Miss at Arkansas Winner?"
+      ],
+      "winRate": 0.8,
+      "avgPnl": 15.2,
+      "edge": 0.3
+    },
+    "sports|below-60|dip-5-10": {
+      "wins": 4,
+      "losses": 7,
+      "pnl": -173,
+      "totalBets": 11,
+      "examples": [
+        "Iowa St. at Arizona Winner?",
+        "Iowa St. at Arizona Winner?",
+        "Iowa St. at Arizona Winner?"
+      ],
+      "winRate": 0.364,
+      "avgPnl": -15.73,
+      "edge": -0.136
+    },
+    "sports|60-70|dip-10-15": {
+      "wins": 4,
+      "losses": 0,
+      "pnl": 140,
+      "totalBets": 4,
+      "examples": [
+        "Oklahoma at Arkansas Winner?",
+        "Cal State Fullerton at Hawai'i Winner?",
+        "Missouri at Miami (FL) Winner?"
+      ],
+      "winRate": 1,
+      "avgPnl": 35,
+      "edge": 0.5
+    },
+    "sports|80-90|nodip": {
+      "wins": 141,
+      "losses": 27,
+      "pnl": -157.4000000000001,
+      "totalBets": 168,
+      "examples": [
+        "Oklahoma at Arkansas Winner?",
+        "Oklahoma at Arkansas Winner?",
+        "Cal State Fullerton at Hawai'i Winner?"
+      ],
+      "winRate": 0.839,
+      "avgPnl": -0.94,
+      "edge": 0.339
+    },
+    "sports|70-80|dip-10-15": {
+      "wins": 20,
+      "losses": 0,
+      "pnl": 529,
+      "totalBets": 20,
+      "examples": [
+        "Wisconsin at Michigan Winner?",
+        "Purdue at UCLA Winner?",
+        "Purdue at UCLA Winner?"
+      ],
+      "winRate": 1,
+      "avgPnl": 26.45,
+      "edge": 0.5
+    },
+    "sports|70-80|dip-15+": {
+      "wins": 23,
+      "losses": 0,
+      "pnl": 610,
+      "totalBets": 23,
+      "examples": [
+        "Wisconsin at Michigan Winner?",
+        "Wisconsin at Michigan Winner?",
+        "Wisconsin at Michigan Winner?"
+      ],
+      "winRate": 1,
+      "avgPnl": 26.52,
+      "edge": 0.5
+    },
+    "sports|70-80|dip-5-10": {
+      "wins": 14,
+      "losses": 0,
+      "pnl": 345,
+      "totalBets": 14,
+      "examples": [
+        "Ole Miss at Arkansas Winner?",
+        "Ole Miss at Arkansas Winner?",
+        "Ole Miss at Arkansas Winner?"
+      ],
+      "winRate": 1,
+      "avgPnl": 24.64,
+      "edge": 0.5
+    },
+    "sports|80-90|dip-5-10": {
+      "wins": 9,
+      "losses": 0,
+      "pnl": 161,
+      "totalBets": 9,
+      "examples": [
+        "Purdue at UCLA Winner?",
+        "Ole Miss at Arkansas Winner?",
+        "Ole Miss at Arkansas Winner?"
+      ],
+      "winRate": 1,
+      "avgPnl": 17.89,
+      "edge": 0.5
+    },
+    "sports|90-100|dip-5-10": {
+      "wins": 3,
+      "losses": 0,
+      "pnl": 26,
+      "totalBets": 3,
+      "examples": [
+        "Siena at Duke Winner?",
+        "Siena at Duke Winner?",
+        "Siena at Duke Winner?"
+      ],
+      "winRate": 1,
+      "avgPnl": 8.67,
+      "edge": 0.5
+    },
+    "sports|80-90|dip-10-15": {
+      "wins": 8,
+      "losses": 0,
+      "pnl": 119,
+      "totalBets": 8,
+      "examples": [
+        "Siena at Duke Winner?",
+        "Siena at Duke Winner?",
+        "Siena at Duke Winner?"
+      ],
+      "winRate": 1,
+      "avgPnl": 14.88,
+      "edge": 0.5
+    },
+    "sports|80-90|dip-15+": {
+      "wins": 5,
+      "losses": 0,
+      "pnl": 86,
+      "totalBets": 5,
+      "examples": [
+        "Siena at Duke Winner?",
+        "Siena at Duke Winner?",
+        "Siena at Duke Winner?"
+      ],
+      "winRate": 1,
+      "avgPnl": 17.2,
+      "edge": 0.5
+    }
+  },
+  "insights": {
+    "bestConditions": [
+      {
+        "condition": "sports|60-70|dip-10-15",
+        "winRate": 1,
+        "totalBets": 4,
+        "pnl": 140,
+        "edge": 0.5,
+        "examples": [
+          "Oklahoma at Arkansas Winner?",
+          "Cal State Fullerton at Hawai'i Winner?",
+          "Missouri at Miami (FL) Winner?"
+        ]
+      },
+      {
+        "condition": "sports|70-80|dip-10-15",
+        "winRate": 1,
+        "totalBets": 20,
+        "pnl": 529,
+        "edge": 0.5,
+        "examples": [
+          "Wisconsin at Michigan Winner?",
+          "Purdue at UCLA Winner?",
+          "Purdue at UCLA Winner?"
+        ]
+      },
+      {
+        "condition": "sports|70-80|dip-15+",
+        "winRate": 1,
+        "totalBets": 23,
+        "pnl": 610,
+        "edge": 0.5,
+        "examples": [
+          "Wisconsin at Michigan Winner?",
+          "Wisconsin at Michigan Winner?",
+          "Wisconsin at Michigan Winner?"
+        ]
+      },
+      {
+        "condition": "sports|70-80|dip-5-10",
+        "winRate": 1,
+        "totalBets": 14,
+        "pnl": 345,
+        "edge": 0.5,
+        "examples": [
+          "Ole Miss at Arkansas Winner?",
+          "Ole Miss at Arkansas Winner?",
+          "Ole Miss at Arkansas Winner?"
+        ]
+      },
+      {
+        "condition": "sports|80-90|dip-5-10",
+        "winRate": 1,
+        "totalBets": 9,
+        "pnl": 161,
+        "edge": 0.5,
+        "examples": [
+          "Purdue at UCLA Winner?",
+          "Ole Miss at Arkansas Winner?",
+          "Ole Miss at Arkansas Winner?"
+        ]
+      },
+      {
+        "condition": "sports|90-100|dip-5-10",
+        "winRate": 1,
+        "totalBets": 3,
+        "pnl": 26,
+        "edge": 0.5,
+        "examples": [
+          "Siena at Duke Winner?",
+          "Siena at Duke Winner?",
+          "Siena at Duke Winner?"
+        ]
+      },
+      {
+        "condition": "sports|80-90|dip-10-15",
+        "winRate": 1,
+        "totalBets": 8,
+        "pnl": 119,
+        "edge": 0.5,
+        "examples": [
+          "Siena at Duke Winner?",
+          "Siena at Duke Winner?",
+          "Siena at Duke Winner?"
+        ]
+      },
+      {
+        "condition": "sports|80-90|dip-15+",
+        "winRate": 1,
+        "totalBets": 5,
+        "pnl": 86,
+        "edge": 0.5,
+        "examples": [
+          "Siena at Duke Winner?",
+          "Siena at Duke Winner?",
+          "Siena at Duke Winner?"
+        ]
+      },
+      {
+        "condition": "sports|90-100|nodip",
+        "winRate": 0.996,
+        "totalBets": 265,
+        "pnl": 1066.1,
+        "edge": 0.496,
+        "examples": [
+          "Louisville at Miami (FL) Winner?",
+          "BYU at Houston Winner?",
+          "Middle Tennessee at Louisiana Tech Winner?"
+        ]
+      },
+      {
+        "condition": "sports|80-90|nodip",
+        "winRate": 0.839,
+        "totalBets": 168,
+        "pnl": -157.4,
+        "edge": 0.339,
+        "examples": [
+          "Oklahoma at Arkansas Winner?",
+          "Oklahoma at Arkansas Winner?",
+          "Cal State Fullerton at Hawai'i Winner?"
+        ]
+      }
+    ],
+    "worstConditions": [
+      {
+        "condition": "other|below-60|nodip",
+        "winRate": 0,
+        "totalBets": 3,
+        "pnl": -159
+      },
+      {
+        "condition": "sports|below-60|dip-15+",
+        "winRate": 0.174,
+        "totalBets": 23,
+        "pnl": -474
+      },
+      {
+        "condition": "sports|below-60|dip-5-10",
+        "winRate": 0.364,
+        "totalBets": 11,
+        "pnl": -173
+      },
+      {
+        "condition": "sports|below-60|nodip",
+        "winRate": 0.387,
+        "totalBets": 62,
+        "pnl": -605.4
+      },
+      {
+        "condition": "sports|60-70|dip-5-10",
+        "winRate": 0.4,
+        "totalBets": 5,
+        "pnl": -126
+      }
+    ],
+    "totalEdge": "4.835"
+  }
+}

@@ -7,6 +7,63 @@ import {
   BarChart, Bar, Cell, ReferenceLine,
 } from 'recharts'
 
+// ─── Auto-Research Types ──────────────────────────────────────────────────────
+
+interface SwarmAgent {
+  name: string
+  minTradeUSD: number
+  impliedRange: [number, number]
+  overallWinRate: number
+  modelConfidence: number
+  categoryStats: Record<string, null | {
+    samples: number
+    wins: number
+    winRate: number
+    winRateEwma: number
+    brierScore: number
+    kellyBet: number
+  }>
+}
+
+interface SwarmConfig {
+  agents: SwarmAgent[]
+  weights: number[]
+  threshold: number
+  consensusThreshold: number
+}
+
+interface MemoryCategoryStats {
+  wins: number
+  losses: number
+  pnl: number
+  totalBets: number
+  winRate: number
+  avgPnl: number
+  summary: string
+}
+
+interface MemoryData {
+  generatedAt: string
+  settledTrades: number
+  L0_categories: Record<string, MemoryCategoryStats>
+}
+
+interface ExperimentEntry {
+  ts: string
+  result?: string
+  brierScore?: number
+  prevBest?: number
+  winRate?: number
+  nSignals?: number
+  totalPnL?: number
+  sharpe?: number
+  hypothesis?: string
+  note?: string
+  params?: Record<string, unknown>
+  improvement?: number
+  pnlDelta?: number
+}
+
 // ─── Types ───────────────────────────────────────────────────────────────────
 
 interface Params {
@@ -374,6 +431,407 @@ const PRESETS = [
   },
 ]
 
+// ─── Agent metadata ───────────────────────────────────────────────────────────
+
+const AGENT_META: Record<string, { emoji: string; desc: string }> = {
+  'Whale-Chaser':    { emoji: '🐳', desc: 'Only follows bets where big money ($1,000+) is flowing' },
+  'Momentum-Rider':  { emoji: '🚀', desc: 'Chases fast-moving markets with high confidence' },
+  'Contrarian':      { emoji: '🔄', desc: 'Looks for hidden value in the 65-85% range' },
+  'Conservative':    { emoji: '🛡️', desc: 'Only bets when it\'s almost certain (85%+)' },
+  'Value-Hunter':    { emoji: '💎', desc: 'Scans the full range for the best expected value' },
+}
+
+// ─── Auto-Research Engine section ────────────────────────────────────────────
+
+function AutoResearchEngine() {
+  const [swarm, setSwarm] = useState<SwarmConfig | null>(null)
+  const [memory, setMemory] = useState<MemoryData | null>(null)
+  const [experiments, setExperiments] = useState<ExperimentEntry[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    Promise.all([
+      fetch('/api/swarm').then(r => r.json()),
+      fetch('/api/memory').then(r => r.json()),
+      fetch('/api/experiments').then(r => r.json()),
+    ]).then(([s, m, e]) => {
+      setSwarm(s)
+      setMemory(m)
+      setExperiments(Array.isArray(e) ? e.slice().reverse().slice(0, 10) : [])
+    }).catch(console.error).finally(() => setLoading(false))
+  }, [])
+
+  if (loading) {
+    return (
+      <div style={{ marginTop: 48, background: '#0d1829', border: '1px solid #1a2840', borderRadius: 16, padding: 32, textAlign: 'center', color: DIM }}>
+        <div style={{ fontSize: 28, marginBottom: 12 }}>🤖</div>
+        <div style={{ fontSize: 14 }}>Loading Auto-Research Engine…</div>
+      </div>
+    )
+  }
+
+  return (
+    <div style={{ marginTop: 56 }}>
+      {/* Section header */}
+      <div style={{ marginBottom: 28, borderTop: '1px solid #1a2840', paddingTop: 40 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
+          <span style={{ fontSize: 28 }}>🤖</span>
+          <h2 style={{ fontSize: 24, fontWeight: 800, letterSpacing: '-0.02em', margin: 0 }}>
+            Auto-Research Engine
+          </h2>
+          <span style={{
+            fontSize: 10, fontWeight: 700, color: GREEN,
+            background: 'rgba(0,255,212,0.1)', border: '1px solid rgba(0,255,212,0.25)',
+            borderRadius: 20, padding: '2px 10px',
+          }}>LIVE</span>
+        </div>
+        <p style={{ fontSize: 14, color: '#a0b4d0', maxWidth: 680, margin: 0, lineHeight: 1.7 }}>
+          The AI runs 24/7, continuously testing new strategies and updating its own settings.
+          Here's a live view of how it thinks, what it's learned, and what it's been experimenting with.
+        </p>
+      </div>
+
+      {/* Panel 1: How the AI Decides */}
+      {swarm && (
+        <div style={{ marginBottom: 28 }}>
+          <div style={{ background: '#0d1829', border: '1px solid #1a2840', borderRadius: 16, padding: 24 }}>
+            <div style={{ marginBottom: 20 }}>
+              <h3 style={{ fontSize: 18, fontWeight: 800, margin: '0 0 6px 0' }}>🧠 How the AI Decides</h3>
+              <p style={{ fontSize: 13, color: '#a0b4d0', margin: 0, lineHeight: 1.6 }}>
+                The AI uses 5 independent agents that each look at a market differently. A bet is only placed when at least 3 of them agree — this is called consensus.
+              </p>
+            </div>
+
+            {/* Agent cards */}
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+              gap: 14,
+              marginBottom: 20,
+            }}>
+              {swarm.agents.map((agent, i) => {
+                const meta = AGENT_META[agent.name] ?? { emoji: '🤖', desc: agent.name }
+                const weight = swarm.weights[i] ?? 0.2
+                const lo = agent.impliedRange[0]
+                const hi = agent.impliedRange[1]
+                const winRatePct = Math.round((agent.overallWinRate ?? 0) * 100)
+                const barLeft = lo * 100
+                const barWidth = (hi - lo) * 100
+
+                return (
+                  <div key={agent.name} style={{
+                    background: '#07101e',
+                    border: '1px solid #1a2840',
+                    borderRadius: 12,
+                    padding: '16px 18px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 8,
+                  }}>
+                    {/* Emoji + name + weight badge */}
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                      <div>
+                        <div style={{ fontSize: 28, lineHeight: 1, marginBottom: 4 }}>{meta.emoji}</div>
+                        <div style={{ fontSize: 13, fontWeight: 800, color: '#e8edf5' }}>{agent.name}</div>
+                      </div>
+                      <span style={{
+                        fontSize: 10, fontWeight: 700, color: CYAN,
+                        background: 'rgba(0,212,255,0.08)', border: '1px solid rgba(0,212,255,0.2)',
+                        borderRadius: 20, padding: '2px 8px', whiteSpace: 'nowrap',
+                      }}>
+                        Weight: {Math.round(weight * 100)}%
+                      </span>
+                    </div>
+
+                    {/* Description */}
+                    <div style={{ fontSize: 12, color: '#8099b8', lineHeight: 1.5 }}>{meta.desc}</div>
+
+                    {/* Win rate */}
+                    <div style={{ display: 'flex', alignItems: 'baseline', gap: 4 }}>
+                      <span style={{ fontSize: 28, fontWeight: 800, fontFamily: 'monospace', color: GREEN }}>
+                        {winRatePct}%
+                      </span>
+                      <span style={{ fontSize: 11, color: DIM }}>win rate</span>
+                    </div>
+
+                    {/* Implied range bar */}
+                    <div>
+                      <div style={{ fontSize: 10, color: DIM, marginBottom: 4 }}>
+                        Range: {Math.round(lo * 100)}%–{Math.round(hi * 100)}%
+                      </div>
+                      <div style={{ position: 'relative', height: 6, background: '#1a2840', borderRadius: 3, overflow: 'hidden' }}>
+                        <div style={{
+                          position: 'absolute',
+                          left: `${barLeft}%`,
+                          width: `${barWidth}%`,
+                          height: '100%',
+                          background: 'linear-gradient(90deg, #00ffd4, #00d4ff)',
+                          borderRadius: 3,
+                        }} />
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+
+            {/* Explanation box */}
+            <div style={{
+              background: 'rgba(0,255,212,0.04)',
+              border: '1px solid rgba(0,255,212,0.12)',
+              borderRadius: 10,
+              padding: '14px 18px',
+              fontSize: 13,
+              color: '#a0b4d0',
+              lineHeight: 1.7,
+            }}>
+              <div style={{ marginBottom: 10 }}>
+                The weighted score combines all their confidence levels.
+                A bet is only placed when the combined score passes the threshold.
+              </div>
+              <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
+                <div>
+                  <span style={{ color: DIM, fontSize: 12 }}>Consensus threshold: </span>
+                  <span style={{ color: GREEN, fontWeight: 700, fontFamily: 'monospace' }}>
+                    {swarm.consensusThreshold ?? 3}/5
+                  </span>
+                </div>
+                <div>
+                  <span style={{ color: DIM, fontSize: 12 }}>Score threshold: </span>
+                  <span style={{ color: GREEN, fontWeight: 700, fontFamily: 'monospace' }}>
+                    {swarm.threshold}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Panel 2: What the AI Has Learned */}
+      {memory && (
+        <div style={{ marginBottom: 28 }}>
+          <div style={{ background: '#0d1829', border: '1px solid #1a2840', borderRadius: 16, padding: 24 }}>
+            <div style={{ marginBottom: 20 }}>
+              <h3 style={{ fontSize: 18, fontWeight: 800, margin: '0 0 6px 0' }}>📚 What the AI Has Learned</h3>
+              <p style={{ fontSize: 13, color: '#a0b4d0', margin: 0, lineHeight: 1.6 }}>
+                Based on <strong style={{ color: '#e8edf5' }}>{memory.settledTrades.toLocaleString()} settled trades</strong>,
+                the AI has built a profile of which categories and conditions perform best.
+              </p>
+            </div>
+
+            {/* Category tiles */}
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+              gap: 14,
+              marginBottom: 16,
+            }}>
+              {Object.entries(memory.L0_categories).map(([cat, stats]) => {
+                const winRatePct = Math.round(stats.winRate * 100)
+                const categoryEmoji: Record<string, string> = {
+                  sports: '🏆', crypto: '₿', politics: '🏛️', other: '📦',
+                }
+                const emoji = categoryEmoji[cat] ?? '📊'
+                const isStrong = stats.winRate > 0.7
+                const catLabel = cat.charAt(0).toUpperCase() + cat.slice(1)
+
+                return (
+                  <div key={cat} style={{
+                    background: '#07101e',
+                    border: `1px solid ${isStrong ? 'rgba(0,255,212,0.15)' : '#1a2840'}`,
+                    borderRadius: 12,
+                    padding: '16px 18px',
+                  }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
+                      <span style={{ fontSize: 20 }}>{emoji}</span>
+                      <span style={{ fontSize: 14, fontWeight: 700, color: '#e8edf5' }}>{catLabel}</span>
+                      {isStrong && (
+                        <span style={{
+                          fontSize: 9, fontWeight: 700, color: GREEN,
+                          background: 'rgba(0,255,212,0.1)', borderRadius: 20, padding: '1px 7px',
+                        }}>STRONG</span>
+                      )}
+                    </div>
+
+                    {/* Big win rate */}
+                    <div style={{ fontSize: 36, fontWeight: 800, fontFamily: 'monospace', color: isStrong ? GREEN : RED, lineHeight: 1 }}>
+                      {winRatePct}%
+                    </div>
+                    <div style={{ fontSize: 11, color: DIM, marginBottom: 10 }}>win rate</div>
+
+                    {/* Trade count */}
+                    <div style={{ fontSize: 12, color: '#8099b8', marginBottom: 10 }}>
+                      {stats.totalBets.toLocaleString()} trades analysed
+                    </div>
+
+                    {/* Progress bar */}
+                    <div style={{ background: '#1a2840', borderRadius: 3, height: 5, overflow: 'hidden', marginBottom: 8 }}>
+                      <div style={{
+                        width: `${winRatePct}%`,
+                        height: '100%',
+                        background: isStrong ? 'linear-gradient(90deg, #00ffd4, #00d4ff)' : 'rgba(255,68,68,0.5)',
+                        borderRadius: 3,
+                        transition: 'width 0.5s ease',
+                      }} />
+                    </div>
+
+                    {/* Plain English insight */}
+                    <div style={{ fontSize: 11, color: '#6080a0', lineHeight: 1.5 }}>
+                      {isStrong
+                        ? `${catLabel} is the strongest category — the AI focuses here.`
+                        : `${catLabel} has low performance — the AI avoids this.`}
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+
+            <div style={{ fontSize: 11, color: DIM }}>
+              Last updated: {new Date(memory.generatedAt).toLocaleString()}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Panel 3: Recent Research Runs */}
+      {experiments.length > 0 && (
+        <div style={{ marginBottom: 28 }}>
+          <div style={{ background: '#0d1829', border: '1px solid #1a2840', borderRadius: 16, padding: 24 }}>
+            <div style={{ marginBottom: 20 }}>
+              <h3 style={{ fontSize: 18, fontWeight: 800, margin: '0 0 6px 0' }}>🔬 Recent Research Runs</h3>
+              <p style={{ fontSize: 13, color: '#a0b4d0', margin: 0, lineHeight: 1.6 }}>
+                The AI continuously tests new strategies and updates its own settings. Here&apos;s what it&apos;s been learning:
+              </p>
+            </div>
+
+            {/* Timeline feed */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+              {experiments.map((exp, i) => {
+                const accepted = exp.result === 'ACCEPTED'
+                const rejected = exp.result === 'REJECTED'
+                const improvement = exp.improvement ?? (exp.prevBest && exp.brierScore
+                  ? +(exp.prevBest - exp.brierScore).toFixed(4) : null)
+                const pnlDelta = exp.pnlDelta
+
+                // Build a beginner-friendly summary
+                let summary = exp.hypothesis ?? 'Tested a new strategy configuration'
+                if (exp.note) summary = exp.note
+                // Shorten the note if it's too long
+                if (summary.length > 120) summary = summary.slice(0, 117) + '…'
+
+                return (
+                  <div key={i} style={{
+                    display: 'flex',
+                    gap: 16,
+                    paddingBottom: i < experiments.length - 1 ? 16 : 0,
+                    marginBottom: i < experiments.length - 1 ? 16 : 0,
+                    borderBottom: i < experiments.length - 1 ? '1px solid #0f1e33' : 'none',
+                  }}>
+                    {/* Timeline left */}
+                    <div style={{ flexShrink: 0, width: 90, textAlign: 'right' }}>
+                      <div style={{ fontSize: 11, color: DIM, fontFamily: 'monospace', lineHeight: 1.4 }}>
+                        {exp.ts ? new Date(exp.ts).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '–'}
+                      </div>
+                      <div style={{ fontSize: 10, color: '#3a5070', fontFamily: 'monospace' }}>
+                        {exp.ts ? new Date(exp.ts).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }) : ''}
+                      </div>
+                    </div>
+
+                    {/* Dot */}
+                    <div style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                      <div style={{
+                        width: 10, height: 10, borderRadius: '50%', marginTop: 2,
+                        background: accepted ? GREEN : rejected ? RED : DIM,
+                        boxShadow: accepted ? `0 0 6px ${GREEN}` : 'none',
+                      }} />
+                      {i < experiments.length - 1 && (
+                        <div style={{ flex: 1, width: 1, background: '#1a2840', marginTop: 4 }} />
+                      )}
+                    </div>
+
+                    {/* Content */}
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8, flexWrap: 'wrap', marginBottom: 4 }}>
+                        <span style={{ fontSize: 13, color: '#c0d0e0', lineHeight: 1.5, flex: 1 }}>
+                          {summary}
+                        </span>
+                        {/* Result badge */}
+                        {exp.result && (
+                          <span style={{
+                            fontSize: 10, fontWeight: 700, flexShrink: 0,
+                            color: accepted ? GREEN : rejected ? RED : DIM,
+                            background: accepted ? 'rgba(0,255,212,0.08)' : rejected ? 'rgba(255,68,68,0.08)' : '#111d35',
+                            border: `1px solid ${accepted ? 'rgba(0,255,212,0.2)' : rejected ? 'rgba(255,68,68,0.2)' : '#1a2840'}`,
+                            borderRadius: 20, padding: '2px 9px',
+                          }}>
+                            {accepted ? '✓ ACCEPTED' : '✗ REJECTED'}
+                          </span>
+                        )}
+                        {/* PnL delta badge */}
+                        {pnlDelta != null && (
+                          <span style={{
+                            fontSize: 10, fontWeight: 700, flexShrink: 0,
+                            color: pnlDelta >= 0 ? GREEN : RED,
+                            background: pnlDelta >= 0 ? 'rgba(0,255,212,0.08)' : 'rgba(255,68,68,0.08)',
+                            border: `1px solid ${pnlDelta >= 0 ? 'rgba(0,255,212,0.2)' : 'rgba(255,68,68,0.2)'}`,
+                            borderRadius: 20, padding: '2px 9px',
+                          }}>
+                            {pnlDelta >= 0 ? '+' : ''}{pnlDelta.toFixed(1)} PnL
+                          </span>
+                        )}
+                        {/* Improvement badge */}
+                        {improvement != null && Math.abs(improvement) > 0.0001 && (
+                          <span style={{
+                            fontSize: 10, fontWeight: 700, flexShrink: 0,
+                            color: improvement > 0 ? GREEN : RED,
+                            background: improvement > 0 ? 'rgba(0,255,212,0.08)' : 'rgba(255,68,68,0.08)',
+                            border: `1px solid ${improvement > 0 ? 'rgba(0,255,212,0.2)' : 'rgba(255,68,68,0.2)'}`,
+                            borderRadius: 20, padding: '2px 9px',
+                          }}>
+                            {improvement > 0 ? '▲' : '▼'} Brier {Math.abs(improvement).toFixed(4)}
+                          </span>
+                        )}
+                      </div>
+                      {/* Key stats line */}
+                      <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                        {exp.winRate != null && (
+                          <span style={{ fontSize: 11, color: DIM }}>
+                            Win rate: <span style={{ color: '#a0b4d0', fontFamily: 'monospace' }}>{Math.round(exp.winRate * 100)}%</span>
+                          </span>
+                        )}
+                        {exp.nSignals != null && (
+                          <span style={{ fontSize: 11, color: DIM }}>
+                            Signals: <span style={{ color: '#a0b4d0', fontFamily: 'monospace' }}>{exp.nSignals}</span>
+                          </span>
+                        )}
+                        {exp.brierScore != null && (
+                          <span style={{ fontSize: 11, color: DIM }}>
+                            Brier score: <span style={{ color: '#a0b4d0', fontFamily: 'monospace' }}>{exp.brierScore.toFixed(4)}</span>
+                            <span style={{ color: '#3a5070', fontSize: 10 }}> (lower=better)</span>
+                          </span>
+                        )}
+                        {exp.totalPnL != null && (
+                          <span style={{ fontSize: 11, color: DIM }}>
+                            Total P&L: <span style={{
+                              color: exp.totalPnL >= 0 ? GREEN : RED,
+                              fontFamily: 'monospace',
+                            }}>{exp.totalPnL >= 0 ? '+' : ''}${exp.totalPnL}</span>
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 // ─── Main page ────────────────────────────────────────────────────────────────
 
 export default function ResearchPage() {
@@ -687,6 +1145,10 @@ export default function ResearchPage() {
             )}
           </div>
         </div>
+
+        {/* Auto-Research Engine section */}
+        <AutoResearchEngine />
+
       </div>
     </div>
   )
