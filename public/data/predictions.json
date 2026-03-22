@@ -17153,5 +17153,26 @@
     "settledAt": null,
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaambgame-26mar22miapur"
+  },
+  {
+    "id": "0c930d86-0566-4684-b848-fe2c233c5bc8",
+    "firedAt": "2026-03-22T16:46:07.309Z",
+    "market": "Miami (FL) at Purdue Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR22MIAPUR-MIA",
+    "side": "NO",
+    "price": 0.71,
+    "impliedPct": 71,
+    "contractsObserved": 1500,
+    "dollarObserved": 1065,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 336.23,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaambgame-26mar22miapur"
   }
 ]
