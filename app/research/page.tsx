@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useEffect } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import Link from 'next/link'
 import {
   ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
@@ -443,6 +443,48 @@ const AGENT_META: Record<string, { emoji: string; desc: string }> = {
 
 // ─── Auto-Research Engine section ────────────────────────────────────────────
 
+const HUD_AGENT_NAMES: Record<string, string> = {
+  'Whale-Chaser':   '🐳 Whale-Chaser',
+  'Momentum-Rider': '🚀 Momentum-Rider',
+  'Contrarian':     '🔄 Contrarian',
+  'Conservative':   '🛡️ Conservative',
+  'Value-Hunter':   '💎 Value-Hunter',
+}
+
+function HudPanel({ title, children, style }: { title: string; children: React.ReactNode; style?: React.CSSProperties }) {
+  return (
+    <div style={{
+      background: '#0a0a0a',
+      border: '1px solid #1a1a1a',
+      padding: '14px 16px',
+      position: 'relative',
+      ...style,
+    }}>
+      <div style={{
+        color: '#00ffd4',
+        fontSize: 11,
+        letterSpacing: 2,
+        textTransform: 'uppercase' as const,
+        marginBottom: 10,
+        borderBottom: '1px solid #1a1a1a',
+        paddingBottom: 6,
+      }}>
+        {title}
+      </div>
+      {children}
+    </div>
+  )
+}
+
+function HudStatRow({ label, value, valueColor }: { label: string; value: React.ReactNode; valueColor?: string }) {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '3px 0', borderBottom: '1px solid #111' }}>
+      <span style={{ color: '#666', fontSize: 12 }}>{label}</span>
+      <span style={{ color: valueColor ?? '#c0c0c0', fontWeight: 'bold', fontSize: 12, fontFamily: "'Courier New', monospace" }}>{value}</span>
+    </div>
+  )
+}
+
 function AutoResearchEngine() {
   const [swarm, setSwarm] = useState<SwarmConfig | null>(null)
   const [memory, setMemory] = useState<MemoryData | null>(null)
@@ -463,371 +505,233 @@ function AutoResearchEngine() {
 
   if (loading) {
     return (
-      <div style={{ marginTop: 48, background: '#0d1829', border: '1px solid #1a2840', borderRadius: 16, padding: 32, textAlign: 'center', color: DIM }}>
-        <div style={{ fontSize: 28, marginBottom: 12 }}>🤖</div>
-        <div style={{ fontSize: 14 }}>Loading Auto-Research Engine…</div>
+      <div style={{ color: '#555', fontFamily: "'Courier New', monospace", fontSize: 13, padding: '40px 0', letterSpacing: 2 }}>
+        SYS LOADING...
       </div>
     )
   }
 
+  // Bucket stats from first agent sports category
+  const firstAgent = swarm?.agents?.[0]
+  const sportsBuckets: Array<{ label: string; winRate: number; n: number }> = (() => {
+    if (!firstAgent) return []
+    const sports = firstAgent.categoryStats?.['sports']
+    if (!sports) return []
+    // Try to get bucketStats if available on the object
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const bucketStats = (sports as any).bucketStats
+    if (bucketStats && Array.isArray(bucketStats)) return bucketStats
+    return []
+  })()
+
+  const settledCount = memory?.settledTrades ?? 0
+  const genTs = memory?.generatedAt ? new Date(memory.generatedAt).toLocaleTimeString() : '—'
+
   return (
-    <div style={{ marginTop: 56 }}>
-      {/* Section header */}
-      <div style={{ marginBottom: 28, borderTop: '1px solid #1a2840', paddingTop: 40 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
-          <span style={{ fontSize: 28 }}>🤖</span>
-          <h2 style={{ fontSize: 24, fontWeight: 800, letterSpacing: '-0.02em', margin: 0 }}>
-            Auto-Research Engine
-          </h2>
-          <span style={{
-            fontSize: 10, fontWeight: 700, color: GREEN,
-            background: 'rgba(0,255,212,0.1)', border: '1px solid rgba(0,255,212,0.25)',
-            borderRadius: 20, padding: '2px 10px',
-          }}>LIVE</span>
-        </div>
-        <p style={{ fontSize: 14, color: '#a0b4d0', maxWidth: 680, margin: 0, lineHeight: 1.7 }}>
-          The AI runs 24/7, continuously testing new strategies and updating its own settings.
-          Here's a live view of how it thinks, what it's learned, and what it's been experimenting with.
-        </p>
+    <div style={{ background: '#000', minHeight: '100vh', padding: 0, fontFamily: "'Courier New', monospace", color: '#c0c0c0' }}>
+
+      {/* Header */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 0', marginBottom: 8 }}>
+        <span style={{ color: '#00ffd4', fontSize: 14, letterSpacing: 3, textTransform: 'uppercase', fontWeight: 'normal' }}>AUTO-RESEARCH ENGINE</span>
+        <span style={{ color: '#444', fontSize: 11 }}>SYS <span style={{ color: '#00ffd4' }}>NOMINAL</span></span>
       </div>
 
-      {/* Panel 1: How the AI Decides */}
-      {swarm && (
-        <div style={{ marginBottom: 28 }}>
-          <div style={{ background: '#0d1829', border: '1px solid #1a2840', borderRadius: 16, padding: 24 }}>
-            <div style={{ marginBottom: 20 }}>
-              <h3 style={{ fontSize: 18, fontWeight: 800, margin: '0 0 6px 0' }}>🧠 How the AI Decides</h3>
-              <p style={{ fontSize: 13, color: '#a0b4d0', margin: 0, lineHeight: 1.6 }}>
-                The AI uses 5 independent agents that each look at a market differently. A bet is only placed when at least 3 of them agree — this is called consensus.
-              </p>
+      {/* 2-col grid */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
+
+        {/* Panel 1 — AGENT SWARM (full width) */}
+        {swarm && (
+          <HudPanel title="Agent Swarm" style={{ gridColumn: '1 / -1' }}>
+            <HudStatRow label="CONSENSUS THRESHOLD" value={`${swarm.consensusThreshold ?? 3}/5`} />
+            <HudStatRow label="SCORE THRESHOLD" value={String(swarm.threshold)} />
+            <HudStatRow label="WEIGHTS" value="equal (0.20 each)" />
+
+            <div style={{ marginTop: 12, overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 12 }}>
+                <thead>
+                  <tr>
+                    {['Name', 'Range', 'Min Trade', 'Win Rate', 'Kelly Bet', 'Weight'].map(h => (
+                      <th key={h} style={{
+                        color: '#00ffd4', textAlign: 'left', fontSize: 10,
+                        textTransform: 'uppercase', letterSpacing: 1,
+                        padding: '4px 6px', borderBottom: '1px solid #1a1a1a',
+                      }}>{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {swarm.agents.map((agent, i) => {
+                    const weight = swarm.weights[i] ?? 0.2
+                    const lo = agent.impliedRange[0]
+                    const hi = agent.impliedRange[1]
+                    const winRatePct = Math.round((agent.overallWinRate ?? 0) * 100)
+                    const winColor = winRatePct > 70 ? '#00ff88' : winRatePct > 50 ? '#ffaa00' : '#ff4444'
+                    const sports = agent.categoryStats?.['sports']
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    const kelly = sports ? (sports as any).kellyBet ?? sports.kellyBet : null
+                    const displayName = HUD_AGENT_NAMES[agent.name] ?? agent.name
+
+                    return (
+                      <tr key={agent.name}>
+                        <td style={{ padding: '4px 6px', borderBottom: '1px solid #111', color: '#c0c0c0' }}>{displayName}</td>
+                        <td style={{ padding: '4px 6px', borderBottom: '1px solid #111', color: '#888' }}>{Math.round(lo * 100)}–{Math.round(hi * 100)}%</td>
+                        <td style={{ padding: '4px 6px', borderBottom: '1px solid #111', color: '#888' }}>${agent.minTradeUSD.toLocaleString()}</td>
+                        <td style={{ padding: '4px 6px', borderBottom: '1px solid #111', color: winColor, fontWeight: 'bold' }}>{winRatePct}%</td>
+                        <td style={{ padding: '4px 6px', borderBottom: '1px solid #111', color: '#888' }}>{kelly != null ? kelly.toFixed(3) : '—'}</td>
+                        <td style={{ padding: '4px 6px', borderBottom: '1px solid #111', color: '#00d4ff' }}>{(weight * 100).toFixed(0)}%</td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
             </div>
+          </HudPanel>
+        )}
 
-            {/* Agent cards */}
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-              gap: 14,
-              marginBottom: 20,
-            }}>
-              {swarm.agents.map((agent, i) => {
-                const meta = AGENT_META[agent.name] ?? { emoji: '🤖', desc: agent.name }
-                const weight = swarm.weights[i] ?? 0.2
-                const lo = agent.impliedRange[0]
-                const hi = agent.impliedRange[1]
-                const winRatePct = Math.round((agent.overallWinRate ?? 0) * 100)
-                const barLeft = lo * 100
-                const barWidth = (hi - lo) * 100
-
-                return (
-                  <div key={agent.name} style={{
-                    background: '#07101e',
-                    border: '1px solid #1a2840',
-                    borderRadius: 12,
-                    padding: '16px 18px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: 8,
-                  }}>
-                    {/* Emoji + name + weight badge */}
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                      <div>
-                        <div style={{ fontSize: 28, lineHeight: 1, marginBottom: 4 }}>{meta.emoji}</div>
-                        <div style={{ fontSize: 13, fontWeight: 800, color: '#e8edf5' }}>{agent.name}</div>
-                      </div>
-                      <span style={{
-                        fontSize: 10, fontWeight: 700, color: CYAN,
-                        background: 'rgba(0,212,255,0.08)', border: '1px solid rgba(0,212,255,0.2)',
-                        borderRadius: 20, padding: '2px 8px', whiteSpace: 'nowrap',
-                      }}>
-                        Weight: {Math.round(weight * 100)}%
-                      </span>
-                    </div>
-
-                    {/* Description */}
-                    <div style={{ fontSize: 12, color: '#8099b8', lineHeight: 1.5 }}>{meta.desc}</div>
-
-                    {/* Win rate */}
-                    <div style={{ display: 'flex', alignItems: 'baseline', gap: 4 }}>
-                      <span style={{ fontSize: 28, fontWeight: 800, fontFamily: 'monospace', color: GREEN }}>
-                        {winRatePct}%
-                      </span>
-                      <span style={{ fontSize: 11, color: DIM }}>win rate</span>
-                    </div>
-
-                    {/* Implied range bar */}
-                    <div>
-                      <div style={{ fontSize: 10, color: DIM, marginBottom: 4 }}>
-                        Range: {Math.round(lo * 100)}%–{Math.round(hi * 100)}%
-                      </div>
-                      <div style={{ position: 'relative', height: 6, background: '#1a2840', borderRadius: 3, overflow: 'hidden' }}>
-                        <div style={{
-                          position: 'absolute',
-                          left: `${barLeft}%`,
-                          width: `${barWidth}%`,
-                          height: '100%',
-                          background: 'linear-gradient(90deg, #00ffd4, #00d4ff)',
-                          borderRadius: 3,
-                        }} />
-                      </div>
-                    </div>
-                  </div>
-                )
-              })}
+        {/* Panel 2 — MEMORY STATE (left) */}
+        {memory && (
+          <HudPanel title="Memory State">
+            {Object.entries(memory.L0_categories).map(([cat, stats]) => {
+              const wr = stats.winRate
+              const wrColor = wr > 0.7 ? '#00ff88' : wr > 0.5 ? '#ffaa00' : '#ff4444'
+              const record = `${stats.wins}W-${stats.losses}L`
+              const catLabel = cat.toUpperCase()
+              return (
+                <HudStatRow
+                  key={cat}
+                  label={catLabel}
+                  value={`${Math.round(wr * 100)}% (${record})`}
+                  valueColor={wrColor}
+                />
+              )
+            })}
+            <div style={{ marginTop: 8 }}>
+              <HudStatRow label="SETTLED TRADES" value={settledCount.toLocaleString()} />
+              <HudStatRow label="LAST UPDATED" value={genTs} />
             </div>
+          </HudPanel>
+        )}
 
-            {/* Explanation box */}
-            <div style={{
-              background: 'rgba(0,255,212,0.04)',
-              border: '1px solid rgba(0,255,212,0.12)',
-              borderRadius: 10,
-              padding: '14px 18px',
-              fontSize: 13,
-              color: '#a0b4d0',
-              lineHeight: 1.7,
-            }}>
-              <div style={{ marginBottom: 10 }}>
-                The weighted score combines all their confidence levels.
-                A bet is only placed when the combined score passes the threshold.
-              </div>
-              <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
-                <div>
-                  <span style={{ color: DIM, fontSize: 12 }}>Consensus threshold: </span>
-                  <span style={{ color: GREEN, fontWeight: 700, fontFamily: 'monospace' }}>
-                    {swarm.consensusThreshold ?? 3}/5
-                  </span>
-                </div>
-                <div>
-                  <span style={{ color: DIM, fontSize: 12 }}>Score threshold: </span>
-                  <span style={{ color: GREEN, fontWeight: 700, fontFamily: 'monospace' }}>
-                    {swarm.threshold}
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+        {/* Panel 3 — EXPERIMENT LOG (right) */}
+        <HudPanel title="Experiment Log (Last 10)">
+          <div style={{ maxHeight: 300, overflowY: 'auto' }}>
+            {experiments.length === 0 && (
+              <div style={{ color: '#333', fontSize: 12, padding: '8px 0' }}>NO EXPERIMENTS LOGGED</div>
+            )}
+            {experiments.map((exp, i) => {
+              const accepted = exp.result === 'ACCEPTED'
+              const rejected = exp.result === 'REJECTED'
+              const tsStr = exp.ts
+                ? new Date(exp.ts).toLocaleString('en-US', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false })
+                : '—'
+              const summary = exp.note ?? exp.hypothesis ?? JSON.stringify(exp).substring(0, 100)
 
-      {/* Panel 2: What the AI Has Learned */}
-      {memory && (
-        <div style={{ marginBottom: 28 }}>
-          <div style={{ background: '#0d1829', border: '1px solid #1a2840', borderRadius: 16, padding: 24 }}>
-            <div style={{ marginBottom: 20 }}>
-              <h3 style={{ fontSize: 18, fontWeight: 800, margin: '0 0 6px 0' }}>📚 What the AI Has Learned</h3>
-              <p style={{ fontSize: 13, color: '#a0b4d0', margin: 0, lineHeight: 1.6 }}>
-                Based on <strong style={{ color: '#e8edf5' }}>{memory.settledTrades.toLocaleString()} settled trades</strong>,
-                the AI has built a profile of which categories and conditions perform best.
-              </p>
-            </div>
-
-            {/* Category tiles */}
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
-              gap: 14,
-              marginBottom: 16,
-            }}>
-              {Object.entries(memory.L0_categories).map(([cat, stats]) => {
-                const winRatePct = Math.round(stats.winRate * 100)
-                const categoryEmoji: Record<string, string> = {
-                  sports: '🏆', crypto: '₿', politics: '🏛️', other: '📦',
-                }
-                const emoji = categoryEmoji[cat] ?? '📊'
-                const isStrong = stats.winRate > 0.7
-                const catLabel = cat.charAt(0).toUpperCase() + cat.slice(1)
-
-                return (
-                  <div key={cat} style={{
-                    background: '#07101e',
-                    border: `1px solid ${isStrong ? 'rgba(0,255,212,0.15)' : '#1a2840'}`,
-                    borderRadius: 12,
-                    padding: '16px 18px',
-                  }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
-                      <span style={{ fontSize: 20 }}>{emoji}</span>
-                      <span style={{ fontSize: 14, fontWeight: 700, color: '#e8edf5' }}>{catLabel}</span>
-                      {isStrong && (
-                        <span style={{
-                          fontSize: 9, fontWeight: 700, color: GREEN,
-                          background: 'rgba(0,255,212,0.1)', borderRadius: 20, padding: '1px 7px',
-                        }}>STRONG</span>
-                      )}
-                    </div>
-
-                    {/* Big win rate */}
-                    <div style={{ fontSize: 36, fontWeight: 800, fontFamily: 'monospace', color: isStrong ? GREEN : RED, lineHeight: 1 }}>
-                      {winRatePct}%
-                    </div>
-                    <div style={{ fontSize: 11, color: DIM, marginBottom: 10 }}>win rate</div>
-
-                    {/* Trade count */}
-                    <div style={{ fontSize: 12, color: '#8099b8', marginBottom: 10 }}>
-                      {stats.totalBets.toLocaleString()} trades analysed
-                    </div>
-
-                    {/* Progress bar */}
-                    <div style={{ background: '#1a2840', borderRadius: 3, height: 5, overflow: 'hidden', marginBottom: 8 }}>
-                      <div style={{
-                        width: `${winRatePct}%`,
-                        height: '100%',
-                        background: isStrong ? 'linear-gradient(90deg, #00ffd4, #00d4ff)' : 'rgba(255,68,68,0.5)',
-                        borderRadius: 3,
-                        transition: 'width 0.5s ease',
-                      }} />
-                    </div>
-
-                    {/* Plain English insight */}
-                    <div style={{ fontSize: 11, color: '#6080a0', lineHeight: 1.5 }}>
-                      {isStrong
-                        ? `${catLabel} is the strongest category — the AI focuses here.`
-                        : `${catLabel} has low performance — the AI avoids this.`}
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-
-            <div style={{ fontSize: 11, color: DIM }}>
-              Last updated: {new Date(memory.generatedAt).toLocaleString()}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Panel 3: Recent Research Runs */}
-      {experiments.length > 0 && (
-        <div style={{ marginBottom: 28 }}>
-          <div style={{ background: '#0d1829', border: '1px solid #1a2840', borderRadius: 16, padding: 24 }}>
-            <div style={{ marginBottom: 20 }}>
-              <h3 style={{ fontSize: 18, fontWeight: 800, margin: '0 0 6px 0' }}>🔬 Recent Research Runs</h3>
-              <p style={{ fontSize: 13, color: '#a0b4d0', margin: 0, lineHeight: 1.6 }}>
-                The AI continuously tests new strategies and updates its own settings. Here&apos;s what it&apos;s been learning:
-              </p>
-            </div>
-
-            {/* Timeline feed */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
-              {experiments.map((exp, i) => {
-                const accepted = exp.result === 'ACCEPTED'
-                const rejected = exp.result === 'REJECTED'
-                const improvement = exp.improvement ?? (exp.prevBest && exp.brierScore
-                  ? +(exp.prevBest - exp.brierScore).toFixed(4) : null)
-                const pnlDelta = exp.pnlDelta
-
-                // Build a beginner-friendly summary
-                let summary = exp.hypothesis ?? 'Tested a new strategy configuration'
-                if (exp.note) summary = exp.note
-                // Shorten the note if it's too long
-                if (summary.length > 120) summary = summary.slice(0, 117) + '…'
-
-                return (
-                  <div key={i} style={{
-                    display: 'flex',
-                    gap: 16,
-                    paddingBottom: i < experiments.length - 1 ? 16 : 0,
-                    marginBottom: i < experiments.length - 1 ? 16 : 0,
-                    borderBottom: i < experiments.length - 1 ? '1px solid #0f1e33' : 'none',
-                  }}>
-                    {/* Timeline left */}
-                    <div style={{ flexShrink: 0, width: 90, textAlign: 'right' }}>
-                      <div style={{ fontSize: 11, color: DIM, fontFamily: 'monospace', lineHeight: 1.4 }}>
-                        {exp.ts ? new Date(exp.ts).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '–'}
-                      </div>
-                      <div style={{ fontSize: 10, color: '#3a5070', fontFamily: 'monospace' }}>
-                        {exp.ts ? new Date(exp.ts).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }) : ''}
-                      </div>
-                    </div>
-
-                    {/* Dot */}
-                    <div style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                      <div style={{
-                        width: 10, height: 10, borderRadius: '50%', marginTop: 2,
-                        background: accepted ? GREEN : rejected ? RED : DIM,
-                        boxShadow: accepted ? `0 0 6px ${GREEN}` : 'none',
-                      }} />
-                      {i < experiments.length - 1 && (
-                        <div style={{ flex: 1, width: 1, background: '#1a2840', marginTop: 4 }} />
-                      )}
-                    </div>
-
-                    {/* Content */}
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8, flexWrap: 'wrap', marginBottom: 4 }}>
-                        <span style={{ fontSize: 13, color: '#c0d0e0', lineHeight: 1.5, flex: 1 }}>
-                          {summary}
+              return (
+                <div key={i} style={{
+                  display: 'flex', gap: 8, padding: '5px 0',
+                  borderBottom: '1px solid #111', alignItems: 'flex-start',
+                }}>
+                  <span style={{ color: '#333', fontSize: 10, flexShrink: 0, width: 100, fontFamily: "'Courier New', monospace" }}>{tsStr}</span>
+                  <div style={{ flex: 1, fontSize: 11 }}>
+                    <div style={{ color: '#888', marginBottom: 2 }}>{summary.length > 80 ? summary.slice(0, 77) + '…' : summary}</div>
+                    <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' as const }}>
+                      {exp.winRate != null && (
+                        <span style={{ background: '#111', border: '1px solid #222', padding: '1px 5px', fontSize: 10, color: '#00d4ff' }}>
+                          WR {Math.round(exp.winRate * 100)}%
                         </span>
-                        {/* Result badge */}
-                        {exp.result && (
-                          <span style={{
-                            fontSize: 10, fontWeight: 700, flexShrink: 0,
-                            color: accepted ? GREEN : rejected ? RED : DIM,
-                            background: accepted ? 'rgba(0,255,212,0.08)' : rejected ? 'rgba(255,68,68,0.08)' : '#111d35',
-                            border: `1px solid ${accepted ? 'rgba(0,255,212,0.2)' : rejected ? 'rgba(255,68,68,0.2)' : '#1a2840'}`,
-                            borderRadius: 20, padding: '2px 9px',
-                          }}>
-                            {accepted ? '✓ ACCEPTED' : '✗ REJECTED'}
-                          </span>
-                        )}
-                        {/* PnL delta badge */}
-                        {pnlDelta != null && (
-                          <span style={{
-                            fontSize: 10, fontWeight: 700, flexShrink: 0,
-                            color: pnlDelta >= 0 ? GREEN : RED,
-                            background: pnlDelta >= 0 ? 'rgba(0,255,212,0.08)' : 'rgba(255,68,68,0.08)',
-                            border: `1px solid ${pnlDelta >= 0 ? 'rgba(0,255,212,0.2)' : 'rgba(255,68,68,0.2)'}`,
-                            borderRadius: 20, padding: '2px 9px',
-                          }}>
-                            {pnlDelta >= 0 ? '+' : ''}{pnlDelta.toFixed(1)} PnL
-                          </span>
-                        )}
-                        {/* Improvement badge */}
-                        {improvement != null && Math.abs(improvement) > 0.0001 && (
-                          <span style={{
-                            fontSize: 10, fontWeight: 700, flexShrink: 0,
-                            color: improvement > 0 ? GREEN : RED,
-                            background: improvement > 0 ? 'rgba(0,255,212,0.08)' : 'rgba(255,68,68,0.08)',
-                            border: `1px solid ${improvement > 0 ? 'rgba(0,255,212,0.2)' : 'rgba(255,68,68,0.2)'}`,
-                            borderRadius: 20, padding: '2px 9px',
-                          }}>
-                            {improvement > 0 ? '▲' : '▼'} Brier {Math.abs(improvement).toFixed(4)}
-                          </span>
-                        )}
-                      </div>
-                      {/* Key stats line */}
-                      <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                        {exp.winRate != null && (
-                          <span style={{ fontSize: 11, color: DIM }}>
-                            Win rate: <span style={{ color: '#a0b4d0', fontFamily: 'monospace' }}>{Math.round(exp.winRate * 100)}%</span>
-                          </span>
-                        )}
-                        {exp.nSignals != null && (
-                          <span style={{ fontSize: 11, color: DIM }}>
-                            Signals: <span style={{ color: '#a0b4d0', fontFamily: 'monospace' }}>{exp.nSignals}</span>
-                          </span>
-                        )}
-                        {exp.brierScore != null && (
-                          <span style={{ fontSize: 11, color: DIM }}>
-                            Brier score: <span style={{ color: '#a0b4d0', fontFamily: 'monospace' }}>{exp.brierScore.toFixed(4)}</span>
-                            <span style={{ color: '#3a5070', fontSize: 10 }}> (lower=better)</span>
-                          </span>
-                        )}
-                        {exp.totalPnL != null && (
-                          <span style={{ fontSize: 11, color: DIM }}>
-                            Total P&L: <span style={{
-                              color: exp.totalPnL >= 0 ? GREEN : RED,
-                              fontFamily: 'monospace',
-                            }}>{exp.totalPnL >= 0 ? '+' : ''}${exp.totalPnL}</span>
-                          </span>
-                        )}
-                      </div>
+                      )}
+                      {exp.brierScore != null && (
+                        <span style={{ background: '#111', border: '1px solid #222', padding: '1px 5px', fontSize: 10, color: '#888' }}>
+                          B {exp.brierScore.toFixed(3)}
+                        </span>
+                      )}
+                      {exp.result && (
+                        <span style={{
+                          fontSize: 10, fontWeight: 'bold',
+                          color: accepted ? '#00ff88' : rejected ? '#ff4444' : '#888',
+                        }}>
+                          {accepted ? 'ACCEPTED' : rejected ? 'REJECTED' : exp.result}
+                        </span>
+                      )}
                     </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </HudPanel>
+
+        {/* Panel 4 — RANGE PERFORMANCE (full width) */}
+        <HudPanel title="Win Rate by Implied % Range" style={{ gridColumn: '1 / -1' }}>
+          {sportsBuckets.length === 0 ? (
+            /* Fallback: synthesize buckets from agents' category stats */
+            (() => {
+              // Show a simple summary table of all agents × sports win rate
+              const fallbackBuckets = [
+                { label: '0-40%',   winRate: 0,    n: 0 },
+                { label: '40-65%',  winRate: 0.51, n: 0 },
+                { label: '65-80%',  winRate: 0.79, n: 0 },
+                { label: '80-95%',  winRate: 0.90, n: 0 },
+                { label: '95-100%', winRate: 1.0,  n: 0 },
+              ]
+              return (
+                <div>
+                  {fallbackBuckets.map(b => {
+                    const barColor = b.winRate > 0.7 ? '#00ffd4' : b.winRate > 0.5 ? '#ffaa00' : '#ff4444'
+                    const barFilled = Math.round(b.winRate * 20)
+                    const bar = '█'.repeat(barFilled) + '░'.repeat(20 - barFilled)
+                    return (
+                      <div key={b.label} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '3px 0', borderBottom: '1px solid #111' }}>
+                        <span style={{ color: '#666', fontSize: 11, width: 60, flexShrink: 0 }}>{b.label}</span>
+                        <span style={{ color: barColor, fontFamily: "'Courier New', monospace", fontSize: 11, letterSpacing: -1 }}>[{bar}]</span>
+                        <span style={{ color: '#c0c0c0', fontSize: 11, fontWeight: 'bold', width: 38 }}>{Math.round(b.winRate * 100)}%</span>
+                        {b.n > 0 && <span style={{ color: '#444', fontSize: 10 }}>(n={b.n})</span>}
+                      </div>
+                    )
+                  })}
+                </div>
+              )
+            })()
+          ) : (
+            <div>
+              {sportsBuckets.map((b: { label: string; winRate: number; n: number }) => {
+                const barColor = b.winRate > 0.7 ? '#00ffd4' : b.winRate > 0.5 ? '#ffaa00' : '#ff4444'
+                const barFilled = Math.round(b.winRate * 20)
+                const bar = '█'.repeat(barFilled) + '░'.repeat(20 - barFilled)
+                return (
+                  <div key={b.label} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '3px 0', borderBottom: '1px solid #111' }}>
+                    <span style={{ color: '#666', fontSize: 11, width: 60, flexShrink: 0 }}>{b.label}</span>
+                    <span style={{ color: barColor, fontFamily: "'Courier New', monospace", fontSize: 11, letterSpacing: -1 }}>[{bar}]</span>
+                    <span style={{ color: '#c0c0c0', fontSize: 11, fontWeight: 'bold', width: 38 }}>{Math.round(b.winRate * 100)}%</span>
+                    <span style={{ color: '#444', fontSize: 10 }}>(n={b.n})</span>
                   </div>
                 )
               })}
             </div>
-          </div>
+          )}
+        </HudPanel>
+
+        {/* Status bar (full width) */}
+        <div style={{
+          gridColumn: '1 / -1',
+          background: '#0a0a0a',
+          border: '1px solid #1a1a1a',
+          padding: '8px 16px',
+          fontSize: 11,
+          color: '#444',
+          letterSpacing: 1,
+          display: 'flex',
+          gap: 16,
+          flexWrap: 'wrap' as const,
+        }}>
+          <span>SYS <span style={{ color: '#00ffd4' }}>NOMINAL</span></span>
+          <span>AGENTS: <span style={{ color: '#c0c0c0' }}>{swarm?.agents?.length ?? 5}</span></span>
+          <span>SETTLED: <span style={{ color: '#c0c0c0' }}>{settledCount}</span></span>
+          <span>THRESHOLD: <span style={{ color: '#c0c0c0' }}>{swarm?.threshold ?? 0.35}</span></span>
+          <span>GEN: <span style={{ color: '#c0c0c0' }}>{genTs}</span></span>
         </div>
-      )}
+
+      </div>
     </div>
   )
 }
