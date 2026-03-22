@@ -8,16 +8,16 @@
     "other"
   ],
   "recommendedBetSize": 54.41,
-  "generatedAt": "2026-03-22T02:00:16.206Z",
-  "dataPoints": 845,
-  "overallWinRate": 0.8272,
+  "generatedAt": "2026-03-22T02:31:06.038Z",
+  "dataPoints": 848,
+  "overallWinRate": 0.8278,
   "overallBrierScore": 0.1074,
   "modelConfidence": 0.82,
   "categoryStats": {
     "sports": {
-      "samples": 839,
-      "wins": 697,
-      "winRate": 0.8308,
+      "samples": 842,
+      "wins": 700,
+      "winRate": 0.8314,
       "winRateEwma": 0.7514,
       "brierScore": 0.1064,
       "kellyBet": 60.81
@@ -75,5 +75,5 @@
       "avgPnL": 2.69
     }
   },
-  "notes": "845 settled trades | Win rate: 82.7% | Brier: 0.1074 (lower=better, 0.25=random) | Skipping: other (<35% win rate) | Implied range refined to 65%-100% based on EV | Min trade size: $1000 (best win rate at this threshold) | Kelly bet size: $54.41 per signal (half-Kelly, 2-week EWMA) | Total P&L: $2413.50"
+  "notes": "848 settled trades | Win rate: 82.8% | Brier: 0.1074 (lower=better, 0.25=random) | Skipping: other (<35% win rate) | Implied range refined to 65%-100% based on EV | Min trade size: $1000 (best win rate at this threshold) | Kelly bet size: $54.41 per signal (half-Kelly, 2-week EWMA) | Total P&L: $2432.50"
 }
