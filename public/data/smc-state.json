@@ -4,47 +4,62 @@
     {
       "symbol": "ETH/USD",
       "direction": "LONG",
-      "entry": 2118.795,
-      "stop": 2012.85525,
-      "target": 2330.6745,
+      "entry": 2131.25,
+      "stop": 2024.6875,
+      "target": 2344.375,
       "rr": 2.0,
       "strategy": "trend_follow",
       "strength": 0.5,
-      "rsi": 58.43679441035824,
-      "macd": 13.661464395576331,
+      "rsi": 59.12652916021849,
+      "macd": 14.654606159111609,
       "trend": "bullish",
-      "volatility_pct": 5.492241426897633,
-      "timestamp": "2026-03-23T12:16:12.949228+00:00"
+      "volatility_pct": 5.460144832423962,
+      "timestamp": "2026-03-23T16:02:26.652099+00:00"
+    },
+    {
+      "symbol": "LTC/USD",
+      "direction": "LONG",
+      "entry": 55.16795,
+      "stop": 52.4095525,
+      "target": 60.684745,
+      "rr": 2.0,
+      "strategy": "macd_bullish",
+      "strength": 0.6,
+      "rsi": 54.905013024969804,
+      "macd": -0.10900146282885714,
+      "trend": "bullish",
+      "volatility_pct": 4.593385777624767,
+      "timestamp": "2026-03-23T16:02:27.270884+00:00"
     },
     {
       "symbol": "DOGE/USD",
       "direction": "SHORT",
-      "entry": 0.0926275,
-      "stop": 0.09725887500000001,
-      "target": 0.08336475,
+      "entry": 0.09395,
+      "stop": 0.09864750000000001,
+      "target": 0.084555,
       "rr": 2.0,
       "strategy": "trend_follow",
       "strength": 0.5,
-      "rsi": 53.3000012280788,
-      "macd": -0.0012419272499585299,
+      "rsi": 55.12219084962693,
+      "macd": -0.0011364732168573505,
       "trend": "bearish",
-      "volatility_pct": 5.9042257197607935,
-      "timestamp": "2026-03-23T12:16:14.364784+00:00"
+      "volatility_pct": 5.853547745761423,
+      "timestamp": "2026-03-23T16:02:27.735713+00:00"
     },
     {
       "symbol": "AVAX/USD",
       "direction": "SHORT",
-      "entry": 9.436,
-      "stop": 9.9078,
-      "target": 8.4924,
+      "entry": 9.427,
+      "stop": 9.89835,
+      "target": 8.4843,
       "rr": 2.0,
       "strategy": "macd_bearish",
       "strength": 0.6,
-      "rsi": 52.61607200867898,
-      "macd": 0.0027397690097714644,
+      "rsi": 52.485035626292685,
+      "macd": 0.002022123415887478,
       "trend": "bullish",
-      "volatility_pct": 6.1032491131986895,
-      "timestamp": "2026-03-23T12:16:14.924891+00:00"
+      "volatility_pct": 6.249362792283561,
+      "timestamp": "2026-03-23T16:02:28.382929+00:00"
     }
   ],
   "trades": [
@@ -88,7 +103,7 @@
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": -841.741064
+    "total_pnl": -225.28153500000002
   },
-  "last_scan": "2026-03-23T12:16:15.587458+00:00"
+  "last_scan": "2026-03-23T16:02:28.832915+00:00"
 }
