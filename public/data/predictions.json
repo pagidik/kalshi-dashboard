@@ -19688,10 +19688,10 @@
     "dipFromOpen": 0,
     "hoursToClose": 331.2,
     "hypotheticalBet": 100,
-    "status": "pending",
-    "result": null,
-    "pnl": null,
-    "settledAt": null,
+    "status": "won",
+    "result": "yes",
+    "pnl": 2,
+    "settledAt": "2026-03-23T22:30:08.833Z",
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaawbgame-26mar23ndosu"
   }
