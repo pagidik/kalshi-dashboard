@@ -19442,5 +19442,26 @@
     "settledAt": null,
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaawbgame-26mar23alalou"
+  },
+  {
+    "id": "02223b9b-719f-4c9c-9501-4555ebc5dfa2",
+    "firedAt": "2026-03-23T15:59:25.219Z",
+    "market": "St. Bonaventure at Middle Tennessee Winner?",
+    "ticker": "KXNCAAWBGAME-26MAR23SBONMTU-MTU",
+    "side": "YES",
+    "price": 0.78,
+    "impliedPct": 78,
+    "contractsObserved": 1325,
+    "dollarObserved": 1034,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 343.51,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaawbgame-26mar23sbonmtu"
   }
 ]
