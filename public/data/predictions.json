@@ -18518,5 +18518,26 @@
     "settledAt": null,
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaambgame-26mar22usuariz"
+  },
+  {
+    "id": "b1e5b398-6c64-4660-9ed4-cb1b4a1fbe11",
+    "firedAt": "2026-03-23T02:29:25.585Z",
+    "market": "UCLA at UConn Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR22UCLACONN-CONN",
+    "side": "YES",
+    "price": 0.68,
+    "impliedPct": 68,
+    "contractsObserved": 1142,
+    "dollarObserved": 777,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 326.51,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaambgame-26mar22uclaconn"
   }
 ]
