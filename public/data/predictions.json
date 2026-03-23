@@ -19400,5 +19400,26 @@
     "settledAt": "2026-03-23T04:30:08.647Z",
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaawbgame-26mar22washtcu"
+  },
+  {
+    "id": "547c8734-b829-4dab-8e7f-f3136d5e51e3",
+    "firedAt": "2026-03-23T12:59:08.125Z",
+    "market": "Texas at Purdue Winner?",
+    "ticker": "KXNCAAMBGAME-26MAR26TEXPUR-PUR",
+    "side": "YES",
+    "price": 0.76,
+    "impliedPct": 76,
+    "contractsObserved": 5186,
+    "dollarObserved": 3941,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 412.01,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaambgame-26mar26texpur"
   }
 ]
