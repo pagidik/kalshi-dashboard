@@ -19421,5 +19421,26 @@
     "settledAt": null,
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaambgame-26mar26texpur"
+  },
+  {
+    "id": "657c5ce6-8dfd-4b06-9008-bdacae898005",
+    "firedAt": "2026-03-23T14:53:16.640Z",
+    "market": "Alabama at Louisville Winner?",
+    "ticker": "KXNCAAWBGAME-26MAR23ALALOU-LOU",
+    "side": "YES",
+    "price": 0.78,
+    "impliedPct": 78,
+    "contractsObserved": 3276,
+    "dollarObserved": 2555,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 338.11,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaawbgame-26mar23alalou"
   }
 ]
