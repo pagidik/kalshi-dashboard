@@ -19568,5 +19568,26 @@
     "settledAt": "2026-03-23T18:32:53.996Z",
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaawbgame-26mar23alalou"
+  },
+  {
+    "id": "45256cd2-ad15-4bcd-b1f6-c6ca421735af",
+    "firedAt": "2026-03-23T19:05:57.966Z",
+    "market": "Virginia at Iowa Winner?",
+    "ticker": "KXNCAAWBGAME-26MAR23UVAIOWA-IOWA",
+    "side": "YES",
+    "price": 0.71,
+    "impliedPct": 71,
+    "contractsObserved": 3008,
+    "dollarObserved": 2136,
+    "anchorPrice": 0.9,
+    "dipFromOpen": 0.19,
+    "hoursToClose": 333.9,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaawbgame-26mar23uvaiowa"
   }
 ]
