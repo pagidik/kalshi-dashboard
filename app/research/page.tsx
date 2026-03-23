@@ -528,7 +528,7 @@ function AutoResearchEngine() {
   const genTs = memory?.generatedAt ? new Date(memory.generatedAt).toLocaleTimeString() : '—'
 
   return (
-    <div style={{ background: '#000', minHeight: '100vh', padding: 0, fontFamily: "'Courier New', monospace", color: '#c0c0c0' }}>
+    <div style={{ background: '#000', minHeight: '100%', padding: '0 0 40px 0', fontFamily: "'Courier New', monospace", color: '#c0c0c0' }}>
 
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 0', marginBottom: 8, flexWrap: 'wrap', gap: 8 }}>
@@ -752,7 +752,7 @@ export default function ResearchPage() {
   const [history, setHistory] = useState<ExperimentResult[]>([])
   const [error, setError] = useState('')
   const [showIntro, setShowIntro] = useState(false)
-  const [activeTab, setActiveTab] = useState<'lab' | 'auto'>('lab')
+  const [activeTab, setActiveTab] = useState<'lab' | 'auto'>('auto')
 
   useEffect(() => {
     const seen = localStorage.getItem('kalshi-research-intro-seen')
@@ -829,10 +829,10 @@ export default function ResearchPage() {
         ))}
       </div>
 
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '32px 24px' }}>
+      <div style={activeTab === 'auto' ? { padding: 0 } : { maxWidth: 1200, margin: '0 auto', padding: '32px 24px' }}>
 
-        {/* Page intro */}
-        <div style={{ marginBottom: 28 }}>
+        {/* Page intro — hidden in auto-research mode */}
+        <div style={{ marginBottom: 28, display: activeTab === 'auto' ? 'none' : 'block' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
             <h1 style={{ fontSize: 26, fontWeight: 800, letterSpacing: '-0.02em', margin: 0 }}>
               🧪 Strategy Tester
@@ -856,9 +856,11 @@ export default function ResearchPage() {
 
         {/* Tab bar */}
         <div style={{
-          display: 'flex', gap: 4, marginBottom: 24,
+          display: 'flex', gap: 4, marginBottom: activeTab === 'auto' ? 0 : 24,
           borderBottom: '1px solid #1e3a5f',
           paddingBottom: 0,
+          padding: activeTab === 'auto' ? '0 24px' : 0,
+          background: activeTab === 'auto' ? '#050d1a' : 'transparent',
         }}>
           {[
             { id: 'lab', label: '🔬 Research Lab' },
@@ -1087,7 +1089,9 @@ export default function ResearchPage() {
         )} {/* end activeTab === 'lab' */}
 
         {activeTab === 'auto' && (
-          <AutoResearchEngine />
+          <div style={{ minHeight: 'calc(100vh - 100px)' }}>
+            <AutoResearchEngine />
+          </div>
         )}
 
       </div>
