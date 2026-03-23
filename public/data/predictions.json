@@ -19694,5 +19694,26 @@
     "settledAt": "2026-03-23T22:30:08.833Z",
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaawbgame-26mar23ndosu"
+  },
+  {
+    "id": "6fec60cf-44de-4ede-b061-6de107974664",
+    "firedAt": "2026-03-23T22:59:05.630Z",
+    "market": "Kentucky at West Virginia Winner?",
+    "ticker": "KXNCAAWBGAME-26MAR23UKWVU-WVU",
+    "side": "NO",
+    "price": 0.8,
+    "impliedPct": 80,
+    "contractsObserved": 4341,
+    "dollarObserved": 3473,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 330.02,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaawbgame-26mar23ukwvu"
   }
 ]
