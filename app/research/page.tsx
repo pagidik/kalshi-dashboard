@@ -158,7 +158,7 @@ function ResultCard({ r, rank }: { r: ExperimentResult; rank?: number }) {
     <div style={{
       background: '#0d1829',
       border: `1px solid ${isTop ? 'rgba(0,255,212,0.4)' : '#1a2840'}`,
-      borderRadius: 12, padding: 20, marginBottom: 14,
+      borderRadius: 12, padding: 'clamp(12px, 4vw, 20px)', marginBottom: 14,
       boxShadow: isTop ? '0 0 0 1px rgba(0,255,212,0.08)' : 'none',
     }}>
       {/* Header row */}
@@ -343,7 +343,7 @@ function IntroModal({ onDismiss }: { onDismiss: () => void }) {
     }}>
       <div style={{
         background: '#0d1829', border: '1px solid rgba(0,255,212,0.2)',
-        borderRadius: 20, padding: '36px 40px', maxWidth: 460, width: '100%',
+        borderRadius: 20, padding: 'clamp(20px, 5vw, 36px) clamp(16px, 5vw, 40px)', maxWidth: 460, width: '100%',
         boxShadow: '0 0 60px rgba(0,255,212,0.06)',
         animation: 'fadeUp 0.25s ease',
       }}>
@@ -531,13 +531,13 @@ function AutoResearchEngine() {
     <div style={{ background: '#000', minHeight: '100vh', padding: 0, fontFamily: "'Courier New', monospace", color: '#c0c0c0' }}>
 
       {/* Header */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 0', marginBottom: 8 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 0', marginBottom: 8, flexWrap: 'wrap', gap: 8 }}>
         <span style={{ color: '#00ffd4', fontSize: 14, letterSpacing: 3, textTransform: 'uppercase', fontWeight: 'normal' }}>AUTO-RESEARCH ENGINE</span>
         <span style={{ color: '#444', fontSize: 11 }}>SYS <span style={{ color: '#00ffd4' }}>NOMINAL</span></span>
       </div>
 
       {/* 2-col grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
+      <div className="auto-research-grid" style={{ display: 'grid', gap: 2 }}>
 
         {/* Panel 1 — AGENT SWARM (full width) */}
         {swarm && (
@@ -815,15 +815,15 @@ export default function ResearchPage() {
       {showIntro && <IntroModal onDismiss={dismissIntro} />}
 
       {/* Nav */}
-      <div style={{ background: '#050d1a', borderBottom: '1px solid #1a2840', padding: '14px 24px', display: 'flex', alignItems: 'center', gap: 24 }}>
-        <span style={{ fontWeight: 800, fontSize: 16, color: GREEN, letterSpacing: '-0.02em' }}>KALSHI</span>
+      <div style={{ background: '#050d1a', borderBottom: '1px solid #1a2840', padding: '14px 24px', display: 'flex', alignItems: 'center', gap: 24, overflowX: 'auto' }}>
+        <span style={{ fontWeight: 800, fontSize: 16, color: GREEN, letterSpacing: '-0.02em', flexShrink: 0, whiteSpace: 'nowrap' }}>KALSHI</span>
         {[
           { href: '/', label: 'Dashboard' },
           { href: '/experiments', label: 'Experiments' },
           { href: '/research', label: 'Strategy Tester' },
         ].map(nav => (
           <Link key={nav.href} href={nav.href}
-            style={{ fontSize: 13, color: nav.href === '/research' ? GREEN : '#5a7399', textDecoration: 'none', fontWeight: nav.href === '/research' ? 700 : 400 }}>
+            style={{ fontSize: 13, color: nav.href === '/research' ? GREEN : '#5a7399', textDecoration: 'none', fontWeight: nav.href === '/research' ? 700 : 400, flexShrink: 0, whiteSpace: 'nowrap' }}>
             {nav.label}
           </Link>
         ))}
@@ -888,7 +888,7 @@ export default function ResearchPage() {
         </div>
 
         {activeTab === 'lab' && (
-        <div style={{ display: 'grid', gridTemplateColumns: '300px 1fr', gap: 28 }}>
+        <div className="research-grid" style={{ display: 'grid', gap: 28 }}>
 
           {/* LEFT — Controls */}
           <div>

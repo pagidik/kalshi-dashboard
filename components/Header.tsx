@@ -28,14 +28,14 @@ export default function Header() {
           </Link>
           
           {/* Nav */}
-          <nav className="flex items-center gap-1">
+          <nav className="flex items-center gap-1 overflow-x-auto">
             {NAV_ITEMS.map(item => {
               const isActive = pathname === item.href
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                  className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors flex-shrink-0 whitespace-nowrap ${
                     isActive
                       ? 'bg-accent/15 text-accent'
                       : 'text-text-muted hover:text-text hover:bg-surface2'
