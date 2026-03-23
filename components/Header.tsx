@@ -7,6 +7,7 @@ const NAV_ITEMS = [
   { href: '/', label: 'Dashboard' },
   { href: '/leaderboard', label: '🏆 Leaderboard' },
   { href: '/research', label: 'Research Lab' },
+  { href: '/autoresearch', label: '🧪 Auto-Research' },
   { href: '/data-collection', label: 'Data Collection' },
   { href: '/stocks', label: 'Stocks' },
 ]
