@@ -19757,5 +19757,26 @@
     "settledAt": null,
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaawbgame-26mar23gwusi"
+  },
+  {
+    "id": "50889bfd-a214-4c06-835b-f96d7bc18ce3",
+    "firedAt": "2026-03-24T00:24:40.035Z",
+    "market": "Illinois at Vanderbilt Winner?",
+    "ticker": "KXNCAAWBGAME-26MAR23ILLVAN-ILL",
+    "side": "NO",
+    "price": 0.98,
+    "impliedPct": 98,
+    "contractsObserved": 1460,
+    "dollarObserved": 1431,
+    "anchorPrice": 0.98,
+    "dipFromOpen": 0,
+    "hoursToClose": 328.59,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaawbgame-26mar23illvan"
   }
 ]
