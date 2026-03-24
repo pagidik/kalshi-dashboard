@@ -329,6 +329,29 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* RBI Methodology */}
+      <section className="mb-10">
+        <h2 className="mb-4 text-xl font-semibold">The RBI System: Research → Backtest → Incubate</h2>
+        <div className="rounded-xl border border-border bg-surface p-6 md:p-8 mb-4">
+          <p className="text-sm leading-relaxed text-text-muted mb-4">
+            Stanford research shows the amygdala reacts in 12ms. The prefrontal cortex — responsible for logic — takes 500ms. A 40x difference. When a trader sees a red candle, their body is already hitting &quot;sell&quot; before the brain can think &quot;this is normal volatility.&quot; Jim Simons made $31B through Renaissance Technologies. Every successful fund — Citadel, Jane Street, Two Sigma — executes algorithmically. A bot has no amygdala. It doesn&apos;t panic, doesn&apos;t revenge trade. It executes the strategy.
+          </p>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {[
+              { label: 'Research', icon: '🔍', desc: 'Find verified strategies from Market Wizards, academic papers, and real traders. Nothing is new in trading — find it, verify it, automate it.' },
+              { label: 'Backtest', icon: '📊', desc: `Run strategy against historical data. Current results: ${(configWinRate ?? winRate).toFixed(1)}% win rate across ${settledCount} settled trades. Brier score: ${typeof rawConfigData.overallBrierScore === 'number' ? rawConfigData.overallBrierScore.toFixed(4) : 'N/A'} (lower = better, 0.25 = random).` },
+              { label: 'Incubate', icon: '🌱', desc: 'Start small. $1 → $5 → $10 → $50 → $100. 90% of people throw in $10K immediately after seeing good backtest numbers. Trading is a marathon.' },
+            ].map((step, i) => (
+              <div key={i} className="rounded-lg border border-border/50 bg-background p-4">
+                <div className="text-2xl mb-2">{step.icon}</div>
+                <h3 className="mb-1 font-semibold text-text">{step.label}</h3>
+                <p className="text-xs leading-relaxed text-text-muted">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How It Works */}
       <section className="mb-10">
         <h2 className="mb-4 text-xl font-semibold">How the whole system works</h2>
