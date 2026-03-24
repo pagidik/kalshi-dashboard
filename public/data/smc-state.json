@@ -4,77 +4,92 @@
     {
       "symbol": "BTC/USD",
       "direction": "SHORT",
-      "entry": 70570.6325,
-      "stop": 74099.16412500001,
-      "target": 63513.56925000001,
+      "entry": 70977.8815,
+      "stop": 74526.775575,
+      "target": 63880.09335,
       "rr": 2.0,
       "strategy": "macd_bearish",
       "strength": 0.6,
-      "rsi": 56.13376294240493,
-      "macd": 22.451549138932023,
+      "rsi": 53.14542974443087,
+      "macd": 95.54781155570527,
       "trend": "bullish",
-      "volatility_pct": 3.863024932846184,
-      "timestamp": "2026-03-23T20:02:02.654801+00:00"
+      "volatility_pct": 3.5187764094802154,
+      "timestamp": "2026-03-24T00:02:19.292621+00:00"
+    },
+    {
+      "symbol": "ETH/USD",
+      "direction": "LONG",
+      "entry": 2150.495,
+      "stop": 2042.9702499999999,
+      "target": 2365.5445,
+      "rr": 2.0,
+      "strategy": "trend_follow",
+      "strength": 0.5,
+      "rsi": 57.77034111920873,
+      "macd": 16.85872274809435,
+      "trend": "bullish",
+      "volatility_pct": 5.104959935717457,
+      "timestamp": "2026-03-24T00:02:19.942826+00:00"
     },
     {
       "symbol": "LTC/USD",
       "direction": "LONG",
-      "entry": 55.2915,
-      "stop": 52.526925,
-      "target": 60.82065,
+      "entry": 55.76205,
+      "stop": 52.9739475,
+      "target": 61.338255000000004,
       "rr": 2.0,
       "strategy": "macd_bullish",
       "strength": 0.6,
-      "rsi": 55.294936890469,
-      "macd": -0.09914978359282856,
+      "rsi": 56.44725807441348,
+      "macd": -0.031997315331793175,
       "trend": "bullish",
-      "volatility_pct": 4.583121762128252,
-      "timestamp": "2026-03-23T20:02:03.750046+00:00"
+      "volatility_pct": 3.8066999641461217,
+      "timestamp": "2026-03-24T00:02:20.627372+00:00"
     },
     {
       "symbol": "DOGE/USD",
       "direction": "LONG",
-      "entry": 0.09481435,
-      "stop": 0.0900736325,
-      "target": 0.10429578500000002,
+      "entry": 0.0942089,
+      "stop": 0.08949845499999999,
+      "target": 0.10362979000000001,
       "rr": 2.0,
       "strategy": "macd_bullish",
       "strength": 0.6,
-      "rsi": 56.238195180684784,
-      "macd": -0.0010675513314047924,
+      "rsi": 49.42536952405335,
+      "macd": -0.0010380797518632634,
       "trend": "bearish",
-      "volatility_pct": 5.8001854225049865,
-      "timestamp": "2026-03-23T20:02:04.238483+00:00"
+      "volatility_pct": 5.0853940778722295,
+      "timestamp": "2026-03-24T00:02:21.146759+00:00"
     },
     {
       "symbol": "AVAX/USD",
       "direction": "SHORT",
-      "entry": 9.459672005,
-      "stop": 9.93265560525,
-      "target": 8.5137048045,
+      "entry": 9.5722,
+      "stop": 10.05081,
+      "target": 8.614980000000001,
       "rr": 2.0,
       "strategy": "macd_bearish",
       "strength": 0.6,
-      "rsi": 52.95730125706884,
-      "macd": 0.0046273367971743085,
+      "rsi": 50.58636866901762,
+      "macd": 0.016106044131104724,
       "trend": "bullish",
-      "volatility_pct": 6.227778617664359,
-      "timestamp": "2026-03-23T20:02:04.889460+00:00"
+      "volatility_pct": 5.642341528443974,
+      "timestamp": "2026-03-24T00:02:21.696538+00:00"
     },
     {
       "symbol": "LINK/USD",
       "direction": "LONG",
-      "entry": 9.116615,
-      "stop": 8.660784249999999,
-      "target": 10.0282765,
+      "entry": 9.10931,
+      "stop": 8.6538445,
+      "target": 10.020241000000002,
       "rr": 2.0,
       "strategy": "trend_follow",
       "strength": 0.5,
-      "rsi": 54.33632705583301,
-      "macd": -0.01915380759827201,
+      "rsi": 52.27473157395773,
+      "macd": -0.016620121433406965,
       "trend": "bullish",
-      "volatility_pct": 5.350930212897783,
-      "timestamp": "2026-03-23T20:02:05.509951+00:00"
+      "volatility_pct": 5.054458131688504,
+      "timestamp": "2026-03-24T00:02:22.313149+00:00"
     }
   ],
   "trades": [
@@ -118,7 +133,7 @@
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": -244.83170099999998
+    "total_pnl": -374.85021
   },
-  "last_scan": "2026-03-23T20:02:05.510025+00:00"
+  "last_scan": "2026-03-24T00:02:22.313180+00:00"
 }
