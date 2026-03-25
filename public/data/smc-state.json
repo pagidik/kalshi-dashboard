@@ -3,93 +3,93 @@
   "signals": [
     {
       "symbol": "BTC/USD",
-      "direction": "SHORT",
-      "entry": 70957.495,
-      "stop": 74505.36975,
-      "target": 63861.7455,
+      "direction": "LONG",
+      "entry": 71815.7975,
+      "stop": 68225.007625,
+      "target": 78997.37725,
       "rr": 2.0,
-      "strategy": "macd_bearish",
-      "strength": 0.6,
-      "rsi": 52.277501859834516,
-      "macd": 103.27244631649228,
+      "strategy": "trend_follow",
+      "strength": 0.5,
+      "rsi": 54.60973057999389,
+      "macd": 171.7121137991635,
       "trend": "bullish",
-      "volatility_pct": 3.622918179235483,
-      "timestamp": "2026-03-25T08:02:03.304661+00:00"
+      "volatility_pct": 3.6487045508328384,
+      "timestamp": "2026-03-25T12:10:45.078011+00:00"
     },
     {
       "symbol": "ETH/USD",
       "direction": "LONG",
-      "entry": 2166.5445,
-      "stop": 2058.217275,
-      "target": 2383.19895,
+      "entry": 2192.8145,
+      "stop": 2083.1737749999998,
+      "target": 2412.0959500000004,
       "rr": 2.0,
       "strategy": "trend_follow",
       "strength": 0.5,
-      "rsi": 57.90865627038831,
-      "macd": 18.706034801133228,
+      "rsi": 59.373040378710584,
+      "macd": 20.80076255127915,
       "trend": "bullish",
-      "volatility_pct": 5.129960287237186,
-      "timestamp": "2026-03-25T08:02:03.775864+00:00"
+      "volatility_pct": 5.1347666740441165,
+      "timestamp": "2026-03-25T12:10:45.461845+00:00"
     },
     {
       "symbol": "LTC/USD",
       "direction": "LONG",
-      "entry": 56.397,
-      "stop": 53.577149999999996,
-      "target": 62.0367,
+      "entry": 56.4925,
+      "stop": 53.667874999999995,
+      "target": 62.14175,
       "rr": 2.0,
       "strategy": "trend_follow",
       "strength": 0.5,
-      "rsi": 55.56811463151671,
-      "macd": 0.08169517937020743,
+      "rsi": 55.8613184079602,
+      "macd": 0.08931019650530914,
       "trend": "bullish",
-      "volatility_pct": 3.7336916581175794,
-      "timestamp": "2026-03-25T08:02:04.231692+00:00"
+      "volatility_pct": 3.7354277346550426,
+      "timestamp": "2026-03-25T12:10:45.853096+00:00"
     },
     {
       "symbol": "DOGE/USD",
       "direction": "LONG",
-      "entry": 0.0970655,
-      "stop": 0.092212225,
-      "target": 0.10677205000000001,
+      "entry": 0.09728655,
+      "stop": 0.0924222225,
+      "target": 0.107015205,
       "rr": 2.0,
       "strategy": "macd_bullish",
       "strength": 0.6,
-      "rsi": 56.72232731276545,
-      "macd": -0.0006802938297264388,
+      "rsi": 57.02637462874178,
+      "macd": -0.0006626676565566758,
       "trend": "bearish",
-      "volatility_pct": 5.0644564752667005,
-      "timestamp": "2026-03-25T08:02:04.662396+00:00"
+      "volatility_pct": 5.052949251463844,
+      "timestamp": "2026-03-25T12:10:46.263790+00:00"
     },
     {
       "symbol": "AVAX/USD",
       "direction": "SHORT",
-      "entry": 9.6575,
-      "stop": 10.140375,
-      "target": 8.69175,
+      "entry": 9.784265,
+      "stop": 10.27347825,
+      "target": 8.8058385,
       "rr": 2.0,
       "strategy": "macd_bearish",
       "strength": 0.6,
-      "rsi": 51.59819684583334,
-      "macd": 0.028184728909945278,
+      "rsi": 53.44538673509112,
+      "macd": 0.03829276709979368,
       "trend": "bullish",
-      "volatility_pct": 5.560183170370916,
-      "timestamp": "2026-03-25T08:02:05.181044+00:00"
+      "volatility_pct": 5.545420307503933,
+      "timestamp": "2026-03-25T12:10:46.642363+00:00"
     },
     {
       "symbol": "LINK/USD",
       "direction": "LONG",
-      "entry": 9.2948,
-      "stop": 8.83006,
-      "target": 10.224280000000002,
+      "entry": 9.4553,
+      "stop": 8.982534999999999,
+      "target": 10.400830000000001,
       "rr": 2.0,
       "strategy": "trend_follow",
       "strength": 0.5,
-      "rsi": 55.15950284826515,
-      "macd": 0.009306444396461444,
+      "rsi": 57.513738959764474,
+      "macd": 0.022104457487378326,
       "trend": "bullish",
-      "volatility_pct": 4.994035084133061,
-      "timestamp": "2026-03-25T08:02:05.624239+00:00"
+      "volatility_pct": 4.989645279820386,
+      "timestamp": "2026-03-25T12:10:47.025598+00:00"
     }
   ],
   "trades": [
@@ -133,7 +133,7 @@
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": 344.167098
+    "total_pnl": 451.73583599999995
   },
-  "last_scan": "2026-03-25T08:02:05.624278+00:00"
+  "last_scan": "2026-03-25T12:10:47.025626+00:00"
 }
