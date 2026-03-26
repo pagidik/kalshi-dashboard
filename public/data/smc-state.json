@@ -4,32 +4,47 @@
     {
       "symbol": "ETH/USD",
       "direction": "SHORT",
-      "entry": 2068.8375,
-      "stop": 2172.279375,
-      "target": 1861.9537500000001,
+      "entry": 2048.3,
+      "stop": 2150.715,
+      "target": 1843.4700000000003,
       "rr": 2.0,
       "strategy": "macd_bearish",
       "strength": 0.6,
-      "rsi": 49.72747087412521,
-      "macd": 11.986169531422092,
+      "rsi": 48.497140048477036,
+      "macd": 10.348542155380073,
       "trend": "bullish",
-      "volatility_pct": 5.593321350670538,
-      "timestamp": "2026-03-26T16:02:00.294890+00:00"
+      "volatility_pct": 5.714666568005872,
+      "timestamp": "2026-03-26T20:02:02.918168+00:00"
+    },
+    {
+      "symbol": "LTC/USD",
+      "direction": "LONG",
+      "entry": 54.25005,
+      "stop": 51.5375475,
+      "target": 59.67505500000001,
+      "rr": 2.0,
+      "strategy": "macd_bullish",
+      "strength": 0.6,
+      "rsi": 49.05301051613539,
+      "macd": -0.02418128151038701,
+      "trend": "bullish",
+      "volatility_pct": 4.1781086320262775,
+      "timestamp": "2026-03-26T20:02:03.440486+00:00"
     },
     {
       "symbol": "DOGE/USD",
       "direction": "LONG",
-      "entry": 0.09086455,
-      "stop": 0.08632132249999999,
-      "target": 0.09995100500000001,
+      "entry": 0.091055,
+      "stop": 0.08650224999999999,
+      "target": 0.1001605,
       "rr": 2.0,
       "strategy": "macd_bullish",
       "strength": 0.6,
-      "rsi": 44.24266506930153,
-      "macd": -0.0009949756225171996,
+      "rsi": 44.4939497640296,
+      "macd": -0.0009797894443666216,
       "trend": "bearish",
-      "volatility_pct": 6.3393004831288495,
-      "timestamp": "2026-03-26T16:02:01.441582+00:00"
+      "volatility_pct": 6.327774892725746,
+      "timestamp": "2026-03-26T20:02:03.988622+00:00"
     }
   ],
   "trades": [
@@ -73,7 +88,7 @@
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": -1235.161241
+    "total_pnl": -1429.121162
   },
-  "last_scan": "2026-03-26T16:02:02.554764+00:00"
+  "last_scan": "2026-03-26T20:02:05.041579+00:00"
 }
