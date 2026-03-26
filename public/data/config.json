@@ -8,7 +8,7 @@
     "other"
   ],
   "recommendedBetSize": 73.88,
-  "generatedAt": "2026-03-26T05:00:10.482Z",
+  "generatedAt": "2026-03-26T05:01:36.591Z",
   "dataPoints": 991,
   "overallWinRate": 0.8375,
   "overallBrierScore": 0.1016,
@@ -18,7 +18,7 @@
       "samples": 985,
       "wins": 828,
       "winRate": 0.8406,
-      "winRateEwma": 0.7932,
+      "winRateEwma": 0.8003,
       "brierScore": 0.1008,
       "kellyBet": 79.62
     },
@@ -28,7 +28,7 @@
       "samples": 6,
       "wins": 2,
       "winRate": 0.3333,
-      "winRateEwma": 0.3281,
+      "winRateEwma": 0.3289,
       "brierScore": 0.2285,
       "kellyBet": 0
     }
@@ -46,7 +46,7 @@
       "samples": 120,
       "wins": 62,
       "winRate": 0.5167,
-      "winRateEwma": 0.4954,
+      "winRateEwma": 0.4986,
       "brierScore": 0.2219,
       "avgPnL": -2.24
     },
@@ -54,7 +54,7 @@
       "samples": 260,
       "wins": 208,
       "winRate": 0.8,
-      "winRateEwma": 0.7632,
+      "winRateEwma": 0.7687,
       "brierScore": 0.1601,
       "avgPnL": 7.16
     },
@@ -62,7 +62,7 @@
       "samples": 352,
       "wins": 316,
       "winRate": 0.8977,
-      "winRateEwma": 0.9071,
+      "winRateEwma": 0.9057,
       "brierScore": 0.0882,
       "avgPnL": 2.7
     },
