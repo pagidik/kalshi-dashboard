@@ -2,34 +2,49 @@
   "positions": {},
   "signals": [
     {
-      "symbol": "ETH/USD",
-      "direction": "SHORT",
-      "entry": 2065.0,
-      "stop": 2168.25,
-      "target": 1858.5,
+      "symbol": "BTC/USD",
+      "direction": "LONG",
+      "entry": 66635.807,
+      "stop": 63304.01665,
+      "target": 73299.3877,
       "rr": 2.0,
-      "strategy": "macd_bearish",
-      "strength": 0.6,
-      "rsi": 48.26525520299308,
-      "macd": 5.5198359629462175,
+      "strategy": "bb_oversold",
+      "strength": 0.7,
+      "rsi": 39.7563880293578,
+      "macd": -302.9310657750466,
       "trend": "bullish",
-      "volatility_pct": 5.389495898908684,
-      "timestamp": "2026-03-27T08:02:01.022554+00:00"
+      "volatility_pct": 4.076882121165733,
+      "timestamp": "2026-03-27T12:07:21.777554+00:00"
     },
     {
       "symbol": "DOGE/USD",
       "direction": "SHORT",
-      "entry": 0.092209,
-      "stop": 0.09681945,
-      "target": 0.0829881,
+      "entry": 0.089935,
+      "stop": 0.09443175000000001,
+      "target": 0.0809415,
       "rr": 2.0,
       "strategy": "trend_follow",
       "strength": 0.5,
-      "rsi": 43.96316334241389,
-      "macd": -0.000994503391105045,
+      "rsi": 40.899765182283225,
+      "macd": -0.001175828511159549,
       "trend": "bearish",
-      "volatility_pct": 5.769833127537906,
-      "timestamp": "2026-03-27T08:02:02.557129+00:00"
+      "volatility_pct": 6.073801396246495,
+      "timestamp": "2026-03-27T12:07:23.816372+00:00"
+    },
+    {
+      "symbol": "AVAX/USD",
+      "direction": "LONG",
+      "entry": 8.74671,
+      "stop": 8.3093745,
+      "target": 9.621381000000001,
+      "rr": 2.0,
+      "strategy": "bb_oversold",
+      "strength": 0.7,
+      "rsi": 37.5623907235211,
+      "macd": -0.06795191340424189,
+      "trend": "bullish",
+      "volatility_pct": 6.377595759679111,
+      "timestamp": "2026-03-27T12:07:24.525243+00:00"
     }
   ],
   "trades": [
@@ -73,7 +88,7 @@
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": -1256.368504
+    "total_pnl": -2187.104519
   },
-  "last_scan": "2026-03-27T08:02:04.119623+00:00"
+  "last_scan": "2026-03-27T12:07:25.064859+00:00"
 }
