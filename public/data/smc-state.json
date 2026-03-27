@@ -4,47 +4,47 @@
     {
       "symbol": "BTC/USD",
       "direction": "LONG",
-      "entry": 66635.807,
-      "stop": 63304.01665,
-      "target": 73299.3877,
+      "entry": 65935.034,
+      "stop": 62638.2823,
+      "target": 72528.5374,
       "rr": 2.0,
       "strategy": "bb_oversold",
       "strength": 0.7,
-      "rsi": 39.7563880293578,
-      "macd": -302.9310657750466,
+      "rsi": 38.46964935379957,
+      "macd": -358.8095830819657,
       "trend": "bullish",
-      "volatility_pct": 4.076882121165733,
-      "timestamp": "2026-03-27T12:07:21.777554+00:00"
+      "volatility_pct": 4.1844857281665915,
+      "timestamp": "2026-03-27T16:02:06.892712+00:00"
     },
     {
       "symbol": "DOGE/USD",
       "direction": "SHORT",
-      "entry": 0.089935,
-      "stop": 0.09443175000000001,
-      "target": 0.0809415,
+      "entry": 0.09020375,
+      "stop": 0.0947139375,
+      "target": 0.081183375,
       "rr": 2.0,
       "strategy": "trend_follow",
       "strength": 0.5,
-      "rsi": 40.899765182283225,
-      "macd": -0.001175828511159549,
+      "rsi": 41.23165508464212,
+      "macd": -0.0011543988163421753,
       "trend": "bearish",
-      "volatility_pct": 6.073801396246495,
-      "timestamp": "2026-03-27T12:07:23.816372+00:00"
+      "volatility_pct": 6.055705317921134,
+      "timestamp": "2026-03-27T16:02:08.313562+00:00"
     },
     {
       "symbol": "AVAX/USD",
       "direction": "LONG",
-      "entry": 8.74671,
-      "stop": 8.3093745,
-      "target": 9.621381000000001,
+      "entry": 8.78485,
+      "stop": 8.3456075,
+      "target": 9.663335000000002,
       "rr": 2.0,
       "strategy": "bb_oversold",
       "strength": 0.7,
-      "rsi": 37.5623907235211,
-      "macd": -0.06795191340424189,
+      "rsi": 37.9305973519913,
+      "macd": -0.06491069085416257,
       "trend": "bullish",
-      "volatility_pct": 6.377595759679111,
-      "timestamp": "2026-03-27T12:07:24.525243+00:00"
+      "volatility_pct": 6.349907011177523,
+      "timestamp": "2026-03-27T16:02:08.778998+00:00"
     }
   ],
   "trades": [
@@ -88,7 +88,7 @@
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": -2187.104519
+    "total_pnl": -2061.5807489999997
   },
-  "last_scan": "2026-03-27T12:07:25.064859+00:00"
+  "last_scan": "2026-03-27T16:02:09.219553+00:00"
 }
