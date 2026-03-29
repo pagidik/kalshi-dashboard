@@ -4,32 +4,62 @@
     {
       "symbol": "BTC/USD",
       "direction": "LONG",
-      "entry": 66918.1805,
-      "stop": 63572.271475,
-      "target": 73609.99855,
+      "entry": 66312.685,
+      "stop": 62997.050749999995,
+      "target": 72943.9535,
       "rr": 2.0,
       "strategy": "bb_oversold",
       "strength": 0.7,
-      "rsi": 39.99237983501457,
-      "macd": -517.4315219410637,
+      "rsi": 33.231553493451415,
+      "macd": -747.623268355077,
       "trend": "bullish",
-      "volatility_pct": 4.157300370955571,
-      "timestamp": "2026-03-28T20:02:01.577381+00:00"
+      "volatility_pct": 3.941445928944179,
+      "timestamp": "2026-03-29T00:01:56.631134+00:00"
     },
     {
       "symbol": "DOGE/USD",
       "direction": "SHORT",
-      "entry": 0.092277,
-      "stop": 0.09689085,
-      "target": 0.0830493,
+      "entry": 0.0908446,
+      "stop": 0.09538683,
+      "target": 0.08176014,
       "rr": 2.0,
       "strategy": "trend_follow",
       "strength": 0.5,
-      "rsi": 44.72090351573718,
-      "macd": -0.0011832296987827479,
+      "rsi": 40.03880451654136,
+      "macd": -0.001379424380752503,
       "trend": "bearish",
-      "volatility_pct": 6.762023116733934,
-      "timestamp": "2026-03-28T20:02:03.320021+00:00"
+      "volatility_pct": 6.424439490231512,
+      "timestamp": "2026-03-29T00:01:58.385976+00:00"
+    },
+    {
+      "symbol": "AVAX/USD",
+      "direction": "LONG",
+      "entry": 8.747585,
+      "stop": 8.31020575,
+      "target": 9.622343500000001,
+      "rr": 2.0,
+      "strategy": "bb_oversold",
+      "strength": 0.7,
+      "rsi": 33.7605653481737,
+      "macd": -0.14426842398894024,
+      "trend": "bullish",
+      "volatility_pct": 6.2000273585713765,
+      "timestamp": "2026-03-29T00:01:58.836905+00:00"
+    },
+    {
+      "symbol": "LINK/USD",
+      "direction": "LONG",
+      "entry": 8.424585,
+      "stop": 8.00335575,
+      "target": 9.267043500000002,
+      "rr": 2.0,
+      "strategy": "bb_oversold",
+      "strength": 0.7,
+      "rsi": 34.40811747939193,
+      "macd": -0.12678343177027074,
+      "trend": "bullish",
+      "volatility_pct": 5.810699131512964,
+      "timestamp": "2026-03-29T00:01:59.513545+00:00"
     }
   ],
   "trades": [
@@ -73,7 +103,7 @@
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": -1795.971109
+    "total_pnl": -2233.902332
   },
-  "last_scan": "2026-03-28T20:02:04.582017+00:00"
+  "last_scan": "2026-03-29T00:01:59.513572+00:00"
 }
