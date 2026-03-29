@@ -4,32 +4,47 @@
     {
       "symbol": "BTC/USD",
       "direction": "LONG",
-      "entry": 66895.3265,
-      "stop": 63550.56017499999,
-      "target": 73584.85915,
+      "entry": 66612.228,
+      "stop": 63281.6166,
+      "target": 73273.4508,
       "rr": 2.0,
       "strategy": "bb_oversold",
       "strength": 0.7,
-      "rsi": 35.17923610340992,
-      "macd": -701.1643677674438,
+      "rsi": 34.2472770954337,
+      "macd": -723.7381890074612,
       "trend": "bullish",
-      "volatility_pct": 3.9961635235267856,
-      "timestamp": "2026-03-29T04:01:59.150048+00:00"
+      "volatility_pct": 4.013147010391466,
+      "timestamp": "2026-03-29T08:02:01.829058+00:00"
     },
     {
       "symbol": "DOGE/USD",
       "direction": "SHORT",
-      "entry": 0.0913625,
-      "stop": 0.095930625,
-      "target": 0.08222625,
+      "entry": 0.09112525,
+      "stop": 0.09568151250000001,
+      "target": 0.08201272500000001,
       "rr": 2.0,
       "strategy": "trend_follow",
       "strength": 0.5,
-      "rsi": 40.93160189311083,
-      "macd": -0.0013381278637444871,
+      "rsi": 40.50692368416666,
+      "macd": -0.0013570457989832418,
       "trend": "bearish",
-      "volatility_pct": 6.470069307898285,
-      "timestamp": "2026-03-29T04:02:00.862771+00:00"
+      "volatility_pct": 6.486914517577258,
+      "timestamp": "2026-03-29T08:02:03.661790+00:00"
+    },
+    {
+      "symbol": "AVAX/USD",
+      "direction": "LONG",
+      "entry": 8.735595,
+      "stop": 8.298815249999999,
+      "target": 9.6091545,
+      "rr": 2.0,
+      "strategy": "bb_oversold",
+      "strength": 0.7,
+      "rsi": 33.65157923876016,
+      "macd": -0.14522448739679383,
+      "trend": "bullish",
+      "volatility_pct": 6.280901206909369,
+      "timestamp": "2026-03-29T08:02:04.160296+00:00"
     }
   ],
   "trades": [
@@ -73,7 +88,7 @@
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": -2233.878154
+    "total_pnl": -2149.316757
   },
-  "last_scan": "2026-03-29T04:02:01.828555+00:00"
+  "last_scan": "2026-03-29T08:02:04.826963+00:00"
 }
