@@ -4,47 +4,62 @@
     {
       "symbol": "BTC/USD",
       "direction": "LONG",
-      "entry": 66750.7715,
-      "stop": 63413.232925,
-      "target": 73425.84865000001,
+      "entry": 66330.37,
+      "stop": 63013.85149999999,
+      "target": 72963.407,
       "rr": 2.0,
       "strategy": "bb_oversold",
       "strength": 0.7,
-      "rsi": 34.70668658366348,
-      "macd": -712.6909520812187,
+      "rsi": 33.29239263183814,
+      "macd": -746.213094763094,
       "trend": "bullish",
-      "volatility_pct": 4.004817587070357,
-      "timestamp": "2026-03-29T12:07:26.633137+00:00"
+      "volatility_pct": 4.043662310720464,
+      "timestamp": "2026-03-29T18:12:39.447492+00:00"
     },
     {
-      "symbol": "DOGE/USD",
-      "direction": "SHORT",
-      "entry": 0.09085945,
-      "stop": 0.0954024225,
-      "target": 0.081773505,
+      "symbol": "LTC/USD",
+      "direction": "LONG",
+      "entry": 53.20605,
+      "stop": 50.5457475,
+      "target": 58.526655000000005,
       "rr": 2.0,
-      "strategy": "trend_follow",
-      "strength": 0.5,
-      "rsi": 40.056908576326435,
-      "macd": -0.0013782402655226067,
-      "trend": "bearish",
-      "volatility_pct": 6.529990551340559,
-      "timestamp": "2026-03-29T12:07:28.245193+00:00"
+      "strategy": "bb_oversold",
+      "strength": 0.7,
+      "rsi": 40.18988045858642,
+      "macd": -0.37794210276295814,
+      "trend": "bullish",
+      "volatility_pct": 4.653641604801386,
+      "timestamp": "2026-03-29T18:12:41.129135+00:00"
     },
     {
       "symbol": "AVAX/USD",
       "direction": "LONG",
-      "entry": 8.714745,
-      "stop": 8.27900775,
-      "target": 9.586219500000002,
+      "entry": 8.606575,
+      "stop": 8.176246249999998,
+      "target": 9.4672325,
       "rr": 2.0,
       "strategy": "bb_oversold",
       "strength": 0.7,
-      "rsi": 33.46372431236517,
-      "macd": -0.1468870330226224,
+      "rsi": 32.52184958099946,
+      "macd": -0.15551233567710554,
       "trend": "bullish",
-      "volatility_pct": 6.356252932734778,
-      "timestamp": "2026-03-29T12:07:28.873162+00:00"
+      "volatility_pct": 6.5110870675700205,
+      "timestamp": "2026-03-29T18:12:42.460098+00:00"
+    },
+    {
+      "symbol": "LINK/USD",
+      "direction": "LONG",
+      "entry": 8.4205,
+      "stop": 7.999475,
+      "target": 9.262550000000001,
+      "rr": 2.0,
+      "strategy": "bb_oversold",
+      "strength": 0.7,
+      "rsi": 34.367159612442606,
+      "macd": -0.12710916313149667,
+      "trend": "bullish",
+      "volatility_pct": 5.97596174641818,
+      "timestamp": "2026-03-29T18:12:43.168277+00:00"
     }
   ],
   "trades": [
@@ -88,7 +103,7 @@
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": -2249.369278
+    "total_pnl": -2447.67212
   },
-  "last_scan": "2026-03-29T12:07:29.383280+00:00"
+  "last_scan": "2026-03-29T18:12:43.168318+00:00"
 }
