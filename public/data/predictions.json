@@ -19967,5 +19967,26 @@
     "settledAt": "2026-03-25T04:00:06.119Z",
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaambgame-26mar24joesunm"
+  },
+  {
+    "id": "ed8f2f46-a2a0-4530-b019-9e2090d9d90b",
+    "firedAt": "2026-03-31T00:30:56.571Z",
+    "market": "TCU at South Carolina Winner?",
+    "ticker": "KXNCAAWBGAME-26MAR30TCUSCAR-SCAR",
+    "side": "YES",
+    "price": 0.92,
+    "impliedPct": 92,
+    "contractsObserved": 834,
+    "dollarObserved": 767,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 336.48,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaawbgame-26mar30tcuscar"
   }
 ]
