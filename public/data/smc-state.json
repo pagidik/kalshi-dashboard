@@ -1,6 +1,22 @@
 {
   "positions": {},
-  "signals": [],
+  "signals": [
+    {
+      "symbol": "ETH/USD",
+      "direction": "LONG",
+      "entry": 2050.6,
+      "stop": 1948.0699999999997,
+      "target": 2255.6600000000003,
+      "rr": 2.0,
+      "strategy": "rsi_oversold",
+      "strength": 0.013932537347622542,
+      "rsi": 29.582023879571324,
+      "macd": -19.141183888943488,
+      "trend": "bullish",
+      "volatility_pct": 5.197361361488275,
+      "timestamp": "2026-03-31T08:02:10.195443+00:00"
+    }
+  ],
   "trades": [
     {
       "symbol": "DOGE/USD",
@@ -42,7 +58,7 @@
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": -1539.4315000000001
+    "total_pnl": -1699.562509
   },
-  "last_scan": "2026-03-31T04:02:01.772926+00:00"
+  "last_scan": "2026-03-31T08:02:12.186491+00:00"
 }
