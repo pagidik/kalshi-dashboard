@@ -2,19 +2,34 @@
   "positions": {},
   "signals": [
     {
-      "symbol": "DOGE/USD",
-      "direction": "SHORT",
-      "entry": 0.0924923,
-      "stop": 0.097116915,
-      "target": 0.08324307,
+      "symbol": "ETH/USD",
+      "direction": "LONG",
+      "entry": 2133.485,
+      "stop": 2026.81075,
+      "target": 2346.8335,
       "rr": 2.0,
       "strategy": "trend_follow",
       "strength": 0.5,
-      "rsi": 43.69172351389974,
-      "macd": -0.0012591364645542918,
+      "rsi": 44.412767524131205,
+      "macd": -8.77240241232721,
+      "trend": "bullish",
+      "volatility_pct": 4.694570459705598,
+      "timestamp": "2026-04-01T12:08:38.344597+00:00"
+    },
+    {
+      "symbol": "DOGE/USD",
+      "direction": "SHORT",
+      "entry": 0.0924145,
+      "stop": 0.097035225,
+      "target": 0.08317305,
+      "rr": 2.0,
+      "strategy": "trend_follow",
+      "strength": 0.5,
+      "rsi": 43.49131847948159,
+      "macd": -0.0012653401120214236,
       "trend": "bearish",
-      "volatility_pct": 5.593505737388797,
-      "timestamp": "2026-04-01T04:03:43.531613+00:00"
+      "volatility_pct": 5.755424125620362,
+      "timestamp": "2026-04-01T12:08:39.301923+00:00"
     }
   ],
   "trades": [
@@ -58,7 +73,7 @@
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": -1600.53904
+    "total_pnl": -974.943675
   },
-  "last_scan": "2026-04-01T04:03:44.843840+00:00"
+  "last_scan": "2026-04-01T12:08:40.402381+00:00"
 }
