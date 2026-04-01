@@ -20303,5 +20303,26 @@
     "settledAt": "2026-03-31T03:15:24.378Z",
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaawbgame-26mar30tcuscar"
+  },
+  {
+    "id": "8878f1c4-07ac-4a95-b14d-c501924770f1",
+    "firedAt": "2026-04-01T06:33:51.141Z",
+    "market": "South Carolina at UConn Winner?",
+    "ticker": "KXNCAAWBGAME-26APR03SCARCONN-CONN",
+    "side": "YES",
+    "price": 0.74,
+    "impliedPct": 74,
+    "contractsObserved": 1318,
+    "dollarObserved": 975,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 400.44,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaawbgame-26apr03scarconn"
   }
 ]
