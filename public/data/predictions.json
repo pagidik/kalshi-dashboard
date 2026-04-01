@@ -20324,5 +20324,26 @@
     "settledAt": null,
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaawbgame-26apr03scarconn"
+  },
+  {
+    "id": "ea7aeed7-505d-48c0-963f-e2706c52596f",
+    "firedAt": "2026-04-01T08:11:06.386Z",
+    "market": "Michigan at Arizona Winner?",
+    "ticker": "KXNCAAMBGAME-26APR04MICHARIZ-ARIZ",
+    "side": "YES",
+    "price": 0.48,
+    "impliedPct": 48,
+    "contractsObserved": 2000,
+    "dollarObserved": 960,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 424.63,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaambgame-26apr04michariz"
   }
 ]
