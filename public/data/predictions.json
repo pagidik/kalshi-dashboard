@@ -20408,5 +20408,26 @@
     "settledAt": null,
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaawbgame-26apr01clmbbyu"
+  },
+  {
+    "id": "1ca4920e-9eb3-4fcc-93d5-e749c90df5a9",
+    "firedAt": "2026-04-02T00:53:08.241Z",
+    "market": "Oklahoma at Colorado Winner?",
+    "ticker": "KXNCAAMBGAME-26APR01OKLACOLO-COLO",
+    "side": "NO",
+    "price": 0.46,
+    "impliedPct": 46,
+    "contractsObserved": 2358,
+    "dollarObserved": 1085,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 335.11,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaambgame-26apr01oklacolo"
   }
 ]
