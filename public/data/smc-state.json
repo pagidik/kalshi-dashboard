@@ -2,34 +2,34 @@
   "positions": {},
   "signals": [
     {
-      "symbol": "ETH/USD",
+      "symbol": "LTC/USD",
       "direction": "LONG",
-      "entry": 2136.84,
-      "stop": 2029.998,
-      "target": 2350.5240000000003,
+      "entry": 52.5016,
+      "stop": 49.87652,
+      "target": 57.75176000000001,
       "rr": 2.0,
-      "strategy": "macd_bullish",
-      "strength": 0.6,
-      "rsi": 49.87414675016987,
-      "macd": -3.2125345054746504,
+      "strategy": "bb_oversold",
+      "strength": 0.7,
+      "rsi": 37.49402199904355,
+      "macd": -0.6005404170324837,
       "trend": "bullish",
-      "volatility_pct": 4.284278506563094,
-      "timestamp": "2026-04-02T00:03:13.384206+00:00"
+      "volatility_pct": 3.9645211835720917,
+      "timestamp": "2026-04-02T04:06:01.208567+00:00"
     },
     {
       "symbol": "DOGE/USD",
-      "direction": "LONG",
-      "entry": 0.0921106,
-      "stop": 0.08750506999999999,
-      "target": 0.10132166000000001,
+      "direction": "SHORT",
+      "entry": 0.09002195,
+      "stop": 0.09452304750000001,
+      "target": 0.081019755,
       "rr": 2.0,
-      "strategy": "macd_bullish",
-      "strength": 0.6,
-      "rsi": 46.408757677828426,
-      "macd": -0.0012090340863775834,
+      "strategy": "trend_follow",
+      "strength": 0.5,
+      "rsi": 42.057490690925256,
+      "macd": -0.0013755796941180426,
       "trend": "bearish",
-      "volatility_pct": 5.452242040702002,
-      "timestamp": "2026-04-02T00:03:14.704805+00:00"
+      "volatility_pct": 5.822091961222474,
+      "timestamp": "2026-04-02T04:06:01.803121+00:00"
     }
   ],
   "trades": [
@@ -73,7 +73,7 @@
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": -1118.971882
+    "total_pnl": -2146.998606
   },
-  "last_scan": "2026-04-02T00:03:15.801202+00:00"
+  "last_scan": "2026-04-02T04:06:02.943361+00:00"
 }
