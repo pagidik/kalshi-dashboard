@@ -20429,5 +20429,26 @@
     "settledAt": null,
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaambgame-26apr01oklacolo"
+  },
+  {
+    "id": "114f3a11-2694-4b81-917c-23e8c3baef13",
+    "firedAt": "2026-04-02T01:02:56.262Z",
+    "market": "Marshall at Arkansas St. Winner?",
+    "ticker": "KXNCAAWBGAME-26APR01MRSHARST-MRSH",
+    "side": "YES",
+    "price": 0.65,
+    "impliedPct": 65,
+    "contractsObserved": 1477,
+    "dollarObserved": 960,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 334.95,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaawbgame-26apr01mrsharst"
   }
 ]
