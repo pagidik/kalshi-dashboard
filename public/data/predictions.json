@@ -20870,5 +20870,26 @@
     "settledAt": null,
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaambgame-26apr04illconn"
+  },
+  {
+    "id": "a111ee41-241c-4ce4-9159-94cf470e0e0c",
+    "firedAt": "2026-04-02T21:31:30.191Z",
+    "market": "New Mexico at Tulsa Winner?",
+    "ticker": "KXNCAAMBGAME-26APR02UNMTLSA-TLSA",
+    "side": "YES",
+    "price": 0.4,
+    "impliedPct": 40,
+    "contractsObserved": 930,
+    "dollarObserved": 372,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 337.47,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaambgame-26apr02unmtlsa"
   }
 ]
