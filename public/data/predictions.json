@@ -20387,5 +20387,26 @@
     "settledAt": null,
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaambgame-26apr01oklacolo"
+  },
+  {
+    "id": "be5c011e-5a1f-4dc7-9821-96125eda82d2",
+    "firedAt": "2026-04-01T23:50:41.437Z",
+    "market": "Columbia at BYU Winner?",
+    "ticker": "KXNCAAWBGAME-26APR01CLMBBYU-CLMB",
+    "side": "YES",
+    "price": 0.96,
+    "impliedPct": 96,
+    "contractsObserved": 345,
+    "dollarObserved": 331,
+    "anchorPrice": null,
+    "dipFromOpen": 0,
+    "hoursToClose": 335.16,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaawbgame-26apr01clmbbyu"
   }
 ]
