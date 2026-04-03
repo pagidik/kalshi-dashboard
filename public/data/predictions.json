@@ -21395,5 +21395,26 @@
     "settledAt": null,
     "category": "sports",
     "url": "https://kalshi.com/markets/kxncaambgame-26apr04illconn"
+  },
+  {
+    "id": "f0c0dec8-5037-4890-91d0-6e1c178136c8",
+    "firedAt": "2026-04-03T08:55:34.084Z",
+    "market": "Illinois at UConn Winner?",
+    "ticker": "KXNCAAMBGAME-26APR04ILLCONN-CONN",
+    "side": "YES",
+    "price": 0.46,
+    "impliedPct": 46,
+    "contractsObserved": 4166,
+    "dollarObserved": 1916,
+    "anchorPrice": 0.46,
+    "dipFromOpen": 0,
+    "hoursToClose": 373.22,
+    "hypotheticalBet": 100,
+    "status": "pending",
+    "result": null,
+    "pnl": null,
+    "settledAt": null,
+    "category": "sports",
+    "url": "https://kalshi.com/markets/kxncaambgame-26apr04illconn"
   }
 ]
