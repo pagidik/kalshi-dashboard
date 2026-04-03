@@ -78904,5 +78904,4253 @@
     "sharpe": 0.716,
     "hypothesis": "RANDOM-FULL-9: [0.86-1.0] $249 ewma=0.12 kelly=0.43 23d",
     "note": "No improvement: $1280.1 vs best $3039.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:12.147Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "HIGH-CONF: impliedRange [0.75Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "note": "No improvement: $1642.7 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:12.211Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.78,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0517,
+    "totalPnL": 1307.7,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.943,
+    "nSignals": 316,
+    "sharpe": 0.185,
+    "hypothesis": "HIGH-CONF: impliedRange [0.78Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "note": "No improvement: $1307.7 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:12.273Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0482,
+    "totalPnL": 967.7,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.945,
+    "nSignals": 291,
+    "sharpe": 0.153,
+    "hypothesis": "HIGH-CONF: impliedRange [0.8Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "note": "No improvement: $967.7 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:12.336Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.82,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0421,
+    "totalPnL": 842.7,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9517,
+    "nSignals": 269,
+    "sharpe": 0.154,
+    "hypothesis": "HIGH-CONF: impliedRange [0.82Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "note": "No improvement: $842.7 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:12.399Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.84,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0164,
+    "totalPnL": 1336.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9875,
+    "nSignals": 240,
+    "sharpe": 0.483,
+    "hypothesis": "HIGH-CONF: impliedRange [0.84Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "note": "No improvement: $1336.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:12.463Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.013,
+    "totalPnL": 1260.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9913,
+    "nSignals": 229,
+    "sharpe": 0.552,
+    "hypothesis": "HIGH-CONF: impliedRange [0.85Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "note": "No improvement: $1260.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:12.526Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.87,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0082,
+    "totalPnL": 900.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9949,
+    "nSignals": 197,
+    "sharpe": 0.587,
+    "hypothesis": "HIGH-CONF: impliedRange [0.87Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "note": "No improvement: $900.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:12.589Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.88,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0076,
+    "totalPnL": 757.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9946,
+    "nSignals": 186,
+    "sharpe": 0.526,
+    "hypothesis": "HIGH-CONF: impliedRange [0.88Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "note": "No improvement: $757.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:12.651Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0071,
+    "totalPnL": 561.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9941,
+    "nSignals": 169,
+    "sharpe": 0.43,
+    "hypothesis": "HIGH-CONF: impliedRange [0.9Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "note": "No improvement: $561.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:12.714Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.92,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0016,
+    "totalPnL": 506.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 1,
+    "nSignals": 153,
+    "sharpe": 1.486,
+    "hypothesis": "HIGH-CONF: impliedRange [0.92Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "note": "No improvement: $506.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:12.778Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.95,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0008,
+    "totalPnL": 282.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 1,
+    "nSignals": 119,
+    "sharpe": 1.575,
+    "hypothesis": "HIGH-CONF: impliedRange [0.95Ã¢â‚¬â€œ1.0] Ã¢â‚¬â€ focus on whale-certainty signals",
+    "note": "No improvement: $282.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:12.841Z",
+    "params": {
+      "minTradeUSD": 200,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0454,
+    "totalPnL": 1131.7,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9489,
+    "nSignals": 313,
+    "sharpe": 0.172,
+    "hypothesis": "COMBO: range [0.8Ã¢â‚¬â€œ1.0] + minTrade $200",
+    "note": "No improvement: $1131.7 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:12.904Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0482,
+    "totalPnL": 967.7,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.945,
+    "nSignals": 291,
+    "sharpe": 0.153,
+    "hypothesis": "COMBO: range [0.8Ã¢â‚¬â€œ1.0] + minTrade $300",
+    "note": "No improvement: $967.7 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:12.966Z",
+    "params": {
+      "minTradeUSD": 500,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0524,
+    "totalPnL": 769.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9392,
+    "nSignals": 263,
+    "sharpe": 0.129,
+    "hypothesis": "COMBO: range [0.8Ã¢â‚¬â€œ1.0] + minTrade $500",
+    "note": "No improvement: $769.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.028Z",
+    "params": {
+      "minTradeUSD": 750,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0532,
+    "totalPnL": 541,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9369,
+    "nSignals": 222,
+    "sharpe": 0.106,
+    "hypothesis": "COMBO: range [0.8Ã¢â‚¬â€œ1.0] + minTrade $750",
+    "note": "No improvement: $541 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.091Z",
+    "params": {
+      "minTradeUSD": 1000,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0615,
+    "totalPnL": 267,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9264,
+    "nSignals": 163,
+    "sharpe": 0.066,
+    "hypothesis": "COMBO: range [0.8Ã¢â‚¬â€œ1.0] + minTrade $1000",
+    "note": "No improvement: $267 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.154Z",
+    "params": {
+      "minTradeUSD": 1500,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0552,
+    "totalPnL": 237,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9333,
+    "nSignals": 120,
+    "sharpe": 0.084,
+    "hypothesis": "COMBO: range [0.8Ã¢â‚¬â€œ1.0] + minTrade $1500",
+    "note": "No improvement: $237 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.216Z",
+    "params": {
+      "minTradeUSD": 200,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0124,
+    "totalPnL": 1387.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.992,
+    "nSignals": 249,
+    "sharpe": 0.579,
+    "hypothesis": "COMBO: range [0.85Ã¢â‚¬â€œ1.0] + minTrade $200",
+    "note": "No improvement: $1387.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.279Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.013,
+    "totalPnL": 1260.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9913,
+    "nSignals": 229,
+    "sharpe": 0.552,
+    "hypothesis": "COMBO: range [0.85Ã¢â‚¬â€œ1.0] + minTrade $300",
+    "note": "No improvement: $1260.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.341Z",
+    "params": {
+      "minTradeUSD": 500,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0139,
+    "totalPnL": 1134.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9902,
+    "nSignals": 205,
+    "sharpe": 0.531,
+    "hypothesis": "COMBO: range [0.85Ã¢â‚¬â€œ1.0] + minTrade $500",
+    "note": "No improvement: $1134.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.404Z",
+    "params": {
+      "minTradeUSD": 750,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0109,
+    "totalPnL": 1006,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9943,
+    "nSignals": 175,
+    "sharpe": 0.661,
+    "hypothesis": "COMBO: range [0.85Ã¢â‚¬â€œ1.0] + minTrade $750",
+    "note": "No improvement: $1006 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.466Z",
+    "params": {
+      "minTradeUSD": 1000,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0125,
+    "totalPnL": 620,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9917,
+    "nSignals": 121,
+    "sharpe": 0.517,
+    "hypothesis": "COMBO: range [0.85Ã¢â‚¬â€œ1.0] + minTrade $1000",
+    "note": "No improvement: $620 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.528Z",
+    "params": {
+      "minTradeUSD": 1500,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0056,
+    "totalPnL": 517,
+    "prevBestPnL": 1642.7,
+    "winRate": 1,
+    "nSignals": 91,
+    "sharpe": 1.165,
+    "hypothesis": "COMBO: range [0.85Ã¢â‚¬â€œ1.0] + minTrade $1500",
+    "note": "No improvement: $517 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.591Z",
+    "params": {
+      "minTradeUSD": 200,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0068,
+    "totalPnL": 674.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9947,
+    "nSignals": 188,
+    "sharpe": 0.481,
+    "hypothesis": "COMBO: range [0.9Ã¢â‚¬â€œ1.0] + minTrade $200",
+    "note": "No improvement: $674.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.653Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0071,
+    "totalPnL": 561.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9941,
+    "nSignals": 169,
+    "sharpe": 0.43,
+    "hypothesis": "COMBO: range [0.9Ã¢â‚¬â€œ1.0] + minTrade $300",
+    "note": "No improvement: $561.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.716Z",
+    "params": {
+      "minTradeUSD": 500,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0077,
+    "totalPnL": 489.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9933,
+    "nSignals": 149,
+    "sharpe": 0.402,
+    "hypothesis": "COMBO: range [0.9Ã¢â‚¬â€œ1.0] + minTrade $500",
+    "note": "No improvement: $489.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.779Z",
+    "params": {
+      "minTradeUSD": 750,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0086,
+    "totalPnL": 414,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9923,
+    "nSignals": 130,
+    "sharpe": 0.366,
+    "hypothesis": "COMBO: range [0.9Ã¢â‚¬â€œ1.0] + minTrade $750",
+    "note": "No improvement: $414 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.842Z",
+    "params": {
+      "minTradeUSD": 1000,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0109,
+    "totalPnL": 239,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9891,
+    "nSignals": 92,
+    "sharpe": 0.257,
+    "hypothesis": "COMBO: range [0.9Ã¢â‚¬â€œ1.0] + minTrade $1000",
+    "note": "No improvement: $239 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.905Z",
+    "params": {
+      "minTradeUSD": 1500,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0019,
+    "totalPnL": 237,
+    "prevBestPnL": 1642.7,
+    "winRate": 1,
+    "nSignals": 70,
+    "sharpe": 1.223,
+    "hypothesis": "COMBO: range [0.9Ã¢â‚¬â€œ1.0] + minTrade $1500",
+    "note": "No improvement: $237 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:13.967Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [
+        "crypto",
+        "politics",
+        "other"
+      ],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0483,
+    "totalPnL": 962.7,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9448,
+    "nSignals": 290,
+    "sharpe": 0.153,
+    "hypothesis": "SPORTS-ONLY high-conf: [0.8Ã¢â‚¬â€œ1.0], skip all non-sports",
+    "note": "No improvement: $962.7 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.029Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [
+        "crypto",
+        "politics",
+        "other"
+      ],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.013,
+    "totalPnL": 1255.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9912,
+    "nSignals": 228,
+    "sharpe": 0.551,
+    "hypothesis": "SPORTS-ONLY high-conf: [0.85Ã¢â‚¬â€œ1.0], skip all non-sports",
+    "note": "No improvement: $1255.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.095Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [
+        "crypto",
+        "politics",
+        "other"
+      ],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0071,
+    "totalPnL": 556.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.994,
+    "nSignals": 168,
+    "sharpe": 0.428,
+    "hypothesis": "SPORTS-ONLY high-conf: [0.9Ã¢â‚¬â€œ1.0], skip all non-sports",
+    "note": "No improvement: $556.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.158Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 7,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0078,
+    "totalPnL": 115,
+    "prevBestPnL": 1642.7,
+    "winRate": 1,
+    "nSignals": 16,
+    "sharpe": 1.412,
+    "hypothesis": "RECENCY: [0.8Ã¢â‚¬â€œ1.0] + lookback 7d",
+    "note": "No improvement: $115 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.221Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 14,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0309,
+    "totalPnL": 639,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9701,
+    "nSignals": 134,
+    "sharpe": 0.282,
+    "hypothesis": "RECENCY: [0.8Ã¢â‚¬â€œ1.0] + lookback 14d",
+    "note": "No improvement: $639 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.284Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 21,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0495,
+    "totalPnL": 931.7,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9435,
+    "nSignals": 283,
+    "sharpe": 0.15,
+    "hypothesis": "RECENCY: [0.8Ã¢â‚¬â€œ1.0] + lookback 21d",
+    "note": "No improvement: $931.7 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.346Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 7,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0059,
+    "totalPnL": 96,
+    "prevBestPnL": 1642.7,
+    "winRate": 1,
+    "nSignals": 15,
+    "sharpe": 1.521,
+    "hypothesis": "RECENCY: [0.85Ã¢â‚¬â€œ1.0] + lookback 7d",
+    "note": "No improvement: $96 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.407Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 14,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0127,
+    "totalPnL": 519,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9909,
+    "nSignals": 110,
+    "sharpe": 0.461,
+    "hypothesis": "RECENCY: [0.85Ã¢â‚¬â€œ1.0] + lookback 14d",
+    "note": "No improvement: $519 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.470Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 21,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0133,
+    "totalPnL": 1224.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.991,
+    "nSignals": 221,
+    "sharpe": 0.547,
+    "hypothesis": "RECENCY: [0.85Ã¢â‚¬â€œ1.0] + lookback 21d",
+    "note": "No improvement: $1224.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.532Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 500,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0514,
+    "totalPnL": 779.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9403,
+    "nSignals": 268,
+    "sharpe": 0.129,
+    "hypothesis": "INSTITUTIONAL: [0.8Ã¢â‚¬â€œ1.0] + minContracts 500",
+    "note": "No improvement: $779.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.595Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 750,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0574,
+    "totalPnL": 571,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9322,
+    "nSignals": 236,
+    "sharpe": 0.101,
+    "hypothesis": "INSTITUTIONAL: [0.8Ã¢â‚¬â€œ1.0] + minContracts 750",
+    "note": "No improvement: $571 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.657Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 1000,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.059,
+    "totalPnL": 356,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9289,
+    "nSignals": 197,
+    "sharpe": 0.075,
+    "hypothesis": "INSTITUTIONAL: [0.8Ã¢â‚¬â€œ1.0] + minContracts 1000",
+    "note": "No improvement: $356 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.719Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 1500,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0621,
+    "totalPnL": 159,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9248,
+    "nSignals": 133,
+    "sharpe": 0.048,
+    "hypothesis": "INSTITUTIONAL: [0.8Ã¢â‚¬â€œ1.0] + minContracts 1500",
+    "note": "No improvement: $159 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.783Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 500,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0136,
+    "totalPnL": 1144.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9905,
+    "nSignals": 210,
+    "sharpe": 0.528,
+    "hypothesis": "INSTITUTIONAL: [0.85Ã¢â‚¬â€œ1.0] + minContracts 500",
+    "note": "No improvement: $1144.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.845Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 750,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0149,
+    "totalPnL": 953,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9888,
+    "nSignals": 179,
+    "sharpe": 0.485,
+    "hypothesis": "INSTITUTIONAL: [0.85Ã¢â‚¬â€œ1.0] + minContracts 750",
+    "note": "No improvement: $953 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.908Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 1000,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0114,
+    "totalPnL": 821,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9933,
+    "nSignals": 150,
+    "sharpe": 0.597,
+    "hypothesis": "INSTITUTIONAL: [0.85Ã¢â‚¬â€œ1.0] + minContracts 1000",
+    "note": "No improvement: $821 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:14.970Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 1500,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0136,
+    "totalPnL": 468,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.99,
+    "nSignals": 100,
+    "sharpe": 0.439,
+    "hypothesis": "INSTITUTIONAL: [0.85Ã¢â‚¬â€œ1.0] + minContracts 1500",
+    "note": "No improvement: $468 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.034Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 500,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0075,
+    "totalPnL": 499.1,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9935,
+    "nSignals": 154,
+    "sharpe": 0.403,
+    "hypothesis": "INSTITUTIONAL: [0.9Ã¢â‚¬â€œ1.0] + minContracts 500",
+    "note": "No improvement: $499.1 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.096Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 750,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0085,
+    "totalPnL": 417,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9924,
+    "nSignals": 131,
+    "sharpe": 0.368,
+    "hypothesis": "INSTITUTIONAL: [0.9Ã¢â‚¬â€œ1.0] + minContracts 750",
+    "note": "No improvement: $417 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.159Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 1000,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0095,
+    "totalPnL": 346,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9912,
+    "nSignals": 114,
+    "sharpe": 0.328,
+    "hypothesis": "INSTITUTIONAL: [0.9Ã¢â‚¬â€œ1.0] + minContracts 1000",
+    "note": "No improvement: $346 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.222Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 1500,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0123,
+    "totalPnL": 174,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9872,
+    "nSignals": 78,
+    "sharpe": 0.205,
+    "hypothesis": "INSTITUTIONAL: [0.9Ã¢â‚¬â€œ1.0] + minContracts 1500",
+    "note": "No improvement: $174 vs best $1642.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.285Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.7,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "IMPROVED",
+    "brierScore": 0.0771,
+    "totalPnL": 2458.7,
+    "prevBestPnL": 1642.7,
+    "winRate": 0.9144,
+    "nSignals": 432,
+    "sharpe": 0.209,
+    "hypothesis": "WIDER: does including [0.7Ã¢â‚¬â€œ0.80] zone help or hurt PnL?",
+    "note": "PnL $1642.7 Ã¢â€ â€™ $2458.7 (ÃŽâ€$816)"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.347Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.72,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0748,
+    "totalPnL": 2189.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9159,
+    "nSignals": 416,
+    "sharpe": 0.196,
+    "hypothesis": "WIDER: does including [0.72Ã¢â‚¬â€œ0.80] zone help or hurt PnL?",
+    "note": "No improvement: $2189.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.409Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "WIDER: does including [0.75Ã¢â‚¬â€œ0.80] zone help or hurt PnL?",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.472Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.05,
+      "maxDip": 0.18,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0608,
+    "totalPnL": 689,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9583,
+    "nSignals": 48,
+    "sharpe": 0.716,
+    "hypothesis": "DIP: minDip=0.05 maxDip=0.18 Ã¢â‚¬â€ conviction during wobble, not collapse",
+    "note": "No improvement: $689 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.534Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.08,
+      "maxDip": 0.18,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0561,
+    "totalPnL": 526,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9688,
+    "nSignals": 32,
+    "sharpe": 0.963,
+    "hypothesis": "DIP: minDip=0.08 maxDip=0.18 Ã¢â‚¬â€ conviction during wobble, not collapse",
+    "note": "No improvement: $526 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.598Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.1,
+      "maxDip": 0.18,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0623,
+    "totalPnL": 326,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9545,
+    "nSignals": 22,
+    "sharpe": 0.738,
+    "hypothesis": "DIP: minDip=0.1 maxDip=0.18 Ã¢â‚¬â€ conviction during wobble, not collapse",
+    "note": "No improvement: $326 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.661Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.12,
+      "maxDip": 0.18,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0782,
+    "totalPnL": 211,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9333,
+    "nSignals": 15,
+    "sharpe": 0.582,
+    "hypothesis": "DIP: minDip=0.12 maxDip=0.18 Ã¢â‚¬â€ conviction during wobble, not collapse",
+    "note": "No improvement: $211 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.724Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.15,
+      "maxDip": 0.18,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0961,
+    "totalPnL": 111,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9,
+    "nSignals": 10,
+    "sharpe": 0.383,
+    "hypothesis": "DIP: minDip=0.15 maxDip=0.18 Ã¢â‚¬â€ conviction during wobble, not collapse",
+    "note": "No improvement: $111 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.787Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.05,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0606,
+    "totalPnL": 785,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9615,
+    "nSignals": 52,
+    "sharpe": 0.776,
+    "hypothesis": "DIP-ONLY: minDip=0.05 Ã¢â‚¬â€ any conviction dip",
+    "note": "No improvement: $785 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.849Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.1,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0616,
+    "totalPnL": 422,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9615,
+    "nSignals": 26,
+    "sharpe": 0.864,
+    "hypothesis": "DIP-ONLY: minDip=0.1 Ã¢â‚¬â€ any conviction dip",
+    "note": "No improvement: $422 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.913Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.15,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0852,
+    "totalPnL": 207,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9286,
+    "nSignals": 14,
+    "sharpe": 0.588,
+    "hypothesis": "DIP-ONLY: minDip=0.15 Ã¢â‚¬â€ any conviction dip",
+    "note": "No improvement: $207 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:15.977Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": true
+    },
+    "result": "REJECTED",
+    "brierScore": 0.055,
+    "totalPnL": 359,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.94,
+    "nSignals": 100,
+    "sharpe": 0.155,
+    "hypothesis": "CLUSTER: only signals in 3+ burst within 5 min",
+    "note": "No improvement: $359 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.042Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.7,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": true
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0696,
+    "totalPnL": 996,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9333,
+    "nSignals": 135,
+    "sharpe": 0.291,
+    "hypothesis": "CLUSTER+WIDER: cluster + 70%+ implied",
+    "note": "No improvement: $996 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.105Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": true
+    },
+    "result": "REJECTED",
+    "brierScore": 0.055,
+    "totalPnL": 359,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.94,
+    "nSignals": 100,
+    "sharpe": 0.155,
+    "hypothesis": "CLUSTER+75: cluster + 75%+ implied",
+    "note": "No improvement: $359 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.168Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.1,
+      "maxDip": 0.18,
+      "requireCluster": true
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0385,
+    "totalPnL": 190,
+    "prevBestPnL": 2458.7,
+    "winRate": 1,
+    "nSignals": 10,
+    "sharpe": 3.862,
+    "hypothesis": "HOLY-GRAIL-A: dip 10-18Ã‚Â¢ + cluster Ã¢â‚¬â€ Ole Miss pattern",
+    "note": "No improvement: $190 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.231Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.08,
+      "maxDip": 0.18,
+      "requireCluster": true
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0415,
+    "totalPnL": 258,
+    "prevBestPnL": 2458.7,
+    "winRate": 1,
+    "nSignals": 13,
+    "sharpe": 4.325,
+    "hypothesis": "HOLY-GRAIL-B: dip 8-18Ã‚Â¢ + cluster Ã¢â‚¬â€ slightly wider",
+    "note": "No improvement: $258 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.294Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.65,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.1,
+      "maxDip": 0.18,
+      "requireCluster": true
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0624,
+    "totalPnL": 710,
+    "prevBestPnL": 2458.7,
+    "winRate": 1,
+    "nSignals": 29,
+    "sharpe": 4.889,
+    "hypothesis": "HOLY-GRAIL-C: dip 10-18Ã‚Â¢ + cluster + wider implied range",
+    "note": "No improvement: $710 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.357Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.1,
+      "maxDip": 0.18,
+      "requireCluster": true
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0385,
+    "totalPnL": 190,
+    "prevBestPnL": 2458.7,
+    "winRate": 1,
+    "nSignals": 10,
+    "sharpe": 3.862,
+    "hypothesis": "HOLY-GRAIL-D: dip 10-18Ã‚Â¢ + cluster + $300+ trade size",
+    "note": "No improvement: $190 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.420Z",
+    "params": {
+      "minTradeUSD": 200,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.1,
+      "maxDip": 0.18,
+      "requireCluster": true
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0385,
+    "totalPnL": 190,
+    "prevBestPnL": 2458.7,
+    "winRate": 1,
+    "nSignals": 10,
+    "sharpe": 3.862,
+    "hypothesis": "FULL-OPTIMAL: 75%+ + dip 10-18Ã‚Â¢ + cluster + $200+",
+    "note": "No improvement: $190 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.483Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.7,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.08,
+      "maxDip": 1,
+      "requireCluster": true
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0612,
+    "totalPnL": 1046,
+    "prevBestPnL": 2458.7,
+    "winRate": 1,
+    "nSignals": 43,
+    "sharpe": 5.46,
+    "hypothesis": "FULL-WIDE: 70%+ + dip 8Ã‚Â¢+ + cluster + $300+",
+    "note": "No improvement: $1046 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.546Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.05,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "EWMA: decay=0.05 -- weight recent vs historical",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.608Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.1,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "EWMA: decay=0.1 -- weight recent vs historical",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.671Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.2,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "EWMA: decay=0.2 -- weight recent vs historical",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.733Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.25,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "EWMA: decay=0.25 -- weight recent vs historical",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.796Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.3,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "EWMA: decay=0.3 -- weight recent vs historical",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.858Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.4,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "EWMA: decay=0.4 -- weight recent vs historical",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.921Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.5,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "EWMA: decay=0.5 -- weight recent vs historical",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:16.983Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.25,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "KELLY: fraction=0.25 -- bet sizing",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.045Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.33,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "KELLY: fraction=0.33 -- bet sizing",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.108Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.4,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "KELLY: fraction=0.4 -- bet sizing",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.171Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.6,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "KELLY: fraction=0.6 -- bet sizing",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.233Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.75,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "KELLY: fraction=0.75 -- bet sizing",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.296Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 1,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "KELLY: fraction=1 -- bet sizing",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.357Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [
+        "sports",
+        "other"
+      ],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "INSUFFICIENT",
+    "hypothesis": "POLITICS+CRYPTO: skip sports only",
+    "note": "Too few signals passed filter"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.420Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [
+        "sports",
+        "crypto",
+        "other"
+      ],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "INSUFFICIENT",
+    "hypothesis": "POLITICS-ONLY: pure political markets",
+    "note": "Too few signals passed filter"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.483Z",
+    "params": {
+      "minTradeUSD": 2000,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0509,
+    "totalPnL": 516,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9439,
+    "nSignals": 107,
+    "sharpe": 0.219,
+    "hypothesis": "HIGH-VALUE: minTrade 2000",
+    "note": "No improvement: $516 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.546Z",
+    "params": {
+      "minTradeUSD": 3000,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0421,
+    "totalPnL": 340,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9552,
+    "nSignals": 67,
+    "sharpe": 0.255,
+    "hypothesis": "HIGH-VALUE: minTrade 3000",
+    "note": "No improvement: $340 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.607Z",
+    "params": {
+      "minTradeUSD": 5000,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0508,
+    "totalPnL": 45,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9375,
+    "nSignals": 32,
+    "sharpe": 0.063,
+    "hypothesis": "HIGH-VALUE: minTrade 5000",
+    "note": "No improvement: $45 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.671Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.65,
+        0.92
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.1367,
+    "totalPnL": 1799.6,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.8304,
+    "nSignals": 342,
+    "sharpe": 0.144,
+    "hypothesis": "CAP-TOP: range 0.65-0.92",
+    "note": "No improvement: $1799.6 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.733Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.65,
+        0.95
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.1209,
+    "totalPnL": 2068.6,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.8505,
+    "nSignals": 388,
+    "sharpe": 0.155,
+    "hypothesis": "CAP-TOP: range 0.65-0.95",
+    "note": "No improvement: $2068.6 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.797Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.65,
+        0.97
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.112,
+    "totalPnL": 2177.6,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.8616,
+    "nSignals": 419,
+    "sharpe": 0.157,
+    "hypothesis": "CAP-TOP: range 0.65-0.97",
+    "note": "No improvement: $2177.6 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.860Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        0.9
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.1087,
+    "totalPnL": 1091.6,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.8782,
+    "nSignals": 197,
+    "sharpe": 0.171,
+    "hypothesis": "MIDDLE-BAND: range 0.75-0.9",
+    "note": "No improvement: $1091.6 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.924Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        0.85
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.1427,
+    "totalPnL": 462.6,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.8333,
+    "nSignals": 138,
+    "sharpe": 0.089,
+    "hypothesis": "MIDDLE-BAND: range 0.75-0.85",
+    "note": "No improvement: $462.6 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:17.986Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 3,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0174,
+    "totalPnL": 35,
+    "prevBestPnL": 2458.7,
+    "winRate": 1,
+    "nSignals": 3,
+    "sharpe": 1.904,
+    "hypothesis": "ULTRA-RECENT: lookback 3d",
+    "note": "No improvement: $35 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.048Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 5,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0078,
+    "totalPnL": 115,
+    "prevBestPnL": 2458.7,
+    "winRate": 1,
+    "nSignals": 16,
+    "sharpe": 1.412,
+    "hypothesis": "ULTRA-RECENT: lookback 5d",
+    "note": "No improvement: $115 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.110Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 10,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0073,
+    "totalPnL": 127,
+    "prevBestPnL": 2458.7,
+    "winRate": 1,
+    "nSignals": 18,
+    "sharpe": 1.466,
+    "hypothesis": "ULTRA-RECENT: lookback 10d",
+    "note": "No improvement: $127 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.174Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.75,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0482,
+    "totalPnL": 967.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.945,
+    "nSignals": 291,
+    "sharpe": 0.153,
+    "hypothesis": "AGGRESSIVE: range-0.8-kelly-0.75",
+    "note": "No improvement: $967.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.236Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 1,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0482,
+    "totalPnL": 967.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.945,
+    "nSignals": 291,
+    "sharpe": 0.153,
+    "hypothesis": "AGGRESSIVE: range-0.8-kelly-1",
+    "note": "No improvement: $967.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.299Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.75,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.013,
+    "totalPnL": 1260.1,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9913,
+    "nSignals": 229,
+    "sharpe": 0.552,
+    "hypothesis": "AGGRESSIVE: range-0.85-kelly-0.75",
+    "note": "No improvement: $1260.1 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.363Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 1,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.013,
+    "totalPnL": 1260.1,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9913,
+    "nSignals": 229,
+    "sharpe": 0.552,
+    "hypothesis": "AGGRESSIVE: range-0.85-kelly-1",
+    "note": "No improvement: $1260.1 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.425Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.75,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0071,
+    "totalPnL": 561.1,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9941,
+    "nSignals": 169,
+    "sharpe": 0.43,
+    "hypothesis": "AGGRESSIVE: range-0.9-kelly-0.75",
+    "note": "No improvement: $561.1 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.486Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 1,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0071,
+    "totalPnL": 561.1,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9941,
+    "nSignals": 169,
+    "sharpe": 0.43,
+    "hypothesis": "AGGRESSIVE: range-0.9-kelly-1",
+    "note": "No improvement: $561.1 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.548Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.05,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0482,
+    "totalPnL": 967.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.945,
+    "nSignals": 291,
+    "sharpe": 0.153,
+    "hypothesis": "STABLE-HIST: range-0.8-ewma-0.05",
+    "note": "No improvement: $967.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.612Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.4,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0482,
+    "totalPnL": 967.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.945,
+    "nSignals": 291,
+    "sharpe": 0.153,
+    "hypothesis": "ADAPTIVE: range-0.8-ewma-0.40",
+    "note": "No improvement: $967.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.674Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.05,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.013,
+    "totalPnL": 1260.1,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9913,
+    "nSignals": 229,
+    "sharpe": 0.552,
+    "hypothesis": "STABLE-HIST: range-0.85-ewma-0.05",
+    "note": "No improvement: $1260.1 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.737Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.4,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.013,
+    "totalPnL": 1260.1,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9913,
+    "nSignals": 229,
+    "sharpe": 0.552,
+    "hypothesis": "ADAPTIVE: range-0.85-ewma-0.40",
+    "note": "No improvement: $1260.1 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.801Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 50,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "CONTRACT-MIN: 50 contracts",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.865Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 100,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "CONTRACT-MIN: 100 contracts",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.928Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 200,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "CONTRACT-MIN: 200 contracts",
+    "note": "No improvement: $1642.7 vs best $2458.7"
+  },
+  {
+    "ts": "2026-04-03T05:03:18.990Z",
+    "params": {
+      "minTradeUSD": 500,
+      "impliedRange": [
+        0.6,
+        1
+      ],
+      "ewmaDecay": 0.2,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "IMPROVED",
+    "brierScore": 0.0992,
+    "totalPnL": 2911.3,
+    "prevBestPnL": 2458.7,
+    "winRate": 0.8835,
+    "nSignals": 472,
+    "sharpe": 0.2,
+    "hypothesis": "WILDCARD-A: wide-range-med-trade-fast-ewma",
+    "note": "PnL $2458.7 Ã¢â€ â€™ $2911.3 (ÃŽâ€$453)"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.054Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.1,
+      "kellyFraction": 0.75,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.013,
+    "totalPnL": 1260.1,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9913,
+    "nSignals": 229,
+    "sharpe": 0.552,
+    "hypothesis": "WILDCARD-B: high-conf-aggressive-kelly-stable-history",
+    "note": "No improvement: $1260.1 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.116Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 14,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0309,
+    "totalPnL": 639,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9701,
+    "nSignals": 134,
+    "sharpe": 0.282,
+    "hypothesis": "WILDCARD-C: recent-2wk-balanced-params",
+    "note": "No improvement: $639 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.179Z",
+    "params": {
+      "minTradeUSD": 200,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [
+        "other"
+      ],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0069,
+    "totalPnL": 669.1,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9947,
+    "nSignals": 187,
+    "sharpe": 0.479,
+    "hypothesis": "WILDCARD-D: near-certainty-no-junk-low-entry",
+    "note": "No improvement: $669.1 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.241Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.68,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0865,
+    "totalPnL": 2247.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.8972,
+    "nSignals": 457,
+    "sharpe": 0.17,
+    "hypothesis": "RANDOM-RANGE-0: impliedRange [0.68-1.0]",
+    "note": "No improvement: $2247.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.304Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.79,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.05,
+    "totalPnL": 1077.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9435,
+    "nSignals": 301,
+    "sharpe": 0.162,
+    "hypothesis": "RANDOM-RANGE-1: impliedRange [0.79-1.0]",
+    "note": "No improvement: $1077.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.366Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.69,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0827,
+    "totalPnL": 2199.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9029,
+    "nSignals": 443,
+    "sharpe": 0.175,
+    "hypothesis": "RANDOM-RANGE-2: impliedRange [0.69-1.0]",
+    "note": "No improvement: $2199.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.428Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.86,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0092,
+    "totalPnL": 1180.1,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9954,
+    "nSignals": 217,
+    "sharpe": 0.688,
+    "hypothesis": "RANDOM-RANGE-3: impliedRange [0.86-1.0]",
+    "note": "No improvement: $1180.1 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.491Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.67,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.093,
+    "totalPnL": 1942.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.8835,
+    "nSignals": 472,
+    "sharpe": 0.136,
+    "hypothesis": "RANDOM-RANGE-4: impliedRange [0.67-1.0]",
+    "note": "No improvement: $1942.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.554Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.88,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0076,
+    "totalPnL": 757.1,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9946,
+    "nSignals": 186,
+    "sharpe": 0.526,
+    "hypothesis": "RANDOM-RANGE-5: impliedRange [0.88-1.0]",
+    "note": "No improvement: $757.1 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.616Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.9,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0071,
+    "totalPnL": 561.1,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9941,
+    "nSignals": 169,
+    "sharpe": 0.43,
+    "hypothesis": "RANDOM-RANGE-6: impliedRange [0.9-1.0]",
+    "note": "No improvement: $561.1 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.678Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.83,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0326,
+    "totalPnL": 991.1,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9647,
+    "nSignals": 255,
+    "sharpe": 0.22,
+    "hypothesis": "RANDOM-RANGE-7: impliedRange [0.83-1.0]",
+    "note": "No improvement: $991.1 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.741Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.69,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0827,
+    "totalPnL": 2199.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9029,
+    "nSignals": 443,
+    "sharpe": 0.175,
+    "hypothesis": "RANDOM-RANGE-8: impliedRange [0.69-1.0]",
+    "note": "No improvement: $2199.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.803Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "RANDOM-RANGE-9: impliedRange [0.75-1.0]",
+    "note": "No improvement: $1642.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.866Z",
+    "params": {
+      "minTradeUSD": 704,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0147,
+    "totalPnL": 940,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9889,
+    "nSignals": 180,
+    "sharpe": 0.477,
+    "hypothesis": "RANDOM-COMBO-0: [0.85-1.0] + $704",
+    "note": "No improvement: $940 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.929Z",
+    "params": {
+      "minTradeUSD": 353,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0133,
+    "totalPnL": 1195.1,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9908,
+    "nSignals": 218,
+    "sharpe": 0.54,
+    "hypothesis": "RANDOM-COMBO-1: [0.85-1.0] + $353",
+    "note": "No improvement: $1195.1 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:19.991Z",
+    "params": {
+      "minTradeUSD": 322,
+      "impliedRange": [
+        0.77,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0527,
+    "totalPnL": 1543.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9439,
+    "nSignals": 321,
+    "sharpe": 0.214,
+    "hypothesis": "RANDOM-COMBO-2: [0.77-1.0] + $322",
+    "note": "No improvement: $1543.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.055Z",
+    "params": {
+      "minTradeUSD": 425,
+      "impliedRange": [
+        0.83,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0344,
+    "totalPnL": 871.1,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9622,
+    "nSignals": 238,
+    "sharpe": 0.201,
+    "hypothesis": "RANDOM-COMBO-3: [0.83-1.0] + $425",
+    "note": "No improvement: $871.1 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.117Z",
+    "params": {
+      "minTradeUSD": 297,
+      "impliedRange": [
+        0.84,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0162,
+    "totalPnL": 1338.1,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9876,
+    "nSignals": 242,
+    "sharpe": 0.482,
+    "hypothesis": "RANDOM-COMBO-4: [0.84-1.0] + $297",
+    "note": "No improvement: $1338.1 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.180Z",
+    "params": {
+      "minTradeUSD": 400,
+      "impliedRange": [
+        0.77,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0539,
+    "totalPnL": 1438.1,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9421,
+    "nSignals": 311,
+    "sharpe": 0.203,
+    "hypothesis": "RANDOM-COMBO-5: [0.77-1.0] + $400",
+    "note": "No improvement: $1438.1 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.246Z",
+    "params": {
+      "minTradeUSD": 687,
+      "impliedRange": [
+        0.72,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0787,
+    "totalPnL": 990,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9052,
+    "nSignals": 306,
+    "sharpe": 0.116,
+    "hypothesis": "RANDOM-COMBO-6: [0.72-1.0] + $687",
+    "note": "No improvement: $990 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.309Z",
+    "params": {
+      "minTradeUSD": 520,
+      "impliedRange": [
+        0.76,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0614,
+    "totalPnL": 1328.1,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9316,
+    "nSignals": 307,
+    "sharpe": 0.177,
+    "hypothesis": "RANDOM-COMBO-7: [0.76-1.0] + $520",
+    "note": "No improvement: $1328.1 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.371Z",
+    "params": {
+      "minTradeUSD": 704,
+      "impliedRange": [
+        0.85,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0147,
+    "totalPnL": 940,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9889,
+    "nSignals": 180,
+    "sharpe": 0.477,
+    "hypothesis": "RANDOM-COMBO-8: [0.85-1.0] + $704",
+    "note": "No improvement: $940 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.433Z",
+    "params": {
+      "minTradeUSD": 606,
+      "impliedRange": [
+        0.88,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0085,
+    "totalPnL": 629.1,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9936,
+    "nSignals": 157,
+    "sharpe": 0.482,
+    "hypothesis": "RANDOM-COMBO-9: [0.88-1.0] + $606",
+    "note": "No improvement: $629.1 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.496Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.18,
+      "kellyFraction": 0.33,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "RANDOM-EWMA-KELLY-0: decay=0.18 kelly=0.33",
+    "note": "No improvement: $1642.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.558Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.06,
+      "kellyFraction": 0.26,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "RANDOM-EWMA-KELLY-1: decay=0.06 kelly=0.26",
+    "note": "No improvement: $1642.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.621Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.18,
+      "kellyFraction": 0.31,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "RANDOM-EWMA-KELLY-2: decay=0.18 kelly=0.31",
+    "note": "No improvement: $1642.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.683Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.28,
+      "kellyFraction": 0.55,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "RANDOM-EWMA-KELLY-3: decay=0.28 kelly=0.55",
+    "note": "No improvement: $1642.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.745Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.21,
+      "kellyFraction": 0.35,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "RANDOM-EWMA-KELLY-4: decay=0.21 kelly=0.35",
+    "note": "No improvement: $1642.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.808Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.2,
+      "kellyFraction": 0.64,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "RANDOM-EWMA-KELLY-5: decay=0.2 kelly=0.64",
+    "note": "No improvement: $1642.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.871Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.26,
+      "kellyFraction": 0.57,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "RANDOM-EWMA-KELLY-6: decay=0.26 kelly=0.57",
+    "note": "No improvement: $1642.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.937Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.37,
+      "kellyFraction": 0.54,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0611,
+    "totalPnL": 1642.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9324,
+    "nSignals": 355,
+    "sharpe": 0.191,
+    "hypothesis": "RANDOM-EWMA-KELLY-7: decay=0.37 kelly=0.54",
+    "note": "No improvement: $1642.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:20.999Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.06,
+      "maxDip": 0.15,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0669,
+    "totalPnL": 527,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9487,
+    "nSignals": 39,
+    "sharpe": 0.613,
+    "hypothesis": "RANDOM-DIP-0: dip 0.06-0.15",
+    "note": "No improvement: $527 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:21.062Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.09,
+      "maxDip": 0.17,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0578,
+    "totalPnL": 394,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9615,
+    "nSignals": 26,
+    "sharpe": 0.811,
+    "hypothesis": "RANDOM-DIP-1: dip 0.09-0.17",
+    "note": "No improvement: $394 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:21.123Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.1,
+      "maxDip": 0.18,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0623,
+    "totalPnL": 326,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9545,
+    "nSignals": 22,
+    "sharpe": 0.738,
+    "hypothesis": "RANDOM-DIP-2: dip 0.1-0.18",
+    "note": "No improvement: $326 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:21.186Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.07,
+      "maxDip": 0.18,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.071,
+    "totalPnL": 517,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9459,
+    "nSignals": 37,
+    "sharpe": 0.616,
+    "hypothesis": "RANDOM-DIP-3: dip 0.07-0.18",
+    "note": "No improvement: $517 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:21.249Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.05,
+      "maxDip": 0.24,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0606,
+    "totalPnL": 785,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9615,
+    "nSignals": 52,
+    "sharpe": 0.776,
+    "hypothesis": "RANDOM-DIP-4: dip 0.05-0.24",
+    "note": "No improvement: $785 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:21.314Z",
+    "params": {
+      "minTradeUSD": 300,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.5,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 30,
+      "minDip": 0.06,
+      "maxDip": 0.23,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0639,
+    "totalPnL": 677,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9565,
+    "nSignals": 46,
+    "sharpe": 0.717,
+    "hypothesis": "RANDOM-DIP-5: dip 0.06-0.23",
+    "note": "No improvement: $677 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:21.376Z",
+    "params": {
+      "minTradeUSD": 171,
+      "impliedRange": [
+        0.79,
+        1
+      ],
+      "ewmaDecay": 0.22,
+      "kellyFraction": 0.59,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 20,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.053,
+    "totalPnL": 973,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9403,
+    "nSignals": 268,
+    "sharpe": 0.16,
+    "hypothesis": "RANDOM-FULL-0: [0.79-1.0] $171 ewma=0.22 kelly=0.59 20d",
+    "note": "No improvement: $973 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:21.438Z",
+    "params": {
+      "minTradeUSD": 154,
+      "impliedRange": [
+        0.65,
+        1
+      ],
+      "ewmaDecay": 0.23,
+      "kellyFraction": 0.54,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 21,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0954,
+    "totalPnL": 2263.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.8825,
+    "nSignals": 485,
+    "sharpe": 0.153,
+    "hypothesis": "RANDOM-FULL-1: [0.65-1.0] $154 ewma=0.23 kelly=0.54 21d",
+    "note": "No improvement: $2263.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:21.500Z",
+    "params": {
+      "minTradeUSD": 315,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.17,
+      "kellyFraction": 0.56,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 29,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0482,
+    "totalPnL": 947.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9448,
+    "nSignals": 290,
+    "sharpe": 0.151,
+    "hypothesis": "RANDOM-FULL-2: [0.8-1.0] $315 ewma=0.17 kelly=0.56 29d",
+    "note": "No improvement: $947.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:21.564Z",
+    "params": {
+      "minTradeUSD": 481,
+      "impliedRange": [
+        0.79,
+        1
+      ],
+      "ewmaDecay": 0.2,
+      "kellyFraction": 0.41,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 28,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0532,
+    "totalPnL": 889.1,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9388,
+    "nSignals": 278,
+    "sharpe": 0.14,
+    "hypothesis": "RANDOM-FULL-3: [0.79-1.0] $481 ewma=0.2 kelly=0.41 28d",
+    "note": "No improvement: $889.1 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:21.626Z",
+    "params": {
+      "minTradeUSD": 452,
+      "impliedRange": [
+        0.75,
+        1
+      ],
+      "ewmaDecay": 0.13,
+      "kellyFraction": 0.47,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 21,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0637,
+    "totalPnL": 1401.1,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9288,
+    "nSignals": 323,
+    "sharpe": 0.174,
+    "hypothesis": "RANDOM-FULL-4: [0.75-1.0] $452 ewma=0.13 kelly=0.47 21d",
+    "note": "No improvement: $1401.1 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:21.690Z",
+    "params": {
+      "minTradeUSD": 396,
+      "impliedRange": [
+        0.73,
+        1
+      ],
+      "ewmaDecay": 0.22,
+      "kellyFraction": 0.48,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 15,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0458,
+    "totalPnL": 1919,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9617,
+    "nSignals": 235,
+    "sharpe": 0.413,
+    "hypothesis": "RANDOM-FULL-5: [0.73-1.0] $396 ewma=0.22 kelly=0.48 15d",
+    "note": "No improvement: $1919 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:21.753Z",
+    "params": {
+      "minTradeUSD": 218,
+      "impliedRange": [
+        0.7,
+        1
+      ],
+      "ewmaDecay": 0.15,
+      "kellyFraction": 0.51,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 18,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0745,
+    "totalPnL": 1446,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9156,
+    "nSignals": 308,
+    "sharpe": 0.175,
+    "hypothesis": "RANDOM-FULL-6: [0.7-1.0] $218 ewma=0.15 kelly=0.51 18d",
+    "note": "No improvement: $1446 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:21.817Z",
+    "params": {
+      "minTradeUSD": 222,
+      "impliedRange": [
+        0.69,
+        1
+      ],
+      "ewmaDecay": 0.14,
+      "kellyFraction": 0.36,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 20,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.076,
+    "totalPnL": 2428,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9186,
+    "nSignals": 381,
+    "sharpe": 0.238,
+    "hypothesis": "RANDOM-FULL-7: [0.69-1.0] $222 ewma=0.14 kelly=0.36 20d",
+    "note": "No improvement: $2428 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:21.880Z",
+    "params": {
+      "minTradeUSD": 178,
+      "impliedRange": [
+        0.74,
+        1
+      ],
+      "ewmaDecay": 0.16,
+      "kellyFraction": 0.59,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 22,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0596,
+    "totalPnL": 2173.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9367,
+    "nSignals": 395,
+    "sharpe": 0.231,
+    "hypothesis": "RANDOM-FULL-8: [0.74-1.0] $178 ewma=0.16 kelly=0.59 22d",
+    "note": "No improvement: $2173.7 vs best $2911.3"
+  },
+  {
+    "ts": "2026-04-03T05:03:21.942Z",
+    "params": {
+      "minTradeUSD": 231,
+      "impliedRange": [
+        0.8,
+        1
+      ],
+      "ewmaDecay": 0.23,
+      "kellyFraction": 0.37,
+      "skipCategories": [],
+      "minContracts": 0,
+      "lookbackDays": 28,
+      "minDip": 0,
+      "maxDip": 1,
+      "requireCluster": false
+    },
+    "result": "REJECTED",
+    "brierScore": 0.0458,
+    "totalPnL": 1101.7,
+    "prevBestPnL": 2911.3,
+    "winRate": 0.9482,
+    "nSignals": 309,
+    "sharpe": 0.169,
+    "hypothesis": "RANDOM-FULL-9: [0.8-1.0] $231 ewma=0.23 kelly=0.37 28d",
+    "note": "No improvement: $1101.7 vs best $2911.3"
   }
 ]

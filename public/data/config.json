@@ -5,20 +5,20 @@
     1
   ],
   "skipCategories": [],
-  "recommendedBetSize": 223.72,
-  "generatedAt": "2026-04-03T05:02:02.725Z",
+  "recommendedBetSize": 244.49,
+  "generatedAt": "2026-04-03T05:03:48.124Z",
   "dataPoints": 1042,
   "overallWinRate": 0.834,
-  "overallBrierScore": 0.0691,
+  "overallBrierScore": 0.0644,
   "modelConfidence": 0.92,
   "categoryStats": {
     "sports": {
       "samples": 1036,
       "wins": 867,
       "winRate": 0.8369,
-      "winRateEwma": 0.8741,
-      "brierScore": 0.0691,
-      "kellyBet": 223.72
+      "winRateEwma": 0.8817,
+      "brierScore": 0.0644,
+      "kellyBet": 244.49
     },
     "crypto": null,
     "politics": null,
@@ -27,37 +27,37 @@
   "bucketStats": {
     "0-40%": null,
     "40-65%": {
-      "samples": 17,
-      "wins": 11,
-      "winRate": 0.6471,
-      "winRateEwma": 0.7074,
-      "brierScore": 0.2126,
-      "avgPnL": 9.41
+      "samples": 19,
+      "wins": 9,
+      "winRate": 0.4737,
+      "winRateEwma": 0.6723,
+      "brierScore": 0.2533,
+      "avgPnL": -6.42
     },
     "65-80%": {
-      "samples": 124,
-      "wins": 109,
-      "winRate": 0.879,
-      "winRateEwma": 0.8187,
-      "brierScore": 0.1208,
-      "avgPnL": 14.92
+      "samples": 109,
+      "wins": 95,
+      "winRate": 0.8716,
+      "winRateEwma": 0.8266,
+      "brierScore": 0.1252,
+      "avgPnL": 14.47
     },
     "80-95%": {
-      "samples": 236,
-      "wins": 215,
-      "winRate": 0.911,
-      "winRateEwma": 0.9019,
-      "brierScore": 0.08,
-      "avgPnL": 4.14
+      "samples": 157,
+      "wins": 149,
+      "winRate": 0.949,
+      "winRateEwma": 0.909,
+      "brierScore": 0.0565,
+      "avgPnL": 8.02
     },
     "95-100%": {
-      "samples": 167,
-      "wins": 167,
+      "samples": 141,
+      "wins": 141,
       "winRate": 1,
       "winRateEwma": 1,
       "brierScore": 0.0008,
       "avgPnL": 2.47
     }
   },
-  "notes": "1042 settled trades | Win rate: 83.4% | Brier: 0.0691 (lower=better, 0.25=random) | No categories skipped | Implied range refined to 40%-100% based on EV | Min trade size: $300 (best win rate at this threshold) | Kelly bet size: $223.72 per signal (half-Kelly, 2-week EWMA) | Total P&L: $2699.50"
+  "notes": "1042 settled trades | Win rate: 83.4% | Brier: 0.0644 (lower=better, 0.25=random) | No categories skipped | Implied range refined to 40%-100% based on EV | Min trade size: $300 (best win rate at this threshold) | Kelly bet size: $244.49 per signal (half-Kelly, 2-week EWMA) | Total P&L: $2699.50"
 }
