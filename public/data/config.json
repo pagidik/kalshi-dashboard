@@ -1,16 +1,26 @@
 {
   "minTradeUSD": 300,
   "impliedRange": [
-    0.4,
-    1
+    0.7,
+    0.97
   ],
-  "skipCategories": [],
+  "skipCategories": [
+    "other",
+    "crypto",
+    "politics"
+  ],
+  "skipTickers": [
+    "KXNBATOTAL",
+    "KXNBATEAMTOTAL",
+    "KXNBAREB"
+  ],
   "recommendedBetSize": 244.49,
-  "generatedAt": "2026-04-03T16:02:17.678Z",
+  "generatedAt": "2026-04-03T16:32:10.871Z",
   "dataPoints": 1050,
   "overallWinRate": 0.8352,
   "overallBrierScore": 0.0644,
   "modelConfidence": 0.92,
+  "notes": "UPDATED Apr 3 — Key findings: NCAA 84.8% WR +$3.52/bet | NBA games 88.2% | NBA TOTALS 20% WR -$43/bet (BANNED) | 60-70c bucket 51.4% WR -$4.40/bet (BANNED) | other category 68.7% -$4.92/bet (BANNED) | impliedRange raised to 0.70 minimum | skipTickers now bans NBA totals/props",
   "categoryStats": {
     "sports": {
       "samples": 1044,
@@ -19,45 +29,33 @@
       "winRateEwma": 0.8817,
       "brierScore": 0.0644,
       "kellyBet": 244.49
-    },
-    "crypto": null,
-    "politics": null,
-    "other": null
-  },
-  "bucketStats": {
-    "0-40%": null,
-    "40-65%": {
-      "samples": 19,
-      "wins": 9,
-      "winRate": 0.4737,
-      "winRateEwma": 0.6723,
-      "brierScore": 0.2533,
-      "avgPnL": -6.42
-    },
-    "65-80%": {
-      "samples": 109,
-      "wins": 95,
-      "winRate": 0.8716,
-      "winRateEwma": 0.8266,
-      "brierScore": 0.1252,
-      "avgPnL": 14.47
-    },
-    "80-95%": {
-      "samples": 157,
-      "wins": 149,
-      "winRate": 0.949,
-      "winRateEwma": 0.909,
-      "brierScore": 0.0565,
-      "avgPnL": 8.02
-    },
-    "95-100%": {
-      "samples": 141,
-      "wins": 141,
-      "winRate": 1,
-      "winRateEwma": 1,
-      "brierScore": 0.0008,
-      "avgPnL": 2.47
     }
   },
-  "notes": "1050 settled trades | Win rate: 83.5% | Brier: 0.0644 (lower=better, 0.25=random) | No categories skipped | Implied range refined to 40%-100% based on EV | Min trade size: $300 (best win rate at this threshold) | Kelly bet size: $244.49 per signal (half-Kelly, 2-week EWMA) | Total P&L: $2862.50"
+  "sportPerformance": {
+    "NCAA": {
+      "wr": 0.848,
+      "perBet": 3.52,
+      "status": "BEST"
+    },
+    "NBA_game": {
+      "wr": 0.882,
+      "perBet": 2.76,
+      "status": "GOOD"
+    },
+    "NHL": {
+      "wr": 0.5,
+      "perBet": -6,
+      "status": "CAUTION"
+    },
+    "NBA_total": {
+      "wr": 0.2,
+      "perBet": -43.4,
+      "status": "BANNED"
+    },
+    "other": {
+      "wr": 0.687,
+      "perBet": -4.92,
+      "status": "BANNED"
+    }
+  }
 }
