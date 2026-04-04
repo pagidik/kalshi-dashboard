@@ -3,18 +3,18 @@
   "signals": [
     {
       "symbol": "DOGE/USD",
-      "direction": "SHORT",
-      "entry": 0.091005,
-      "stop": 0.09555525000000001,
-      "target": 0.0819045,
+      "direction": "LONG",
+      "entry": 0.09172925,
+      "stop": 0.0871427875,
+      "target": 0.10090217500000001,
       "rr": 2.0,
-      "strategy": "trend_follow",
-      "strength": 0.5,
-      "rsi": 49.18978248348046,
-      "macd": -0.0012679476764799885,
+      "strategy": "macd_bullish",
+      "strength": 0.6,
+      "rsi": 50.998091920112365,
+      "macd": -0.0012101971407722095,
       "trend": "bearish",
-      "volatility_pct": 5.550499580085868,
-      "timestamp": "2026-04-04T14:12:49.059662+00:00"
+      "volatility_pct": 5.529818148830079,
+      "timestamp": "2026-04-04T16:04:44.967019+00:00"
     }
   ],
   "trades": [
@@ -58,7 +58,7 @@
   "stats": {
     "wins": 0,
     "losses": 0,
-    "total_pnl": -1850.777417
+    "total_pnl": -1698.3365270000002
   },
-  "last_scan": "2026-04-04T14:12:50.128668+00:00"
+  "last_scan": "2026-04-04T16:04:46.036422+00:00"
 }
