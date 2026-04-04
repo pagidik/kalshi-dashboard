@@ -15,17 +15,17 @@
     "KXNBAREB"
   ],
   "recommendedBetSize": 244.49,
-  "generatedAt": "2026-04-04T01:01:57.223Z",
-  "dataPoints": 1050,
-  "overallWinRate": 0.8352,
+  "generatedAt": "2026-04-04T01:33:33.478Z",
+  "dataPoints": 1069,
+  "overallWinRate": 0.8232,
   "overallBrierScore": 0.0644,
   "modelConfidence": 0.92,
   "notes": "UPDATED Apr 3 — Key findings: NCAA 84.8% WR +$3.52/bet | NBA games 88.2% | NBA TOTALS 20% WR -$43/bet (BANNED) | 60-70c bucket 51.4% WR -$4.40/bet (BANNED) | other category 68.7% -$4.92/bet (BANNED) | impliedRange raised to 0.70 minimum | skipTickers now bans NBA totals/props",
   "categoryStats": {
     "sports": {
-      "samples": 1044,
-      "wins": 875,
-      "winRate": 0.8381,
+      "samples": 1063,
+      "wins": 878,
+      "winRate": 0.826,
       "winRateEwma": 0.8817,
       "brierScore": 0.0644,
       "kellyBet": 244.49
