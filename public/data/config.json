@@ -1,61 +1,63 @@
 {
-  "minTradeUSD": 300,
+  "minTradeUSD": 1000,
   "impliedRange": [
-    0.7,
-    0.97
+    0.65,
+    1
   ],
-  "skipCategories": [
-    "other",
-    "crypto",
-    "politics"
-  ],
-  "skipTickers": [
-    "KXNBATOTAL",
-    "KXNBATEAMTOTAL",
-    "KXNBAREB"
-  ],
-  "recommendedBetSize": 244.49,
-  "generatedAt": "2026-04-04T05:03:40.475Z",
+  "skipCategories": [],
+  "recommendedBetSize": 6.51,
+  "generatedAt": "2026-04-04T05:04:53.886Z",
   "dataPoints": 1093,
   "overallWinRate": 0.8271,
-  "overallBrierScore": 0.0644,
-  "modelConfidence": 0.92,
-  "notes": "UPDATED Apr 3 — Key findings: NCAA 84.8% WR +$3.52/bet | NBA games 88.2% | NBA TOTALS 20% WR -$43/bet (BANNED) | 60-70c bucket 51.4% WR -$4.40/bet (BANNED) | other category 68.7% -$4.92/bet (BANNED) | impliedRange raised to 0.70 minimum | skipTickers now bans NBA totals/props",
+  "overallBrierScore": 0.1068,
+  "modelConfidence": 0.85,
   "categoryStats": {
     "sports": {
       "samples": 1087,
       "wins": 902,
       "winRate": 0.8298,
-      "winRateEwma": 0.8817,
-      "brierScore": 0.0644,
-      "kellyBet": 244.49
+      "winRateEwma": 0.8767,
+      "brierScore": 0.1068,
+      "kellyBet": 6.51
+    },
+    "crypto": null,
+    "politics": null,
+    "other": null
+  },
+  "bucketStats": {
+    "0-40%": null,
+    "40-65%": {
+      "samples": 19,
+      "wins": 9,
+      "winRate": 0.4737,
+      "winRateEwma": 0.47368421052631576,
+      "brierScore": 0.2549,
+      "avgPnL": -6.21
+    },
+    "65-80%": {
+      "samples": 72,
+      "wins": 51,
+      "winRate": 0.7083,
+      "winRateEwma": 0.7083333333333334,
+      "brierScore": 0.2059,
+      "avgPnL": -1.88
+    },
+    "80-95%": {
+      "samples": 109,
+      "wins": 96,
+      "winRate": 0.8807,
+      "winRateEwma": 0.8807339449541285,
+      "brierScore": 0.1032,
+      "avgPnL": 0.93
+    },
+    "95-100%": {
+      "samples": 90,
+      "wins": 90,
+      "winRate": 1,
+      "winRateEwma": 1,
+      "brierScore": 0.0007,
+      "avgPnL": 2.33
     }
   },
-  "sportPerformance": {
-    "NCAA": {
-      "wr": 0.848,
-      "perBet": 3.52,
-      "status": "BEST"
-    },
-    "NBA_game": {
-      "wr": 0.882,
-      "perBet": 2.76,
-      "status": "GOOD"
-    },
-    "NHL": {
-      "wr": 0.5,
-      "perBet": -6,
-      "status": "CAUTION"
-    },
-    "NBA_total": {
-      "wr": 0.2,
-      "perBet": -43.4,
-      "status": "BANNED"
-    },
-    "other": {
-      "wr": 0.687,
-      "perBet": -4.92,
-      "status": "BANNED"
-    }
-  }
+  "notes": "1093 settled trades | Win rate: 82.7% | Brier: 0.1068 (lower=better, 0.25=random) | No categories skipped | Implied range refined to 65%-100% based on EV | Min trade size: $1000 (best win rate at this threshold) | Kelly bet size: $6.51 per signal (half-Kelly, 2-week EWMA) | Total P&L: $1888.50"
 }
