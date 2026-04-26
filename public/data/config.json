@@ -1,21 +1,25 @@
 {
-  "minTradeUSD": 1000,
+  "minTradeUSD": 200,
   "impliedRange": [
-    0.65,
+    0.8,
     1
   ],
-  "skipCategories": [],
+  "skipCategories": [
+    "crypto",
+    "politics",
+    "other"
+  ],
   "recommendedBetSize": 6.51,
-  "generatedAt": "2026-04-04T17:44:27.203Z",
-  "dataPoints": 1093,
-  "overallWinRate": 0.8271,
+  "generatedAt": "2026-04-26T19:10:56.368Z",
+  "dataPoints": 1100,
+  "overallWinRate": 0.8255,
   "overallBrierScore": 0.1068,
   "modelConfidence": 0.85,
   "categoryStats": {
     "sports": {
-      "samples": 1087,
-      "wins": 902,
-      "winRate": 0.8298,
+      "samples": 1094,
+      "wins": 906,
+      "winRate": 0.8282,
       "winRateEwma": 0.8767,
       "brierScore": 0.1068,
       "kellyBet": 6.51
@@ -59,5 +63,17 @@
       "avgPnL": 2.33
     }
   },
-  "notes": "1093 settled trades | Win rate: 82.7% | Brier: 0.1068 (lower=better, 0.25=random) | No categories skipped | Implied range refined to 65%-100% based on EV | Min trade size: $1000 (best win rate at this threshold) | Kelly bet size: $6.51 per signal (half-Kelly, 2-week EWMA) | Total P&L: $1888.50"
+  "notes": "Synced to autoresearch best config on 2026-04-05. Paper trading widened to major-sport game winners only. Live trading remains disabled.",
+  "autoresearchOptimizationTarget": "pnl",
+  "autoresearchAt": "2026-04-25T17:38:11.152Z",
+  "ewmaDecay": 0.15,
+  "kellyFraction": 0.5,
+  "minContracts": 0,
+  "lookbackDays": 30,
+  "minDip": 0,
+  "maxDip": 1,
+  "requireCluster": false,
+  "bestPnL": 175,
+  "autoresearchExperiments": 12,
+  "autoresearchImprovements": 2
 }
