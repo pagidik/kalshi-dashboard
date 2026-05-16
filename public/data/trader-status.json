@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-05-16T17:57:35.142Z",
+  "mode": "paper",
+  "dryRun": true,
+  "balance": 92.76,
+  "spendableBalance": 52.76,
+  "cashReserve": 40,
+  "openPositions": 0,
+  "maxOpenPositions": 5,
+  "marketsScanned": 136,
+  "qualifiedSignals": 0,
+  "filterBreakdown": {
+    "no_bid": 0,
+    "no_ask": 0,
+    "crossed_book": 0,
+    "implied_low": 136,
+    "implied_high": 0,
+    "time_early": 0,
+    "time_late": 0,
+    "volume": 0,
+    "spread": 0,
+    "pass": 0
+  },
+  "cron": {
+    "id": "6c67c2b6-9f22-4908-b98e-6ebcf9bf33bd",
+    "name": "Kalshi Paper Trader - active",
+    "enabled": true,
+    "schedule": "*/15 * * * *",
+    "timezone": "America/New_York",
+    "lastRunAt": "2026-05-16T17:45:00.020Z",
+    "nextRunAt": "2026-05-16T18:00:00.000Z",
+    "lastRunStatus": "ok",
+    "consecutiveErrors": 0
+  },
+  "strategy": {
+    "impliedRange": [0.8, 1],
+    "maxBetsPerRun": 2,
+    "betSize": 5,
+    "minVolume": 1000,
+    "minEdge": 0.05,
+    "minNetEvCents": 1,
+    "guards": [
+      "dryRun must be true",
+      "fee-adjusted EV must be positive",
+      "ask price required",
+      "crossed books rejected",
+      "$40 cash reserve held back",
+      "max 5 open positions"
+    ]
+  },
+  "trades": {
+    "paperOrdersWritten": 264,
+    "filled": 0,
+    "won": 0,
+    "lost": 0,
+    "pnl": 0,
+    "lastOrderAt": "2026-05-13T03:14:01.274Z",
+    "lastOrderTicker": "KXNBAPTS-26MAY13CLEDET-CLEDMITCHELL45-20",
+    "lastOrderTitle": "Donovan Mitchell: 20+ points",
+    "lastOrderStatus": "simulated"
+  },
+  "safety": {
+    "liveTradingEnabled": false,
+    "halted": false,
+    "haltReason": null,
+    "note": "The automation is live on schedule, but it is still paper trading only. No real Kalshi orders are placed."
+  }
+}

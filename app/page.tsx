@@ -2,6 +2,7 @@ import { predictions as staticPredictions, config as staticConfig } from '../lib
 import predictionsJson from '../public/data/predictions.json'
 import configJson from '../public/data/config.json'
 import experimentStatus from '../public/data/experiment-status.json'
+import traderStatusJson from '../public/data/trader-status.json'
 import StatCard from '../components/StatCard'
 import CircularProgress from '../components/CircularProgress'
 import ProfitChart from '../components/ProfitChart'
@@ -21,6 +22,7 @@ function getLiveData() {
 
 export default async function Home() {
   const { predictions, config } = await getLiveData()
+  const traderStatus = traderStatusJson
   const sports = predictions.filter(p => p.category === 'sports')
   const crypto = predictions.filter(p => p.category === 'crypto')
   const other = predictions.filter(p => p.category === 'other')
@@ -59,6 +61,10 @@ export default async function Home() {
   const brierDisplay = brierScore.toFixed(4)
   const brierColor = brierScore < 0.15 ? 'var(--green)' : brierScore < 0.20 ? 'var(--amber)' : 'var(--red)'
   const brierPct = Math.min((brierScore / 0.25) * 100, 100)
+  const formatEt = (value: string) => new Date(value).toLocaleString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true })
+  const traderMode = traderStatus.dryRun ? 'Paper live' : 'Live money'
+  const traderModeColor = traderStatus.dryRun ? 'var(--amber)' : 'var(--red)'
+  const cronStatusColor = traderStatus.cron.enabled && traderStatus.cron.lastRunStatus === 'ok' ? 'var(--green)' : 'var(--red)'
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-8 md:py-12">
@@ -68,6 +74,67 @@ export default async function Home() {
         <p className="text-base text-text-muted mt-1">Tracking big money signals from Kalshi prediction markets</p>
         <p className="text-xs text-text-muted mt-2">Last updated: {new Date().toLocaleString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true })} ET</p>
       </div>
+
+      {/* Paper Trader Control */}
+      <section className="mb-10 rounded-xl border border-border bg-surface p-5">
+        <div className="mb-4 flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+          <div>
+            <div className="flex flex-wrap items-center gap-2">
+              <h2 className="text-xl font-semibold">Kalshi Paper Trader</h2>
+              <span className="rounded-full border px-2 py-0.5 text-xs font-semibold" style={{ color: traderModeColor, borderColor: traderModeColor }}>
+                {traderMode}
+              </span>
+              <span className="rounded-full border px-2 py-0.5 text-xs font-semibold" style={{ color: cronStatusColor, borderColor: cronStatusColor }}>
+                Cron {traderStatus.cron.enabled ? traderStatus.cron.lastRunStatus : 'off'}
+              </span>
+            </div>
+            <p className="mt-1 text-sm text-text-muted">{traderStatus.safety.note}</p>
+          </div>
+          <div className="text-left md:text-right">
+            <p className="text-xs text-text-muted">Every 15 min ET</p>
+            <p className="text-sm font-semibold text-text">Next run: {formatEt(traderStatus.cron.nextRunAt)} ET</p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4 xl:grid-cols-8">
+          {[
+            { label: 'Balance', value: '$' + traderStatus.balance.toFixed(2), color: 'var(--text)' },
+            { label: 'Spendable', value: '$' + traderStatus.spendableBalance.toFixed(2), color: 'var(--green)' },
+            { label: 'Open positions', value: traderStatus.openPositions + '/' + traderStatus.maxOpenPositions, color: 'var(--text)' },
+            { label: 'Markets scanned', value: traderStatus.marketsScanned.toString(), color: 'var(--text)' },
+            { label: 'Signals now', value: traderStatus.qualifiedSignals.toString(), color: traderStatus.qualifiedSignals > 0 ? 'var(--green)' : 'var(--text-muted)' },
+            { label: 'Paper orders', value: traderStatus.trades.paperOrdersWritten.toString(), color: 'var(--text)' },
+            { label: 'Real orders', value: traderStatus.safety.liveTradingEnabled ? 'ON' : '0', color: traderStatus.safety.liveTradingEnabled ? 'var(--red)' : 'var(--green)' },
+            { label: 'Last run', value: formatEt(traderStatus.cron.lastRunAt), color: 'var(--text)' },
+          ].map((item) => (
+            <div key={item.label} className="rounded-lg border border-border bg-bg p-3">
+              <p className="text-xs text-text-muted">{item.label}</p>
+              <p className="mt-1 text-lg font-bold leading-tight" style={{ color: item.color }}>{item.value}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-3">
+          <div className="rounded-lg border border-border bg-bg p-3">
+            <p className="text-xs text-text-muted">Active strategy</p>
+            <p className="mt-1 text-sm font-semibold text-text">
+              {(traderStatus.strategy.impliedRange[0] * 100).toFixed(0)}-{(traderStatus.strategy.impliedRange[1] * 100).toFixed(0)}% implied, fee-adjusted EV, max {traderStatus.strategy.maxBetsPerRun}/run
+            </p>
+          </div>
+          <div className="rounded-lg border border-border bg-bg p-3">
+            <p className="text-xs text-text-muted">Safety guards</p>
+            <p className="mt-1 text-sm font-semibold text-text">
+              Dry-run locked, ${traderStatus.cashReserve.toFixed(0)} reserve, crossed books rejected
+            </p>
+          </div>
+          <div className="rounded-lg border border-border bg-bg p-3">
+            <p className="text-xs text-text-muted">Last paper order</p>
+            <p className="mt-1 text-sm font-semibold text-text">
+              {traderStatus.trades.lastOrderAt ? formatEt(traderStatus.trades.lastOrderAt) + ' ET - ' + traderStatus.trades.lastOrderTitle : 'No paper orders yet'}
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Stat Cards */}
       <section className="mb-10 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">

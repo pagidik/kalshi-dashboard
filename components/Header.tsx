@@ -24,7 +24,7 @@ export default function Header() {
             <span className="text-xl font-bold text-text">Kalshi</span>
             <span className="flex items-center gap-1.5 rounded-full bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-              Live
+              Paper Live
             </span>
           </Link>
           
